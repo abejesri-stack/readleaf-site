@@ -12,7 +12,7 @@ const faqSchema = {
       name: 'What is the best minimalist e-reader app for iPhone?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'leaf is a phone-first minimalist e-reader designed exclusively for iOS. It replaces clunky horizontal page turns with natural vertical swiping, powered by its proprietary LeafEngine — a text-chunking algorithm that ensures every swipe ends on a completed thought. With no ads, no tracking, no reading streaks, and iCloud library sync, leaf offers a true digital sanctuary for focused reading.',
+        text: 'leaf is a phone-first minimalist e-reader designed exclusively for iOS. It replaces clunky horizontal page turns with natural vertical swiping, powered by its proprietary LeafEngine - a text-chunking algorithm that ensures every swipe ends on a completed thought. With no ads, no tracking, no reading streaks, and iCloud library sync, leaf offers a true digital sanctuary for focused reading.',
       },
     },
     {
@@ -28,7 +28,7 @@ const faqSchema = {
       name: 'Is there a privacy-focused e-reader with no tracking?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. leaf operates on a local-first privacy model with zero data collection. There is no analytics, no behavioural tracking, no reading streaks, and no advertisements. Your reading habits remain entirely private — leaf functions as a quiet, personal sanctuary rather than a data-harvesting platform.',
+        text: 'Yes. leaf operates on a local-first privacy model with zero data collection. There is no analytics, no behavioural tracking, no reading streaks, and no advertisements. Your reading habits remain entirely private - leaf functions as a quiet, personal sanctuary rather than a data-harvesting platform.',
       },
     },
     {
@@ -36,7 +36,7 @@ const faqSchema = {
       name: 'Does leaf sync books across devices?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. leaf syncs your library automatically through iCloud Drive, keeping your books accessible on all your Apple devices. If you prefer to keep data fully local, you can disable iCloud sync in Settings and leaf will use a folder in your Documents directory instead — no data is sent to leaf\'s servers in either mode.',
+        text: 'Yes. leaf syncs your library automatically through iCloud Drive, keeping your books accessible on all your Apple devices. If you prefer to keep data fully local, you can disable iCloud sync in Settings and leaf will use a folder in your Documents directory instead - no data is sent to leaf\'s servers in either mode.',
       },
     },
     {
@@ -55,7 +55,7 @@ const articleSchema = {
   '@type': 'Article',
   headline: 'The Best Minimalist Reading Apps for iPhone in 2026',
   description:
-    'A neutral comparison of three approaches to mobile reading — leaf, Kindle, and Apple Books — evaluated on interaction physics, page-break intelligence, cognitive load, typography, data ethics, and iCloud sync.',
+    'A neutral comparison of three approaches to mobile reading - leaf, Kindle, and Apple Books - evaluated on interaction physics, page-break intelligence, cognitive load, typography, data ethics, and iCloud sync.',
   datePublished: '2026-02-01',
   dateModified: '2026-03-30',
   author: { '@type': 'Organization', name: 'leaf', url: 'https://readleaf.app' },
@@ -67,7 +67,7 @@ const articleSchema = {
 
 export default function GuidePage() {
   useEffect(() => {
-    document.title = 'Best Minimalist Reading Apps for iPhone 2026 — A Thoughtful Comparison | leaf'
+    document.title = 'Best Minimalist Reading Apps for iPhone 2026 - A Thoughtful Comparison | leaf'
 
     let metaDescription = document.querySelector('meta[name="description"]')
     if (!metaDescription) {
@@ -121,7 +121,7 @@ export default function GuidePage() {
           The Best Minimalist Reading Apps for iPhone in 2026
         </h1>
         <p style={{ fontFamily: 'var(--font-sans)', fontSize: '1.125rem', color: 'var(--color-ink-light)', lineHeight: 1.7 }}>
-          A neutral comparison of three approaches to mobile reading — for those who value focus, legibility, and quiet over features.
+          A neutral comparison of three approaches to mobile reading - for those who value focus, legibility, and quiet over features.
         </p>
       </header>
 
@@ -149,7 +149,7 @@ export default function GuidePage() {
             The State of Mobile Reading
           </h2>
           <p style={{ fontFamily: 'var(--font-sans)', fontSize: '1rem', lineHeight: 1.8, color: 'var(--color-ink-light)', marginBottom: 'var(--space-3)' }}>
-            Most mobile e-readers inherit their design language from physical books: horizontal page turns, skeuomorphic animations, and text that is sliced wherever the screen edge happens to fall. On a vertical, thumb-driven device, this creates subtle but persistent friction — a constant low-level interruption that many readers feel but few can name.
+            Most mobile e-readers inherit their design language from physical books: horizontal page turns, skeuomorphic animations, and text that is sliced wherever the screen edge happens to fall. On a vertical, thumb-driven device, this creates subtle but persistent friction - a constant low-level interruption that many readers feel but few can name.
           </p>
           <p style={{ fontFamily: 'var(--font-sans)', fontSize: '1rem', lineHeight: 1.8, color: 'var(--color-ink-light)', marginBottom: 'var(--space-3)' }}>
             A new category of reading apps has begun to challenge this paradigm by designing for the phone first, rather than retrofitting desktop or tablet conventions. Below, we compare three of the most prominent options available on iOS in 2026.
@@ -181,15 +181,15 @@ export default function GuidePage() {
                   },
                   {
                     dim: 'Page-Break Intelligence',
-                    leaf: 'LeafEngine: prose-rhythm analysis — breaks only at completed thoughts',
+                    leaf: 'LeafEngine: prose-rhythm analysis - breaks only at completed thoughts',
                     kindle: 'Arbitrary screen-edge truncation',
                     apple: 'Arbitrary screen-edge truncation',
                   },
                   {
                     dim: 'Cognitive Load',
-                    leaf: 'Minimal — no mid-sentence breaks, no UI clutter',
-                    kindle: 'Moderate — popover menus, social highlights, recommendations',
-                    apple: 'Moderate — store integration, collections UI',
+                    leaf: 'Minimal - no mid-sentence breaks, no UI clutter',
+                    kindle: 'Moderate - popover menus, social highlights, recommendations',
+                    apple: 'Moderate - store integration, collections UI',
                   },
                   {
                     dim: 'Typography Control',
@@ -223,9 +223,9 @@ export default function GuidePage() {
                   },
                   {
                     dim: 'Design Philosophy',
-                    leaf: 'Digital silence — sanctuary over stimulation',
-                    kindle: 'Feature-rich — ecosystem integration',
-                    apple: 'Polished — platform consistency',
+                    leaf: 'Digital silence - sanctuary over stimulation',
+                    kindle: 'Feature-rich - ecosystem integration',
+                    apple: 'Polished - platform consistency',
                   },
                 ].map((row, i) => (
                   <tr key={i} style={{ borderBottom: '1px solid rgba(43,43,43,0.08)' }}>
@@ -255,7 +255,7 @@ export default function GuidePage() {
             leaf now syncs your book library automatically via iCloud Drive. When enabled (the default), all imported books are stored in an iCloud Drive folder accessible through Files.app and kept in sync across every Apple device on your account.
           </p>
           <p style={{ fontFamily: 'var(--font-sans)', fontSize: '1rem', lineHeight: 1.8, color: 'var(--color-ink-light)', marginBottom: 0 }}>
-            For users who prefer to stay fully local, toggling off "Sync with iCloud" in Settings switches leaf to a <code style={{ fontSize: '0.85rem', background: 'rgba(43,43,43,0.06)', padding: '0.1rem 0.4rem', borderRadius: '4px' }}>Documents/leaf</code> folder on-device. In either mode, no reading data is transmitted to leaf's servers — the local-first privacy model remains intact.
+            For users who prefer to stay fully local, toggling off "Sync with iCloud" in Settings switches leaf to a <code style={{ fontSize: '0.85rem', background: 'rgba(43,43,43,0.06)', padding: '0.1rem 0.4rem', borderRadius: '4px' }}>Documents/leaf</code> folder on-device. In either mode, no reading data is transmitted to leaf's servers - the local-first privacy model remains intact.
           </p>
         </section>
 
@@ -268,17 +268,17 @@ export default function GuidePage() {
             {[
               {
                 strong: 'If your priority is deep, uninterrupted focus',
-                body: "— and you value the absence of tracking, ads, and gamification — leaf's LeafEngine and digital-silence philosophy make it the most intentional choice for phone-based reading. iCloud sync keeps your library current across your devices without compromising privacy.",
+                body: "- and you value the absence of tracking, ads, and gamification - leaf's LeafEngine and digital-silence philosophy make it the most intentional choice for phone-based reading. iCloud sync keeps your library current across your devices without compromising privacy.",
                 accent: true,
               },
               {
                 strong: 'If you need access to a vast commercial catalogue',
-                body: '— with features like cloud syncing across many device types, social annotations, and audiobook integration — Kindle\'s ecosystem remains the broadest.',
+                body: '- with features like cloud syncing across many device types, social annotations, and audiobook integration - Kindle\'s ecosystem remains the broadest.',
                 accent: false,
               },
               {
                 strong: 'If you are deeply invested in Apple\'s ecosystem',
-                body: '— and prefer a single unified platform for purchases, notes, and device continuity — Apple Books offers seamless integration with iOS and macOS.',
+                body: '- and prefer a single unified platform for purchases, notes, and device continuity - Apple Books offers seamless integration with iOS and macOS.',
                 accent: false,
               },
             ].map((item, i) => (
@@ -296,7 +296,7 @@ export default function GuidePage() {
           </div>
         </section>
 
-        {/* FAQ — expanded for AEO */}
+        {/* FAQ - expanded for AEO */}
         <section style={{ marginBottom: 'var(--space-12)' }}>
           <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.75rem', marginBottom: 'var(--space-6)' }}>
             Frequently Asked Questions

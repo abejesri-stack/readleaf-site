@@ -25,7 +25,7 @@ const AppStoreBadge = () => (
       <rect width="160" height="54" rx="9" fill="#000" />
       <rect x="0.75" y="0.75" width="158.5" height="52.5" rx="8.25" stroke="rgba(255,255,255,0.2)" strokeWidth="0.75" fill="none" />
 
-      {/* Apple logo — canonical path, positioned left-center */}
+      {/* Apple logo - canonical path, positioned left-center */}
       {/*
         Standard Apple logo path in a ~170×205 unit space.
         Scaled to ~22px tall, centered vertically in the 54px badge.
@@ -135,7 +135,7 @@ const FeatureBadge = ({ label, desc }) => (
 // ─── App ─────────────────────────────────────────────────────────────────────
 function App() {
   useEffect(() => {
-    document.title = 'Leaf — The Mindful, Phone-First Book Reader for iOS'
+    document.title = 'Leaf - The Mindful, Phone-First Book Reader for iOS'
 
     // Meta description
     let meta = document.querySelector('meta[name="description"]')
@@ -149,7 +149,7 @@ function App() {
 
     // Open Graph
     const ogTags = [
-      { property: 'og:title', content: 'Leaf — The Mindful, Phone-First Book Reader for iOS' },
+      { property: 'og:title', content: 'Leaf - The Mindful, Phone-First Book Reader for iOS' },
       { property: 'og:description', content: 'Vertical scroll. 70,000 free classics. iCloud sync. No noise, no streaks, no distractions. Free on iOS.' },
       { property: 'og:image', content: 'https://readleaf.app/leaf-app-icon.png' },
       { property: 'og:url', content: 'https://readleaf.app' },
@@ -204,7 +204,7 @@ function App() {
   return (
     <>
       {/* ═══════════════════════════════════════════════════════
-          HERO — split layout matching brand slide reference
+          HERO - split layout matching brand slide reference
           ═══════════════════════════════════════════════════════ */}
       <section
         style={{
@@ -346,7 +346,7 @@ function App() {
                 Most reading apps were built around the technology, not around you. They borrow the page from a physical book and force it onto a screen you hold vertically, in one hand.
               </p>
               <p style={{ maxWidth: 'none' }}>
-                You get cut off mid-thought. The flow breaks. You lose the thread. leaf was built to fix that — by working with how you actually read, not against it.
+                You get cut off mid-thought. The flow breaks. You lose the thread. leaf was built to fix that - by working with how you actually read, not against it.
               </p>
               <p style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontSize: '1.5rem', color: 'var(--color-ink)', textAlign: 'center', marginTop: 'var(--space-8)', maxWidth: 'none' }}>
                 The best reading experience is one you don't notice.
@@ -370,7 +370,7 @@ function App() {
               <h2 style={{ fontSize: 'clamp(2.2rem, 4vw, 3.5rem)' }}>
                 Every page ends<br />on a complete thought.
               </h2>
-              <p>Most reading apps cut off wherever the screen runs out — right in the middle of a sentence, a thought, a moment.</p>
+              <p>Most reading apps cut off wherever the screen runs out - right in the middle of a sentence, a thought, a moment.</p>
               <p>leaf reads the natural rhythm of the prose and always pauses at the right place. Every swipe lands where the thought ends. You stay in the story.</p>
               <p style={{ color: 'var(--color-ink)', fontWeight: 500, maxWidth: 'none' }}>
                 No interruptions. Just flow.
@@ -396,7 +396,7 @@ function App() {
                   }} aria-hidden="true" />
                   <img
                     src="/screenshots/screenshot-pageturn-new.png"
-                    alt="leaf reader showing the page-curl Leaf mode — The First Breath"
+                    alt="leaf reader showing the page-curl Leaf mode - The First Breath"
                     style={{ width: '100%', height: 'auto', display: 'block' }}
                   />
                 </div>
@@ -421,7 +421,7 @@ function App() {
               Three Ways to Read.
             </h2>
             <p style={{ margin: '0 auto', maxWidth: '48ch', textAlign: 'center' }}>
-              Every reader has a rhythm. leaf offers three distinct flows — pick the one that fits yours.
+              Every reader has a rhythm. leaf offers three distinct flows - pick the one that fits yours.
             </p>
           </motion.div>
 
@@ -493,7 +493,7 @@ function App() {
         <div className="container">
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 'var(--space-12)', alignItems: 'center' }}>
 
-            {/* Phone mockup — left */}
+            {/* Phone mockup - left */}
             <motion.div initial="hidden" whileInView="show" variants={fadeLeft()} viewport={{ once: true }}
               style={{ display: 'flex', justifyContent: 'center' }}>
               <div style={{
@@ -531,7 +531,7 @@ function App() {
               </div>
             </motion.div>
 
-            {/* Copy — right */}
+            {/* Copy - right */}
             <motion.div initial="hidden" whileInView="show" variants={fadeRight()} viewport={{ once: true }}>
               <p style={{
                 fontFamily: 'var(--font-sans)',
@@ -549,7 +549,7 @@ function App() {
                 Your books,<br />on every device.
               </h2>
               <p>
-                leaf now syncs your entire library through iCloud Drive. Pick up on your iPhone, continue on your iPad — your books are always where you are.
+                leaf now syncs your entire library through iCloud Drive. Pick up on your iPhone, continue on your iPad - your books are always where you are.
               </p>
               <p>
                 Prefer to keep everything local? Toggle off iCloud sync in settings and your library stays on-device, tucked in a dedicated folder in your Documents.
@@ -594,10 +594,10 @@ function App() {
                 <em>leaf</em> is designed for total digital silence. No distractions pulling you away, no streaks or notifications nudging you back.
               </p>
               <p style={{ color: 'rgba(244,241,234,0.8)', maxWidth: 'none' }}>
-                Every detail — the warm paper-toned background, the carefully chosen typefaces — is designed to fade away so the writing can take over.
+                Every detail - the warm paper-toned background, the carefully chosen typefaces - is designed to fade away so the writing can take over.
               </p>
               <p style={{ color: 'var(--color-white)', marginTop: 'var(--space-6)', maxWidth: 'none' }}>
-                And with hand-vetted editions of 70,000+ classics — from Marcus Aurelius's <em>Meditations</em> to Emily Brontë's <em>Wuthering Heights</em> — there's always something great to read next.
+                And with hand-vetted editions of 70,000+ classics - from Marcus Aurelius's <em>Meditations</em> to Emily Brontë's <em>Wuthering Heights</em> - there's always something great to read next.
               </p>
             </div>
 
@@ -656,9 +656,9 @@ function App() {
             <h2>Built by a single reader.</h2>
             <div style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', marginTop: 'var(--space-6)' }}>
               <p>leaf was not engineered in a boardroom. It was crafted by hand, born out of a personal frustration with the noise and friction of modern digital reading.</p>
-              <p>I wanted a space that revered the written word — a mindful reading app and pocket-sized retreat tailored to the cadence of great literature. Built with absolute intent for those who seek depth over distraction.</p>
+              <p>I wanted a space that revered the written word - a mindful reading app and pocket-sized retreat tailored to the cadence of great literature. Built with absolute intent for those who seek depth over distraction.</p>
               <p style={{ fontFamily: 'var(--font-sans)', fontStyle: 'normal', fontSize: '0.875rem', textTransform: 'uppercase', letterSpacing: '0.1em', marginTop: 'var(--space-6)', color: 'var(--color-ink)', maxWidth: 'none' }}>
-                — From the Developer.
+                - From the Developer.
               </p>
             </div>
           </motion.div>

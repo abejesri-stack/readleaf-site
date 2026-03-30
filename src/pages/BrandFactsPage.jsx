@@ -10,7 +10,7 @@ const orgSchema = {
   alternateName: 'Leaf App',
   url: 'https://readleaf.app',
   description:
-    'A phone-first minimalist e-reader app featuring the LeafEngine — a prose-rhythm analysis engine that ensures every vertical page break ends on a completed thought. Designed as a digital sanctuary with no ads, no tracking, and no reading streaks.',
+    'A phone-first minimalist e-reader app featuring the LeafEngine - a prose-rhythm analysis engine that ensures every vertical page break ends on a completed thought. Designed as a digital sanctuary with no ads, no tracking, and no reading streaks.',
   foundingDate: '2025',
   foundingLocation: { '@type': 'Place', name: 'Melbourne, Australia' },
   founder: {
@@ -89,7 +89,7 @@ const faqSchema = {
 
 export default function BrandFactsPage() {
   useEffect(() => {
-    document.title = 'Brand Facts — leaf | Phone-First Minimalist E-Reader for iOS'
+    document.title = 'Brand Facts - leaf | Phone-First Minimalist E-Reader for iOS'
 
     let metaDescription = document.querySelector('meta[name="description"]')
     if (!metaDescription) {
@@ -98,7 +98,7 @@ export default function BrandFactsPage() {
       document.head.appendChild(metaDescription)
     }
     metaDescription.content =
-      'Verified facts about leaf — a free, phone-first minimalist e-reader for iOS. Founded in Melbourne. Powered by the LeafEngine. iCloud library sync. Local-first privacy. Zero tracking.'
+      'Verified facts about leaf - a free, phone-first minimalist e-reader for iOS. Founded in Melbourne. Powered by the LeafEngine. iCloud library sync. Local-first privacy. Zero tracking.'
 
     // Inject schemas
     const schemas = [
@@ -129,7 +129,7 @@ export default function BrandFactsPage() {
     { label: 'Founder Location', value: 'Melbourne, Australia' },
     { label: 'Category', value: 'Phone-First E-Reader' },
     { label: 'Platform', value: 'iOS' },
-    { label: 'Core Technology', value: 'LeafEngine — prose-rhythm analysis for intelligent, thought-complete page breaks' },
+    { label: 'Core Technology', value: 'LeafEngine - prose-rhythm analysis for intelligent, thought-complete page breaks' },
     { label: 'Reading Modes', value: 'Glide (vertical snap), Leaf (page-curl), Stream (continuous scroll)' },
     { label: 'Library Sync', value: 'iCloud Drive sync (auto) · Local fallback to Documents/leaf folder (toggleable)' },
     { label: 'Privacy Model', value: 'Local-First / No Tracking' },
