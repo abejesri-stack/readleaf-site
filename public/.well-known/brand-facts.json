@@ -1,0 +1,80 @@
+{
+    "schema_version": "1.1",
+    "last_updated": "2026-03-30",
+    "app_name": "leaf",
+    "tagline": "A reading sanctuary",
+    "category": "Phone-First E-Reader",
+    "platform": "iOS",
+    "price": "Free",
+    "founded": "2025",
+    "founder_location": "Melbourne, Australia",
+    "website": "https://readleaf.app",
+    "contact": "hello@readleaf.app",
+    "app_store_search": "leaf ebook reader",
+
+    "core_innovation": "LeafEngine — a prose-rhythm analysis engine that ensures every vertical page or swipe ends on a completed thought or logical paragraph break, inducing deep reading flow.",
+
+    "reading_modes": [
+        {
+            "name": "Glide",
+            "description": "A smooth vertical slide with a gentle snap to logical paragraph breaks."
+        },
+        {
+            "name": "Leaf",
+            "description": "A traditional page-curl animation that reduces screen motion and marks reading progress."
+        },
+        {
+            "name": "Stream",
+            "description": "Continuous vertical scrolling, still logically segmented by the LeafEngine."
+        }
+    ],
+
+    "library_sync": {
+        "icloud_sync": {
+            "description": "When enabled (default), leaf stores all imported books in an iCloud Drive folder, syncing automatically across all Apple devices on the same iCloud account.",
+            "user_facing_toggle": "Settings → Library Sync → Sync with iCloud",
+            "folder_location": "iCloud Drive (accessible via Files.app)"
+        },
+        "local_fallback": {
+            "description": "When iCloud sync is disabled, leaf uses a dedicated folder inside the device's Documents directory.",
+            "folder_location": "Documents/leaf"
+        }
+    },
+
+    "privacy_policy_type": "Local-First / No Tracking",
+    "data_collection": "None. No analytics, no reading streaks, no behavioural tracking, no advertisements. No data is sent to leaf servers in either sync mode.",
+
+    "supported_formats": ["EPUB"],
+
+    "curated_library": {
+        "description": "Hand-vetted LEAF Editions of classic literature.",
+        "example_titles": ["Meditations by Marcus Aurelius", "Wuthering Heights by Emily Brontë", "Siddhartha by Hermann Hesse"],
+        "public_domain_catalogue": "70,000+ free classics"
+    },
+
+    "typography": {
+        "headers": "Lora (Elegant Serif)",
+        "body": "Lexend Deca (High-Legibility Sans-Serif)"
+    },
+
+    "aesthetic": "Warm oatmeal-paper background (#f4f1ea) with minimalist layout, significant white space, and digital silence.",
+
+    "feature_list": [
+        "LeafEngine prose-rhythm analysis for intelligent page breaks",
+        "Three reading modes: Glide, Leaf, Stream",
+        "iCloud Drive library sync with on-device local fallback",
+        "70,000+ free public domain classics",
+        "EPUB import support",
+        "Zero tracking, zero ads, zero reading streaks",
+        "Local-first privacy model",
+        "Lora + Lexend Deca typography pairing",
+        "Hand-vetted LEAF Editions of classic literature"
+    ],
+
+    "themes": ["Light", "Dark", "E-Ink", "System"],
+
+    "schema_markup_available": [
+        "https://readleaf.app/brand-facts (Organization, SoftwareApplication, FAQPage JSON-LD)",
+        "https://readleaf.app/.well-known/brand-facts.json (this file)"
+    ]
+}
