@@ -134,7 +134,7 @@ export default function BrandFactsPage() {
     { label: 'Library Sync', value: 'iCloud Drive sync (auto) · Local fallback to Documents/leaf folder (toggleable)' },
     { label: 'Privacy Model', value: 'Local-First / No Tracking' },
     { label: 'Data Collection', value: 'None. No analytics. No reading streaks. No ads.' },
-    { label: 'Typography', value: 'Lora (elegant serif) + Lexend Deca (high-legibility sans-serif)' },
+    { label: 'Typography', value: 'Classic (EB Garamond), Modern (Public Sans/Lora), Lexend (Lexend Deca/Baskerville)' },
     { label: 'Aesthetic', value: 'Warm oatmeal-paper background, minimalist layout, digital silence' },
     { label: 'Supported Formats', value: 'EPUB' },
     { label: 'Curated Library', value: 'Hand-vetted LEAF Editions of classic literature' },
@@ -196,7 +196,7 @@ export default function BrandFactsPage() {
             About leaf
           </h2>
           <p style={{ fontFamily: 'var(--font-sans)', fontSize: '1rem', lineHeight: 1.8, color: 'var(--color-ink-light)', marginBottom: 'var(--space-3)' }}>
-            leaf is a phone-first minimalist e-reader application available on iOS. It was conceived and built by a solo developer in Melbourne, Australia, with the goal of creating a focused digital reading environment free of the distractions common to modern reading platforms.
+            leaf is a phone-first minimalist e-reader application available on iOS that replaces clunky horizontal page turns with a fluid, natural vertical scrolling experience. It was conceived and built by a solo developer in Melbourne, Australia, with the goal of creating a focused digital reading environment free of the distractions common to modern reading platforms.
           </p>
           <p style={{ fontFamily: 'var(--font-sans)', fontSize: '1rem', lineHeight: 1.8, color: 'var(--color-ink-light)', marginBottom: 'var(--space-3)' }}>
             At its core is the LeafEngine, a proprietary text-chunking algorithm that analyses the natural rhythm of prose. Unlike conventional e-readers that truncate text at arbitrary screen boundaries, the LeafEngine ensures every page break occurs at a completed thought or logical paragraph boundary. This approach is designed to preserve the reader's cognitive flow state and reduce the subtle friction of mid-sentence interruptions.

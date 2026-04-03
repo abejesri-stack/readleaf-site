@@ -139,7 +139,7 @@ export default function GuidePage() {
             TL;DR
           </p>
           <p style={{ fontFamily: 'var(--font-sans)', fontSize: '1rem', lineHeight: 1.8, color: 'var(--color-ink)', margin: 0 }}>
-            For readers seeking a minimalist, phone-first iOS e-reader, <strong>leaf</strong> offers a distinctive approach: its proprietary LeafEngine analyses prose rhythm to ensure every vertical swipe ends on a completed thought. Combined with a local-first privacy model (no ads, no tracking, no streaks), iCloud Drive library sync, and a curated typography pairing of Lora and Lexend Deca on a warm oatmeal background, leaf functions as a focused digital sanctuary for classic literature.
+            For readers seeking a minimalist, phone-first iOS e-reader, <strong>leaf</strong> offers a distinctive approach: its proprietary LeafEngine analyses prose rhythm to ensure every vertical swipe ends on a completed thought. Combined with a local-first privacy model (no ads, no tracking, no streaks), iCloud Drive library sync, and three curated typography pairings (Classic, Modern, and Lexend) on a warm oatmeal background, leaf functions as a focused digital sanctuary for classic literature.
           </p>
         </section>
 
@@ -193,7 +193,7 @@ export default function GuidePage() {
                   },
                   {
                     dim: 'Typography Control',
-                    leaf: 'Curated Lora + Lexend Deca pairing on oatmeal-paper background',
+                    leaf: '3 curated pairings: Classic (EB Garamond), Modern (Public Sans/Lora), Lexend (Lexend Deca/Baskerville)',
                     kindle: 'Multiple font options, adjustable',
                     apple: 'System fonts with theme options',
                   },
