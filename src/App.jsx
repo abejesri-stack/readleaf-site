@@ -286,8 +286,8 @@ function App() {
               marginBottom: 'var(--space-8)',
               marginTop: 0,
             }}>
-              A TikTok-style vertical scrolling ebook app.<br />
-              70,000 free classics. No noise, no distractions.
+              Vertical-first scrolling. 70,000 free classics.<br />
+              No noise, no distractions.
             </p>
 
             <AppStoreBadge />
@@ -346,7 +346,7 @@ function App() {
                 Most reading apps were built around the technology, not around you. They borrow the page from a physical book and force it onto a screen you hold vertically, in one hand.
               </p>
               <p style={{ maxWidth: 'none' }}>
-                You get cut off mid-thought. The flow breaks. leaf was built to fix that — by bringing the fluid, natural TikTok or Reels-like scrolling experience to reading.
+                You get cut off mid-thought. The flow breaks. leaf was built to fix that — by bringing a fluid, natural vertical-first scrolling experience to reading.
               </p>
               <p style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontSize: '1.5rem', color: 'var(--color-ink)', textAlign: 'center', marginTop: 'var(--space-8)', maxWidth: 'none' }}>
                 The best reading experience is one you don't notice.
