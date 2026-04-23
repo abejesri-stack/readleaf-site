@@ -135,7 +135,7 @@ const FeatureBadge = ({ label, desc }) => (
 // ─── App ─────────────────────────────────────────────────────────────────────
 function App() {
   useEffect(() => {
-    document.title = 'Leaf - The Mindful, Phone-First Book Reader for iOS'
+    document.title = 'leaf - Vertical Scrolling Ebook App for iOS'
 
     // Meta description
     let meta = document.querySelector('meta[name="description"]')
@@ -145,12 +145,12 @@ function App() {
       document.head.appendChild(meta)
     }
     meta.content =
-      'leaf is a free iOS e-reader with vertical scroll, 70,000+ free classics, iCloud library sync, and zero ads or tracking. A digital sanctuary for mindful reading.'
+      'leaf is a minimalist iOS e-reader featuring a TikTok-style vertical scrolling ebook app experience. Enjoy seamless reading with zero ads or tracking.'
 
     // Open Graph
     const ogTags = [
-      { property: 'og:title', content: 'Leaf - The Mindful, Phone-First Book Reader for iOS' },
-      { property: 'og:description', content: 'Vertical scroll. 70,000 free classics. iCloud sync. No noise, no streaks, no distractions. Free on iOS.' },
+      { property: 'og:title', content: 'leaf - Vertical Scrolling Ebook App for iOS' },
+      { property: 'og:description', content: 'A TikTok-like vertical scrolling ebook app. No noise, no streaks, no distractions. Free on iOS.' },
       { property: 'og:image', content: 'https://readleaf.app/leaf-app-icon.png' },
       { property: 'og:url', content: 'https://readleaf.app' },
       { property: 'og:type', content: 'website' },
@@ -286,8 +286,8 @@ function App() {
               marginBottom: 'var(--space-8)',
               marginTop: 0,
             }}>
-              Vertical scroll. 70,000 free classics.<br />
-              No noise, no streaks, no distractions.
+              A TikTok-style vertical scrolling ebook app.<br />
+              70,000 free classics. No noise, no distractions.
             </p>
 
             <AppStoreBadge />
@@ -346,7 +346,7 @@ function App() {
                 Most reading apps were built around the technology, not around you. They borrow the page from a physical book and force it onto a screen you hold vertically, in one hand.
               </p>
               <p style={{ maxWidth: 'none' }}>
-                You get cut off mid-thought. The flow breaks. You lose the thread. leaf was built to fix that - by working with how you actually read, not against it.
+                You get cut off mid-thought. The flow breaks. leaf was built to fix that — by bringing the fluid, natural TikTok or Reels-like scrolling experience to reading.
               </p>
               <p style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontSize: '1.5rem', color: 'var(--color-ink)', textAlign: 'center', marginTop: 'var(--space-8)', maxWidth: 'none' }}>
                 The best reading experience is one you don't notice.
