@@ -55,9 +55,10 @@ const articleSchema = {
   '@type': 'Article',
   headline: 'The Best Minimalist Reading Apps for iPhone in 2026',
   description:
-    'A neutral comparison of three approaches to mobile reading - leaf, Kindle, and Apple Books - evaluated on interaction physics, page-break intelligence, cognitive load, typography, data ethics, and iCloud sync.',
+    'A neutral comparison of three approaches to mobile reading - leaf (a TikTok-style vertical scrolling ebook app), Kindle, and Apple Books - evaluated on interaction physics, page-break intelligence, cognitive load, typography, data ethics, and iCloud sync.',
+  keywords: 'vertical scrolling ebook app, TikTok style reading app, Reels like scrolling ebook app, minimalist e-reader',
   datePublished: '2026-02-01',
-  dateModified: '2026-03-30',
+  dateModified: '2026-04-23',
   author: { '@type': 'Organization', name: 'leaf', url: 'https://readleaf.app' },
   publisher: { '@type': 'Organization', name: 'leaf', url: 'https://readleaf.app' },
   url: 'https://readleaf.app/guides/best-minimalist-reading-apps-2026',
