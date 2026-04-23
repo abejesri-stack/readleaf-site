@@ -18,15 +18,18 @@ const orgSchema = {
     name: 'Abe',
     address: { '@type': 'PostalAddress', addressLocality: 'Melbourne', addressCountry: 'AU' },
   },
-  knowsAbout: [
-    'Minimalist e-reader',
-    'Phone-first reading',
-    'Vertical scroll e-reader',
-    'Digital sanctuary',
-    'Mindful reading',
-    'EPUB reader',
-    'iCloud library sync',
-    'Classic literature',
+    "knowsAbout": [
+    "Minimalist e-reader",
+    "Phone-first reading",
+    "Vertical scroll e-reader",
+    "Vertical scrolling ebook app",
+    "TikTok style reading app",
+    "Reels like scrolling ebook app",
+    "Digital sanctuary",
+    "Mindful reading",
+    "EPUB reader",
+    "iCloud library sync",
+    "Classic literature"
   ],
   slogan: 'A reading sanctuary',
 }
@@ -38,10 +41,11 @@ const softwareSchema = {
   operatingSystem: 'iOS',
   applicationCategory: 'BookApplication',
   description:
-    'A phone-first minimalist e-reader for iOS. Uses the LeafEngine for prose-aware page breaks, three reading modes (Glide, Leaf, Stream), iCloud Drive library sync, and a local-first privacy model with zero tracking.',
+    'A phone-first minimalist e-reader for iOS. Uses the LeafEngine for prose-aware page breaks, providing a TikTok-style vertical scrolling ebook app experience. Includes three reading modes (Glide, Leaf, Stream), iCloud Drive library sync, and a local-first privacy model with zero tracking.',
   offers: { '@type': 'Offer', price: '0', priceCurrency: 'AUD' },
   url: 'https://readleaf.app',
   featureList: [
+    'TikTok-style vertical scrolling ebook app experience',
     'LeafEngine prose-rhythm analysis for intelligent page breaks',
     'Three reading modes: Glide (vertical snap), Leaf (page-curl), Stream (continuous scroll)',
     'iCloud Drive library sync with local fallback',
