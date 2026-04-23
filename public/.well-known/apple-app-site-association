@@ -4,8 +4,8 @@
       {
         "appIDs": ["T25TWD3SWM.leaf.leaf"],
         "components": [
-          { "/": "/works/*",   "comment": "Open work detail in Explore tab" },
-          { "/": "/authors/*", "comment": "Open writer profile" }
+          { "/": "/works/*/*",  "comment": "Open work detail — /works/:userId/:workId" },
+          { "/": "/authors/*", "comment": "Open writer profile — /authors/:userId" }
         ]
       }
     ]
