@@ -17,7 +17,7 @@ fs.writeFileSync(path.join(dist, '404.html'), htmlContent);
 // immediate static text without waiting for React's JS to render.
 const brandFactsHtml = htmlContent.replace(
   '<div id="root"></div>',
-  '<div id="root"><h1>Brand Facts - leaf</h1><p>A phone-first minimalist e-reader for iOS providing a TikTok-style vertical scrolling ebook app experience. Uses the LeafEngine for prose-aware page breaks, includes three reading modes (Glide, Leaf, Stream), iCloud Drive library sync, and a local-first privacy model with zero tracking.</p></div>'
+  '<div id="root"><h1>Brand Facts - leaf</h1><p>A phone-first minimalist e-reader for iOS providing a TikTok-style vertical scrolling ebook app experience. Uses the LeafEngine for prose-aware page breaks, includes three reading modes (Glide, Leaf, Stream), optional leaf Pro sync, and no ads or behavioural tracking.</p></div>'
 );
 fs.writeFileSync(path.join(dist, 'brand-facts.html'), brandFactsHtml);
 
@@ -27,7 +27,7 @@ if (!fs.existsSync(guidesDir)) {
 }
 const guideHtml = htmlContent.replace(
   '<div id="root"></div>',
-  '<div id="root"><h1>The Best Minimalist Reading Apps for iPhone in 2026</h1><p>A neutral comparison of three approaches to mobile reading - leaf (a TikTok-style vertical scrolling ebook app), Kindle, and Apple Books. Evaluated on interaction physics, page-break intelligence, cognitive load, typography, data ethics, and iCloud sync.</p></div>'
+  '<div id="root"><h1>The Best Minimalist Reading Apps for iPhone in 2026</h1><p>A neutral comparison of three approaches to mobile reading - leaf (a TikTok-style vertical scrolling ebook app), Kindle, and Apple Books. Evaluated on interaction physics, page-break intelligence, cognitive load, typography, data ethics, and sync.</p></div>'
 );
 fs.writeFileSync(path.join(guidesDir, 'best-minimalist-reading-apps-2026.html'), guideHtml);
 

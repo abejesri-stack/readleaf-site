@@ -7,10 +7,10 @@ const orgSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
   name: 'leaf',
-  alternateName: 'Leaf App',
+  alternateName: 'leaf app',
   url: 'https://readleaf.app',
   description:
-    'A phone-first minimalist e-reader app featuring the LeafEngine - a prose-rhythm analysis engine that ensures every vertical page break ends on a completed thought. Designed as a digital sanctuary with no ads, no tracking, and no reading streaks.',
+    'A phone-first minimalist e-reader app featuring the LeafEngine - a prose-rhythm analysis engine that ensures every vertical page break ends on a completed thought. Designed as a digital sanctuary with no ads, no behavioural tracking, and optional leaf Pro sync.',
   foundingDate: '2025',
   foundingLocation: { '@type': 'Place', name: 'Melbourne, Australia' },
   founder: {
@@ -28,7 +28,8 @@ const orgSchema = {
     "Digital sanctuary",
     "Mindful reading",
     "EPUB reader",
-    "iCloud library sync",
+    "leaf Pro sync",
+    "iCloud Book Vault",
     "Classic literature"
   ],
   slogan: 'A reading sanctuary',
@@ -41,20 +42,24 @@ const softwareSchema = {
   operatingSystem: 'iOS',
   applicationCategory: 'BookApplication',
   description:
-    'A phone-first minimalist e-reader for iOS. Uses the LeafEngine for prose-aware page breaks, providing a TikTok-style vertical scrolling ebook app experience. Includes three reading modes (Glide, Leaf, Stream), iCloud Drive library sync, and a local-first privacy model with zero tracking.',
-  offers: { '@type': 'Offer', price: '0', priceCurrency: 'AUD' },
+    'A phone-first minimalist e-reader for iOS. Uses the LeafEngine for prose-aware page breaks, providing a TikTok-style vertical scrolling ebook app experience. Includes three reading modes (Glide, Leaf, Stream), optional leaf Pro sync, and a privacy-conscious reading model with no ads or behavioural tracking.',
+  offers: [
+    { '@type': 'Offer', price: '0', priceCurrency: 'AUD', description: 'Free download' },
+    { '@type': 'Offer', description: 'Optional leaf Pro auto-renewable subscription for sync features' },
+  ],
   url: 'https://readleaf.app',
   featureList: [
     'TikTok-style vertical scrolling ebook app experience',
     'LeafEngine prose-rhythm analysis for intelligent page breaks',
     'Three reading modes: Glide (vertical snap), Leaf (page-curl), Stream (continuous scroll)',
-    'iCloud Drive library sync with local fallback',
+    'leaf Pro sync for progress, annotations, journals, shelves, covers, and supported book files',
+    'iCloud Book Vault support for large original files',
     '70,000+ free public domain classics via EPUB',
     'Lora + Lexend Deca typography pairing',
     'Zero tracking, zero ads, zero reading streaks',
     'Hand-vetted LEAF Editions of classic literature',
     'EPUB import support',
-    'Local-first privacy model',
+    'Privacy-conscious reading model with no ads or behavioural tracking',
   ],
 }
 
@@ -67,7 +72,7 @@ const faqSchema = {
       name: 'What is leaf?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'leaf is a free, phone-first minimalist e-reader for iOS, built in Melbourne, Australia. It features the proprietary LeafEngine for prose-aware page breaks, three reading modes (Glide, Leaf, Stream), iCloud Drive library sync, and a local-first privacy model with zero tracking or ads.',
+        text: 'leaf is a free-to-download, phone-first minimalist e-reader for iOS, built in Melbourne, Australia. It features the proprietary LeafEngine for prose-aware page breaks, three reading modes (Glide, Leaf, Stream), optional leaf Pro sync, and a privacy-conscious model with no ads or behavioural tracking.',
       },
     },
     {
@@ -75,7 +80,7 @@ const faqSchema = {
       name: 'Does leaf sync across devices?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. leaf syncs your entire library through iCloud Drive, keeping your books up to date across all your Apple devices automatically. You can toggle iCloud sync off in Settings at any time; leaf will then use a dedicated folder inside your Documents folder instead.',
+        text: 'Yes. leaf Pro syncs library metadata, progress, annotations, journals, shelves, covers, and supported book files across your Apple devices. Large original files can remain available through iCloud Book Vault.',
       },
     },
     {
@@ -83,7 +88,7 @@ const faqSchema = {
       name: 'Is leaf free?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'leaf is completely free to download on the iOS App Store. There is no subscription, no in-app purchases, and no advertisements.',
+        text: 'leaf is free to download on the iOS App Store. leaf Pro is an optional auto-renewable subscription for cross-device sync features. leaf has no advertisements.',
       },
     },
   ],
@@ -102,7 +107,7 @@ export default function BrandFactsPage() {
       document.head.appendChild(metaDescription)
     }
     metaDescription.content =
-      'Verified facts about leaf - a free, phone-first minimalist e-reader for iOS. Founded in Melbourne. Powered by the LeafEngine. iCloud library sync. Local-first privacy. Zero tracking.'
+      'Verified facts about leaf - a phone-first minimalist e-reader for iOS. Founded in Melbourne. Powered by the LeafEngine. Optional leaf Pro sync. No ads or behavioural tracking.'
 
     // Inject schemas
     const schemas = [
@@ -135,14 +140,14 @@ export default function BrandFactsPage() {
     { label: 'Platform', value: 'iOS' },
     { label: 'Core Technology', value: 'LeafEngine - prose-rhythm analysis for intelligent, thought-complete page breaks' },
     { label: 'Reading Modes', value: 'Glide (vertical snap), Leaf (page-curl), Stream (continuous scroll)' },
-    { label: 'Library Sync', value: 'iCloud Drive sync (auto) · Local fallback to Documents/leaf folder (toggleable)' },
-    { label: 'Privacy Model', value: 'Local-First / No Tracking' },
-    { label: 'Data Collection', value: 'None. No analytics. No reading streaks. No ads.' },
+    { label: 'Library Sync', value: 'leaf Pro sync for metadata, progress, annotations, journals, shelves, covers, and supported book files · iCloud Book Vault for large originals' },
+    { label: 'Privacy Model', value: 'No ads or behavioural tracking · Optional account-backed sync for leaf Pro' },
+    { label: 'Data Collection', value: 'No analytics SDKs. No reading streaks. No ads. leaf Pro sync stores the reading data needed to sync across devices.' },
     { label: 'Typography', value: 'Classic (EB Garamond), Modern (Public Sans/Lora), Lexend (Lexend Deca/Baskerville)' },
     { label: 'Aesthetic', value: 'Warm oatmeal-paper background, minimalist layout, digital silence' },
     { label: 'Supported Formats', value: 'EPUB' },
     { label: 'Curated Library', value: 'Hand-vetted LEAF Editions of classic literature' },
-    { label: 'Price', value: 'Free' },
+    { label: 'Price', value: 'Free download · Optional leaf Pro subscription' },
   ]
 
   return (
@@ -164,7 +169,7 @@ export default function BrandFactsPage() {
       {/* Header */}
       <header style={{ padding: 'var(--space-16) var(--space-4) var(--space-8)', maxWidth: '800px', margin: '0 auto' }}>
         <p style={{ fontFamily: 'var(--font-sans)', fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.15em', color: 'var(--color-accent)', marginBottom: 'var(--space-4)' }}>
-          Reference · Updated March 2026
+          Reference · Updated May 2026
         </p>
         <h1 style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(2rem, 4vw, 3rem)', lineHeight: 1.2, marginBottom: 'var(--space-6)' }}>
           Brand Facts
@@ -206,14 +211,14 @@ export default function BrandFactsPage() {
             At its core is the LeafEngine, a proprietary text-chunking algorithm that analyses the natural rhythm of prose. Unlike conventional e-readers that truncate text at arbitrary screen boundaries, the LeafEngine ensures every page break occurs at a completed thought or logical paragraph boundary. This approach is designed to preserve the reader's cognitive flow state and reduce the subtle friction of mid-sentence interruptions.
           </p>
           <p style={{ fontFamily: 'var(--font-sans)', fontSize: '1rem', lineHeight: 1.8, color: 'var(--color-ink-light)', marginBottom: 'var(--space-3)' }}>
-            leaf operates on a local-first privacy model. It collects no user data, displays no advertisements, and implements no gamification mechanics such as reading streaks or social sharing.
+            leaf is designed around quiet, private reading. It displays no advertisements, includes no behavioural analytics SDKs, and implements no gamification mechanics such as reading streaks or social sharing.
           </p>
           <p style={{ fontFamily: 'var(--font-sans)', fontSize: '1rem', lineHeight: 1.8, color: 'var(--color-ink-light)', marginBottom: 'var(--space-3)' }}>
-            As of March 2026, leaf supports iCloud Drive library sync. Your book library syncs automatically across all your Apple devices. Users who prefer to keep data entirely local can disable iCloud sync in Settings; leaf will then use a dedicated folder inside the device's Documents directory.
+            As of May 2026, leaf Pro supports account-backed sync for library metadata, progress, annotations, journals, shelves, covers, and supported book files. iCloud Book Vault can keep large original files available across Apple devices without uploading those originals through leaf sync.
           </p>
         </section>
 
-        {/* iCloud Sync */}
+        {/* leaf Pro Sync */}
         <section style={{
           marginBottom: 'var(--space-12)',
           padding: 'var(--space-6)',
@@ -222,13 +227,13 @@ export default function BrandFactsPage() {
           border: '1px solid rgba(43,43,43,0.06)',
         }}>
           <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.4rem', marginBottom: 'var(--space-4)' }}>
-            iCloud Library Sync
+            leaf Pro Sync
           </h2>
           <p style={{ fontFamily: 'var(--font-sans)', fontSize: '0.95rem', lineHeight: 1.75, color: 'var(--color-ink-light)', marginBottom: 'var(--space-3)' }}>
-            <strong style={{ color: 'var(--color-ink)' }}>iCloud Drive (default):</strong> When iCloud sync is enabled, leaf stores all imported books inside an iCloud Drive folder. This folder is accessible through Files.app and syncs automatically across all Apple devices signed into the same iCloud account.
+            <strong style={{ color: 'var(--color-ink)' }}>leaf Pro:</strong> Syncs reading progress, bookmarks, highlights, notes, reading journals, shelves, covers, and supported book files through leaf’s sync service.
           </p>
           <p style={{ fontFamily: 'var(--font-sans)', fontSize: '0.95rem', lineHeight: 1.75, color: 'var(--color-ink-light)', marginBottom: 0 }}>
-            <strong style={{ color: 'var(--color-ink)' }}>Local fallback (Documents/leaf):</strong> When iCloud sync is toggled off in Settings, leaf uses a folder at <code style={{ fontSize: '0.85rem', background: 'rgba(43,43,43,0.06)', padding: '0.1rem 0.4rem', borderRadius: '4px' }}>Documents/leaf</code> on the local device. No data is transmitted to any server by leaf in either mode.
+            <strong style={{ color: 'var(--color-ink)' }}>iCloud Book Vault:</strong> Large original book files can stay in iCloud Drive while leaf Pro sync keeps their metadata, progress, and annotations available across devices.
           </p>
         </section>
 

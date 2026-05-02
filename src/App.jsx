@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { motion } from 'framer-motion'
+import { motion as Motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 
 // ─── App Store Badge ─────────────────────────────────────────────────────────
@@ -145,12 +145,12 @@ function App() {
       document.head.appendChild(meta)
     }
     meta.content =
-      'leaf is a minimalist iOS e-reader featuring a TikTok-style vertical scrolling ebook app experience. Enjoy seamless reading with zero ads or tracking.'
+      'leaf is a minimalist iOS e-reader with vertical-first reading, 70,000+ free classics, and optional leaf Pro sync for your library, progress, highlights, notes, and journals.'
 
     // Open Graph
     const ogTags = [
       { property: 'og:title', content: 'leaf - Vertical Scrolling Ebook App for iOS' },
-      { property: 'og:description', content: 'A TikTok-like vertical scrolling ebook app. No noise, no streaks, no distractions. Free on iOS.' },
+      { property: 'og:description', content: 'A quieter ebook app for iPhone. Vertical-first reading, free classics, and optional leaf Pro sync across devices.' },
       { property: 'og:image', content: 'https://readleaf.app/leaf-app-icon.png' },
       { property: 'og:url', content: 'https://readleaf.app' },
       { property: 'og:type', content: 'website' },
@@ -173,17 +173,21 @@ function App() {
       operatingSystem: 'iOS',
       applicationCategory: 'BookApplication',
       description:
-        'A phone-first minimalist e-reader for iOS. Features the LeafEngine for prose-aware page breaks, three reading modes (Glide, Leaf, Stream), iCloud Drive library sync, and zero tracking.',
-      offers: { '@type': 'Offer', price: '0', priceCurrency: 'AUD' },
+        'A phone-first minimalist e-reader for iOS. Features the LeafEngine for prose-aware page breaks, three reading modes (Glide, Leaf, Stream), and optional leaf Pro sync for library metadata, progress, annotations, journals, covers, and supported book files.',
+      offers: [
+        { '@type': 'Offer', price: '0', priceCurrency: 'AUD', description: 'Free download' },
+        { '@type': 'Offer', description: 'Optional leaf Pro auto-renewable subscription for sync features' },
+      ],
       url: 'https://readleaf.app',
       featureList: [
         'LeafEngine prose-rhythm analysis for intelligent page breaks',
         'Three reading modes: Glide, Leaf, Stream',
-        'iCloud Drive library sync',
+        'leaf Pro sync for library metadata, progress, annotations, journals, covers, and supported book files',
+        'iCloud Book Vault support for large original files',
         '70,000+ free public domain classics',
         'Zero tracking, zero ads, zero reading streaks',
         'EPUB import support',
-        'Local-first privacy model',
+        'Privacy-conscious reading model with no ads or behavioural tracking',
         'Lora + Lexend Deca curated typography',
       ],
     }
@@ -259,7 +263,7 @@ function App() {
         {/* ── Split content ── */}
         <div className="hero-grid" style={{ flex: 1, maxWidth: '1200px', margin: '0 auto', width: '100%' }}>
           {/* Left: copy */}
-          <motion.div
+          <Motion.div
             className="hero-copy"
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -287,14 +291,14 @@ function App() {
               marginTop: 0,
             }}>
               Vertical-first scrolling. 70,000 free classics.<br />
-              No noise, no distractions.
+              Optional leaf Pro sync. No noise.
             </p>
 
             <AppStoreBadge />
-          </motion.div>
+          </Motion.div>
 
           {/* Right: phone screenshot */}
-          <motion.div
+          <Motion.div
             className="hero-phone"
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -323,7 +327,7 @@ function App() {
                 />
               </div>
             </div>
-          </motion.div>
+          </Motion.div>
         </div>
       </section>
 
@@ -333,7 +337,7 @@ function App() {
           ═══════════════════════════════════════════════════════ */}
       <section className="section" style={{ background: 'rgba(255,255,255,0.35)' }}>
         <div className="container">
-          <motion.div
+          <Motion.div
             initial="hidden" whileInView="show" variants={fadeUp}
             viewport={{ once: true, margin: '-80px' }}
             style={{ maxWidth: '800px', margin: '0 auto' }}
@@ -352,7 +356,7 @@ function App() {
                 The best reading experience is one you don't notice.
               </p>
             </div>
-          </motion.div>
+          </Motion.div>
         </div>
       </section>
 
@@ -366,7 +370,7 @@ function App() {
         <div className="container">
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 'var(--space-12)', alignItems: 'center' }}>
 
-            <motion.div initial="hidden" whileInView="show" variants={fadeLeft()} viewport={{ once: true }}>
+            <Motion.div initial="hidden" whileInView="show" variants={fadeLeft()} viewport={{ once: true }}>
               <h2 style={{ fontSize: 'clamp(2.2rem, 4vw, 3.5rem)' }}>
                 Every page ends<br />on a complete thought.
               </h2>
@@ -375,9 +379,9 @@ function App() {
               <p style={{ color: 'var(--color-ink)', fontWeight: 500, maxWidth: 'none' }}>
                 No interruptions. Just flow.
               </p>
-            </motion.div>
+            </Motion.div>
 
-            <motion.div initial="hidden" whileInView="show" variants={fadeRight()} viewport={{ once: true }}
+            <Motion.div initial="hidden" whileInView="show" variants={fadeRight()} viewport={{ once: true }}
               style={{ display: 'flex', justifyContent: 'center' }}>
               <div style={{
                 background: '#1c1c1e',
@@ -401,7 +405,7 @@ function App() {
                   />
                 </div>
               </div>
-            </motion.div>
+            </Motion.div>
 
           </div>
         </div>
@@ -415,7 +419,7 @@ function App() {
           ═══════════════════════════════════════════════════════ */}
       <section className="section">
         <div className="container">
-          <motion.div initial="hidden" whileInView="show" variants={fadeUp} viewport={{ once: true }}
+          <Motion.div initial="hidden" whileInView="show" variants={fadeUp} viewport={{ once: true }}
             style={{ textAlign: 'center', marginBottom: 'var(--space-12)' }}>
             <h2 style={{ fontSize: 'clamp(2.2rem, 4vw, 3.5rem)', marginBottom: 'var(--space-3)' }}>
               Three Ways to Read.
@@ -423,7 +427,7 @@ function App() {
             <p style={{ margin: '0 auto', maxWidth: '48ch', textAlign: 'center' }}>
               Every reader has a rhythm. leaf offers three distinct flows - pick the one that fits yours.
             </p>
-          </motion.div>
+          </Motion.div>
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 'var(--space-5)' }}>
             {[
@@ -446,7 +450,7 @@ function App() {
                 bg: 'rgba(255,255,255,0.45)',
               },
             ].map((flow, i) => (
-              <motion.div
+              <Motion.div
                 key={flow.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -477,7 +481,7 @@ function App() {
                 <p style={{ fontSize: '0.95rem', margin: 0, lineHeight: 1.75, maxWidth: 'none' }}>
                   {flow.desc}
                 </p>
-              </motion.div>
+              </Motion.div>
             ))}
           </div>
         </div>
@@ -487,14 +491,14 @@ function App() {
 
 
       {/* ═══════════════════════════════════════════════════════
-          iCLOUD SYNC  (new feature)
+          LEAF PRO SYNC
           ═══════════════════════════════════════════════════════ */}
       <section className="section" style={{ background: 'rgba(255,255,255,0.4)' }}>
         <div className="container">
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 'var(--space-12)', alignItems: 'center' }}>
 
             {/* Phone mockup - left */}
-            <motion.div initial="hidden" whileInView="show" variants={fadeLeft()} viewport={{ once: true }}
+            <Motion.div initial="hidden" whileInView="show" variants={fadeLeft()} viewport={{ once: true }}
               style={{ display: 'flex', justifyContent: 'center' }}>
               <div style={{
                 background: '#1c1c1e',
@@ -529,10 +533,10 @@ function App() {
                   />
                 </div>
               </div>
-            </motion.div>
+            </Motion.div>
 
             {/* Copy - right */}
-            <motion.div initial="hidden" whileInView="show" variants={fadeRight()} viewport={{ once: true }}>
+            <Motion.div initial="hidden" whileInView="show" variants={fadeRight()} viewport={{ once: true }}>
               <p style={{
                 fontFamily: 'var(--font-sans)',
                 fontSize: '0.68rem',
@@ -543,32 +547,32 @@ function App() {
                 fontWeight: 600,
                 maxWidth: 'none',
               }}>
-                New · iCloud Sync
+                New · leaf Pro Sync
               </p>
               <h2 style={{ fontSize: 'clamp(2rem, 4vw, 3.2rem)', marginBottom: 'var(--space-5)' }}>
-                Your books,<br />on every device.
+                Pick up where<br />you left off.
               </h2>
               <p>
-                leaf now syncs your entire library through iCloud Drive. Pick up on your iPhone, continue on your iPad - your books are always where you are.
+                leaf Pro keeps your library, shelves, reading progress, highlights, notes, and reading journals in sync across your Apple devices.
               </p>
               <p>
-                Prefer to keep everything local? Toggle off iCloud sync in settings and your library stays on-device, tucked in a dedicated folder in your Documents.
+                Supported book files and covers can sync through leaf. Large originals can stay in your iCloud Book Vault, so your reading data still follows you even when a file is too large for app sync.
               </p>
               <div style={{ marginTop: 'var(--space-5)', display: 'flex', flexDirection: 'column', gap: 'var(--space-4)' }}>
                 <FeatureBadge
-                  label="iCloud Drive sync"
-                  desc="Your library syncs automatically to all your iOS devices via iCloud Drive."
+                  label="Account-backed sync"
+                  desc="Progress, shelves, bookmarks, highlights, notes, and reading journals sync through leaf Pro."
                 />
                 <FeatureBadge
-                  label="Local fallback"
-                  desc="Toggle off to store books in a dedicated Documents/leaf folder on-device."
+                  label="Book file fallback"
+                  desc="Under-limit book files can sync through leaf; large originals can remain available through iCloud Book Vault."
                 />
                 <FeatureBadge
-                  label="Private by default"
-                  desc="Your reading data never touches our servers. Zero telemetry, always."
+                  label="No ads or tracking"
+                  desc="leaf Pro adds sync, not feeds, streaks, advertising, or behavioural analytics."
                 />
               </div>
-            </motion.div>
+            </Motion.div>
 
           </div>
         </div>
@@ -582,7 +586,7 @@ function App() {
           ═══════════════════════════════════════════════════════ */}
       <section className="section" style={{ backgroundColor: 'var(--color-ink)', color: 'var(--color-oatmeal)' }}>
         <div className="container text-center">
-          <motion.div
+          <Motion.div
             initial="hidden" whileInView="show" variants={fadeUp} viewport={{ once: true }}
             style={{ maxWidth: '800px', margin: '0 auto' }}
           >
@@ -601,7 +605,7 @@ function App() {
               </p>
             </div>
 
-            <motion.div
+            <Motion.div
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -625,13 +629,13 @@ function App() {
                   }} aria-hidden="true" />
                   <img
                     src="/screenshots/screenshot-explore-new.png"
-                    alt="leaf Explore screen showing the Leaf Collection of classic books"
+                    alt="leaf Explore screen showing the leaf Collection of classic books"
                     style={{ width: '100%', height: 'auto', display: 'block' }}
                   />
                 </div>
               </div>
-            </motion.div>
-          </motion.div>
+            </Motion.div>
+          </Motion.div>
         </div>
       </section>
 
@@ -643,7 +647,7 @@ function App() {
           ═══════════════════════════════════════════════════════ */}
       <section className="section">
         <div className="container">
-          <motion.div
+          <Motion.div
             initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}
             viewport={{ once: true }} transition={{ duration: 1 }}
             style={{
@@ -661,7 +665,7 @@ function App() {
                 - From the Developer.
               </p>
             </div>
-          </motion.div>
+          </Motion.div>
         </div>
       </section>
 
@@ -685,7 +689,7 @@ function App() {
         }}
       >
         <div className="container">
-          <motion.div
+          <Motion.div
             initial={{ opacity: 0, scale: 0.97 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
@@ -695,10 +699,10 @@ function App() {
               Start reading more,<br />starting today.
             </h2>
             <p style={{ margin: 'var(--space-5) auto var(--space-8)', maxWidth: '40ch', textAlign: 'center' }}>
-              Free on the App Store. No subscription, no ads. Just you and the books.
+              Free on the App Store. leaf Pro is optional for cross-device sync. No ads.
             </p>
             <AppStoreBadge />
-          </motion.div>
+          </Motion.div>
         </div>
       </section>
 

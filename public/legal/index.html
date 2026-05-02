@@ -176,7 +176,7 @@
                 <div class="brand">leaf</div>
                 <h1 class="title">Privacy Policy &amp; Terms of Use</h1>
                 <p class="subtitle">
-                    Effective date: <span class="kbd">2026-02-27</span> ·
+                    Effective date: <span class="kbd">2026-05-02</span> ·
                     Contact: <a href="mailto:support@readleaf.co">support@readleaf.co</a>
                 </p>
             </div>
@@ -190,11 +190,15 @@
 
         <section id="privacy" class="card" aria-labelledby="privacy-title">
             <h2 id="privacy-title">Privacy Policy</h2>
-            <p>leaf is a reading app designed to collect as little data as possible.</p>
+            <p>leaf is a reading app designed to collect as little data as possible while supporting optional account,
+                subscription, and sync features.</p>
 
             <h3>What leaf collects</h3>
             <ul>
-                <li><strong>No accounts:</strong> leaf does not require sign-in.</li>
+                <li><strong>Account information:</strong> if you sign in with Apple, leaf receives the account
+                    identifier and any name or email information Apple shares with the app.</li>
+                <li><strong>Subscription status:</strong> if you subscribe to leaf Pro, Apple and leaf process
+                    subscription status so Pro features can be enabled.</li>
                 <li><strong>No analytics / ads SDKs:</strong> leaf does not include third-party analytics or advertising
                     SDKs.</li>
                 <li><strong>No sale of data:</strong> we do not sell personal data.</li>
@@ -205,26 +209,43 @@
             <ul>
                 <li>Imported books and files (e.g., EPUB, PDF, Markdown)</li>
                 <li>Reading position, bookmarks, highlights, and notes</li>
-                <li>App preferences (theme, typography, reading flow)</li>
+                <li>Shelves, reading journals, and app preferences (theme, typography, reading flow)</li>
             </ul>
-            <p>This data is <strong>not uploaded</strong> by leaf.</p>
+
+            <h3>leaf Pro sync</h3>
+            <p>If you enable leaf Pro sync, leaf syncs reading data through our sync provider, Supabase, so it can be
+                available on your Apple devices. Synced data may include:</p>
+            <ul>
+                <li>Library metadata, shelves, reading progress, bookmarks, highlights, notes, and reading journals</li>
+                <li>Book covers and supported book files that are small enough to sync through leaf</li>
+                <li>Portable file location metadata for books stored in your iCloud Book Vault</li>
+            </ul>
+            <p>Large original book files may remain in your iCloud Book Vault instead of being uploaded to leaf sync.
+                In that case, metadata, progress, annotations, shelves, and journals can still sync, while the original
+                file is provided by iCloud Drive on devices where it is available.</p>
+
+            <h3>iCloud Book Vault</h3>
+            <p>If you use iCloud Book Vault, your book files are stored in iCloud Drive and handled by Apple under your
+                Apple ID and iCloud settings. You can manage those files in the Files app.</p>
 
             <h3>Network access</h3>
             <p>leaf may access the internet to:</p>
             <ul>
+                <li>Sign you in with Apple and verify leaf Pro subscription status</li>
+                <li>Sync leaf Pro reading data, covers, and supported book files through Supabase</li>
                 <li>Fetch public catalog metadata (e.g., JSON feeds) from sources such as <strong>Standard
                         Ebooks</strong> and <strong>Project Gutenberg</strong></li>
                 <li>Download <strong>EPUB</strong> files when you choose to</li>
             </ul>
-            <p>Downloads are initiated by you. leaf does not add tracking parameters to these requests.</p>
+            <p>leaf does not add advertising or analytics tracking parameters to catalog or download requests.</p>
 
             <h3>Diagnostics</h3>
             <p>Apple may provide aggregated crash and performance information to developers through platform services.
                 leaf does not include third-party crash reporting SDKs.</p>
 
             <h3>Your choices</h3>
-            <p>You can delete imported books and reading data at any time by removing them from the app (and/or
-                uninstalling the app).</p>
+            <p>You can delete imported books and reading data from the app, remove iCloud Book Vault files in the Files
+                app, sign out of leaf, or manage/cancel leaf Pro through your Apple ID subscription settings.</p>
 
             <h3>Changes</h3>
             <p>If we update this policy, we will update the “Effective date” above.</p>
@@ -236,12 +257,23 @@
             <h2 id="terms-title">Terms of Use</h2>
             <p>By using leaf, you agree to these terms.</p>
 
+            <h3>Apple standard EULA</h3>
+            <p>leaf uses Apple’s standard End User License Agreement (EULA), available at
+                <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">https://www.apple.com/legal/internet-services/itunes/dev/stdeula/</a>.
+            </p>
+
             <h3>Use of the app</h3>
             <p>leaf is provided “as is.” We may update or change features over time.</p>
 
+            <h3>leaf Pro subscription</h3>
+            <p>leaf Pro is an optional auto-renewable subscription managed by Apple. Subscription length, price, renewal,
+                cancellation, and refund handling are shown by Apple during purchase and managed through your Apple ID.
+                leaf Pro enables Pro features such as account-backed sync.</p>
+
             <h3>Your content</h3>
-            <p>Books you import into leaf and any notes or highlights you create remain yours. leaf stores reading data
-                locally on your device.</p>
+            <p>Books you import into leaf and any notes, highlights, or journal entries you create remain yours. If you
+                use leaf Pro sync, selected reading data and supported files are synced so they can be available on your
+                devices.</p>
 
             <h3>Third-party content sources</h3>
             <p>leaf may link to or download public-domain ebooks and metadata from third-party sources such as Standard
@@ -252,6 +284,11 @@
 
             <h3>Acceptable use</h3>
             <p>Do not use leaf to violate copyright or other rights, or to misuse third-party services.</p>
+
+            <h3>Sync and availability</h3>
+            <p>We work to keep sync reliable, but network services, iCloud Drive, public catalogs, and third-party
+                services may be unavailable or change over time. You are responsible for keeping copies of important
+                files outside the app if you need a separate backup.</p>
 
             <h3>Limitation of liability</h3>
             <p>To the maximum extent permitted by law, leaf is not liable for any indirect, incidental, or consequential
@@ -272,8 +309,14 @@
             <h3>FAQ</h3>
             <ul>
                 <li><strong>How do I import books?</strong> Share an EPUB/PDF to leaf, or import from the Files app.</li>
-                <li><strong>Where are my books and notes stored?</strong> On your device. leaf does not require sign-in.</li>
-                <li><strong>Does leaf sync across devices?</strong> Not yet.</li>
+                <li><strong>Where are my books and notes stored?</strong> leaf stores reading data on your device. If you
+                    use leaf Pro sync, reading data and supported files can also sync through leaf’s sync service. If
+                    you use iCloud Book Vault, original book files may be stored in iCloud Drive.</li>
+                <li><strong>Does leaf sync across devices?</strong> Yes. leaf Pro can sync library metadata, progress,
+                    annotations, journals, shelves, covers, and supported book files. Large originals can remain
+                    available through iCloud Book Vault.</li>
+                <li><strong>How do I manage or cancel leaf Pro?</strong> Use your Apple ID subscription settings in the
+                    App Store or iOS Settings.</li>
                 <li><strong>How do I report a bug?</strong> Email us with your device model, iOS version, and leaf app version.</li>
                 <li><strong>Where do the public-domain books come from?</strong> leaf can fetch catalogs and download links from sources like Standard Ebooks and Project Gutenberg.</li>
             </ul>

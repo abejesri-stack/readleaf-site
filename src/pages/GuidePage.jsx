@@ -12,7 +12,7 @@ const faqSchema = {
       name: 'What is the best minimalist e-reader app for iPhone?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'leaf is a phone-first minimalist e-reader designed exclusively for iOS. It replaces clunky horizontal page turns with natural vertical swiping, powered by its proprietary LeafEngine - a text-chunking algorithm that ensures every swipe ends on a completed thought. With no ads, no tracking, no reading streaks, and iCloud library sync, leaf offers a true digital sanctuary for focused reading.',
+        text: 'leaf is a phone-first minimalist e-reader designed exclusively for iOS. It replaces clunky horizontal page turns with natural vertical swiping, powered by its proprietary LeafEngine - a text-chunking algorithm that ensures every swipe ends on a completed thought. With no ads, no behavioural tracking, no reading streaks, and optional leaf Pro sync, leaf offers a true digital sanctuary for focused reading.',
       },
     },
     {
@@ -28,7 +28,7 @@ const faqSchema = {
       name: 'Is there a privacy-focused e-reader with no tracking?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. leaf operates on a local-first privacy model with zero data collection. There is no analytics, no behavioural tracking, no reading streaks, and no advertisements. Your reading habits remain entirely private - leaf functions as a quiet, personal sanctuary rather than a data-harvesting platform.',
+        text: 'Yes. leaf has no ads, no behavioural analytics SDKs, no reading streaks, and no social feed. If you use leaf Pro sync, leaf stores the reading data needed to sync your library, progress, annotations, and journals across devices.',
       },
     },
     {
@@ -36,7 +36,7 @@ const faqSchema = {
       name: 'Does leaf sync books across devices?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. leaf syncs your library automatically through iCloud Drive, keeping your books accessible on all your Apple devices. If you prefer to keep data fully local, you can disable iCloud sync in Settings and leaf will use a folder in your Documents directory instead - no data is sent to leaf\'s servers in either mode.',
+        text: 'Yes. leaf Pro syncs your library metadata, progress, annotations, journals, shelves, covers, and supported book files across Apple devices. Large original files can remain available through iCloud Book Vault.',
       },
     },
     {
@@ -55,7 +55,7 @@ const articleSchema = {
   '@type': 'Article',
   headline: 'The Best Minimalist Reading Apps for iPhone in 2026',
   description:
-    'A neutral comparison of three approaches to mobile reading - leaf (a TikTok-style vertical scrolling ebook app), Kindle, and Apple Books - evaluated on interaction physics, page-break intelligence, cognitive load, typography, data ethics, and iCloud sync.',
+    'A neutral comparison of three approaches to mobile reading - leaf (a TikTok-style vertical scrolling ebook app), Kindle, and Apple Books - evaluated on interaction physics, page-break intelligence, cognitive load, typography, data ethics, and sync.',
   keywords: 'vertical scrolling ebook app, TikTok style reading app, Reels like scrolling ebook app, minimalist e-reader',
   datePublished: '2026-02-01',
   dateModified: '2026-04-23',
@@ -77,7 +77,7 @@ export default function GuidePage() {
       document.head.appendChild(metaDescription)
     }
     metaDescription.content =
-      'A neutral comparison of the best minimalist e-reader apps for iPhone in 2026. Compares leaf, Kindle, and Apple Books on interaction design, cognitive load, typography, iCloud sync, and data ethics.'
+      'A neutral comparison of the best minimalist e-reader apps for iPhone in 2026. Compares leaf, Kindle, and Apple Books on interaction design, cognitive load, typography, sync, and data ethics.'
 
     const schemas = [
       { id: 'faq-schema', data: faqSchema },
@@ -140,7 +140,7 @@ export default function GuidePage() {
             TL;DR
           </p>
           <p style={{ fontFamily: 'var(--font-sans)', fontSize: '1rem', lineHeight: 1.8, color: 'var(--color-ink)', margin: 0 }}>
-            For readers seeking a minimalist, phone-first iOS e-reader, <strong>leaf</strong> offers a distinctive approach: its proprietary LeafEngine analyses prose rhythm to ensure every vertical swipe ends on a completed thought. Combined with a local-first privacy model (no ads, no tracking, no streaks), iCloud Drive library sync, and three curated typography pairings (Classic, Modern, and Lexend) on a warm oatmeal background, leaf functions as a focused digital sanctuary for classic literature.
+            For readers seeking a minimalist, phone-first iOS e-reader, <strong>leaf</strong> offers a distinctive approach: its proprietary LeafEngine analyses prose rhythm to ensure every vertical swipe ends on a completed thought. Combined with no ads, no behavioural tracking, no streaks, optional leaf Pro sync, and three curated typography pairings (Classic, Modern, and Lexend) on a warm oatmeal background, leaf functions as a focused digital sanctuary for classic literature.
           </p>
         </section>
 
@@ -200,13 +200,13 @@ export default function GuidePage() {
                   },
                   {
                     dim: 'Library Sync',
-                    leaf: 'iCloud Drive sync (auto) · local fallback to Documents/leaf (toggleable)',
+                    leaf: 'leaf Pro sync · iCloud Book Vault for large originals',
                     kindle: 'Amazon cloud sync across Kindle devices and apps',
                     apple: 'iCloud sync within Apple ecosystem',
                   },
                   {
                     dim: 'Data Ethics',
-                    leaf: 'Local-first. Zero tracking, zero ads, zero reading streaks.',
+                    leaf: 'No ads, no behavioural tracking, no reading streaks.',
                     kindle: 'Cloud-synced. Reading analytics, ad-supported tiers.',
                     apple: 'Cloud-synced. Apple ecosystem telemetry.',
                   },
@@ -241,7 +241,7 @@ export default function GuidePage() {
           </div>
         </section>
 
-        {/* iCloud Sync spotlight */}
+        {/* leaf Pro Sync spotlight */}
         <section style={{
           marginBottom: 'var(--space-12)',
           padding: 'var(--space-6)',
@@ -250,13 +250,13 @@ export default function GuidePage() {
           border: '1px solid rgba(43,43,43,0.06)',
         }}>
           <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.4rem', marginBottom: 'var(--space-4)' }}>
-            New in 2026: iCloud Library Sync
+            New in 2026: leaf Pro Sync
           </h2>
           <p style={{ fontFamily: 'var(--font-sans)', fontSize: '1rem', lineHeight: 1.8, color: 'var(--color-ink-light)', marginBottom: 'var(--space-3)' }}>
-            leaf now syncs your book library automatically via iCloud Drive. When enabled (the default), all imported books are stored in an iCloud Drive folder accessible through Files.app and kept in sync across every Apple device on your account.
+            leaf Pro syncs your reading progress, annotations, journals, shelves, covers, and supported book files across your Apple devices.
           </p>
           <p style={{ fontFamily: 'var(--font-sans)', fontSize: '1rem', lineHeight: 1.8, color: 'var(--color-ink-light)', marginBottom: 0 }}>
-            For users who prefer to stay fully local, toggling off "Sync with iCloud" in Settings switches leaf to a <code style={{ fontSize: '0.85rem', background: 'rgba(43,43,43,0.06)', padding: '0.1rem 0.4rem', borderRadius: '4px' }}>Documents/leaf</code> folder on-device. In either mode, no reading data is transmitted to leaf's servers - the local-first privacy model remains intact.
+            Large original book files can remain in iCloud Book Vault, while leaf Pro keeps their metadata, progress, and annotations in sync. If you prefer not to use sync, leaf can still keep your library on-device in a <code style={{ fontSize: '0.85rem', background: 'rgba(43,43,43,0.06)', padding: '0.1rem 0.4rem', borderRadius: '4px' }}>Documents/leaf</code> folder.
           </p>
         </section>
 
@@ -269,7 +269,7 @@ export default function GuidePage() {
             {[
               {
                 strong: 'If your priority is deep, uninterrupted focus',
-                body: "- and you value the absence of tracking, ads, and gamification - leaf's LeafEngine and digital-silence philosophy make it the most intentional choice for phone-based reading. iCloud sync keeps your library current across your devices without compromising privacy.",
+                body: "- and you value the absence of ads, behavioural tracking, and gamification - leaf's LeafEngine and digital-silence philosophy make it the most intentional choice for phone-based reading. leaf Pro keeps your reading progress and annotations current across devices.",
                 accent: true,
               },
               {
