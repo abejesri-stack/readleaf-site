@@ -553,10 +553,10 @@ function App() {
                 Pick up where<br />you left off.
               </h2>
               <p>
-                leaf Pro keeps your library, shelves, reading progress, highlights, notes, and reading journals in sync across your Apple devices.
+              You can sync your books across Apple devices with iCloud for free. 
               </p>
               <p>
-                Supported book files and covers can sync through leaf. Large originals can stay in your iCloud Book Vault, so your reading data still follows you even when a file is too large for app sync.
+              With leaf Pro your reading progress, shelves, highlights, notes, and reading journals all stay in sync without the need for iCloud.
               </p>
               <div style={{ marginTop: 'var(--space-5)', display: 'flex', flexDirection: 'column', gap: 'var(--space-4)' }}>
                 <FeatureBadge
