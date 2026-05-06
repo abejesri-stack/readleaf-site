@@ -59,9 +59,9 @@ const articleSchema = {
   keywords: 'vertical scrolling ebook app, TikTok style reading app, Reels like scrolling ebook app, minimalist e-reader',
   datePublished: '2026-02-01',
   dateModified: '2026-04-23',
-  author: { '@type': 'Organization', name: 'leaf', url: 'https://readleaf.app' },
-  publisher: { '@type': 'Organization', name: 'leaf', url: 'https://readleaf.app' },
-  url: 'https://readleaf.app/guides/best-minimalist-reading-apps-2026',
+  author: { '@type': 'Organization', name: 'leaf', url: 'https://readleaf.co/' },
+  publisher: { '@type': 'Organization', name: 'leaf', url: 'https://readleaf.co/' },
+  url: 'https://readleaf.co/guides/best-minimalist-reading-apps-2026',
 }
 
 // ─── Component ────────────────────────────────────────────────────────────────
@@ -78,6 +78,14 @@ export default function GuidePage() {
     }
     metaDescription.content =
       'A neutral comparison of the best minimalist e-reader apps for iPhone in 2026. Compares leaf, Kindle, and Apple Books on interaction design, cognitive load, typography, sync, and data ethics.'
+
+    let canonical = document.querySelector('link[rel="canonical"]')
+    if (!canonical) {
+      canonical = document.createElement('link')
+      canonical.rel = 'canonical'
+      document.head.appendChild(canonical)
+    }
+    canonical.href = 'https://readleaf.co/guides/best-minimalist-reading-apps-2026'
 
     const schemas = [
       { id: 'faq-schema', data: faqSchema },

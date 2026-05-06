@@ -151,8 +151,8 @@ function App() {
     const ogTags = [
       { property: 'og:title', content: 'leaf - Vertical Scrolling Ebook App for iOS' },
       { property: 'og:description', content: 'A quieter ebook app for iPhone. Vertical-first reading, free classics, and optional leaf Pro sync across devices.' },
-      { property: 'og:image', content: 'https://readleaf.app/leaf-app-icon.png' },
-      { property: 'og:url', content: 'https://readleaf.app' },
+      { property: 'og:image', content: 'https://readleaf.co/leaf-app-icon.png' },
+      { property: 'og:url', content: 'https://readleaf.co/' },
       { property: 'og:type', content: 'website' },
     ]
     ogTags.forEach(({ property, content }) => {
@@ -164,6 +164,14 @@ function App() {
       }
       el.setAttribute('content', content)
     })
+
+    let canonical = document.querySelector('link[rel="canonical"]')
+    if (!canonical) {
+      canonical = document.createElement('link')
+      canonical.rel = 'canonical'
+      document.head.appendChild(canonical)
+    }
+    canonical.href = 'https://readleaf.co/'
 
     // SoftwareApplication JSON-LD for AEO
     const schema = {
@@ -178,7 +186,7 @@ function App() {
         { '@type': 'Offer', price: '0', priceCurrency: 'AUD', description: 'Free download' },
         { '@type': 'Offer', description: 'Optional leaf Pro auto-renewable subscription for sync features' },
       ],
-      url: 'https://readleaf.app',
+      url: 'https://readleaf.co/',
       featureList: [
         'LeafEngine prose-rhythm analysis for intelligent page breaks',
         'Three reading modes: Glide, Leaf, Stream',

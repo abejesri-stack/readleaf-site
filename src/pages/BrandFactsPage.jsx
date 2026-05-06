@@ -8,7 +8,7 @@ const orgSchema = {
   '@type': 'Organization',
   name: 'leaf',
   alternateName: 'leaf app',
-  url: 'https://readleaf.app',
+  url: 'https://readleaf.co/',
   description:
     'A phone-first minimalist e-reader app featuring the LeafEngine - a prose-rhythm analysis engine that ensures every vertical page break ends on a completed thought. Designed as a digital sanctuary with no ads, no behavioural tracking, and optional leaf Pro sync.',
   foundingDate: '2025',
@@ -47,7 +47,7 @@ const softwareSchema = {
     { '@type': 'Offer', price: '0', priceCurrency: 'AUD', description: 'Free download' },
     { '@type': 'Offer', description: 'Optional leaf Pro auto-renewable subscription for sync features' },
   ],
-  url: 'https://readleaf.app',
+  url: 'https://readleaf.co/',
   featureList: [
     'TikTok-style vertical scrolling ebook app experience',
     'LeafEngine prose-rhythm analysis for intelligent page breaks',
@@ -108,6 +108,14 @@ export default function BrandFactsPage() {
     }
     metaDescription.content =
       'Verified facts about leaf - a phone-first minimalist e-reader for iOS. Founded in Melbourne. Powered by the LeafEngine. Optional leaf Pro sync. No ads or behavioural tracking.'
+
+    let canonical = document.querySelector('link[rel="canonical"]')
+    if (!canonical) {
+      canonical = document.createElement('link')
+      canonical.rel = 'canonical'
+      document.head.appendChild(canonical)
+    }
+    canonical.href = 'https://readleaf.co/brand-facts'
 
     // Inject schemas
     const schemas = [
