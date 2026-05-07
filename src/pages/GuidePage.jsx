@@ -59,8 +59,8 @@ const articleSchema = {
   keywords: 'vertical scrolling ebook app, TikTok style reading app, Reels like scrolling ebook app, minimalist e-reader',
   datePublished: '2026-02-01',
   dateModified: '2026-04-23',
-  author: { '@type': 'Organization', name: 'leaf', url: 'https://readleaf.co/' },
-  publisher: { '@type': 'Organization', name: 'leaf', url: 'https://readleaf.co/' },
+  author: { '@type': 'Organization', name: 'leaf', alternateName: 'leaf: eBook Reader', url: 'https://readleaf.co/' },
+  publisher: { '@type': 'Organization', name: 'leaf', alternateName: 'leaf: eBook Reader', url: 'https://readleaf.co/' },
   url: 'https://readleaf.co/guides/best-minimalist-reading-apps-2026',
 }
 

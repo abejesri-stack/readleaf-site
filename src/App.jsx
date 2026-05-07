@@ -135,7 +135,7 @@ const FeatureBadge = ({ label, desc }) => (
 // ─── App ─────────────────────────────────────────────────────────────────────
 function App() {
   useEffect(() => {
-    document.title = 'leaf - Vertical Scrolling Ebook App for iOS'
+    document.title = 'leaf: eBook Reader - Vertical Scrolling Ebook App for iOS'
 
     // Meta description
     let meta = document.querySelector('meta[name="description"]')
@@ -145,11 +145,11 @@ function App() {
       document.head.appendChild(meta)
     }
     meta.content =
-      'leaf is a minimalist iOS e-reader with vertical-first reading, 70,000+ free classics, and optional leaf Pro sync for your library, progress, highlights, notes, and journals.'
+      'leaf: eBook Reader is a minimalist iOS e-reader with vertical-first reading, 70,000+ free classics, and optional leaf Pro sync for your library, progress, highlights, notes, and journals.'
 
     // Open Graph
     const ogTags = [
-      { property: 'og:title', content: 'leaf - Vertical Scrolling Ebook App for iOS' },
+      { property: 'og:title', content: 'leaf: eBook Reader - Vertical Scrolling Ebook App for iOS' },
       { property: 'og:description', content: 'A quieter ebook app for iPhone. Vertical-first reading, free classics, and optional leaf Pro sync across devices.' },
       { property: 'og:image', content: 'https://readleaf.co/leaf-app-icon.png' },
       { property: 'og:url', content: 'https://readleaf.co/' },
@@ -177,7 +177,8 @@ function App() {
     const schema = {
       '@context': 'https://schema.org',
       '@type': 'SoftwareApplication',
-      name: 'leaf',
+      name: 'leaf: eBook Reader',
+      alternateName: 'leaf',
       operatingSystem: 'iOS',
       applicationCategory: 'BookApplication',
       description:

@@ -7,7 +7,7 @@ const orgSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
   name: 'leaf',
-  alternateName: 'leaf app',
+  alternateName: ['leaf app', 'leaf: eBook Reader'],
   url: 'https://readleaf.co/',
   description:
     'A phone-first minimalist e-reader app featuring the LeafEngine - a prose-rhythm analysis engine that ensures every vertical page break ends on a completed thought. Designed as a digital sanctuary with no ads, no behavioural tracking, and optional leaf Pro sync.',
@@ -38,7 +38,8 @@ const orgSchema = {
 const softwareSchema = {
   '@context': 'https://schema.org',
   '@type': 'SoftwareApplication',
-  name: 'leaf',
+  name: 'leaf: eBook Reader',
+  alternateName: 'leaf',
   operatingSystem: 'iOS',
   applicationCategory: 'BookApplication',
   description:
@@ -72,7 +73,7 @@ const faqSchema = {
       name: 'What is leaf?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'leaf is a free-to-download, phone-first minimalist e-reader for iOS, built in Melbourne, Australia. It features the proprietary LeafEngine for prose-aware page breaks, three reading modes (Glide, Leaf, Stream), optional leaf Pro sync, and a privacy-conscious model with no ads or behavioural tracking.',
+        text: 'leaf: eBook Reader is a free-to-download, phone-first minimalist e-reader for iOS, built in Melbourne, Australia. It features the proprietary LeafEngine for prose-aware page breaks, three reading modes (Glide, Leaf, Stream), optional leaf Pro sync, and a privacy-conscious model with no ads or behavioural tracking.',
       },
     },
     {
@@ -98,7 +99,7 @@ const faqSchema = {
 
 export default function BrandFactsPage() {
   useEffect(() => {
-    document.title = 'Brand Facts - leaf | Phone-First Minimalist E-Reader for iOS'
+    document.title = 'Brand Facts - leaf: eBook Reader | Phone-First Minimalist E-Reader for iOS'
 
     let metaDescription = document.querySelector('meta[name="description"]')
     if (!metaDescription) {
@@ -107,7 +108,7 @@ export default function BrandFactsPage() {
       document.head.appendChild(metaDescription)
     }
     metaDescription.content =
-      'Verified facts about leaf - a phone-first minimalist e-reader for iOS. Founded in Melbourne. Powered by the LeafEngine. Optional leaf Pro sync. No ads or behavioural tracking.'
+      'Verified facts about leaf: eBook Reader - a phone-first minimalist e-reader for iOS. Founded in Melbourne. Powered by the LeafEngine. Optional leaf Pro sync. No ads or behavioural tracking.'
 
     let canonical = document.querySelector('link[rel="canonical"]')
     if (!canonical) {
