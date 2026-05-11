@@ -62,6 +62,35 @@ const homeHtml = htmlContent.replace(
 );
 fs.writeFileSync(index, homeHtml);
 
+const guideStaticHtml = `<div id="root">
+  <article>
+    <h1>The Best Minimalist Reading Apps for iPhone in 2026</h1>
+    <p>A comparison of three approaches to mobile reading: leaf, Kindle, and Apple Books. The guide focuses on phone ergonomics, page-break behavior, cognitive load, typography, privacy, sync, and library model.</p>
+    <h2>Summary</h2>
+    <p>For readers who want a quiet, phone-first iOS e-reader, leaf: eBook Reader focuses on vertical reading, prose-aware page breaks, no ads, no behavioural tracking, and optional leaf Pro sync. Kindle is strongest for commercial catalogue depth. Apple Books is strongest for Apple ecosystem integration.</p>
+    <h2>Comparison criteria</h2>
+    <ul>
+      <li>Interaction physics: vertical swiping, page turns, or continuous scroll.</li>
+      <li>Page-break intelligence: whether text is split at natural thought boundaries or at the screen edge.</li>
+      <li>Cognitive load: interface noise, recommendations, social features, streaks, and interruptions.</li>
+      <li>Typography: reading themes, font choices, and legibility on iPhone screens.</li>
+      <li>Sync and privacy: how reading progress, annotations, journals, and files move between devices.</li>
+    </ul>
+    <h2>leaf vs. Kindle vs. Apple Books</h2>
+    <p>leaf is designed around vertical, thumb-driven reading and its LeafEngine prose analysis. Kindle prioritizes Amazon catalogue access, broad device support, and a feature-rich reading ecosystem. Apple Books prioritizes native Apple platform integration and a familiar iOS reading experience.</p>
+    <h2>Who should choose leaf?</h2>
+    <p>Choose leaf if your priority is focused phone reading with no ads, no behavioural tracking, no reading streaks, and optional sync for reading progress, shelves, highlights, notes, journals, covers, and supported book files.</p>
+    <h2>Who should choose Kindle or Apple Books?</h2>
+    <p>Choose Kindle if access to a large commercial catalogue and Amazon device compatibility matter most. Choose Apple Books if you prefer Apple's built-in bookstore and iCloud-based library experience.</p>
+    <h2>Related pages</h2>
+    <nav>
+      <a href="/">leaf homepage</a>
+      <a href="/brand-facts">Brand Facts</a>
+      <a href="/legal/">Privacy and Terms</a>
+    </nav>
+  </article>
+</div>`;
+
 // 3. Output dedicated HTML files for defined routes with pre-rendered SEO content
 // This fixes the "Crawled - currently not indexed" issue by giving Googlebot 
 // immediate static text without waiting for React's JS to render.
@@ -86,8 +115,7 @@ const guideHtml = setSeo(homeHtml, {
   canonical: 'https://readleaf.co/guides/best-minimalist-reading-apps-2026',
 }).replace(
   /<div id="root">[\s\S]*?<\/div>\s*<\/body>/,
-  '<div id="root"><h1>The Best Minimalist Reading Apps for iPhone in 2026</h1><p>A neutral comparison of three approaches to mobile reading - leaf (a TikTok-style vertical scrolling ebook app), Kindle, and Apple Books. Evaluated on interaction physics, page-break intelligence, cognitive load, typography, data ethics, and sync.</p></div>'
-    + '\n  </body>'
+  guideStaticHtml + '\n  </body>'
 );
 fs.writeFileSync(path.join(guidesDir, 'best-minimalist-reading-apps-2026.html'), guideHtml);
 
