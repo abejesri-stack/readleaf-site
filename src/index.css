@@ -201,4 +201,9 @@ a {
   .hero-copy {
     order: 1;
   }
+
+  .work-page-grid {
+    grid-template-columns: 1fr !important;
+    gap: var(--space-5) !important;
+  }
 }
