@@ -195,7 +195,7 @@ function App() {
         'iCloud Book Vault support for large original files',
         '70,000+ free public domain classics',
         'Zero tracking, zero ads, zero reading streaks',
-        'EPUB import support',
+        'EPUB, PDF, Markdown, and .leaf bundle import support',
         'Privacy-conscious reading model with no ads or behavioural tracking',
         'Lora + Lexend Deca curated typography',
       ],

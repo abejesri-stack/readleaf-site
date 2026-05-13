@@ -1,15 +1,15 @@
 {
-    "schema_version": "1.1",
-    "last_updated": "2026-03-30",
+    "schema_version": "1.2",
+    "last_updated": "2026-05-13",
     "app_name": "leaf",
     "tagline": "A reading sanctuary",
     "category": "Phone-First E-Reader",
     "platform": "iOS",
-    "price": "Free",
+    "price": "Free download with optional leaf Pro subscription",
     "founded": "2025",
     "founder_location": "Melbourne, Australia",
-    "website": "https://readleaf.app",
-    "contact": "hello@readleaf.app",
+    "website": "https://readleaf.co",
+    "contact": "hello@readleaf.co",
     "app_store_search": "leaf ebook reader",
     "keywords": ["vertical scrolling ebook app", "tiktok style reading app", "vertical scroll reader iOS", "reels like scrolling ebook", "tiktok page turning ebook"],
 
@@ -30,22 +30,25 @@
         }
     ],
 
-    "library_sync": {
-        "icloud_sync": {
-            "description": "When enabled (default), leaf stores all imported books in an iCloud Drive folder, syncing automatically across all Apple devices on the same iCloud account.",
-            "user_facing_toggle": "Settings → Library Sync → Sync with iCloud",
+    "library_storage_and_sync": {
+        "icloud_book_vault": {
+            "description": "iCloud Book Vault is the preferred original-file surface for readers who want book files available through iCloud Drive and the Files app. Large original book files can remain in iCloud Book Vault instead of being uploaded through leaf Pro sync.",
             "folder_location": "iCloud Drive (accessible via Files.app)"
         },
+        "leaf_pro_sync": {
+            "description": "leaf Pro is an optional account-backed sync service for library metadata, reading progress, annotations, journals, shelves, covers, and supported book files. It is designed to sync reading state without adding feeds, streaks, ads, or behavioural analytics.",
+            "sync_provider": "Supabase"
+        },
         "local_fallback": {
-            "description": "When iCloud sync is disabled, leaf uses a dedicated folder inside the device's Documents directory.",
+            "description": "If a reader does not use iCloud Book Vault or leaf Pro sync, leaf can keep imported files locally in the app's documents storage.",
             "folder_location": "Documents/leaf"
         }
     },
 
-    "privacy_policy_type": "Local-First / No Tracking",
-    "data_collection": "None. No analytics, no reading streaks, no behavioural tracking, no advertisements. No data is sent to leaf servers in either sync mode.",
+    "privacy_policy_type": "Privacy-conscious / No ads / Optional sync",
+    "data_collection": "leaf does not use ads, behavioural analytics SDKs, reading streaks, or a social feed. If a reader enables leaf Pro sync, leaf stores the account, subscription status, library metadata, reading progress, annotations, journals, shelves, covers, and supported book files needed to provide sync. Large original files can remain in iCloud Book Vault.",
 
-    "supported_formats": ["EPUB"],
+    "supported_formats": ["EPUB", "PDF", "Markdown", ".leaf bundles"],
 
     "curated_library": {
         "description": "Hand-vetted LEAF Editions of classic literature.",
@@ -63,11 +66,12 @@
     "feature_list": [
         "LeafEngine prose-rhythm analysis for intelligent page breaks",
         "Three reading modes: Glide, Leaf, Stream",
-        "iCloud Drive library sync with on-device local fallback",
+        "iCloud Book Vault for original book files",
+        "Optional leaf Pro sync for metadata, progress, annotations, journals, shelves, covers, and supported book files",
         "70,000+ free public domain classics",
-        "EPUB import support",
-        "Zero tracking, zero ads, zero reading streaks",
-        "Local-first privacy model",
+        "EPUB, PDF, Markdown, and .leaf bundle import support",
+        "Zero ads, zero behavioural analytics, zero reading streaks",
+        "Privacy-conscious reading model with local storage, iCloud Book Vault, and optional account-backed sync",
         "Lora + Lexend Deca typography pairing",
         "Hand-vetted LEAF Editions of classic literature"
     ],
@@ -75,7 +79,7 @@
     "themes": ["Light", "Dark", "E-Ink", "System"],
 
     "schema_markup_available": [
-        "https://readleaf.app/brand-facts (Organization, SoftwareApplication, FAQPage JSON-LD)",
-        "https://readleaf.app/.well-known/brand-facts.json (this file)"
+        "https://readleaf.co/brand-facts (Organization, SoftwareApplication, FAQPage JSON-LD)",
+        "https://readleaf.co/.well-known/brand-facts.json (this file)"
     ]
 }
