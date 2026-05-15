@@ -194,9 +194,9 @@ function App() {
         'leaf Pro sync for library metadata, progress, annotations, journals, covers, and supported book files',
         'iCloud Book Vault support for large original files',
         '70,000+ free public domain classics',
-        'Zero tracking, zero ads, zero reading streaks',
+        'Zero content tracking, zero ads, zero reading streaks',
         'EPUB, PDF, Markdown, and .leaf bundle import support',
-        'Privacy-conscious reading model with no ads or behavioural tracking',
+        'Privacy-conscious reading model with no ads, no content tracking, and optional anonymous product analytics',
         'Lora + Lexend Deca curated typography',
       ],
     }
@@ -577,8 +577,8 @@ function App() {
                   desc="Under-limit book files can sync through leaf; large originals can remain available through iCloud Book Vault."
                 />
                 <FeatureBadge
-                  label="No ads or tracking"
-                  desc="leaf Pro adds sync, not feeds, streaks, advertising, or behavioural analytics."
+                  label="No ads or content tracking"
+                  desc="leaf Pro adds sync, not feeds, streaks, advertising, or book-content tracking."
                 />
               </div>
             </Motion.div>

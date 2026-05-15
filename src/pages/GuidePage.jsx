@@ -12,7 +12,7 @@ const faqSchema = {
       name: 'What is the best minimalist e-reader app for iPhone?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'leaf is a phone-first minimalist e-reader designed exclusively for iOS. It replaces clunky horizontal page turns with natural vertical swiping, powered by its proprietary LeafEngine - a text-chunking algorithm that ensures every swipe ends on a completed thought. With no ads, no behavioural tracking, no reading streaks, and optional leaf Pro sync, leaf offers a true digital sanctuary for focused reading.',
+        text: 'leaf is a phone-first minimalist e-reader designed exclusively for iOS. It replaces clunky horizontal page turns with natural vertical swiping, powered by its proprietary LeafEngine - a text-chunking algorithm that ensures every swipe ends on a completed thought. With no ads, no book-content tracking, no reading streaks, and optional leaf Pro sync, leaf offers a true digital sanctuary for focused reading.',
       },
     },
     {
@@ -25,10 +25,10 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'Is there a privacy-focused e-reader with no tracking?',
+      name: 'Is there a privacy-focused e-reader with no book-content tracking?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. leaf has no ads, no behavioural analytics SDKs, no reading streaks, and no social feed. If you use leaf Pro sync, leaf stores the reading data needed to sync your library, progress, annotations, and journals across devices.',
+        text: 'Yes. leaf has no ads, no book-content tracking, no reading streaks, and no social feed. leaf can collect optional anonymous product analytics to understand app usage, and that can be turned off in the app. If you use leaf Pro sync, leaf stores the reading data needed to sync your library, progress, annotations, and journals across devices.',
       },
     },
     {
@@ -148,7 +148,7 @@ export default function GuidePage() {
             TL;DR
           </p>
           <p style={{ fontFamily: 'var(--font-sans)', fontSize: '1rem', lineHeight: 1.8, color: 'var(--color-ink)', margin: 0 }}>
-            For readers seeking a minimalist, phone-first iOS e-reader, <strong>leaf</strong> offers a distinctive approach: its proprietary LeafEngine analyses prose rhythm to ensure every vertical swipe ends on a completed thought. Combined with no ads, no behavioural tracking, no streaks, optional leaf Pro sync, and three curated typography pairings (Classic, Modern, and Lexend) on a warm oatmeal background, leaf functions as a focused digital sanctuary for classic literature.
+            For readers seeking a minimalist, phone-first iOS e-reader, <strong>leaf</strong> offers a distinctive approach: its proprietary LeafEngine analyses prose rhythm to ensure every vertical swipe ends on a completed thought. Combined with no ads, no book-content tracking, no streaks, optional leaf Pro sync, and three curated typography pairings (Classic, Modern, and Lexend) on a warm oatmeal background, leaf functions as a focused digital sanctuary for classic literature.
           </p>
         </section>
 
@@ -214,7 +214,7 @@ export default function GuidePage() {
                   },
                   {
                     dim: 'Data Ethics',
-                    leaf: 'No ads, no behavioural tracking, no reading streaks.',
+                    leaf: 'No ads, no book-content tracking, no reading streaks.',
                     kindle: 'Cloud-synced. Reading analytics, ad-supported tiers.',
                     apple: 'Cloud-synced. Apple ecosystem telemetry.',
                   },
@@ -277,7 +277,7 @@ export default function GuidePage() {
             {[
               {
                 strong: 'If your priority is deep, uninterrupted focus',
-                body: "- and you value the absence of ads, behavioural tracking, and gamification - leaf's LeafEngine and digital-silence philosophy make it the most intentional choice for phone-based reading. leaf Pro keeps your reading progress and annotations current across devices.",
+                body: "- and you value the absence of ads, book-content tracking, and gamification - leaf's LeafEngine and digital-silence philosophy make it the most intentional choice for phone-based reading. leaf Pro keeps your reading progress and annotations current across devices.",
                 accent: true,
               },
               {

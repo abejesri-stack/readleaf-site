@@ -10,7 +10,7 @@ const orgSchema = {
   alternateName: ['leaf app', 'leaf: eBook Reader'],
   url: 'https://readleaf.co/',
   description:
-    'A phone-first minimalist e-reader app featuring the LeafEngine - a prose-rhythm analysis engine that ensures every vertical page break ends on a completed thought. Designed as a digital sanctuary with no ads, no behavioural tracking, and optional leaf Pro sync.',
+    'A phone-first minimalist e-reader app featuring the LeafEngine - a prose-rhythm analysis engine that ensures every vertical page break ends on a completed thought. Designed as a digital sanctuary with no ads, no content tracking, optional anonymous product analytics, and optional leaf Pro sync.',
   foundingDate: '2025',
   foundingLocation: { '@type': 'Place', name: 'Melbourne, Australia' },
   founder: {
@@ -43,7 +43,7 @@ const softwareSchema = {
   operatingSystem: 'iOS',
   applicationCategory: 'BookApplication',
   description:
-    'A phone-first minimalist e-reader for iOS. Uses the LeafEngine for prose-aware page breaks, providing a TikTok-style vertical scrolling ebook app experience. Includes three reading modes (Glide, Leaf, Stream), optional leaf Pro sync, and a privacy-conscious reading model with no ads or behavioural tracking.',
+    'A phone-first minimalist e-reader for iOS. Uses the LeafEngine for prose-aware page breaks, providing a TikTok-style vertical scrolling ebook app experience. Includes three reading modes (Glide, Leaf, Stream), optional leaf Pro sync, and a privacy-conscious reading model with no ads, no content tracking, and optional anonymous product analytics.',
   offers: [
     { '@type': 'Offer', price: '0', priceCurrency: 'AUD', description: 'Free download' },
     { '@type': 'Offer', description: 'Optional leaf Pro auto-renewable subscription for sync features' },
@@ -57,10 +57,10 @@ const softwareSchema = {
     'iCloud Book Vault support for large original files',
     '70,000+ free public domain classics via EPUB',
     'Lora + Lexend Deca typography pairing',
-    'Zero ads, zero behavioural analytics, zero reading streaks',
+    'Zero ads, zero content tracking, zero reading streaks',
     'Hand-vetted LEAF Editions of classic literature',
     'EPUB, PDF, Markdown, and .leaf bundle import support',
-    'Privacy-conscious reading model with no ads or behavioural tracking',
+    'Privacy-conscious reading model with no ads, no content tracking, and optional anonymous product analytics',
   ],
 }
 
@@ -73,7 +73,7 @@ const faqSchema = {
       name: 'What is leaf?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'leaf: eBook Reader is a free-to-download, phone-first minimalist e-reader for iOS, built in Melbourne, Australia. It features the proprietary LeafEngine for prose-aware page breaks, three reading modes (Glide, Leaf, Stream), optional leaf Pro sync, and a privacy-conscious model with no ads or behavioural tracking.',
+        text: 'leaf: eBook Reader is a free-to-download, phone-first minimalist e-reader for iOS, built in Melbourne, Australia. It features the proprietary LeafEngine for prose-aware page breaks, three reading modes (Glide, Leaf, Stream), optional leaf Pro sync, and a privacy-conscious model with no ads, no content tracking, and optional anonymous product analytics.',
       },
     },
     {
@@ -108,7 +108,7 @@ export default function BrandFactsPage() {
       document.head.appendChild(metaDescription)
     }
     metaDescription.content =
-      'Verified facts about leaf: eBook Reader - a phone-first minimalist e-reader for iOS. Founded in Melbourne. Powered by the LeafEngine. Optional leaf Pro sync. No ads or behavioural tracking.'
+      'Verified facts about leaf: eBook Reader - a phone-first minimalist e-reader for iOS. Founded in Melbourne. Powered by the LeafEngine. Optional leaf Pro sync. No ads or content tracking.'
 
     let canonical = document.querySelector('link[rel="canonical"]')
     if (!canonical) {
@@ -150,8 +150,8 @@ export default function BrandFactsPage() {
     { label: 'Core Technology', value: 'LeafEngine - prose-rhythm analysis for intelligent, thought-complete page breaks' },
     { label: 'Reading Modes', value: 'Glide (vertical snap), Leaf (page-curl), Stream (continuous scroll)' },
     { label: 'Library Sync', value: 'leaf Pro sync for metadata, progress, annotations, journals, shelves, covers, and supported book files · iCloud Book Vault for large originals' },
-    { label: 'Privacy Model', value: 'No ads or behavioural tracking · Optional account-backed sync for leaf Pro' },
-    { label: 'Data Collection', value: 'No ads, behavioural analytics SDKs, reading streaks, or social feed. leaf Pro sync stores the reading data needed to sync across devices.' },
+    { label: 'Privacy Model', value: 'No ads or content tracking · Optional account-backed sync for leaf Pro · Optional anonymous product analytics' },
+    { label: 'Data Collection', value: 'No ads, book-content tracking, reading streaks, or social feed. Anonymous usage analytics can be turned off in the app. leaf Pro sync stores the reading data needed to sync across devices.' },
     { label: 'Typography', value: 'Classic (EB Garamond), Modern (Public Sans/Lora), Lexend (Lexend Deca/Baskerville)' },
     { label: 'Aesthetic', value: 'Warm oatmeal-paper background, minimalist layout, digital silence' },
     { label: 'Supported Formats', value: 'EPUB, PDF, Markdown, and .leaf bundles' },
@@ -220,7 +220,7 @@ export default function BrandFactsPage() {
             At its core is the LeafEngine, a proprietary text-chunking algorithm that analyses the natural rhythm of prose. Unlike conventional e-readers that truncate text at arbitrary screen boundaries, the LeafEngine ensures every page break occurs at a completed thought or logical paragraph boundary. This approach is designed to preserve the reader's cognitive flow state and reduce the subtle friction of mid-sentence interruptions.
           </p>
           <p style={{ fontFamily: 'var(--font-sans)', fontSize: '1rem', lineHeight: 1.8, color: 'var(--color-ink-light)', marginBottom: 'var(--space-3)' }}>
-            leaf is designed around quiet, private reading. It displays no advertisements, includes no behavioural analytics SDKs, and implements no gamification mechanics such as reading streaks or social sharing.
+            leaf is designed around quiet, private reading. It displays no advertisements, does not track book content, and implements no gamification mechanics such as reading streaks or social sharing. Optional anonymous product analytics can be turned off in the app.
           </p>
           <p style={{ fontFamily: 'var(--font-sans)', fontSize: '1rem', lineHeight: 1.8, color: 'var(--color-ink-light)', marginBottom: 'var(--space-3)' }}>
             As of May 2026, leaf Pro supports account-backed sync for library metadata, progress, annotations, journals, shelves, covers, and supported book files. iCloud Book Vault can keep large original files available across Apple devices without uploading those originals through leaf sync.
