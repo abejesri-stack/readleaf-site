@@ -726,9 +726,9 @@ function App() {
         borderTop: '1px solid rgba(43,43,43,0.06)',
       }}>
         <div style={{ marginBottom: 'var(--space-3)', display: 'flex', justifyContent: 'center', gap: 'var(--space-6)', flexWrap: 'wrap' }}>
-          <Link to="/guides/best-minimalist-reading-apps-2026"
+          <Link to="/guides"
             style={{ fontFamily: 'var(--font-sans)', fontSize: '0.72rem', textTransform: 'uppercase', letterSpacing: '0.08em', color: 'rgba(43,43,43,0.4)' }}>
-            Reading App Guide
+            Guides
           </Link>
           <Link to="/brand-facts"
             style={{ fontFamily: 'var(--font-sans)', fontSize: '0.72rem', textTransform: 'uppercase', letterSpacing: '0.08em', color: 'rgba(43,43,43,0.4)' }}>
