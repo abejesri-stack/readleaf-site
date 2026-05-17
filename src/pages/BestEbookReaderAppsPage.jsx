@@ -58,6 +58,75 @@ const appRows = [
   },
 ]
 
+const appWriteups = [
+  {
+    name: 'leaf',
+    category: 'Best for calm reading, free classics, and your own files',
+    href: 'https://apps.apple.com/app/leaf-ebook-reader/id6758810936',
+    body:
+      'leaf is built around the reading session itself rather than a large commercial bookstore. It suits readers who import their own EPUB, PDF, Markdown, or .leaf files, want a calmer phone-first interface, or spend time with public-domain classics. Its Explore public archive brings together Standard Ebooks and Project Gutenberg discovery, so readers can browse and import classics without leaving the app.',
+    details:
+      'It also includes reading journals, highlights and notes, passage and completion share cards, multiple reading flows, and detailed typography controls. Free reader themes include Light, Dark, System, and E-Ink; leaf Pro adds Sepia, Forest, and Midnight themes, Pro fonts including Literata, Spectral, and Merriweather, custom TTF/OTF fonts, and account-backed sync.',
+    tradeoff:
+      'The tradeoff is that leaf is iOS-first and intentionally quieter than catalogue-heavy bookstore apps, so it is better for people who value the reading environment over a giant paid storefront.',
+  },
+  {
+    name: 'Kindle',
+    category: 'Best for Amazon libraries and Kindle device owners',
+    href: 'https://apps.apple.com/us/app/amazon-kindle/id302584613?l=en&platform=iphone',
+    body:
+      'Kindle is the practical choice for readers whose books already live with Amazon. It is especially useful if you switch between an iPhone, a Kindle device, and other Kindle apps, because your library and reading position follow your Amazon account.',
+    details:
+      'The app works well for purchased Kindle books, Kindle Unlimited reading, samples, and personal documents. It is less about building a quiet independent library and more about staying inside Amazon’s mature reading ecosystem.',
+    tradeoff:
+      'The tradeoff is ecosystem dependence: Kindle is strongest when you already buy, borrow, or manage books through Amazon.',
+  },
+  {
+    name: 'Apple Books',
+    category: 'Best for buying modern ebooks inside Apple’s ecosystem',
+    href: 'https://www.apple.com/apple-books/',
+    body:
+      'Apple Books is the easiest default choice for readers who want a polished Apple-native bookstore and reading app. It handles ebook and audiobook purchases, syncs through iCloud, and fits naturally into iPhone, iPad, and Mac workflows.',
+    details:
+      'It can also open EPUB and PDF files, which makes it useful for casual personal-file reading. Its biggest advantage is convenience: there is very little setup if you already live in Apple’s ecosystem.',
+    tradeoff:
+      'The tradeoff is that it is a general Apple media/store experience rather than a specialized reading environment for imported libraries or public-domain discovery.',
+  },
+  {
+    name: 'Kobo Books',
+    category: 'Best for Kobo store readers and Kobo e-reader owners',
+    href: 'https://www.kobo.com/us/en/p/apps',
+    body:
+      'Kobo Books is a strong fit for readers who prefer Kobo’s store or own Kobo e-reader hardware. It offers a commercial catalogue, audiobooks, and account sync for Kobo purchases.',
+    details:
+      'It is most useful when Kobo is already your book-buying ecosystem. For readers who want an alternative to Amazon while still using a full commercial ebook store, Kobo is the most direct comparison.',
+    tradeoff:
+      'The tradeoff is that sideloaded or externally managed files may not behave like Kobo purchases across devices.',
+  },
+  {
+    name: 'Libby',
+    category: 'Best for borrowing ebooks and audiobooks from libraries',
+    href: 'https://apps.apple.com/us/app/libby-the-library-app/id1076402606',
+    body:
+      'Libby solves a different problem from bookstore apps: it gives readers access to ebooks, audiobooks, and magazines from participating public libraries. If your library supports it, it can be the most cost-effective reading app on your iPhone.',
+    details:
+      'It supports borrowing, holds, offline downloads, tags, bookmarks, notes, highlights, and audiobook playback features. It is particularly useful for readers who prefer borrowing over buying.',
+    tradeoff:
+      'The tradeoff is availability. Your catalogue, wait times, and borrowing rules depend on your library system.',
+  },
+  {
+    name: 'Google Play Books',
+    category: 'Best for Google account libraries across platforms',
+    href: 'https://apps.apple.com/us/app/google-play-books-audiobooks/id400989007?l=en',
+    body:
+      'Google Play Books is useful if your library is tied to a Google account or if you move between iPhone, Android, and web reading. It supports purchased books and uploaded EPUB/PDF files.',
+    details:
+      'The app makes the most sense for readers who already use Google Play for books or want a cross-platform account library that is not tied only to Apple hardware.',
+    tradeoff:
+      'The tradeoff is that the iPhone app is strongest as a reader for an existing Google library rather than as a deeply customized iPhone-first reading space.',
+  },
+]
+
 const faqItems = [
   {
     q: 'What is the best ebook reader app for iPhone?',
@@ -210,30 +279,6 @@ export default function BestEbookReaderAppsPage() {
         </section>
 
         <section style={{ marginBottom: 'var(--space-12)' }}>
-          <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.8rem', marginBottom: 'var(--space-4)' }}>
-            What Makes leaf Different
-          </h2>
-          <p style={textStyle}>
-            leaf is not trying to be a general bookstore. It is built around the reading session itself: vertical reading, clean typography, quiet navigation, and a public archive that brings together Standard Ebooks and Project Gutenberg discovery from inside the app. That makes it most relevant for readers who bring their own books or want access to classic literature without a commercial storefront being the center of the experience.
-          </p>
-          <div style={{ display: 'grid', gap: 'var(--space-4)', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))' }}>
-            {[
-              ['Public-domain discovery', 'Browse and import classics from Standard Ebooks and Project Gutenberg without leaving the app.'],
-              ['Reading journals', 'Keep a Markdown reading journal for each work, with highlights and notes able to flow into the journal.'],
-              ['Share cards', 'Create visual cards for selected passages and finished-reading moments.'],
-              ['Themes', 'Use Light, Dark, System, and E-Ink themes for free; Sepia, Forest, and Midnight are available with leaf Pro.'],
-              ['Fonts', 'Use built-in styles including Classic, Modern, Lexend, and Atkinson; leaf Pro adds Literata, Spectral, Merriweather, and custom TTF/OTF fonts.'],
-              ['Reading controls', 'Tune size, alignment, spacing, reading flow, page direction, and leaf size for a more personal reading rhythm.'],
-            ].map(([heading, body]) => (
-              <div key={heading} style={{ background: 'rgba(255,255,255,0.42)', border: '1px solid rgba(43,43,43,0.07)', borderRadius: '8px', padding: 'var(--space-4)' }}>
-                <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.1rem', marginBottom: 'var(--space-2)' }}>{heading}</h3>
-                <p style={{ ...textStyle, fontSize: '0.9rem', margin: 0 }}>{body}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <section style={{ marginBottom: 'var(--space-12)' }}>
           <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.8rem', marginBottom: 'var(--space-5)' }}>
             Comparison Table
           </h2>
@@ -269,30 +314,31 @@ export default function BestEbookReaderAppsPage() {
 
         <section style={{ marginBottom: 'var(--space-12)' }}>
           <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.8rem', marginBottom: 'var(--space-5)' }}>
-            App-by-App Notes
+            App-by-App Guide
           </h2>
-          <div style={{ display: 'grid', gap: 'var(--space-5)' }}>
-            {appRows.map((row) => (
-              <article key={row.name} style={{ paddingBottom: 'var(--space-5)', borderBottom: '1px solid rgba(43,43,43,0.08)' }}>
+          <div style={{ display: 'grid', gap: 'var(--space-6)' }}>
+            {appWriteups.map((app) => (
+              <article key={app.name} style={{ paddingBottom: 'var(--space-6)', borderBottom: '1px solid rgba(43,43,43,0.08)' }}>
                 <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.35rem', marginBottom: 'var(--space-2)' }}>
-                  {row.name}
+                  <a href={app.href} target="_blank" rel="noopener noreferrer" style={{ color: app.name === 'leaf' ? 'var(--color-accent)' : 'var(--color-ink)' }}>
+                    {app.name}
+                  </a>
                 </h3>
-                <p style={{ ...textStyle, marginBottom: 'var(--space-2)' }}>
-                  <strong style={{ color: 'var(--color-ink)' }}>Category:</strong> {row.category}.
+                <p style={{ fontFamily: 'var(--font-sans)', fontSize: '0.78rem', textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--color-accent)', marginBottom: 'var(--space-3)' }}>
+                  {app.category}
+                </p>
+                <p style={{ ...textStyle, marginBottom: 'var(--space-3)' }}>
+                  {app.body}
+                </p>
+                <p style={{ ...textStyle, marginBottom: 'var(--space-3)' }}>
+                  {app.details}
                 </p>
                 <p style={{ ...textStyle, marginBottom: 'var(--space-2)' }}>
-                  {row.verdict}
-                </p>
-                <p style={{ ...textStyle, marginBottom: 0 }}>
-                  <strong style={{ color: 'var(--color-ink)' }}>Tradeoff:</strong> {row.name === 'leaf'
-                    ? 'It is iOS-first and intentionally quieter than catalogue-heavy bookstore apps, so it suits readers who value the reading environment over a giant paid storefront.'
-                    : row.name === 'Libby'
-                      ? 'Availability depends on your local library and loan wait times.'
-                      : 'It works best when you are already comfortable living inside that company’s book ecosystem.'}
+                  <strong style={{ color: 'var(--color-ink)' }}>Tradeoff:</strong> {app.tradeoff}
                 </p>
                 <p style={{ ...textStyle, fontSize: '0.9rem', marginTop: 'var(--space-2)', marginBottom: 0 }}>
-                  <a href={row.href} target="_blank" rel="noopener noreferrer" style={{ color: 'var(--color-accent)' }}>
-                    Visit {row.name}
+                  <a href={app.href} target="_blank" rel="noopener noreferrer" style={{ color: 'var(--color-accent)' }}>
+                    Visit {app.name}
                   </a>
                 </p>
               </article>

@@ -133,18 +133,16 @@ const bestEbookReaderAppsStaticHtml = `<div id="root">
       <li>Sync across iPhone, iPad, Mac, e-readers, and web.</li>
       <li>Privacy posture, ads, analytics, and account requirements.</li>
     </ul>
-    <h2>What makes leaf different</h2>
-    <p>leaf combines a quiet iPhone reader with integrated Standard Ebooks and Project Gutenberg discovery, reading journals, passage and completion share cards, multiple reading flows, and detailed typography controls. Free reader themes include Light, Dark, System, and E-Ink. leaf Pro adds Sepia, Forest, and Midnight themes, Pro fonts including Literata, Spectral, and Merriweather, plus custom TTF/OTF fonts. It is most relevant for readers who bring their own books or want access to classic literature without a commercial storefront being the center of the experience.</p>
     <h2>Best apps by reader type</h2>
     <p>Use leaf if you import your own books, read public-domain classics, keep reading journals, or want a calmer iPhone reading environment. Use Kindle if your library is mostly Amazon purchases. Use Apple Books if you prefer Apple's built-in bookstore and iCloud sync. Use Libby if your main goal is free borrowing through a participating library. Use Kobo if you prefer Kobo's store or e-reader ecosystem. Use Google Play Books if you keep books in a Google account across platforms.</p>
-    <h2>Apps compared</h2>
+    <h2>App-by-app guide</h2>
     <ul>
-      <li><a href="https://apps.apple.com/app/leaf-ebook-reader/id6758810936">leaf</a> - calm reading, free classics, imported EPUB/PDF/Markdown/.leaf files, journals, share cards, themes, fonts, and optional Pro sync.</li>
-      <li><a href="https://apps.apple.com/us/app/amazon-kindle/id302584613?l=en&amp;platform=iphone">Kindle</a> - Amazon catalogue, Kindle devices, and Amazon account sync.</li>
-      <li><a href="https://www.apple.com/apple-books/">Apple Books</a> - built-in Apple app for ebooks, audiobooks, EPUB, PDF, and iCloud continuity.</li>
-      <li><a href="https://www.kobo.com/us/en/p/apps">Kobo Books</a> - Kobo store, audiobooks, and Kobo account sync.</li>
-      <li><a href="https://apps.apple.com/us/app/libby-the-library-app/id1076402606">Libby</a> - public library ebooks, audiobooks, and magazines.</li>
-      <li><a href="https://apps.apple.com/us/app/google-play-books-audiobooks/id400989007?l=en">Google Play Books</a> - Google purchases and uploaded EPUB/PDF files.</li>
+      <li><a href="https://apps.apple.com/app/leaf-ebook-reader/id6758810936">leaf</a> - best for calm reading, free classics, and your own files. It supports imported EPUB/PDF/Markdown/.leaf files, Standard Ebooks and Project Gutenberg discovery, reading journals, highlights, notes, passage and completion share cards, themes, typography controls, and optional Pro sync.</li>
+      <li><a href="https://apps.apple.com/us/app/amazon-kindle/id302584613?l=en&amp;platform=iphone">Kindle</a> - best for Amazon libraries and Kindle device owners. It is useful when your purchases, subscriptions, and reading devices already live in Amazon's ecosystem.</li>
+      <li><a href="https://www.apple.com/apple-books/">Apple Books</a> - best for buying modern ebooks inside Apple's ecosystem. It is built in, polished, and syncs naturally across Apple devices.</li>
+      <li><a href="https://www.kobo.com/us/en/p/apps">Kobo Books</a> - best for Kobo store readers and Kobo e-reader owners. It is a strong non-Amazon commercial ebook ecosystem.</li>
+      <li><a href="https://apps.apple.com/us/app/libby-the-library-app/id1076402606">Libby</a> - best for borrowing ebooks and audiobooks from libraries. Availability depends on your local library system.</li>
+      <li><a href="https://apps.apple.com/us/app/google-play-books-audiobooks/id400989007?l=en">Google Play Books</a> - best for Google account libraries across platforms, including Google purchases and uploaded EPUB/PDF files.</li>
     </ul>
     <h2>Related pages</h2>
     <nav>
