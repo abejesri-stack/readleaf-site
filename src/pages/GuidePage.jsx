@@ -61,8 +61,15 @@ const articleSchema = {
   dateModified: '2026-05-11',
   author: { '@type': 'Organization', name: 'leaf', alternateName: 'leaf: eBook Reader', url: 'https://readleaf.co/' },
   publisher: { '@type': 'Organization', name: 'leaf', alternateName: 'leaf: eBook Reader', url: 'https://readleaf.co/' },
+  image: 'https://readleaf.co/screenshots/screenshot-pageturn-new.png',
   url: 'https://readleaf.co/guides/best-minimalist-reading-apps-2026',
 }
+
+const visualCards = [
+  { name: 'leaf', label: 'Phone-first', summary: 'Vertical reading, prose-aware breaks, no ads, and a quieter reading surface.' },
+  { name: 'Kindle', label: 'Catalogue-first', summary: 'Strong for Amazon libraries, Kindle devices, and a mature reading ecosystem.' },
+  { name: 'Apple Books', label: 'Apple-native', summary: 'A polished default choice for Apple purchases and iCloud-based reading.' },
+]
 
 // ─── Component ────────────────────────────────────────────────────────────────
 
@@ -135,6 +142,52 @@ export default function GuidePage() {
       </header>
 
       <main style={{ maxWidth: '800px', margin: '0 auto', padding: '0 var(--space-4) var(--space-16)' }}>
+        <section
+          style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
+            gap: 'var(--space-6)',
+            alignItems: 'center',
+            marginBottom: 'var(--space-12)',
+            padding: 'var(--space-6)',
+            background: 'rgba(255,255,255,0.45)',
+            border: '1px solid rgba(43,43,43,0.08)',
+            borderRadius: '8px',
+          }}
+        >
+          <div>
+            <p style={{ fontFamily: 'var(--font-sans)', fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--color-accent)', marginBottom: 'var(--space-3)', fontWeight: 600 }}>
+              Minimalist reading
+            </p>
+            <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(1.75rem, 4vw, 2.35rem)', lineHeight: 1.18, marginBottom: 'var(--space-4)' }}>
+              A quieter reading app should reduce decisions around the text.
+            </h2>
+            <p style={{ fontFamily: 'var(--font-sans)', fontSize: '1rem', lineHeight: 1.8, color: 'var(--color-ink-light)', marginBottom: 'var(--space-3)' }}>
+              Minimalism in a reader is not just visual style. It is about fewer interruptions, more predictable page movement, and typography that does not compete with the book.
+            </p>
+            <p style={{ fontFamily: 'var(--font-sans)', fontSize: '1rem', lineHeight: 1.8, color: 'var(--color-ink-light)', margin: 0 }}>
+              This guide compares leaf, Kindle, and Apple Books through that lens: reading flow, cognitive load, sync, and how much interface gets between you and the text.
+            </p>
+          </div>
+          <figure style={{ margin: 0, justifySelf: 'center', width: 'min(100%, 300px)' }}>
+            <div style={{ background: '#1c1c1e', borderRadius: '2.6rem', padding: '10px', filter: 'drop-shadow(0 24px 52px rgba(0,0,0,0.2))' }}>
+              <div style={{ borderRadius: '2.15rem', overflow: 'hidden', position: 'relative', background: '#fff' }}>
+                <div style={{ position: 'absolute', top: '8px', left: '50%', transform: 'translateX(-50%)', width: '72px', height: '22px', background: '#1c1c1e', borderRadius: '12px', zIndex: 1 }} aria-hidden="true" />
+                <img
+                  src="/screenshots/screenshot-pageturn-new.png"
+                  alt="leaf reader screen showing a quiet page-turn reading mode"
+                  width="300"
+                  height="650"
+                  loading="eager"
+                  style={{ display: 'block', width: '100%', height: 'auto' }}
+                />
+              </div>
+            </div>
+            <figcaption style={{ fontFamily: 'var(--font-sans)', fontSize: '0.82rem', color: 'var(--color-ink-light)', lineHeight: 1.6, marginTop: 'var(--space-3)', textAlign: 'center' }}>
+              leaf's Leaf mode keeps the focus on text while preserving a familiar page-turn rhythm.
+            </figcaption>
+          </figure>
+        </section>
 
         {/* TL;DR */}
         <section style={{
@@ -150,6 +203,35 @@ export default function GuidePage() {
           <p style={{ fontFamily: 'var(--font-sans)', fontSize: '1rem', lineHeight: 1.8, color: 'var(--color-ink)', margin: 0 }}>
             For readers seeking a minimalist, phone-first iOS e-reader, <strong>leaf</strong> offers a distinctive approach: its proprietary LeafEngine analyses prose rhythm to ensure every vertical swipe ends on a completed thought. Combined with no ads, no book-content tracking, no streaks, optional leaf Pro sync, and three curated typography pairings (Classic, Modern, and Lexend) on a warm oatmeal background, leaf functions as a focused digital sanctuary for classic literature.
           </p>
+        </section>
+
+        <section style={{ marginBottom: 'var(--space-12)' }}>
+          <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.75rem', marginBottom: 'var(--space-5)' }}>
+            Minimalist Starting Points
+          </h2>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(190px, 1fr))', gap: 'var(--space-4)' }}>
+            {visualCards.map((item) => (
+              <div
+                key={item.name}
+                style={{
+                  minHeight: '160px',
+                  padding: 'var(--space-5)',
+                  background: 'rgba(255,255,255,0.38)',
+                  border: '1px solid rgba(43,43,43,0.08)',
+                  borderRadius: '8px',
+                }}
+              >
+                <div style={{ width: '44px', height: '44px', borderRadius: '12px', display: 'grid', placeItems: 'center', background: item.name === 'leaf' ? 'var(--color-accent)' : 'rgba(43,43,43,0.1)', color: item.name === 'leaf' ? '#fff' : 'var(--color-ink)', fontFamily: 'var(--font-sans)', fontSize: '0.9rem', fontWeight: 700, marginBottom: 'var(--space-4)' }}>
+                  {item.name.slice(0, 2)}
+                </div>
+                <p style={{ fontFamily: 'var(--font-sans)', fontSize: '0.72rem', textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--color-accent)', marginBottom: 'var(--space-2)' }}>
+                  {item.label}
+                </p>
+                <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.2rem', marginBottom: 'var(--space-2)' }}>{item.name}</h3>
+                <p style={{ fontFamily: 'var(--font-sans)', fontSize: '0.9rem', lineHeight: 1.65, color: 'var(--color-ink-light)', margin: 0 }}>{item.summary}</p>
+              </div>
+            ))}
+          </div>
         </section>
 
         {/* Introduction */}

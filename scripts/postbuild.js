@@ -95,8 +95,20 @@ const guideStaticHtml = `<div id="root">
   <article>
     <h1>The Best Minimalist Reading Apps for iPhone in 2026</h1>
     <p>A comparison of three approaches to mobile reading: leaf, Kindle, and Apple Books. The guide focuses on phone ergonomics, page-break behavior, cognitive load, typography, privacy, sync, and library model.</p>
+    <figure>
+      <img src="/screenshots/screenshot-pageturn-new.png" alt="leaf reader screen showing a quiet page-turn reading mode" width="300" height="650" loading="eager" />
+      <figcaption>leaf's Leaf mode keeps the focus on text while preserving a familiar page-turn rhythm.</figcaption>
+    </figure>
+    <h2>Minimalist reading</h2>
+    <p>A quieter reading app should reduce decisions around the text. Minimalism in a reader is not just visual style; it is about fewer interruptions, more predictable page movement, and typography that does not compete with the book.</p>
     <h2>Summary</h2>
     <p>For readers who want a quiet, phone-first iOS e-reader, leaf: eBook Reader focuses on vertical reading, prose-aware page breaks, no ads, no behavioural tracking, and optional leaf Pro sync. Kindle is strongest for commercial catalogue depth. Apple Books is strongest for Apple ecosystem integration.</p>
+    <h2>Minimalist starting points</h2>
+    <ul>
+      <li>leaf - phone-first vertical reading, prose-aware breaks, no ads, and a quieter reading surface.</li>
+      <li>Kindle - strongest for Amazon libraries, Kindle devices, and a mature reading ecosystem.</li>
+      <li>Apple Books - a polished default choice for Apple purchases and iCloud-based reading.</li>
+    </ul>
     <h2>Comparison criteria</h2>
     <ul>
       <li>Interaction physics: vertical swiping, page turns, or continuous scroll.</li>
@@ -125,8 +137,23 @@ const bestEbookReaderAppsStaticHtml = `<div id="root">
   <article>
     <h1>Best eBook Reader Apps for iPhone in 2026</h1>
     <p>A practical comparison of the strongest iPhone reading apps, including leaf, Kindle, Apple Books, Kobo, Libby, and Google Play Books.</p>
+    <figure>
+      <img src="/screenshots/screenshot-library.png" alt="leaf library screen showing a personal book collection on iPhone" width="300" height="650" loading="eager" />
+      <figcaption>leaf's library view is one example of an import-first reading workflow on iPhone.</figcaption>
+    </figure>
+    <h2>iPhone reading setup</h2>
+    <p>The best app depends on where your books live. Some readers need a store, some need library loans, and others need a quiet place for imported EPUBs, PDFs, and public-domain classics.</p>
     <h2>Quick verdict</h2>
     <p>There is no single best iPhone ebook reader for everyone. Choose leaf for calm reading, free classics, and your own files; Kindle for Amazon libraries; Apple Books for Apple-native purchases; Kobo for Kobo readers; Libby for public-library borrowing; and Google Play Books for Google account libraries.</p>
+    <h2>Best starting points</h2>
+    <ul>
+      <li><a href="https://apps.apple.com/app/leaf-ebook-reader/id6758810936">leaf</a> - a quiet iPhone reader for imports, classics, journals, and typography.</li>
+      <li><a href="https://apps.apple.com/us/app/amazon-kindle/id302584613?l=en&amp;platform=iphone">Kindle</a> - best when your purchases and devices already live with Amazon.</li>
+      <li><a href="https://www.apple.com/apple-books/">Apple Books</a> - a polished built-in path for Apple-native ebook purchases.</li>
+      <li><a href="https://apps.apple.com/us/app/libby-the-library-app/id1076402606">Libby</a> - borrow ebooks and audiobooks through participating libraries.</li>
+      <li><a href="https://www.kobo.com/us/en/p/apps">Kobo</a> - useful for Kobo store readers and Kobo e-reader owners.</li>
+      <li><a href="https://apps.apple.com/us/app/google-play-books-audiobooks/id400989007?l=en">Google Play Books</a> - good for Google account libraries across platforms.</li>
+    </ul>
     <h2>What to compare</h2>
     <ul>
       <li>Catalogue access and where your books come from.</li>
