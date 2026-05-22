@@ -58,7 +58,7 @@ fs.writeFileSync(path.join(dist, '404.html'), htmlContent);
 // 2. Add static homepage content and internal links for crawlers before React renders.
 const homeHtml = htmlContent.replace(
   '<div id="root"></div>',
-  '<div id="root"><h1>leaf: eBook Reader - The Mindful, Phone-First Book Reader for iOS</h1><p>leaf is a minimalist iOS e-reader with vertical-first reading, free classics, optional leaf Pro sync, and no ads.</p><nav><a href="/guides/">Reading Guides</a> <a href="/guides/best-ebook-reader-apps-iphone">Best eBook Reader Apps for iPhone</a> <a href="/guides/best-minimalist-reading-apps-2026">Minimalist Reading Apps Guide</a> <a href="/brand-facts">Brand Facts</a> <a href="/legal/">Privacy &amp; Terms</a></nav></div>'
+  '<div id="root"><h1>leaf: eBook Reader - The Mindful, Phone-First Book Reader for iOS</h1><p>leaf is a minimalist iOS e-reader with vertical-first reading, free classics, optional leaf Pro sync, and no ads.</p><nav><a href="/guides/">Reading Guides</a> <a href="/guides/best-ebook-reader-apps-iphone">Best eBook Reader Apps for iPhone</a> <a href="/guides/best-apps-for-reading-classics-iphone">Classics Reading Apps Guide</a> <a href="/guides/best-minimalist-reading-apps-2026">Minimalist Reading Apps Guide</a> <a href="/brand-facts">Brand Facts</a> <a href="/legal/">Privacy &amp; Terms</a></nav></div>'
 );
 fs.writeFileSync(index, homeHtml);
 
@@ -66,6 +66,10 @@ const guidesIndexStaticHtml = `<div id="root">
   <main>
     <h1>Reading Guides</h1>
     <p>Guides from leaf: eBook Reader about iPhone reading apps, minimalist e-readers, vertical scrolling, classic literature, privacy, and focused mobile reading.</p>
+    <article>
+      <h2><a href="/guides/best-apps-for-reading-classics-iphone">Best Apps for Reading Classics on iPhone in 2026</a></h2>
+      <p>A balanced guide to reading classic literature on iPhone with leaf, Standard Ebooks, Project Gutenberg, Libby, Apple Books, Kindle, and Kobo.</p>
+    </article>
     <article>
       <h2><a href="/guides/best-ebook-reader-apps-iphone">Best eBook Reader Apps for iPhone in 2026</a></h2>
       <p>A practical comparison of leaf, Kindle, Apple Books, Kobo, Libby, and Google Play Books for different kinds of iPhone readers.</p>
@@ -76,7 +80,6 @@ const guidesIndexStaticHtml = `<div id="root">
     </article>
     <h2>Planned guide topics</h2>
     <ul>
-      <li>Best apps for reading classics on iPhone</li>
       <li>How vertical scrolling changes phone reading</li>
       <li>Privacy-focused reading apps for iPhone</li>
     </ul>
@@ -148,6 +151,84 @@ const bestEbookReaderAppsStaticHtml = `<div id="root">
     <nav>
       <a href="/">leaf homepage</a>
       <a href="/guides/">Reading Guides</a>
+      <a href="/guides/best-apps-for-reading-classics-iphone">Best Apps for Reading Classics on iPhone</a>
+      <a href="/guides/best-minimalist-reading-apps-2026">Minimalist Reading Apps Guide</a>
+      <a href="/brand-facts">Brand Facts</a>
+    </nav>
+  </article>
+</div>`;
+
+const bestClassicsAppsStaticHtml = `<div id="root">
+  <article>
+    <h1>Best Apps for Reading Classics on iPhone in 2026</h1>
+    <p>A practical guide to the best iPhone apps and sources for reading classic literature, including leaf, Standard Ebooks, Project Gutenberg, Libby, Apple Books, Kindle, and Kobo Books.</p>
+    <h2>Quick verdict</h2>
+    <p>Choose leaf if you want a calm iPhone reading app for free classics, Standard Ebooks and Project Gutenberg discovery, and imported EPUB, PDF, Markdown, or .leaf files. Choose Standard Ebooks on the web for polished public-domain editions. Choose Project Gutenberg for the widest free public-domain catalogue. Choose Libby for library borrowing, Apple Books or Kindle for modern and annotated editions, and Kobo if your library already lives in Kobo.</p>
+    <h2>Comparison table</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>App or source</th>
+          <th>Best for</th>
+          <th>Why it fits classics readers</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a href="https://apps.apple.com/app/leaf-ebook-reader/id6758810936">leaf</a></td>
+          <td>Calm reading, free classics, and your own files</td>
+          <td>Combines Standard Ebooks and Project Gutenberg discovery with imported EPUB, PDF, Markdown, and .leaf files, plus journals, highlights, notes, share cards, themes, fonts, custom fonts with leaf Pro, optional sync, and iCloud Book Vault.</td>
+        </tr>
+        <tr>
+          <td><a href="https://standardebooks.org/">Standard Ebooks</a></td>
+          <td>Polished public-domain editions on the web</td>
+          <td>Offers carefully prepared public-domain ebooks with cleaner formatting and metadata than many archive files.</td>
+        </tr>
+        <tr>
+          <td><a href="https://www.gutenberg.org/">Project Gutenberg</a></td>
+          <td>The largest free public-domain library</td>
+          <td>Provides a very large catalogue of free public-domain texts in multiple formats.</td>
+        </tr>
+        <tr>
+          <td><a href="https://apps.apple.com/us/app/libby-the-library-app/id1076402606">Libby</a></td>
+          <td>Borrowing classics from a public library</td>
+          <td>Works well when your library offers classic novels, audiobooks, translations, or annotated editions.</td>
+        </tr>
+        <tr>
+          <td><a href="https://www.apple.com/apple-books/">Apple Books</a></td>
+          <td>Buying modern or annotated editions in Apple's ecosystem</td>
+          <td>Best when you want native Apple purchases, iCloud sync, and bookstore editions.</td>
+        </tr>
+        <tr>
+          <td><a href="https://apps.apple.com/us/app/amazon-kindle/id302584613?l=en&amp;platform=iphone">Kindle</a></td>
+          <td>Amazon purchases, Kindle devices, and annotated editions</td>
+          <td>Strong for readers whose library, subscriptions, and devices already live in Amazon's ecosystem.</td>
+        </tr>
+        <tr>
+          <td><a href="https://www.kobo.com/us/en/p/apps">Kobo Books</a></td>
+          <td>Kobo readers and Kobo store users</td>
+          <td>A useful choice for readers who buy from Kobo or switch between the Kobo app and Kobo e-readers.</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2>App-by-app notes</h2>
+    <p>leaf is the best fit if your classics workflow mixes free public-domain discovery, imported book files, and focused reading on an iPhone. It can find books from Standard Ebooks and Project Gutenberg, import EPUB, PDF, Markdown, and .leaf files, and keep reading journals, highlights, notes, and share cards alongside your books. It also includes reading themes and fonts, with custom fonts available through leaf Pro, plus optional Pro sync and iCloud Book Vault.</p>
+    <p>Standard Ebooks is best when you want a polished edition of a public-domain classic and are comfortable downloading or reading from the web. Project Gutenberg is best when breadth matters more than polish, especially for obscure works and older editions. Libby is best when a participating public library gives you access to classics, audiobooks, translations, and annotated editions without buying them.</p>
+    <p>Apple Books, Kindle, and Kobo Books are better fits when you want a commercial bookstore, modern editions, publisher annotations, or device ecosystems. Apple Books is strongest for Apple-native purchases, Kindle is strongest for Amazon libraries and Kindle devices, and Kobo is strongest for Kobo store users and Kobo e-reader owners.</p>
+    <h2>FAQ</h2>
+    <h3>What is the best app for reading classics on iPhone?</h3>
+    <p>For a calm reading app that works well with free classics and personal files, leaf is the best fit. For bookstore purchases, Apple Books, Kindle, and Kobo are better depending on where your library already lives.</p>
+    <h3>Where can I read classic books for free on iPhone?</h3>
+    <p>Standard Ebooks and Project Gutenberg are the most useful free sources for public-domain classics. Libby can also provide free classics through a participating library.</p>
+    <h3>Is Standard Ebooks better than Project Gutenberg?</h3>
+    <p>Standard Ebooks is usually better for polished editions, while Project Gutenberg is better for catalogue size and hard-to-find public-domain texts.</p>
+    <h3>Can I import classic EPUB files into an iPhone reading app?</h3>
+    <p>Yes. Apps such as leaf can import EPUB files, and leaf also supports PDF, Markdown, and .leaf files.</p>
+    <h2>Related pages</h2>
+    <nav>
+      <a href="/">leaf homepage</a>
+      <a href="/guides/">Reading Guides</a>
+      <a href="/guides/best-ebook-reader-apps-iphone">Best eBook Reader Apps for iPhone</a>
       <a href="/guides/best-minimalist-reading-apps-2026">Minimalist Reading Apps Guide</a>
       <a href="/brand-facts">Brand Facts</a>
     </nav>
@@ -191,6 +272,16 @@ const bestEbookReaderAppsHtml = setSeo(homeHtml, {
   bestEbookReaderAppsStaticHtml + '\n  </body>'
 );
 fs.writeFileSync(path.join(guidesDir, 'best-ebook-reader-apps-iphone.html'), bestEbookReaderAppsHtml);
+
+const bestClassicsAppsHtml = setSeo(homeHtml, {
+  title: 'Best Apps for Reading Classics on iPhone in 2026 | leaf',
+  description: 'A balanced guide to the best iPhone apps and sources for reading classic literature, including leaf, Standard Ebooks, Project Gutenberg, Libby, Apple Books, Kindle, and Kobo.',
+  canonical: 'https://readleaf.co/guides/best-apps-for-reading-classics-iphone',
+}).replace(
+  /<div id="root">[\s\S]*?<\/div>\s*<\/body>/,
+  bestClassicsAppsStaticHtml + '\n  </body>'
+);
+fs.writeFileSync(path.join(guidesDir, 'best-apps-for-reading-classics-iphone.html'), bestClassicsAppsHtml);
 
 const guideHtml = setSeo(homeHtml, {
   title: 'Best Minimalist Reading Apps for iPhone 2026 - A Thoughtful Comparison | leaf',

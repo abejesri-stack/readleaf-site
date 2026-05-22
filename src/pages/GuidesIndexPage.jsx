@@ -3,6 +3,13 @@ import { Link } from 'react-router-dom'
 
 const guides = [
   {
+    title: 'Best Apps for Reading Classics on iPhone in 2026',
+    description:
+      'A balanced guide to reading classic literature on iPhone with leaf, Standard Ebooks, Project Gutenberg, Libby, Apple Books, Kindle, and Kobo.',
+    href: '/guides/best-apps-for-reading-classics-iphone',
+    updated: 'May 2026',
+  },
+  {
     title: 'Best eBook Reader Apps for iPhone in 2026',
     description:
       'A practical comparison of leaf, Kindle, Apple Books, Kobo, Libby, and Google Play Books for different kinds of iPhone readers.',
@@ -19,7 +26,6 @@ const guides = [
 ]
 
 const upcomingGuides = [
-  'Best apps for reading classics on iPhone',
   'How vertical scrolling changes phone reading',
   'Privacy-focused reading apps for iPhone',
 ]
