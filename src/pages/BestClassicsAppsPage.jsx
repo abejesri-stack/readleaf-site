@@ -159,6 +159,13 @@ const faqItems = [
   },
 ]
 
+const visualCards = [
+  { name: 'leaf', href: 'https://apps.apple.com/app/leaf-ebook-reader/id6758810936', label: 'App', summary: 'Calm iPhone reading, imports, and free classics discovery.' },
+  { name: 'Standard Ebooks', href: 'https://standardebooks.org/', label: 'Source', summary: 'Polished public-domain editions with clean EPUB files.' },
+  { name: 'Project Gutenberg', href: 'https://www.gutenberg.org/', label: 'Source', summary: 'The broadest free public-domain catalogue.' },
+  { name: 'Libby', href: 'https://apps.apple.com/us/app/libby-the-library-app/id1076402606', label: 'Library', summary: 'Borrow classics and audiobooks through public libraries.' },
+]
+
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
@@ -169,6 +176,7 @@ const articleSchema = {
   dateModified: '2026-05-23',
   author: { '@type': 'Organization', name: 'leaf', alternateName: 'leaf: eBook Reader', url: 'https://readleaf.co/' },
   publisher: { '@type': 'Organization', name: 'leaf', alternateName: 'leaf: eBook Reader', url: 'https://readleaf.co/' },
+  image: 'https://readleaf.co/screenshots/screenshot-explore-new.png',
   url: 'https://readleaf.co/guides/best-apps-for-reading-classics-iphone',
 }
 
@@ -269,6 +277,53 @@ export default function BestClassicsAppsPage() {
       </header>
 
       <main style={{ maxWidth: '920px', margin: '0 auto', padding: '0 var(--space-4) var(--space-16)' }}>
+        <section
+          style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
+            gap: 'var(--space-6)',
+            alignItems: 'center',
+            marginBottom: 'var(--space-12)',
+            padding: 'var(--space-6)',
+            background: 'rgba(255,255,255,0.45)',
+            border: '1px solid rgba(43,43,43,0.08)',
+            borderRadius: '8px',
+          }}
+        >
+          <div>
+            <p style={{ fontFamily: 'var(--font-sans)', fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--color-accent)', marginBottom: 'var(--space-3)', fontWeight: 600 }}>
+              Classics on iPhone
+            </p>
+            <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(1.75rem, 4vw, 2.5rem)', lineHeight: 1.18, marginBottom: 'var(--space-4)' }}>
+              A good classics setup starts with the source.
+            </h2>
+            <p style={{ ...textStyle, marginBottom: 'var(--space-3)' }}>
+              The best experience usually combines a reliable public-domain source with a reading app that makes long books comfortable on a phone.
+            </p>
+            <p style={{ ...textStyle, margin: 0 }}>
+              That is why this guide separates sources such as Standard Ebooks and Project Gutenberg from apps such as leaf, Libby, Apple Books, Kindle, and Kobo.
+            </p>
+          </div>
+          <figure style={{ margin: 0, justifySelf: 'center', width: 'min(100%, 320px)' }}>
+            <div style={{ background: '#1c1c1e', borderRadius: '2.6rem', padding: '10px', filter: 'drop-shadow(0 24px 52px rgba(0,0,0,0.2))' }}>
+              <div style={{ borderRadius: '2.15rem', overflow: 'hidden', position: 'relative', background: '#fff' }}>
+                <div style={{ position: 'absolute', top: '8px', left: '50%', transform: 'translateX(-50%)', width: '72px', height: '22px', background: '#1c1c1e', borderRadius: '12px', zIndex: 1 }} aria-hidden="true" />
+                <img
+                  src="/screenshots/screenshot-explore-new.png"
+                  alt="leaf Explore screen showing a collection of classic books"
+                  width="300"
+                  height="650"
+                  loading="eager"
+                  style={{ display: 'block', width: '100%', height: 'auto' }}
+                />
+              </div>
+            </div>
+            <figcaption style={{ fontFamily: 'var(--font-sans)', fontSize: '0.82rem', color: 'var(--color-ink-light)', lineHeight: 1.6, marginTop: 'var(--space-3)', textAlign: 'center' }}>
+              leaf's Explore screen is one way to discover public-domain classics from inside a reading app.
+            </figcaption>
+          </figure>
+        </section>
+
         <section style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 1fr)', gap: 'var(--space-4)', marginBottom: 'var(--space-12)' }}>
           <div style={{ background: 'rgba(255,255,255,0.5)', border: '1px solid rgba(43,43,43,0.08)', borderRadius: '8px', padding: 'var(--space-5)' }}>
             <p style={{ fontFamily: 'var(--font-sans)', fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--color-accent)', marginBottom: 'var(--space-3)', fontWeight: 600 }}>
@@ -290,6 +345,41 @@ export default function BestClassicsAppsPage() {
           <p style={textStyle}>
             For this guide, we evaluated each option on public-domain access, edition quality, import support, reading comfort, annotations, library borrowing, ecosystem sync, and whether the app or source is better for reading, buying, borrowing, or downloading classics.
           </p>
+        </section>
+
+        <section style={{ marginBottom: 'var(--space-12)' }}>
+          <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.8rem', marginBottom: 'var(--space-5)' }}>
+            Best Starting Points
+          </h2>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(190px, 1fr))', gap: 'var(--space-4)' }}>
+            {visualCards.map((item) => (
+              <a
+                key={item.name}
+                href={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: 'block',
+                  minHeight: '170px',
+                  padding: 'var(--space-5)',
+                  background: 'rgba(255,255,255,0.38)',
+                  border: '1px solid rgba(43,43,43,0.08)',
+                  borderRadius: '8px',
+                  textDecoration: 'none',
+                  color: 'inherit',
+                }}
+              >
+                <div style={{ width: '44px', height: '44px', borderRadius: '12px', display: 'grid', placeItems: 'center', background: item.name === 'leaf' ? 'var(--color-accent)' : 'rgba(43,43,43,0.1)', color: item.name === 'leaf' ? '#fff' : 'var(--color-ink)', fontFamily: 'var(--font-sans)', fontSize: '0.9rem', fontWeight: 700, marginBottom: 'var(--space-4)' }}>
+                  {item.name.slice(0, 2)}
+                </div>
+                <p style={{ fontFamily: 'var(--font-sans)', fontSize: '0.72rem', textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--color-accent)', marginBottom: 'var(--space-2)' }}>
+                  {item.label}
+                </p>
+                <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.2rem', marginBottom: 'var(--space-2)' }}>{item.name}</h3>
+                <p style={{ ...textStyle, fontSize: '0.9rem', lineHeight: 1.65, margin: 0 }}>{item.summary}</p>
+              </a>
+            ))}
+          </div>
         </section>
 
         <section style={{ marginBottom: 'var(--space-12)' }}>
