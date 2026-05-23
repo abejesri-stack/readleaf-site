@@ -58,7 +58,7 @@ fs.writeFileSync(path.join(dist, '404.html'), htmlContent);
 // 2. Add static homepage content and internal links for crawlers before React renders.
 const homeHtml = htmlContent.replace(
   '<div id="root"></div>',
-  '<div id="root"><h1>leaf: eBook Reader - Vertical-Swipe Book Reader for iPhone</h1><p>leaf is a vertical-swipe iOS e-reader with built-in Standard Ebooks and Project Gutenberg discovery, imported EPUB/PDF/Markdown support, optional leaf Pro sync, and no ads.</p><nav><a href="/guides/">Reading Guides</a> <a href="/guides/best-free-ebook-apps-iphone">Best Free eBook Apps and Sources for iPhone</a> <a href="/guides/best-epub-reader-apps-iphone">Best EPUB Reader Apps for iPhone</a> <a href="/guides/best-ebook-reader-apps-iphone">Best eBook Reader Apps for iPhone</a> <a href="/guides/best-apps-for-reading-classics-iphone">Classics Reading Apps Guide</a> <a href="/guides/best-minimalist-reading-apps-2026">Minimalist Reading Apps Guide</a> <a href="/brand-facts">Brand Facts</a> <a href="/legal/">Privacy &amp; Terms</a></nav></div>'
+  '<div id="root"><h1>leaf: eBook Reader - Vertical-Swipe Book Reader for iPhone</h1><p>leaf is a vertical-swipe iOS e-reader with built-in Standard Ebooks and Project Gutenberg discovery, imported EPUB/PDF/Markdown support, optional leaf Pro sync, and no ads.</p><nav><a href="/guides/">Reading Guides</a> <a href="/guides/how-to-read-project-gutenberg-books-on-iphone">How to Read Project Gutenberg Books on iPhone</a> <a href="/guides/best-free-ebook-apps-iphone">Best Free eBook Apps and Sources for iPhone</a> <a href="/guides/best-epub-reader-apps-iphone">Best EPUB Reader Apps for iPhone</a> <a href="/guides/best-ebook-reader-apps-iphone">Best eBook Reader Apps for iPhone</a> <a href="/guides/best-apps-for-reading-classics-iphone">Classics Reading Apps Guide</a> <a href="/guides/best-minimalist-reading-apps-2026">Minimalist Reading Apps Guide</a> <a href="/brand-facts">Brand Facts</a> <a href="/legal/">Privacy &amp; Terms</a></nav></div>'
 );
 fs.writeFileSync(index, homeHtml);
 
@@ -70,6 +70,7 @@ const guidesIndexStaticHtml = `<div id="root">
     <p>Guides for finding legal free ebooks, public-domain classics, and library books on iPhone.</p>
     <ul>
       <li><a href="/guides/best-free-ebook-apps-iphone">Best Free eBook Apps and Sources for iPhone in 2026</a></li>
+      <li><a href="/guides/how-to-read-project-gutenberg-books-on-iphone">How to Read Project Gutenberg Books on iPhone in 2026</a></li>
       <li><a href="/guides/best-apps-for-reading-classics-iphone">Best Apps and Sources for Reading Classics on iPhone in 2026</a></li>
     </ul>
     <h2>iPhone Reading App Comparisons</h2>
@@ -98,6 +99,10 @@ const guidesIndexStaticHtml = `<div id="root">
     <article>
       <h2><a href="/guides/best-free-ebook-apps-iphone">Best Free eBook Apps and Sources for iPhone in 2026</a></h2>
       <p>A practical guide to legal free reading on iPhone, including leaf, Libby, Project Gutenberg, Standard Ebooks, Apple Books, Kindle, Kobo, and Google Play Books.</p>
+    </article>
+    <article>
+      <h2><a href="/guides/how-to-read-project-gutenberg-books-on-iphone">How to Read Project Gutenberg Books on iPhone in 2026</a></h2>
+      <p>A practical how-to guide for reading Project Gutenberg books on iPhone with EPUB downloads, Safari, Apple Books, Kindle workflows, and leaf Explore.</p>
     </article>
     <article>
       <h2><a href="/guides/best-apps-for-reading-classics-iphone">Best Apps and Sources for Reading Classics on iPhone in 2026</a></h2>
@@ -160,9 +165,103 @@ const guideStaticHtml = `<div id="root">
     <nav>
       <a href="/">leaf homepage</a>
       <a href="/guides/">Reading Guides</a>
+      <a href="/guides/how-to-read-project-gutenberg-books-on-iphone">How to Read Project Gutenberg Books on iPhone</a>
       <a href="/guides/best-free-ebook-apps-iphone">Best Free eBook Apps and Sources for iPhone</a>
       <a href="/brand-facts">Brand Facts</a>
       <a href="/legal/">Privacy and Terms</a>
+    </nav>
+  </article>
+</div>`;
+
+const projectGutenbergIphoneStaticHtml = `<div id="root">
+  <article>
+    <h1>How to Read Project Gutenberg Books on iPhone in 2026</h1>
+    <p>A practical guide to finding free public-domain books on Project Gutenberg, choosing the right format, and reading them comfortably on iPhone.</p>
+    <figure>
+      <img src="/screenshots/screenshot-explore-new.png" alt="leaf Explore screen showing Project Gutenberg and free classic books on iPhone" width="300" height="650" loading="eager" />
+      <figcaption>leaf's Explore tab can surface public-domain classics from Project Gutenberg inside the reader.</figcaption>
+    </figure>
+    <h2>Project Gutenberg on iPhone</h2>
+    <p>Project Gutenberg is a free public-domain ebook library. On iPhone, you can read in the browser, download an EPUB, or use a reading app that supports imports.</p>
+    <p>Use EPUB as the default download format for reading apps. Use leaf if you want built-in Gutenberg discovery, vertical-swipe reading, notes, journals, highlights, share cards, themes, and optional Pro sync. Use Apple Books for a simple built-in import path.</p>
+    <h2>What Project Gutenberg is good for</h2>
+    <p>Project Gutenberg is best for free public-domain books: classics, older nonfiction, poetry, essays, and obscure works that may not be easy to find in modern ebook stores. Its official site offers books that can be read online or downloaded in formats such as EPUB, Kindle-compatible files, plain text, and HTML.</p>
+    <p>Public-domain status depends on where you live. Project Gutenberg focuses on free ebooks, but readers outside the United States should check local copyright rules before downloading.</p>
+    <h2>Best iPhone workflows</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Workflow</th>
+          <th>Best for</th>
+          <th>How it works</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>leaf Explore</td>
+          <td>Built-in Gutenberg discovery and vertical-swipe reading</td>
+          <td>Open Explore in leaf, find a public-domain classic, import it into your library, then read with Glide, Leaf, or Stream.</td>
+        </tr>
+        <tr>
+          <td>Safari download</td>
+          <td>Downloading an EPUB directly from Project Gutenberg</td>
+          <td>Open a Project Gutenberg book page in Safari, choose an EPUB download, then use the iOS share/open sheet to send it to a reader.</td>
+        </tr>
+        <tr>
+          <td>Apple Books</td>
+          <td>A built-in Apple reading path</td>
+          <td>Download the EPUB file, then open it in Books if iOS offers Apple Books as an option.</td>
+        </tr>
+        <tr>
+          <td>Kindle</td>
+          <td>Readers who already use Amazon or Kindle devices</td>
+          <td>Use Kindle-compatible workflows when you want the book inside an Amazon library or synced with Kindle hardware.</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2>Download a Project Gutenberg EPUB on iPhone</h2>
+    <ol>
+      <li>Open <a href="https://www.gutenberg.org/">Project Gutenberg</a> in Safari.</li>
+      <li>Search for the title or author you want to read.</li>
+      <li>Open the book page and look for the download options.</li>
+      <li>Choose an EPUB option when you want the file to adapt to iPhone reading settings.</li>
+      <li>Use the iOS share or open sheet to open the file in your preferred reading app.</li>
+      <li>If you use leaf, you can also discover Project Gutenberg books from Explore instead of starting in Safari.</li>
+    </ol>
+    <h2>Which format should you choose?</h2>
+    <p>EPUB is usually the best default for iPhone reading apps because it adapts to screen size, font settings, and reader controls. HTML is useful for quick browser reading, plain text is useful for simple text access, and PDF is best reserved for fixed-layout or special cases.</p>
+    <h2>Where leaf fits</h2>
+    <p>leaf is a good fit when you want Project Gutenberg discovery inside a dedicated reading app rather than a browser-only workflow. Its Explore tab can help readers find public-domain classics, and the reader supports EPUB, PDF, and Markdown imports.</p>
+    <p>It is also designed around vertical-swipe reading on iPhone. For longer classics, leaf adds reading journals, highlights, notes, passage and completion share cards, themes, fonts, custom fonts with leaf Pro, optional leaf Pro sync, and iCloud Book Vault.</p>
+    <h2>FAQ</h2>
+    <h3>Can I read Project Gutenberg books on iPhone?</h3>
+    <p>Yes. Project Gutenberg books can be read online in a browser or downloaded in formats such as EPUB and opened in compatible iPhone reading apps, including leaf and Apple Books.</p>
+    <h3>What format should I download from Project Gutenberg for iPhone?</h3>
+    <p>EPUB is usually the best default for iPhone reading apps because it adapts to screen size, font settings, and reader controls.</p>
+    <h3>Can I read Project Gutenberg books in Apple Books?</h3>
+    <p>Yes. Apple Books can be a simple built-in option for EPUB and PDF files. Download a Project Gutenberg EPUB on iPhone, then open it with Apple Books if it appears in the iOS share or open sheet.</p>
+    <h3>Is Project Gutenberg legal and free?</h3>
+    <p>Project Gutenberg offers free ebooks, mostly public-domain works. Public-domain rules vary by country, so readers should check local copyright rules when they are outside the United States.</p>
+    <h3>What is the easiest way to read Project Gutenberg books on iPhone?</h3>
+    <p>If you want discovery and reading in one place, leaf is a straightforward option because its Explore tab includes Project Gutenberg discovery. If you prefer a built-in Apple workflow, downloading EPUB files in Safari and opening them in Apple Books can also work.</p>
+    <h2>Sources</h2>
+    <ul>
+      <li><a href="https://www.gutenberg.org/">Project Gutenberg</a></li>
+      <li><a href="https://www.gutenberg.org/help/mobile">Project Gutenberg mobile and e-reader help</a></li>
+      <li><a href="https://gutenberg.org/help/reading_options.html">Project Gutenberg reading options</a></li>
+      <li><a href="https://gutenberg.org/help/bibliographic_record.html">Project Gutenberg download options</a></li>
+      <li><a href="https://apps.apple.com/app/leaf-ebook-reader/id6758810936">leaf on the App Store</a></li>
+      <li><a href="https://www.apple.com/apple-books/">Apple Books</a></li>
+      <li><a href="https://apps.apple.com/us/app/amazon-kindle/id302584613?l=en&amp;platform=iphone">Amazon Kindle on the App Store</a></li>
+    </ul>
+    <h2>Related pages</h2>
+    <nav>
+      <a href="/">leaf homepage</a>
+      <a href="/guides/">Reading Guides</a>
+      <a href="/guides/best-free-ebook-apps-iphone">Best Free eBook Apps and Sources for iPhone</a>
+      <a href="/guides/best-apps-for-reading-classics-iphone">Best Apps and Sources for Reading Classics on iPhone</a>
+      <a href="/guides/best-epub-reader-apps-iphone">Best EPUB Reader Apps for iPhone</a>
+      <a href="/brand-facts">Brand Facts</a>
     </nav>
   </article>
 </div>`;
@@ -214,6 +313,7 @@ const bestEbookReaderAppsStaticHtml = `<div id="root">
       <a href="/guides/">Reading Guides</a>
       <a href="/guides/best-epub-reader-apps-iphone">Best EPUB Reader Apps for iPhone</a>
       <a href="/guides/best-free-ebook-apps-iphone">Best Free eBook Apps and Sources for iPhone</a>
+      <a href="/guides/how-to-read-project-gutenberg-books-on-iphone">How to Read Project Gutenberg Books on iPhone</a>
       <a href="/guides/best-apps-for-reading-classics-iphone">Best Apps and Sources for Reading Classics on iPhone</a>
       <a href="/guides/best-minimalist-reading-apps-2026">Minimalist Reading Apps Guide</a>
       <a href="/brand-facts">Brand Facts</a>
@@ -307,6 +407,7 @@ const bestFreeEbookAppsStaticHtml = `<div id="root">
     <nav>
       <a href="/">leaf homepage</a>
       <a href="/guides/">Reading Guides</a>
+      <a href="/guides/how-to-read-project-gutenberg-books-on-iphone">How to Read Project Gutenberg Books on iPhone</a>
       <a href="/guides/best-epub-reader-apps-iphone">Best EPUB Reader Apps for iPhone</a>
       <a href="/guides/best-ebook-reader-apps-iphone">Best eBook Reader Apps for iPhone</a>
       <a href="/guides/best-apps-for-reading-classics-iphone">Best Apps and Sources for Reading Classics on iPhone</a>
@@ -394,6 +495,7 @@ const bestEpubReaderAppsStaticHtml = `<div id="root">
       <a href="/guides/">Reading Guides</a>
       <a href="/guides/best-ebook-reader-apps-iphone">Best eBook Reader Apps for iPhone</a>
       <a href="/guides/best-free-ebook-apps-iphone">Best Free eBook Apps and Sources for iPhone</a>
+      <a href="/guides/how-to-read-project-gutenberg-books-on-iphone">How to Read Project Gutenberg Books on iPhone</a>
       <a href="/guides/best-apps-for-reading-classics-iphone">Best Apps and Sources for Reading Classics on iPhone</a>
       <a href="/brand-facts">Brand Facts</a>
     </nav>
@@ -486,6 +588,7 @@ const bestClassicsAppsStaticHtml = `<div id="root">
       <a href="/guides/">Reading Guides</a>
       <a href="/guides/best-epub-reader-apps-iphone">Best EPUB Reader Apps for iPhone</a>
       <a href="/guides/best-free-ebook-apps-iphone">Best Free eBook Apps and Sources for iPhone</a>
+      <a href="/guides/how-to-read-project-gutenberg-books-on-iphone">How to Read Project Gutenberg Books on iPhone</a>
       <a href="/guides/best-ebook-reader-apps-iphone">Best eBook Reader Apps for iPhone</a>
       <a href="/guides/best-minimalist-reading-apps-2026">Minimalist Reading Apps Guide</a>
       <a href="/brand-facts">Brand Facts</a>
@@ -540,6 +643,16 @@ const bestFreeEbookAppsHtml = setSeo(homeHtml, {
   bestFreeEbookAppsStaticHtml + '\n  </body>'
 );
 fs.writeFileSync(path.join(guidesDir, 'best-free-ebook-apps-iphone.html'), bestFreeEbookAppsHtml);
+
+const projectGutenbergIphoneHtml = setSeo(homeHtml, {
+  title: 'How to Read Project Gutenberg Books on iPhone in 2026 | leaf',
+  description: 'A practical guide to reading Project Gutenberg books on iPhone, including EPUB downloads, Safari, Apple Books, Kindle workflows, and leaf Explore.',
+  canonical: 'https://readleaf.co/guides/how-to-read-project-gutenberg-books-on-iphone',
+}).replace(
+  /<div id="root">[\s\S]*?<\/div>\s*<\/body>/,
+  projectGutenbergIphoneStaticHtml + '\n  </body>'
+);
+fs.writeFileSync(path.join(guidesDir, 'how-to-read-project-gutenberg-books-on-iphone.html'), projectGutenbergIphoneHtml);
 
 const bestEpubReaderAppsHtml = setSeo(homeHtml, {
   title: 'Best EPUB Reader Apps for iPhone in 2026 | leaf',

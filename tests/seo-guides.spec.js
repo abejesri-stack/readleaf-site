@@ -18,3 +18,21 @@ test('guide hub links to EPUB/imported files topic', async ({ page }) => {
   await expect(page.getByRole('heading', { name: 'EPUB and Imported Files' })).toBeVisible()
   await expect(page.locator('a[href="/guides/best-epub-reader-apps-iphone"]').first()).toBeVisible()
 })
+
+test('Project Gutenberg guide route renders and loads its Explore screenshot', async ({ page }) => {
+  await page.goto('/guides/how-to-read-project-gutenberg-books-on-iphone')
+
+  await expect(page).toHaveTitle('How to Read Project Gutenberg Books on iPhone in 2026 | leaf')
+  await expect(page.getByRole('heading', { level: 1 })).toHaveText('How to Read Project Gutenberg Books on iPhone in 2026')
+  await expect(page.getByRole('heading', { name: 'Download a Project Gutenberg EPUB on iPhone' })).toBeVisible()
+
+  const image = page.getByAltText('leaf Explore screen showing Project Gutenberg and free classic books on iPhone')
+  await expect(image).toBeVisible()
+  await expect(image).toHaveJSProperty('complete', true)
+})
+
+test('guide hub links to Project Gutenberg how-to guide', async ({ page }) => {
+  await page.goto('/guides')
+
+  await expect(page.locator('a[href="/guides/how-to-read-project-gutenberg-books-on-iphone"]').first()).toBeVisible()
+})
