@@ -19,6 +19,14 @@ const guides = [
     topics: ['Free books', 'Public domain', 'Library borrowing'],
   },
   {
+    title: 'How to Read Project Gutenberg Books on iPhone in 2026',
+    description:
+      'A practical how-to guide for reading Project Gutenberg books on iPhone with EPUB downloads, Safari, Apple Books, Kindle workflows, and leaf Explore.',
+    href: '/guides/how-to-read-project-gutenberg-books-on-iphone',
+    updated: 'May 2026',
+    topics: ['Project Gutenberg', 'EPUB files', 'Free classics'],
+  },
+  {
     title: 'Best Apps and Sources for Reading Classics on iPhone in 2026',
     description:
       'A balanced guide to reading classic literature on iPhone with leaf, Standard Ebooks, Project Gutenberg, Libby, Apple Books, Kindle, and Kobo.',
@@ -48,7 +56,7 @@ const topicSections = [
   {
     title: 'Free Books and Public-Domain Reading',
     description: 'Guides for finding legal free ebooks, public-domain classics, and library books on iPhone.',
-    guideHrefs: ['/guides/best-free-ebook-apps-iphone', '/guides/best-apps-for-reading-classics-iphone'],
+    guideHrefs: ['/guides/best-free-ebook-apps-iphone', '/guides/how-to-read-project-gutenberg-books-on-iphone', '/guides/best-apps-for-reading-classics-iphone'],
   },
   {
     title: 'EPUB and Imported Files',
@@ -68,7 +76,6 @@ const topicSections = [
 ]
 
 const upcomingGuides = [
-  'How to read Project Gutenberg books on iPhone',
   'How vertical scrolling changes phone reading',
   'Privacy-focused reading apps for iPhone',
 ]
