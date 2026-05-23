@@ -182,7 +182,7 @@ function App() {
       operatingSystem: 'iOS',
       applicationCategory: 'BookApplication',
       description:
-        'A vertical-swipe ebook reader for iOS. Features the LeafEngine for prose-aware page breaks, built-in Standard Ebooks and Project Gutenberg discovery, EPUB/PDF/Markdown imports, three reading modes (Glide, Leaf, Stream), and optional leaf Pro sync for library metadata, progress, annotations, journals, covers, and supported book files.',
+        'A vertical-swipe ebook reader for iOS. Features the LeafEngine for prose-aware page breaks, built-in Standard Ebooks and Project Gutenberg discovery, EPUB/PDF/Markdown imports, three reading modes (Glide, Leaf, Stream), and optional leaf Pro sync for library metadata, progress, annotations, journals, shelves, and covers.',
       offers: [
         { '@type': 'Offer', price: '0', priceCurrency: 'AUD', description: 'Free download' },
         { '@type': 'Offer', description: 'Optional leaf Pro auto-renewable subscription for sync features' },
@@ -192,11 +192,11 @@ function App() {
         'LeafEngine prose-rhythm analysis for intelligent page breaks',
         'Built-in Standard Ebooks and Project Gutenberg discovery',
         'Three reading modes: Glide, Leaf, Stream',
-        'leaf Pro sync for library metadata, progress, annotations, journals, covers, and supported book files',
+        'leaf Pro sync for library metadata, progress, annotations, journals, shelves, and covers',
         'iCloud Book Vault support for large original files',
         'Standard Ebooks and Project Gutenberg discovery through Explore',
         'Zero content tracking, zero ads, zero reading streaks',
-        'EPUB, PDF, Markdown, and .leaf bundle import support',
+        'EPUB, PDF, and Markdown import support',
         'Privacy-conscious reading model with no ads, no content tracking, and optional anonymous product analytics',
         'Lora + Lexend Deca curated typography',
       ],
@@ -575,7 +575,7 @@ function App() {
                 />
                 <FeatureBadge
                   label="Book file fallback"
-                  desc="Under-limit book files can sync through leaf; large originals can remain available through iCloud Book Vault."
+                  desc="Sync reading progress, annotations, journals, shelves, and covers; large originals can remain available through iCloud Book Vault."
                 />
                 <FeatureBadge
                   label="No ads or content tracking"
@@ -608,7 +608,7 @@ function App() {
                 Explore brings public-domain discovery into the reader, so you can find classics without digging through archive pages first.
               </p>
               <p style={{ color: 'rgba(244,241,234,0.8)', maxWidth: 'none' }}>
-                Standard Ebooks and Project Gutenberg discovery sit beside your imported EPUB, PDF, Markdown, and .leaf files.
+                Standard Ebooks and Project Gutenberg discovery sit beside your imported EPUB, PDF, and Markdown files.
               </p>
               <p style={{ color: 'var(--color-white)', marginTop: 'var(--space-6)', maxWidth: 'none' }}>
                 The result is still quiet: no ads, no streaks, no social feed, just a better way to swipe through long books on your phone.

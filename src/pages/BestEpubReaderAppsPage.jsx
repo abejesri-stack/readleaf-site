@@ -6,7 +6,7 @@ const appRows = [
     name: 'leaf',
     category: 'Best for vertical-swipe EPUB reading and imported files',
     href: 'https://apps.apple.com/app/leaf-ebook-reader/id6758810936',
-    importModel: 'EPUB, PDF, Markdown, .leaf files, Standard Ebooks, Project Gutenberg',
+    importModel: 'EPUB, PDF, Markdown, Standard Ebooks, Project Gutenberg',
     bestUse: 'Reading imported EPUBs in a vertical-swipe iPhone app',
     tradeoff: 'Not a large commercial bookstore',
   },
@@ -60,7 +60,7 @@ const appWriteups = [
     body:
       'leaf is a strong fit if your main library is made of EPUB files, PDFs, Markdown files, public-domain classics, or books you manage yourself. It is designed around the reading session rather than a store feed, so imported books feel like first-class books rather than attachments.',
     details:
-      'leaf supports EPUB, PDF, Markdown, and .leaf imports. Its curated Explore tab can also help readers discover and import books from Standard Ebooks and Project Gutenberg. For imported libraries, the useful extras are reading journals, highlights, notes, passage and completion share cards, themes, fonts, custom TTF/OTF fonts with leaf Pro, optional leaf Pro sync, and iCloud Book Vault.',
+      'leaf supports EPUB, PDF, and Markdown imports. Its curated Explore tab can also help readers discover and import books from Standard Ebooks and Project Gutenberg. For imported libraries, the useful extras are reading journals, highlights, notes, passage and completion share cards, themes, fonts, custom TTF/OTF fonts with leaf Pro, optional leaf Pro sync, and iCloud Book Vault.',
     tradeoff:
       'The tradeoff is that leaf is not trying to replace a giant bookstore. It is best when you care about reading your own files in a vertical-swipe iPhone-native environment.',
   },
@@ -141,7 +141,7 @@ const faqItems = [
 ]
 
 const visualCards = [
-  { name: 'leaf', href: 'https://apps.apple.com/app/leaf-ebook-reader/id6758810936', label: 'Imported reading', summary: 'Vertical-swipe EPUB, PDF, Markdown, and .leaf reading on iPhone.' },
+  { name: 'leaf', href: 'https://apps.apple.com/app/leaf-ebook-reader/id6758810936', label: 'Imported reading', summary: 'Vertical-swipe EPUB, PDF, and Markdown reading on iPhone.' },
   { name: 'Apple Books', href: 'https://www.apple.com/apple-books/', label: 'Built-in', summary: 'A simple Apple-native option for casual EPUB and PDF files.' },
   { name: 'Google Play Books', href: 'https://apps.apple.com/us/app/google-play-books-audiobooks/id400989007?l=en', label: 'Uploads', summary: 'Uploaded EPUB/PDF files across Google account devices.' },
   { name: 'Documents', href: 'https://readdle.com/products/documents', label: 'Files', summary: 'File management for downloads, PDFs, folders, cloud storage, and ePUBs.' },

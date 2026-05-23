@@ -6,7 +6,7 @@ const appRows = [
     name: 'leaf',
     category: 'Best for vertical-swipe reading, free classics, and your own files',
     href: 'https://apps.apple.com/app/leaf-ebook-reader/id6758810936',
-    access: 'Standard Ebooks, Project Gutenberg, EPUB/PDF/Markdown/.leaf imports',
+    access: 'Standard Ebooks, Project Gutenberg, EPUB/PDF/Markdown imports',
     bestUse: 'Reading classics with vertical swipes and built-in public-domain discovery',
     tradeoff: 'Not a large commercial bookstore',
   },
@@ -68,7 +68,7 @@ const appWriteups = [
     body:
       'leaf is a good fit for readers who want classic literature to feel natural on an iPhone. It is built around vertical swipes and the reading session rather than a store feed, so it works well for public-domain books, imported files, and readers who want fewer distractions around the text.',
     details:
-      'Its curated Explore tab brings together Standard Ebooks and Project Gutenberg discovery/import. It also supports EPUB, PDF, Markdown, and .leaf imports, reading journals, highlights, notes, passage and completion share cards, themes, fonts, custom TTF/OTF fonts with leaf Pro, optional leaf Pro sync, and iCloud Book Vault.',
+      'Its curated Explore tab brings together Standard Ebooks and Project Gutenberg discovery/import. It also supports EPUB, PDF, and Markdown imports, reading journals, highlights, notes, passage and completion share cards, themes, fonts, custom TTF/OTF fonts with leaf Pro, optional leaf Pro sync, and iCloud Book Vault.',
     tradeoff:
       'The tradeoff is that leaf is not trying to replace a giant commercial bookstore. It is strongest when you want a vertical-swipe reading environment and already care about classics, imports, or free public-domain editions.',
   },
@@ -155,7 +155,7 @@ const faqItems = [
   },
   {
     q: 'Can I import classic EPUB files into an iPhone reading app?',
-    a: 'Yes. Several iPhone reading apps can open EPUB files. leaf is designed for imported books and supports EPUB, PDF, Markdown, and .leaf bundles; Apple Books and Google Play Books can also support EPUB workflows depending on how you manage your files.',
+    a: 'Yes. Several iPhone reading apps can open EPUB files. leaf is designed for imported books and supports EPUB, PDF, and Markdown files; Apple Books and Google Play Books can also support EPUB workflows depending on how you manage your files.',
   },
 ]
 

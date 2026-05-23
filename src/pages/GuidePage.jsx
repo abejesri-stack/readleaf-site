@@ -36,7 +36,7 @@ const faqSchema = {
       name: 'Does leaf sync books across devices?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. leaf Pro syncs your library metadata, progress, annotations, journals, shelves, covers, and supported book files across Apple devices. Large original files can remain available through iCloud Book Vault.',
+        text: 'Yes. leaf Pro syncs your library metadata, progress, annotations, journals, shelves, and covers across Apple devices. Large original files can remain available through iCloud Book Vault.',
       },
     },
     {
@@ -343,7 +343,7 @@ export default function GuidePage() {
             New in 2026: leaf Pro Sync
           </h2>
           <p style={{ fontFamily: 'var(--font-sans)', fontSize: '1rem', lineHeight: 1.8, color: 'var(--color-ink-light)', marginBottom: 'var(--space-3)' }}>
-            leaf Pro syncs your reading progress, annotations, journals, shelves, covers, and supported book files across your Apple devices.
+            leaf Pro syncs your reading progress, annotations, journals, shelves, and covers across your Apple devices.
           </p>
           <p style={{ fontFamily: 'var(--font-sans)', fontSize: '1rem', lineHeight: 1.8, color: 'var(--color-ink-light)', marginBottom: 0 }}>
             Large original book files can remain in iCloud Book Vault, while leaf Pro keeps their metadata, progress, and annotations in sync. If you prefer not to use sync, leaf can still keep your library on-device in a <code style={{ fontSize: '0.85rem', background: 'rgba(43,43,43,0.06)', padding: '0.1rem 0.4rem', borderRadius: '4px' }}>Documents/leaf</code> folder.

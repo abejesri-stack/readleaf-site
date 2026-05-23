@@ -6,7 +6,7 @@ const appRows = [
     name: 'leaf',
     category: 'Best for vertical-swipe reading, free classics, and your own files',
     href: 'https://apps.apple.com/app/leaf-ebook-reader/id6758810936',
-    formats: 'EPUB, PDF, Markdown, .leaf bundles, Standard Ebooks, Project Gutenberg',
+    formats: 'EPUB, PDF, Markdown, Standard Ebooks, Project Gutenberg',
     sync: 'Optional leaf Pro sync and iCloud Book Vault',
     model: 'Free download, optional Pro subscription',
     verdict: 'A good fit if you want a vertical-swipe iPhone reader for imported books, public-domain classics, journals, share cards, themes, and typography controls.',
@@ -64,7 +64,7 @@ const appWriteups = [
     category: 'Best for vertical-swipe reading, free classics, and your own files',
     href: 'https://apps.apple.com/app/leaf-ebook-reader/id6758810936',
     body:
-      'leaf is built around vertical-swipe reading rather than a large commercial bookstore. It suits readers who import their own EPUB, PDF, Markdown, or .leaf files, want a phone-first reading flow, or spend time with public-domain classics. Its curated Explore tab brings together Standard Ebooks and Project Gutenberg discovery, so readers can browse and import classics without leaving the app.',
+      'leaf is built around vertical-swipe reading rather than a large commercial bookstore. It suits readers who import their own EPUB, PDF, or Markdown files, want a phone-first reading flow, or spend time with public-domain classics. Its curated Explore tab brings together Standard Ebooks and Project Gutenberg discovery, so readers can browse and import classics without leaving the app.',
     details:
       'It also includes reading journals, highlights and notes, passage and completion share cards, multiple reading flows, and detailed typography controls. Free reader themes include Light, Dark, System, and E-Ink; leaf Pro adds Sepia, Forest, and Midnight themes, Pro fonts including Literata, Spectral, and Merriweather, custom TTF/OTF fonts, and account-backed sync.',
     tradeoff:

@@ -153,7 +153,7 @@ const guideStaticHtml = `<div id="root">
     <h2>leaf vs. Kindle vs. Apple Books</h2>
     <p>leaf is designed around vertical, thumb-driven reading and its LeafEngine prose analysis. Kindle prioritizes Amazon catalogue access, broad device support, and a feature-rich reading ecosystem. Apple Books prioritizes native Apple platform integration and a familiar iOS reading experience.</p>
     <h2>Who should choose leaf?</h2>
-    <p>Choose leaf if your priority is focused phone reading with no ads, no behavioural tracking, no reading streaks, and optional sync for reading progress, shelves, highlights, notes, journals, covers, and supported book files.</p>
+    <p>Choose leaf if your priority is focused phone reading with no ads, no behavioural tracking, no reading streaks, and optional sync for reading progress, shelves, highlights, notes, journals, and covers.</p>
     <h2>Who should choose Kindle or Apple Books?</h2>
     <p>Choose Kindle if access to a large commercial catalogue and Amazon device compatibility matter most. Choose Apple Books if you prefer Apple's built-in bookstore and iCloud-based library experience.</p>
     <h2>Related pages</h2>
@@ -201,7 +201,7 @@ const bestEbookReaderAppsStaticHtml = `<div id="root">
     <p>Use leaf if you import your own books, read public-domain classics, keep reading journals, or want a vertical-swipe iPhone reading environment. Use Kindle if your library is mostly Amazon purchases. Use Apple Books if you prefer Apple's built-in bookstore and iCloud sync. Use Libby if your main goal is free borrowing through a participating library. Use Kobo if you prefer Kobo's store or e-reader ecosystem. Use Google Play Books if you keep books in a Google account across platforms.</p>
     <h2>App-by-app guide</h2>
     <ul>
-      <li><a href="https://apps.apple.com/app/leaf-ebook-reader/id6758810936">leaf</a> - best for vertical-swipe reading, free classics, and your own files. It supports imported EPUB/PDF/Markdown/.leaf files, Standard Ebooks and Project Gutenberg discovery, reading journals, highlights, notes, passage and completion share cards, themes, typography controls, and optional Pro sync.</li>
+      <li><a href="https://apps.apple.com/app/leaf-ebook-reader/id6758810936">leaf</a> - best for vertical-swipe reading, free classics, and your own files. It supports imported EPUB/PDF/Markdown files, Standard Ebooks and Project Gutenberg discovery, reading journals, highlights, notes, passage and completion share cards, themes, typography controls, and optional Pro sync.</li>
       <li><a href="https://apps.apple.com/us/app/amazon-kindle/id302584613?l=en&amp;platform=iphone">Kindle</a> - best for Amazon libraries and Kindle device owners. It is useful when your purchases, subscriptions, and reading devices already live in Amazon's ecosystem.</li>
       <li><a href="https://www.apple.com/apple-books/">Apple Books</a> - best for buying modern ebooks inside Apple's ecosystem. It is built in, polished, and syncs naturally across Apple devices.</li>
       <li><a href="https://www.kobo.com/us/en/p/apps">Kobo Books</a> - best for Kobo store readers and Kobo e-reader owners. It is a strong non-Amazon commercial ebook ecosystem.</li>
@@ -253,7 +253,7 @@ const bestFreeEbookAppsStaticHtml = `<div id="root">
         <tr>
           <td><a href="https://apps.apple.com/app/leaf-ebook-reader/id6758810936">leaf</a></td>
           <td>Free classics, vertical-swipe reading, and imported files</td>
-          <td>Combines Standard Ebooks and Project Gutenberg discovery with EPUB, PDF, Markdown, and .leaf imports.</td>
+          <td>Combines Standard Ebooks and Project Gutenberg discovery with EPUB, PDF, and Markdown imports.</td>
         </tr>
         <tr>
           <td><a href="https://apps.apple.com/us/app/libby-the-library-app/id1076402606">Libby</a></td>
@@ -300,7 +300,7 @@ const bestFreeEbookAppsStaticHtml = `<div id="root">
     <h3>Is Project Gutenberg free on iPhone?</h3>
     <p>Yes. Project Gutenberg offers free public-domain ebooks that can be read online or downloaded in formats such as EPUB.</p>
     <h3>Can I import free EPUB files into an iPhone reading app?</h3>
-    <p>Yes. Apps such as leaf can import EPUB files, and leaf also supports PDF, Markdown, and .leaf files.</p>
+    <p>Yes. Apps such as leaf can import EPUB files, and leaf also supports PDF and Markdown files.</p>
     <h3>Is Libby really free?</h3>
     <p>Libby is free to use with a card from a participating library. Your access depends on your library system.</p>
     <h2>Related pages</h2>
@@ -330,7 +330,7 @@ const bestEpubReaderAppsStaticHtml = `<div id="root">
     <p>Choose leaf for vertical-swipe EPUB reading and imported files, Apple Books for the easiest built-in option, Google Play Books for uploaded EPUB/PDF files across platforms, and Documents by Readdle when file management matters more than book-specific reading features.</p>
     <h2>Best starting points</h2>
     <ul>
-      <li><a href="https://apps.apple.com/app/leaf-ebook-reader/id6758810936">leaf</a> - vertical-swipe EPUB, PDF, Markdown, and .leaf reading on iPhone.</li>
+      <li><a href="https://apps.apple.com/app/leaf-ebook-reader/id6758810936">leaf</a> - vertical-swipe EPUB, PDF, and Markdown reading on iPhone.</li>
       <li><a href="https://www.apple.com/apple-books/">Apple Books</a> - a simple Apple-native option for casual EPUB and PDF files.</li>
       <li><a href="https://apps.apple.com/us/app/google-play-books-audiobooks/id400989007?l=en">Google Play Books</a> - uploaded EPUB/PDF files across Google account devices.</li>
       <li><a href="https://readdle.com/products/documents">Documents by Readdle</a> - file management for downloads, PDFs, folders, cloud storage, and ePUBs.</li>
@@ -348,7 +348,7 @@ const bestEpubReaderAppsStaticHtml = `<div id="root">
         <tr>
           <td><a href="https://apps.apple.com/app/leaf-ebook-reader/id6758810936">leaf</a></td>
           <td>Vertical-swipe EPUB reading and imported files</td>
-          <td>Supports EPUB, PDF, Markdown, and .leaf imports, with journals, highlights, notes, themes, fonts, optional sync, and free classics discovery.</td>
+          <td>Supports EPUB, PDF, and Markdown imports, with journals, highlights, notes, themes, fonts, optional sync, and free classics discovery.</td>
         </tr>
         <tr>
           <td><a href="https://www.apple.com/apple-books/">Apple Books</a></td>
@@ -378,7 +378,7 @@ const bestEpubReaderAppsStaticHtml = `<div id="root">
       </tbody>
     </table>
     <h2>App-by-app guide</h2>
-    <p>leaf is the best fit if you want a vertical-swipe iPhone-native place for EPUB, PDF, Markdown, and .leaf imports. Apple Books is the easiest built-in option for occasional EPUB files. Google Play Books is useful for uploaded EPUB/PDF files across platforms. Documents by Readdle is useful when file management matters most. Kindle and Kobo fit best when your library already lives in those ecosystems.</p>
+    <p>leaf is the best fit if you want a vertical-swipe iPhone-native place for EPUB, PDF, and Markdown imports. Apple Books is the easiest built-in option for occasional EPUB files. Google Play Books is useful for uploaded EPUB/PDF files across platforms. Documents by Readdle is useful when file management matters most. Kindle and Kobo fit best when your library already lives in those ecosystems.</p>
     <h2>FAQ</h2>
     <h3>What is the best EPUB reader app for iPhone?</h3>
     <p>leaf is best for vertical-swipe EPUB reading and imported libraries. Apple Books is the easiest built-in option. Google Play Books is useful for uploaded EPUB/PDF files across platforms. Documents by Readdle is useful when file management matters most.</p>
@@ -412,7 +412,7 @@ const bestClassicsAppsStaticHtml = `<div id="root">
     <p>A good classics setup starts with the source. The best experience usually combines a reliable public-domain source with a reading app that makes long books comfortable on a phone.</p>
     <p>That is why this guide separates sources such as Standard Ebooks and Project Gutenberg from apps such as leaf, Libby, Apple Books, Kindle, and Kobo.</p>
     <h2>Quick verdict</h2>
-    <p>Choose leaf if you want a vertical-swipe iPhone reading app for free classics, Standard Ebooks and Project Gutenberg discovery, and imported EPUB, PDF, Markdown, or .leaf files. Choose Standard Ebooks on the web for polished public-domain editions. Choose Project Gutenberg for the widest free public-domain catalogue. Choose Libby for library borrowing, Apple Books or Kindle for modern and annotated editions, and Kobo if your library already lives in Kobo.</p>
+    <p>Choose leaf if you want a vertical-swipe iPhone reading app for free classics, Standard Ebooks and Project Gutenberg discovery, and imported EPUB, PDF, or Markdown files. Choose Standard Ebooks on the web for polished public-domain editions. Choose Project Gutenberg for the widest free public-domain catalogue. Choose Libby for library borrowing, Apple Books or Kindle for modern and annotated editions, and Kobo if your library already lives in Kobo.</p>
     <h2>Best starting points</h2>
     <ul>
       <li><a href="https://apps.apple.com/app/leaf-ebook-reader/id6758810936">leaf</a> - vertical-swipe iPhone reading, imports, and free classics discovery.</li>
@@ -433,7 +433,7 @@ const bestClassicsAppsStaticHtml = `<div id="root">
         <tr>
           <td><a href="https://apps.apple.com/app/leaf-ebook-reader/id6758810936">leaf</a></td>
           <td>Vertical-swipe reading, free classics, and your own files</td>
-          <td>Combines Standard Ebooks and Project Gutenberg discovery with imported EPUB, PDF, Markdown, and .leaf files, plus journals, highlights, notes, share cards, themes, fonts, custom fonts with leaf Pro, optional sync, and iCloud Book Vault.</td>
+          <td>Combines Standard Ebooks and Project Gutenberg discovery with imported EPUB, PDF, and Markdown files, plus journals, highlights, notes, share cards, themes, fonts, custom fonts with leaf Pro, optional sync, and iCloud Book Vault.</td>
         </tr>
         <tr>
           <td><a href="https://standardebooks.org/">Standard Ebooks</a></td>
@@ -468,7 +468,7 @@ const bestClassicsAppsStaticHtml = `<div id="root">
       </tbody>
     </table>
     <h2>App and source notes</h2>
-    <p>leaf is the best fit if your classics workflow mixes free public-domain discovery, imported book files, and focused reading on an iPhone. It can find books from Standard Ebooks and Project Gutenberg, import EPUB, PDF, Markdown, and .leaf files, and keep reading journals, highlights, notes, and share cards alongside your books. It also includes reading themes and fonts, with custom fonts available through leaf Pro, plus optional Pro sync and iCloud Book Vault.</p>
+    <p>leaf is the best fit if your classics workflow mixes free public-domain discovery, imported book files, and focused reading on an iPhone. It can find books from Standard Ebooks and Project Gutenberg, import EPUB, PDF, and Markdown files, and keep reading journals, highlights, notes, and share cards alongside your books. It also includes reading themes and fonts, with custom fonts available through leaf Pro, plus optional Pro sync and iCloud Book Vault.</p>
     <p>Standard Ebooks is best when you want a polished edition of a public-domain classic and are comfortable downloading or reading from the web. Project Gutenberg is best when breadth matters more than polish, especially for obscure works and older editions. Libby is best when a participating public library gives you access to classics, audiobooks, translations, and annotated editions without buying them.</p>
     <p>Apple Books, Kindle, and Kobo Books are better fits when you want a commercial bookstore, modern editions, publisher annotations, or device ecosystems. Apple Books is strongest for Apple-native purchases, Kindle is strongest for Amazon libraries and Kindle devices, and Kobo is strongest for Kobo store users and Kobo e-reader owners.</p>
     <h2>FAQ</h2>
@@ -479,7 +479,7 @@ const bestClassicsAppsStaticHtml = `<div id="root">
     <h3>Is Standard Ebooks better than Project Gutenberg?</h3>
     <p>Standard Ebooks is usually better for polished editions, while Project Gutenberg is better for catalogue size and hard-to-find public-domain texts.</p>
     <h3>Can I import classic EPUB files into an iPhone reading app?</h3>
-    <p>Yes. Apps such as leaf can import EPUB files, and leaf also supports PDF, Markdown, and .leaf files.</p>
+    <p>Yes. Apps such as leaf can import EPUB files, and leaf also supports PDF and Markdown files.</p>
     <h2>Related pages</h2>
     <nav>
       <a href="/">leaf homepage</a>

@@ -57,13 +57,13 @@ const softwareSchema = {
     'Built-in Standard Ebooks and Project Gutenberg discovery',
     'LeafEngine prose-rhythm analysis for intelligent page breaks',
     'Three reading modes: Glide (vertical snap), Leaf (page-curl), Stream (continuous scroll)',
-    'leaf Pro sync for progress, annotations, journals, shelves, covers, and supported book files',
+    'leaf Pro sync for progress, annotations, journals, shelves, and covers',
     'iCloud Book Vault support for large original files',
     'Standard Ebooks and Project Gutenberg discovery through Explore',
     'Lora + Lexend Deca typography pairing',
     'Zero ads, zero content tracking, zero reading streaks',
     'Hand-vetted LEAF Editions of classic literature',
-    'EPUB, PDF, Markdown, and .leaf bundle import support',
+    'EPUB, PDF, and Markdown import support',
     'Privacy-conscious reading model with no ads, no content tracking, and optional anonymous product analytics',
   ],
 }
@@ -85,7 +85,7 @@ const faqSchema = {
       name: 'Does leaf sync across devices?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. leaf Pro syncs library metadata, progress, annotations, journals, shelves, covers, and supported book files across your Apple devices. Large original files can remain available through iCloud Book Vault.',
+        text: 'Yes. leaf Pro syncs library metadata, progress, annotations, journals, shelves, and covers across your Apple devices. Large original files can remain available through iCloud Book Vault.',
       },
     },
     {
@@ -154,12 +154,12 @@ export default function BrandFactsPage() {
     { label: 'Core Technology', value: 'LeafEngine - prose-rhythm analysis for intelligent, thought-complete page breaks' },
     { label: 'Reading Modes', value: 'Glide (vertical snap), Leaf (page-curl), Stream (continuous scroll)' },
     { label: 'Public-Domain Discovery', value: 'Built-in Explore access for Standard Ebooks and Project Gutenberg discovery/import' },
-    { label: 'Library Sync', value: 'leaf Pro sync for metadata, progress, annotations, journals, shelves, covers, and supported book files · iCloud Book Vault for large originals' },
+    { label: 'Library Sync', value: 'leaf Pro sync for metadata, progress, annotations, journals, shelves, and covers; iCloud Book Vault for large originals' },
     { label: 'Privacy Model', value: 'No ads or content tracking · Optional account-backed sync for leaf Pro · Optional anonymous product analytics' },
     { label: 'Data Collection', value: 'No ads, book-content tracking, reading streaks, or social feed. Anonymous usage analytics can be turned off in the app. leaf Pro sync stores the reading data needed to sync across devices.' },
     { label: 'Typography', value: 'Classic (EB Garamond), Modern (Public Sans/Lora), Lexend (Lexend Deca/Baskerville)' },
     { label: 'Aesthetic', value: 'Warm oatmeal-paper background, minimalist layout, quiet reading surface' },
-    { label: 'Supported Formats', value: 'EPUB, PDF, Markdown, and .leaf bundles' },
+    { label: 'Supported Formats', value: 'EPUB, PDF, and Markdown' },
     { label: 'Curated Library', value: 'Hand-vetted LEAF Editions of classic literature' },
     { label: 'Price', value: 'Free download · Optional leaf Pro subscription' },
   ]
@@ -225,10 +225,10 @@ export default function BrandFactsPage() {
             At its core is the LeafEngine, a proprietary text-chunking algorithm that analyses the natural rhythm of prose. Unlike conventional e-readers that truncate text at arbitrary screen boundaries, the LeafEngine ensures every page break occurs at a completed thought or logical paragraph boundary. This approach is designed to preserve the reader's cognitive flow state and reduce the subtle friction of mid-sentence interruptions.
           </p>
           <p style={{ fontFamily: 'var(--font-sans)', fontSize: '1rem', lineHeight: 1.8, color: 'var(--color-ink-light)', marginBottom: 'var(--space-3)' }}>
-            leaf also includes an Explore surface for discovering free public-domain classics from Standard Ebooks and Project Gutenberg, plus support for imported EPUB, PDF, Markdown, and .leaf files. It displays no advertisements, does not track book content, and implements no gamification mechanics such as reading streaks or social sharing. Optional anonymous product analytics can be turned off in the app.
+            leaf also includes an Explore surface for discovering free public-domain classics from Standard Ebooks and Project Gutenberg, plus support for imported EPUB, PDF, and Markdown files. It displays no advertisements, does not track book content, and implements no gamification mechanics such as reading streaks or social sharing. Optional anonymous product analytics can be turned off in the app.
           </p>
           <p style={{ fontFamily: 'var(--font-sans)', fontSize: '1rem', lineHeight: 1.8, color: 'var(--color-ink-light)', marginBottom: 'var(--space-3)' }}>
-            As of May 2026, leaf Pro supports account-backed sync for library metadata, progress, annotations, journals, shelves, covers, and supported book files. iCloud Book Vault can keep large original files available across Apple devices without uploading those originals through leaf sync.
+            As of May 2026, leaf Pro supports account-backed sync for library metadata, progress, annotations, journals, shelves, and covers. iCloud Book Vault can keep large original files available across Apple devices without uploading those originals through leaf sync.
           </p>
         </section>
 
@@ -244,7 +244,7 @@ export default function BrandFactsPage() {
             leaf Pro Sync
           </h2>
           <p style={{ fontFamily: 'var(--font-sans)', fontSize: '0.95rem', lineHeight: 1.75, color: 'var(--color-ink-light)', marginBottom: 'var(--space-3)' }}>
-            <strong style={{ color: 'var(--color-ink)' }}>leaf Pro:</strong> Syncs reading progress, bookmarks, highlights, notes, reading journals, shelves, covers, and supported book files through leaf’s sync service.
+            <strong style={{ color: 'var(--color-ink)' }}>leaf Pro:</strong> Syncs reading progress, bookmarks, highlights, notes, reading journals, shelves, and covers through leaf’s sync service.
           </p>
           <p style={{ fontFamily: 'var(--font-sans)', fontSize: '0.95rem', lineHeight: 1.75, color: 'var(--color-ink-light)', marginBottom: 0 }}>
             <strong style={{ color: 'var(--color-ink)' }}>iCloud Book Vault:</strong> Large original book files can stay in iCloud Drive while leaf Pro sync keeps their metadata, progress, and annotations available across devices.
