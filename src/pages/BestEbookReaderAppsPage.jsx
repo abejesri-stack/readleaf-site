@@ -481,6 +481,9 @@ export default function BestEbookReaderAppsPage() {
             If your main goal is legal free reading, see our guide to the <Link to="/guides/best-free-ebook-apps-iphone" style={{ color: 'var(--color-accent)' }}>best free eBook apps and sources for iPhone</Link>.
           </p>
           <p style={{ ...textStyle, marginBottom: 'var(--space-3)' }}>
+            If your library is mostly EPUB files and personal documents, read our guide to the <Link to="/guides/best-epub-reader-apps-iphone" style={{ color: 'var(--color-accent)' }}>best EPUB reader apps for iPhone</Link>.
+          </p>
+          <p style={{ ...textStyle, marginBottom: 'var(--space-3)' }}>
             If you are specifically looking for a quieter, less distracting reading experience, read our focused comparison of <Link to="/guides/best-minimalist-reading-apps-2026" style={{ color: 'var(--color-accent)' }}>minimalist reading apps for iPhone</Link>.
           </p>
           <p style={{ ...textStyle, marginBottom: 'var(--space-3)' }}>

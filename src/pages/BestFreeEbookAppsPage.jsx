@@ -493,6 +493,9 @@ export default function BestFreeEbookAppsPage() {
             Related Reading
           </h2>
           <p style={{ ...textStyle, marginBottom: 'var(--space-3)' }}>
+            If you are organizing downloaded EPUB files, read our guide to the <Link to="/guides/best-epub-reader-apps-iphone" style={{ color: 'var(--color-accent)' }}>best EPUB reader apps for iPhone</Link>.
+          </p>
+          <p style={{ ...textStyle, marginBottom: 'var(--space-3)' }}>
             For a broader app comparison, read our guide to the <Link to="/guides/best-ebook-reader-apps-iphone" style={{ color: 'var(--color-accent)' }}>best eBook reader apps for iPhone</Link>.
           </p>
           <p style={{ ...textStyle, marginBottom: 'var(--space-3)' }}>

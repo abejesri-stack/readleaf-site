@@ -3,6 +3,14 @@ import { Link } from 'react-router-dom'
 
 const guides = [
   {
+    title: 'Best EPUB Reader Apps for iPhone in 2026',
+    description:
+      'A practical guide to reading EPUB files and imported books on iPhone with leaf, Apple Books, Google Play Books, Documents by Readdle, Kindle, and Kobo.',
+    href: '/guides/best-epub-reader-apps-iphone',
+    updated: 'May 2026',
+    topics: ['EPUB files', 'Imported books', 'File management'],
+  },
+  {
     title: 'Best Free eBook Apps and Sources for iPhone in 2026',
     description:
       'A practical guide to legal free reading on iPhone, including leaf, Libby, Project Gutenberg, Standard Ebooks, Apple Books, Kindle, Kobo, and Google Play Books.',
@@ -43,6 +51,11 @@ const topicSections = [
     guideHrefs: ['/guides/best-free-ebook-apps-iphone', '/guides/best-apps-for-reading-classics-iphone'],
   },
   {
+    title: 'EPUB and Imported Files',
+    description: 'Guides for reading EPUB files, imported books, PDFs, and personally managed libraries on iPhone.',
+    guideHrefs: ['/guides/best-epub-reader-apps-iphone', '/guides/best-ebook-reader-apps-iphone'],
+  },
+  {
     title: 'iPhone Reading App Comparisons',
     description: 'Balanced comparisons for choosing between leaf, Kindle, Apple Books, Kobo, Libby, and Google Play Books.',
     guideHrefs: ['/guides/best-ebook-reader-apps-iphone', '/guides/best-free-ebook-apps-iphone'],
@@ -55,7 +68,6 @@ const topicSections = [
 ]
 
 const upcomingGuides = [
-  'Best EPUB reader apps for iPhone',
   'How to read Project Gutenberg books on iPhone',
   'How vertical scrolling changes phone reading',
   'Privacy-focused reading apps for iPhone',

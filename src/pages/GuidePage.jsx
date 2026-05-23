@@ -414,6 +414,9 @@ export default function GuidePage() {
           <p style={{ fontFamily: 'var(--font-sans)', fontSize: '0.95rem', lineHeight: 1.7, color: 'var(--color-ink-light)', marginBottom: 'var(--space-4)' }}>
             If you want legal free books, see our guide to the <Link to="/guides/best-free-ebook-apps-iphone" style={{ color: 'var(--color-accent)' }}>best free eBook apps and sources for iPhone</Link>.
           </p>
+          <p style={{ fontFamily: 'var(--font-sans)', fontSize: '0.95rem', lineHeight: 1.7, color: 'var(--color-ink-light)', marginBottom: 'var(--space-4)' }}>
+            If your focus is imported files, see our guide to the <Link to="/guides/best-epub-reader-apps-iphone" style={{ color: 'var(--color-accent)' }}>best EPUB reader apps for iPhone</Link>.
+          </p>
           <p style={{ fontFamily: 'var(--font-sans)', fontSize: '0.85rem', lineHeight: 1.7, color: 'var(--color-ink-light)', fontStyle: 'italic' }}>
             This guide was prepared by the leaf team. While we have endeavoured to represent each platform accurately based on publicly available information as of March 2026, readers are encouraged to evaluate each app directly. leaf is a free download on the iOS App Store.
           </p>
