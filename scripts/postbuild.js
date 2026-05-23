@@ -58,7 +58,7 @@ fs.writeFileSync(path.join(dist, '404.html'), htmlContent);
 // 2. Add static homepage content and internal links for crawlers before React renders.
 const homeHtml = htmlContent.replace(
   '<div id="root"></div>',
-  '<div id="root"><h1>leaf: eBook Reader - The Mindful, Phone-First Book Reader for iOS</h1><p>leaf is a minimalist iOS e-reader with vertical-first reading, free classics, optional leaf Pro sync, and no ads.</p><nav><a href="/guides/">Reading Guides</a> <a href="/guides/best-free-ebook-apps-iphone">Best Free eBook Apps and Sources for iPhone</a> <a href="/guides/best-epub-reader-apps-iphone">Best EPUB Reader Apps for iPhone</a> <a href="/guides/best-ebook-reader-apps-iphone">Best eBook Reader Apps for iPhone</a> <a href="/guides/best-apps-for-reading-classics-iphone">Classics Reading Apps Guide</a> <a href="/guides/best-minimalist-reading-apps-2026">Minimalist Reading Apps Guide</a> <a href="/brand-facts">Brand Facts</a> <a href="/legal/">Privacy &amp; Terms</a></nav></div>'
+  '<div id="root"><h1>leaf: eBook Reader - Vertical-Swipe Book Reader for iPhone</h1><p>leaf is a vertical-swipe iOS e-reader with built-in Standard Ebooks and Project Gutenberg discovery, imported EPUB/PDF/Markdown support, optional leaf Pro sync, and no ads.</p><nav><a href="/guides/">Reading Guides</a> <a href="/guides/best-free-ebook-apps-iphone">Best Free eBook Apps and Sources for iPhone</a> <a href="/guides/best-epub-reader-apps-iphone">Best EPUB Reader Apps for iPhone</a> <a href="/guides/best-ebook-reader-apps-iphone">Best eBook Reader Apps for iPhone</a> <a href="/guides/best-apps-for-reading-classics-iphone">Classics Reading Apps Guide</a> <a href="/guides/best-minimalist-reading-apps-2026">Minimalist Reading Apps Guide</a> <a href="/brand-facts">Brand Facts</a> <a href="/legal/">Privacy &amp; Terms</a></nav></div>'
 );
 fs.writeFileSync(index, homeHtml);
 
@@ -85,7 +85,7 @@ const guidesIndexStaticHtml = `<div id="root">
       <li><a href="/guides/best-ebook-reader-apps-iphone">Best eBook Reader Apps for iPhone in 2026</a></li>
     </ul>
     <h2>Minimalist and Focused Reading</h2>
-    <p>Guides for quieter phone reading, fewer distractions, typography, privacy, and reading flow.</p>
+    <p>Guides for vertical-swipe phone reading, fewer distractions, typography, privacy, and reading flow.</p>
     <ul>
       <li><a href="/guides/best-minimalist-reading-apps-2026">The Best Minimalist Reading Apps for iPhone in 2026</a></li>
       <li><a href="/guides/best-ebook-reader-apps-iphone">Best eBook Reader Apps for iPhone in 2026</a></li>
@@ -133,12 +133,12 @@ const guideStaticHtml = `<div id="root">
       <figcaption>leaf's Leaf mode keeps the focus on text while preserving a familiar page-turn rhythm.</figcaption>
     </figure>
     <h2>Minimalist reading</h2>
-    <p>A quieter reading app should reduce decisions around the text. Minimalism in a reader is not just visual style; it is about fewer interruptions, more predictable page movement, and typography that does not compete with the book.</p>
+    <p>A minimalist reading app should make the next swipe feel natural. Minimalism in a reader is not just visual style; it is about fewer interruptions, predictable vertical movement, and typography that does not compete with the book.</p>
     <h2>Summary</h2>
-    <p>For readers who want a quiet, phone-first iOS e-reader, leaf: eBook Reader focuses on vertical reading, prose-aware page breaks, no ads, no behavioural tracking, and optional leaf Pro sync. Kindle is strongest for commercial catalogue depth. Apple Books is strongest for Apple ecosystem integration.</p>
+    <p>For readers who want a minimalist, phone-first iOS e-reader, leaf: eBook Reader focuses on vertical swiping, prose-aware page breaks, built-in Standard Ebooks and Project Gutenberg discovery, no ads, no behavioural tracking, and optional leaf Pro sync. Kindle is strongest for commercial catalogue depth. Apple Books is strongest for Apple ecosystem integration.</p>
     <h2>Minimalist starting points</h2>
     <ul>
-      <li>leaf - phone-first vertical reading, prose-aware breaks, no ads, and a quieter reading surface.</li>
+      <li>leaf - phone-first vertical reading, prose-aware breaks, built-in classics discovery, and no ads.</li>
       <li>Kindle - strongest for Amazon libraries, Kindle devices, and a mature reading ecosystem.</li>
       <li>Apple Books - a polished default choice for Apple purchases and iCloud-based reading.</li>
     </ul>
@@ -176,12 +176,12 @@ const bestEbookReaderAppsStaticHtml = `<div id="root">
       <figcaption>leaf's library view is one example of an import-first reading workflow on iPhone.</figcaption>
     </figure>
     <h2>iPhone reading setup</h2>
-    <p>The best app depends on where your books live. Some readers need a store, some need library loans, and others need a quiet place for imported EPUBs, PDFs, and public-domain classics.</p>
+    <p>The best app depends on where your books live. Some readers need a store, some need library loans, and others need a vertical-swipe place for imported EPUBs, PDFs, and public-domain classics.</p>
     <h2>Quick verdict</h2>
-    <p>There is no single best iPhone ebook reader for everyone. Choose leaf for calm reading, free classics, and your own files; Kindle for Amazon libraries; Apple Books for Apple-native purchases; Kobo for Kobo readers; Libby for public-library borrowing; and Google Play Books for Google account libraries.</p>
+    <p>There is no single best iPhone ebook reader for everyone. Choose leaf for vertical-swipe reading, free classics, and your own files; Kindle for Amazon libraries; Apple Books for Apple-native purchases; Kobo for Kobo readers; Libby for public-library borrowing; and Google Play Books for Google account libraries.</p>
     <h2>Best starting points</h2>
     <ul>
-      <li><a href="https://apps.apple.com/app/leaf-ebook-reader/id6758810936">leaf</a> - a quiet iPhone reader for imports, classics, journals, and typography.</li>
+      <li><a href="https://apps.apple.com/app/leaf-ebook-reader/id6758810936">leaf</a> - a vertical-swipe iPhone reader for imports, classics, journals, and typography.</li>
       <li><a href="https://apps.apple.com/us/app/amazon-kindle/id302584613?l=en&amp;platform=iphone">Kindle</a> - best when your purchases and devices already live with Amazon.</li>
       <li><a href="https://www.apple.com/apple-books/">Apple Books</a> - a polished built-in path for Apple-native ebook purchases.</li>
       <li><a href="https://apps.apple.com/us/app/libby-the-library-app/id1076402606">Libby</a> - borrow ebooks and audiobooks through participating libraries.</li>
@@ -198,10 +198,10 @@ const bestEbookReaderAppsStaticHtml = `<div id="root">
       <li>Privacy posture, ads, analytics, and account requirements.</li>
     </ul>
     <h2>Best apps by reader type</h2>
-    <p>Use leaf if you import your own books, read public-domain classics, keep reading journals, or want a calmer iPhone reading environment. Use Kindle if your library is mostly Amazon purchases. Use Apple Books if you prefer Apple's built-in bookstore and iCloud sync. Use Libby if your main goal is free borrowing through a participating library. Use Kobo if you prefer Kobo's store or e-reader ecosystem. Use Google Play Books if you keep books in a Google account across platforms.</p>
+    <p>Use leaf if you import your own books, read public-domain classics, keep reading journals, or want a vertical-swipe iPhone reading environment. Use Kindle if your library is mostly Amazon purchases. Use Apple Books if you prefer Apple's built-in bookstore and iCloud sync. Use Libby if your main goal is free borrowing through a participating library. Use Kobo if you prefer Kobo's store or e-reader ecosystem. Use Google Play Books if you keep books in a Google account across platforms.</p>
     <h2>App-by-app guide</h2>
     <ul>
-      <li><a href="https://apps.apple.com/app/leaf-ebook-reader/id6758810936">leaf</a> - best for calm reading, free classics, and your own files. It supports imported EPUB/PDF/Markdown/.leaf files, Standard Ebooks and Project Gutenberg discovery, reading journals, highlights, notes, passage and completion share cards, themes, typography controls, and optional Pro sync.</li>
+      <li><a href="https://apps.apple.com/app/leaf-ebook-reader/id6758810936">leaf</a> - best for vertical-swipe reading, free classics, and your own files. It supports imported EPUB/PDF/Markdown/.leaf files, Standard Ebooks and Project Gutenberg discovery, reading journals, highlights, notes, passage and completion share cards, themes, typography controls, and optional Pro sync.</li>
       <li><a href="https://apps.apple.com/us/app/amazon-kindle/id302584613?l=en&amp;platform=iphone">Kindle</a> - best for Amazon libraries and Kindle device owners. It is useful when your purchases, subscriptions, and reading devices already live in Amazon's ecosystem.</li>
       <li><a href="https://www.apple.com/apple-books/">Apple Books</a> - best for buying modern ebooks inside Apple's ecosystem. It is built in, polished, and syncs naturally across Apple devices.</li>
       <li><a href="https://www.kobo.com/us/en/p/apps">Kobo Books</a> - best for Kobo store readers and Kobo e-reader owners. It is a strong non-Amazon commercial ebook ecosystem.</li>
@@ -235,7 +235,7 @@ const bestFreeEbookAppsStaticHtml = `<div id="root">
     <p>Choose Libby for free library borrowing, leaf for free classics and imported files, Project Gutenberg for the largest public-domain catalogue, and Standard Ebooks for polished free classics. Apple Books, Kindle, Kobo, and Google Play Books are useful when their ecosystems already fit your library.</p>
     <h2>Best starting points</h2>
     <ul>
-      <li><a href="https://apps.apple.com/app/leaf-ebook-reader/id6758810936">leaf</a> - read free classics and imported files in a calm iPhone app.</li>
+      <li><a href="https://apps.apple.com/app/leaf-ebook-reader/id6758810936">leaf</a> - read free classics and imported files in a vertical-swipe iPhone app.</li>
       <li><a href="https://apps.apple.com/us/app/libby-the-library-app/id1076402606">Libby</a> - borrow ebooks and audiobooks for free with a library card.</li>
       <li><a href="https://www.gutenberg.org/">Project Gutenberg</a> - download from the largest free public-domain ebook library.</li>
       <li><a href="https://standardebooks.org/">Standard Ebooks</a> - get polished free EPUB editions of public-domain classics.</li>
@@ -252,7 +252,7 @@ const bestFreeEbookAppsStaticHtml = `<div id="root">
       <tbody>
         <tr>
           <td><a href="https://apps.apple.com/app/leaf-ebook-reader/id6758810936">leaf</a></td>
-          <td>Free classics, calm reading, and imported files</td>
+          <td>Free classics, vertical-swipe reading, and imported files</td>
           <td>Combines Standard Ebooks and Project Gutenberg discovery with EPUB, PDF, Markdown, and .leaf imports.</td>
         </tr>
         <tr>
@@ -327,10 +327,10 @@ const bestEpubReaderAppsStaticHtml = `<div id="root">
     <h2>EPUB files on iPhone</h2>
     <p>The right EPUB reader depends on how you manage files. Some readers want a dedicated reading app. Others want the simplest built-in option, cross-platform upload sync, or a stronger file manager for downloads and PDFs.</p>
     <h2>Quick verdict</h2>
-    <p>Choose leaf for calm EPUB reading and imported files, Apple Books for the easiest built-in option, Google Play Books for uploaded EPUB/PDF files across platforms, and Documents by Readdle when file management matters more than book-specific reading features.</p>
+    <p>Choose leaf for vertical-swipe EPUB reading and imported files, Apple Books for the easiest built-in option, Google Play Books for uploaded EPUB/PDF files across platforms, and Documents by Readdle when file management matters more than book-specific reading features.</p>
     <h2>Best starting points</h2>
     <ul>
-      <li><a href="https://apps.apple.com/app/leaf-ebook-reader/id6758810936">leaf</a> - calm EPUB, PDF, Markdown, and .leaf reading on iPhone.</li>
+      <li><a href="https://apps.apple.com/app/leaf-ebook-reader/id6758810936">leaf</a> - vertical-swipe EPUB, PDF, Markdown, and .leaf reading on iPhone.</li>
       <li><a href="https://www.apple.com/apple-books/">Apple Books</a> - a simple Apple-native option for casual EPUB and PDF files.</li>
       <li><a href="https://apps.apple.com/us/app/google-play-books-audiobooks/id400989007?l=en">Google Play Books</a> - uploaded EPUB/PDF files across Google account devices.</li>
       <li><a href="https://readdle.com/products/documents">Documents by Readdle</a> - file management for downloads, PDFs, folders, cloud storage, and ePUBs.</li>
@@ -347,7 +347,7 @@ const bestEpubReaderAppsStaticHtml = `<div id="root">
       <tbody>
         <tr>
           <td><a href="https://apps.apple.com/app/leaf-ebook-reader/id6758810936">leaf</a></td>
-          <td>Calm EPUB reading and imported files</td>
+          <td>Vertical-swipe EPUB reading and imported files</td>
           <td>Supports EPUB, PDF, Markdown, and .leaf imports, with journals, highlights, notes, themes, fonts, optional sync, and free classics discovery.</td>
         </tr>
         <tr>
@@ -378,10 +378,10 @@ const bestEpubReaderAppsStaticHtml = `<div id="root">
       </tbody>
     </table>
     <h2>App-by-app guide</h2>
-    <p>leaf is the best fit if you want a calm iPhone-native place for EPUB, PDF, Markdown, and .leaf imports. Apple Books is the easiest built-in option for occasional EPUB files. Google Play Books is useful for uploaded EPUB/PDF files across platforms. Documents by Readdle is useful when file management matters most. Kindle and Kobo fit best when your library already lives in those ecosystems.</p>
+    <p>leaf is the best fit if you want a vertical-swipe iPhone-native place for EPUB, PDF, Markdown, and .leaf imports. Apple Books is the easiest built-in option for occasional EPUB files. Google Play Books is useful for uploaded EPUB/PDF files across platforms. Documents by Readdle is useful when file management matters most. Kindle and Kobo fit best when your library already lives in those ecosystems.</p>
     <h2>FAQ</h2>
     <h3>What is the best EPUB reader app for iPhone?</h3>
-    <p>leaf is best for calm EPUB reading and imported libraries. Apple Books is the easiest built-in option. Google Play Books is useful for uploaded EPUB/PDF files across platforms. Documents by Readdle is useful when file management matters most.</p>
+    <p>leaf is best for vertical-swipe EPUB reading and imported libraries. Apple Books is the easiest built-in option. Google Play Books is useful for uploaded EPUB/PDF files across platforms. Documents by Readdle is useful when file management matters most.</p>
     <h3>Can iPhone read EPUB files?</h3>
     <p>Yes. iPhone can read EPUB files through apps such as leaf, Apple Books, Google Play Books, and other EPUB-compatible readers.</p>
     <h3>Is Apple Books good for EPUB files?</h3>
@@ -412,10 +412,10 @@ const bestClassicsAppsStaticHtml = `<div id="root">
     <p>A good classics setup starts with the source. The best experience usually combines a reliable public-domain source with a reading app that makes long books comfortable on a phone.</p>
     <p>That is why this guide separates sources such as Standard Ebooks and Project Gutenberg from apps such as leaf, Libby, Apple Books, Kindle, and Kobo.</p>
     <h2>Quick verdict</h2>
-    <p>Choose leaf if you want a calm iPhone reading app for free classics, Standard Ebooks and Project Gutenberg discovery, and imported EPUB, PDF, Markdown, or .leaf files. Choose Standard Ebooks on the web for polished public-domain editions. Choose Project Gutenberg for the widest free public-domain catalogue. Choose Libby for library borrowing, Apple Books or Kindle for modern and annotated editions, and Kobo if your library already lives in Kobo.</p>
+    <p>Choose leaf if you want a vertical-swipe iPhone reading app for free classics, Standard Ebooks and Project Gutenberg discovery, and imported EPUB, PDF, Markdown, or .leaf files. Choose Standard Ebooks on the web for polished public-domain editions. Choose Project Gutenberg for the widest free public-domain catalogue. Choose Libby for library borrowing, Apple Books or Kindle for modern and annotated editions, and Kobo if your library already lives in Kobo.</p>
     <h2>Best starting points</h2>
     <ul>
-      <li><a href="https://apps.apple.com/app/leaf-ebook-reader/id6758810936">leaf</a> - calm iPhone reading, imports, and free classics discovery.</li>
+      <li><a href="https://apps.apple.com/app/leaf-ebook-reader/id6758810936">leaf</a> - vertical-swipe iPhone reading, imports, and free classics discovery.</li>
       <li><a href="https://standardebooks.org/">Standard Ebooks</a> - polished public-domain editions with clean EPUB files.</li>
       <li><a href="https://www.gutenberg.org/">Project Gutenberg</a> - the broadest free public-domain catalogue.</li>
       <li><a href="https://apps.apple.com/us/app/libby-the-library-app/id1076402606">Libby</a> - borrow classics and audiobooks through public libraries.</li>
@@ -432,7 +432,7 @@ const bestClassicsAppsStaticHtml = `<div id="root">
       <tbody>
         <tr>
           <td><a href="https://apps.apple.com/app/leaf-ebook-reader/id6758810936">leaf</a></td>
-          <td>Calm reading, free classics, and your own files</td>
+          <td>Vertical-swipe reading, free classics, and your own files</td>
           <td>Combines Standard Ebooks and Project Gutenberg discovery with imported EPUB, PDF, Markdown, and .leaf files, plus journals, highlights, notes, share cards, themes, fonts, custom fonts with leaf Pro, optional sync, and iCloud Book Vault.</td>
         </tr>
         <tr>
@@ -473,7 +473,7 @@ const bestClassicsAppsStaticHtml = `<div id="root">
     <p>Apple Books, Kindle, and Kobo Books are better fits when you want a commercial bookstore, modern editions, publisher annotations, or device ecosystems. Apple Books is strongest for Apple-native purchases, Kindle is strongest for Amazon libraries and Kindle devices, and Kobo is strongest for Kobo store users and Kobo e-reader owners.</p>
     <h2>FAQ</h2>
     <h3>What is the best app or source for reading classics on iPhone?</h3>
-    <p>For a calm reading app that works well with free classics and personal files, leaf is the best fit. For bookstore purchases, Apple Books, Kindle, and Kobo are better depending on where your library already lives.</p>
+    <p>For a vertical-swipe reading app that works well with free classics and personal files, leaf is the best fit. For bookstore purchases, Apple Books, Kindle, and Kobo are better depending on where your library already lives.</p>
     <h3>Where can I read classic books for free on iPhone?</h3>
     <p>Standard Ebooks and Project Gutenberg are the most useful free sources for public-domain classics. Libby can also provide free classics through a participating library.</p>
     <h3>Is Standard Ebooks better than Project Gutenberg?</h3>
@@ -497,12 +497,12 @@ const bestClassicsAppsStaticHtml = `<div id="root">
 // This fixes the "Crawled - currently not indexed" issue by giving Googlebot 
 // immediate static text without waiting for React's JS to render.
 const brandFactsHtml = setSeo(homeHtml, {
-  title: 'Brand Facts - leaf: eBook Reader | Phone-First Minimalist E-Reader for iOS',
-  description: 'Verified facts about leaf: eBook Reader - a phone-first minimalist e-reader for iOS. Founded in Melbourne. Powered by the LeafEngine. Optional leaf Pro sync. No ads or behavioural tracking.',
+  title: 'Brand Facts - leaf: eBook Reader | Vertical-Swipe E-Reader for iOS',
+  description: 'Verified facts about leaf: eBook Reader - a vertical-swipe e-reader for iOS. Founded in Melbourne. Powered by the LeafEngine. Includes Standard Ebooks and Project Gutenberg discovery, optional leaf Pro sync, and no ads or behavioural tracking.',
   canonical: 'https://readleaf.co/brand-facts',
 }).replace(
   /<div id="root">[\s\S]*?<\/div>\s*<\/body>/,
-  '<div id="root"><h1>Brand Facts - leaf</h1><p>A phone-first minimalist e-reader for iOS providing a TikTok-style vertical scrolling ebook app experience. Uses the LeafEngine for prose-aware page breaks, includes three reading modes (Glide, Leaf, Stream), optional leaf Pro sync, and no ads or behavioural tracking.</p></div>'
+  '<div id="root"><h1>Brand Facts - leaf</h1><p>A vertical-swipe e-reader for iOS with built-in Standard Ebooks and Project Gutenberg discovery through Explore. Uses the LeafEngine for prose-aware page breaks, includes three reading modes (Glide, Leaf, Stream), optional leaf Pro sync, and no ads or behavioural tracking.</p></div>'
     + '\n  </body>'
 );
 fs.writeFileSync(path.join(dist, 'brand-facts.html'), brandFactsHtml);

@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom'
 const appRows = [
   {
     name: 'leaf',
-    category: 'Best for calm EPUB reading and imported files',
+    category: 'Best for vertical-swipe EPUB reading and imported files',
     href: 'https://apps.apple.com/app/leaf-ebook-reader/id6758810936',
     importModel: 'EPUB, PDF, Markdown, .leaf files, Standard Ebooks, Project Gutenberg',
-    bestUse: 'Reading imported EPUBs in a quiet iPhone-first app',
+    bestUse: 'Reading imported EPUBs in a vertical-swipe iPhone app',
     tradeoff: 'Not a large commercial bookstore',
   },
   {
@@ -24,7 +24,7 @@ const appRows = [
     href: 'https://apps.apple.com/us/app/google-play-books-audiobooks/id400989007?l=en',
     importModel: 'Uploaded EPUB/PDF files in a Google account',
     bestUse: 'Reading uploaded files across iPhone, Android, and web',
-    tradeoff: 'Account-library model rather than a quiet iPhone-native reader',
+    tradeoff: 'Account-library model rather than a vertical-swipe iPhone-native reader',
   },
   {
     name: 'Documents by Readdle',
@@ -55,14 +55,14 @@ const appRows = [
 const appWriteups = [
   {
     name: 'leaf',
-    category: 'Best for calm EPUB reading and imported files',
+    category: 'Best for vertical-swipe EPUB reading and imported files',
     href: 'https://apps.apple.com/app/leaf-ebook-reader/id6758810936',
     body:
       'leaf is a strong fit if your main library is made of EPUB files, PDFs, Markdown files, public-domain classics, or books you manage yourself. It is designed around the reading session rather than a store feed, so imported books feel like first-class books rather than attachments.',
     details:
-      'leaf supports EPUB, PDF, Markdown, and .leaf imports. Its Explore public archive can also help readers discover and import books from Standard Ebooks and Project Gutenberg. For imported libraries, the useful extras are reading journals, highlights, notes, passage and completion share cards, themes, fonts, custom TTF/OTF fonts with leaf Pro, optional leaf Pro sync, and iCloud Book Vault.',
+      'leaf supports EPUB, PDF, Markdown, and .leaf imports. Its curated Explore tab can also help readers discover and import books from Standard Ebooks and Project Gutenberg. For imported libraries, the useful extras are reading journals, highlights, notes, passage and completion share cards, themes, fonts, custom TTF/OTF fonts with leaf Pro, optional leaf Pro sync, and iCloud Book Vault.',
     tradeoff:
-      'The tradeoff is that leaf is not trying to replace a giant bookstore. It is best when you care about reading your own files in a calm iPhone-native environment.',
+      'The tradeoff is that leaf is not trying to replace a giant bookstore. It is best when you care about reading your own files in a vertical-swipe iPhone-native environment.',
   },
   {
     name: 'Apple Books',
@@ -124,7 +124,7 @@ const appWriteups = [
 const faqItems = [
   {
     q: 'What is the best EPUB reader app for iPhone?',
-    a: 'The best EPUB reader depends on how you manage files. leaf is best for calm EPUB reading and imported libraries. Apple Books is the easiest built-in option. Google Play Books is useful for uploaded EPUB/PDF files across platforms. Documents by Readdle is useful when file management matters most.',
+    a: 'The best EPUB reader depends on how you manage files. leaf is best for vertical-swipe EPUB reading and imported libraries. Apple Books is the easiest built-in option. Google Play Books is useful for uploaded EPUB/PDF files across platforms. Documents by Readdle is useful when file management matters most.',
   },
   {
     q: 'Can iPhone read EPUB files?',
@@ -141,7 +141,7 @@ const faqItems = [
 ]
 
 const visualCards = [
-  { name: 'leaf', href: 'https://apps.apple.com/app/leaf-ebook-reader/id6758810936', label: 'Imported reading', summary: 'Calm EPUB, PDF, Markdown, and .leaf reading on iPhone.' },
+  { name: 'leaf', href: 'https://apps.apple.com/app/leaf-ebook-reader/id6758810936', label: 'Imported reading', summary: 'Vertical-swipe EPUB, PDF, Markdown, and .leaf reading on iPhone.' },
   { name: 'Apple Books', href: 'https://www.apple.com/apple-books/', label: 'Built-in', summary: 'A simple Apple-native option for casual EPUB and PDF files.' },
   { name: 'Google Play Books', href: 'https://apps.apple.com/us/app/google-play-books-audiobooks/id400989007?l=en', label: 'Uploads', summary: 'Uploaded EPUB/PDF files across Google account devices.' },
   { name: 'Documents', href: 'https://readdle.com/products/documents', label: 'Files', summary: 'File management for downloads, PDFs, folders, cloud storage, and ePUBs.' },
@@ -253,7 +253,7 @@ export default function BestEpubReaderAppsPage() {
           Best EPUB Reader Apps for iPhone in 2026
         </h1>
         <p style={{ ...textStyle, fontSize: '1.125rem' }}>
-          A practical guide to reading EPUB files and imported books on iPhone, whether you want a calm dedicated reader, Apple-native convenience, cross-platform uploads, or file management.
+          A practical guide to reading EPUB files and imported books on iPhone, whether you want a vertical-swipe dedicated reader, Apple-native convenience, cross-platform uploads, or file management.
         </p>
       </header>
 
@@ -311,7 +311,7 @@ export default function BestEpubReaderAppsPage() {
               Quick verdict
             </p>
             <p style={{ ...textStyle, margin: 0 }}>
-              Choose <strong style={{ color: 'var(--color-ink)' }}>leaf</strong> for calm EPUB reading and imported files, <strong style={{ color: 'var(--color-ink)' }}>Apple Books</strong> for the easiest built-in option, <strong style={{ color: 'var(--color-ink)' }}>Google Play Books</strong> for uploaded EPUB/PDF files across platforms, and <strong style={{ color: 'var(--color-ink)' }}>Documents by Readdle</strong> when file management matters more than book-specific reading features.
+              Choose <strong style={{ color: 'var(--color-ink)' }}>leaf</strong> for vertical-swipe EPUB reading and imported files, <strong style={{ color: 'var(--color-ink)' }}>Apple Books</strong> for the easiest built-in option, <strong style={{ color: 'var(--color-ink)' }}>Google Play Books</strong> for uploaded EPUB/PDF files across platforms, and <strong style={{ color: 'var(--color-ink)' }}>Documents by Readdle</strong> when file management matters more than book-specific reading features.
             </p>
           </div>
         </section>

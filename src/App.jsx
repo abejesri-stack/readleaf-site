@@ -135,7 +135,7 @@ const FeatureBadge = ({ label, desc }) => (
 // ─── App ─────────────────────────────────────────────────────────────────────
 function App() {
   useEffect(() => {
-    document.title = 'leaf: eBook Reader - Vertical Scrolling Ebook App for iOS'
+    document.title = 'leaf: eBook Reader - Vertical-Swipe Book Reader for iPhone'
 
     // Meta description
     let meta = document.querySelector('meta[name="description"]')
@@ -145,12 +145,12 @@ function App() {
       document.head.appendChild(meta)
     }
     meta.content =
-      'leaf: eBook Reader is a minimalist iOS e-reader with vertical-first reading, 70,000+ free classics, and optional leaf Pro sync for your library, progress, highlights, notes, and journals.'
+      'leaf: eBook Reader is a vertical-swipe ebook reader for iPhone with built-in Standard Ebooks and Project Gutenberg discovery, imported EPUB/PDF/Markdown support, and optional leaf Pro sync.'
 
     // Open Graph
     const ogTags = [
-      { property: 'og:title', content: 'leaf: eBook Reader - Vertical Scrolling Ebook App for iOS' },
-      { property: 'og:description', content: 'A quieter ebook app for iPhone. Vertical-first reading, free classics, and optional leaf Pro sync across devices.' },
+      { property: 'og:title', content: 'leaf: eBook Reader - Vertical-Swipe Book Reader for iPhone' },
+      { property: 'og:description', content: 'Swipe through ebooks on iPhone. Discover free classics from Standard Ebooks and Project Gutenberg, import your own files, and optionally sync with leaf Pro.' },
       { property: 'og:image', content: 'https://readleaf.co/leaf-app-icon.png' },
       { property: 'og:url', content: 'https://readleaf.co/' },
       { property: 'og:type', content: 'website' },
@@ -182,7 +182,7 @@ function App() {
       operatingSystem: 'iOS',
       applicationCategory: 'BookApplication',
       description:
-        'A phone-first minimalist e-reader for iOS. Features the LeafEngine for prose-aware page breaks, three reading modes (Glide, Leaf, Stream), and optional leaf Pro sync for library metadata, progress, annotations, journals, covers, and supported book files.',
+        'A vertical-swipe ebook reader for iOS. Features the LeafEngine for prose-aware page breaks, built-in Standard Ebooks and Project Gutenberg discovery, EPUB/PDF/Markdown imports, three reading modes (Glide, Leaf, Stream), and optional leaf Pro sync for library metadata, progress, annotations, journals, covers, and supported book files.',
       offers: [
         { '@type': 'Offer', price: '0', priceCurrency: 'AUD', description: 'Free download' },
         { '@type': 'Offer', description: 'Optional leaf Pro auto-renewable subscription for sync features' },
@@ -190,10 +190,11 @@ function App() {
       url: 'https://readleaf.co/',
       featureList: [
         'LeafEngine prose-rhythm analysis for intelligent page breaks',
+        'Built-in Standard Ebooks and Project Gutenberg discovery',
         'Three reading modes: Glide, Leaf, Stream',
         'leaf Pro sync for library metadata, progress, annotations, journals, covers, and supported book files',
         'iCloud Book Vault support for large original files',
-        '70,000+ free public domain classics',
+        'Standard Ebooks and Project Gutenberg discovery through Explore',
         'Zero content tracking, zero ads, zero reading streaks',
         'EPUB, PDF, Markdown, and .leaf bundle import support',
         'Privacy-conscious reading model with no ads, no content tracking, and optional anonymous product analytics',
@@ -287,7 +288,7 @@ function App() {
               marginBottom: 'var(--space-5)',
               letterSpacing: '-0.01em',
             }}>
-              A quieter way<br />to <em>read.</em>
+              Swipe through<br /><em>books.</em>
             </h1>
 
             <p style={{
@@ -299,8 +300,8 @@ function App() {
               marginBottom: 'var(--space-8)',
               marginTop: 0,
             }}>
-              Vertical-first scrolling. 70,000 free classics.<br />
-              Optional leaf Pro sync. No noise.
+              Vertical-swipe reading. Built-in free classics.<br />
+              Standard Ebooks, Gutenberg, and your own files.
             </p>
 
             <AppStoreBadge />
@@ -352,14 +353,14 @@ function App() {
             style={{ maxWidth: '800px', margin: '0 auto' }}
           >
             <h2 className="text-center" style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)' }}>
-              Reading on your phone<br />should feel like reading.
+              Reading on iPhone<br />should move vertically.
             </h2>
             <div style={{ marginTop: 'var(--space-8)', display: 'flex', flexDirection: 'column', gap: 'var(--space-4)' }}>
               <p style={{ maxWidth: 'none' }}>
-                Most reading apps were built around the technology, not around you. They borrow the page from a physical book and force it onto a screen you hold vertically, in one hand.
+                Most ebook apps still borrow the page from a physical book. On a phone you hold vertically, horizontal page turns can feel like a convention carried over from another device.
               </p>
               <p style={{ maxWidth: 'none' }}>
-                You get cut off mid-thought. The flow breaks. leaf was built to fix that — by bringing a fluid, natural vertical-first scrolling experience to reading.
+                leaf was built around thumb-driven vertical swipes. Glide snaps each screen into place, Stream lets you scroll continuously, and Leaf keeps a familiar page-turn feel when you want it.
               </p>
               <p style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontSize: '1.5rem', color: 'var(--color-ink)', textAlign: 'center', marginTop: 'var(--space-8)', maxWidth: 'none' }}>
                 The best reading experience is one you don't notice.
@@ -600,17 +601,17 @@ function App() {
             style={{ maxWidth: '800px', margin: '0 auto' }}
           >
             <h2 style={{ color: 'var(--color-white)', fontSize: 'clamp(2.5rem, 5vw, 4rem)' }}>
-              A Quiet Place<br />for Great Thoughts.
+              Free classics<br />built in.
             </h2>
             <div style={{ marginTop: 'var(--space-8)' }}>
               <p style={{ color: 'rgba(244,241,234,0.8)', maxWidth: 'none' }}>
-                <em>leaf</em> is designed for total digital silence. No distractions pulling you away, no streaks or notifications nudging you back.
+                Explore brings public-domain discovery into the reader, so you can find classics without digging through archive pages first.
               </p>
               <p style={{ color: 'rgba(244,241,234,0.8)', maxWidth: 'none' }}>
-                Every detail - the warm paper-toned background, the carefully chosen typefaces - is designed to fade away so the writing can take over.
+                Standard Ebooks and Project Gutenberg discovery sit beside your imported EPUB, PDF, Markdown, and .leaf files.
               </p>
               <p style={{ color: 'var(--color-white)', marginTop: 'var(--space-6)', maxWidth: 'none' }}>
-                And with hand-vetted editions of 70,000+ classics - from Marcus Aurelius's <em>Meditations</em> to Emily Brontë's <em>Wuthering Heights</em> - there's always something great to read next.
+                The result is still quiet: no ads, no streaks, no social feed, just a better way to swipe through long books on your phone.
               </p>
             </div>
 

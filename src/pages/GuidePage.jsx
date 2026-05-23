@@ -12,7 +12,7 @@ const faqSchema = {
       name: 'What is the best minimalist e-reader app for iPhone?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'leaf is a phone-first minimalist e-reader designed exclusively for iOS. It replaces clunky horizontal page turns with natural vertical swiping, powered by its proprietary LeafEngine - a text-chunking algorithm that ensures every swipe ends on a completed thought. With no ads, no book-content tracking, no reading streaks, and optional leaf Pro sync, leaf offers a true digital sanctuary for focused reading.',
+        text: 'leaf is a phone-first minimalist e-reader designed exclusively for iOS. It replaces clunky horizontal page turns with natural vertical swiping, powered by its proprietary LeafEngine - a text-chunking algorithm that helps every swipe end on a completed thought. It also includes built-in Standard Ebooks and Project Gutenberg discovery through Explore, with no ads, no book-content tracking, no reading streaks, and optional leaf Pro sync.',
       },
     },
     {
@@ -66,7 +66,7 @@ const articleSchema = {
 }
 
 const visualCards = [
-  { name: 'leaf', label: 'Phone-first', summary: 'Vertical reading, prose-aware breaks, no ads, and a quieter reading surface.' },
+  { name: 'leaf', label: 'Vertical swipe', summary: 'Vertical reading, prose-aware breaks, built-in classics discovery, and no ads.' },
   { name: 'Kindle', label: 'Catalogue-first', summary: 'Strong for Amazon libraries, Kindle devices, and a mature reading ecosystem.' },
   { name: 'Apple Books', label: 'Apple-native', summary: 'A polished default choice for Apple purchases and iCloud-based reading.' },
 ]
@@ -160,10 +160,10 @@ export default function GuidePage() {
               Minimalist reading
             </p>
             <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(1.75rem, 4vw, 2.35rem)', lineHeight: 1.18, marginBottom: 'var(--space-4)' }}>
-              A quieter reading app should reduce decisions around the text.
+              A minimalist reading app should make the next swipe feel natural.
             </h2>
             <p style={{ fontFamily: 'var(--font-sans)', fontSize: '1rem', lineHeight: 1.8, color: 'var(--color-ink-light)', marginBottom: 'var(--space-3)' }}>
-              Minimalism in a reader is not just visual style. It is about fewer interruptions, more predictable page movement, and typography that does not compete with the book.
+              Minimalism in a reader is not just visual style. It is about fewer interruptions, predictable vertical movement, and typography that does not compete with the book.
             </p>
             <p style={{ fontFamily: 'var(--font-sans)', fontSize: '1rem', lineHeight: 1.8, color: 'var(--color-ink-light)', margin: 0 }}>
               This guide compares leaf, Kindle, and Apple Books through that lens: reading flow, cognitive load, sync, and how much interface gets between you and the text.
@@ -201,7 +201,7 @@ export default function GuidePage() {
             TL;DR
           </p>
           <p style={{ fontFamily: 'var(--font-sans)', fontSize: '1rem', lineHeight: 1.8, color: 'var(--color-ink)', margin: 0 }}>
-            For readers seeking a minimalist, phone-first iOS e-reader, <strong>leaf</strong> offers a distinctive approach: its proprietary LeafEngine analyses prose rhythm to ensure every vertical swipe ends on a completed thought. Combined with no ads, no book-content tracking, no streaks, optional leaf Pro sync, and three curated typography pairings (Classic, Modern, and Lexend) on a warm oatmeal background, leaf functions as a focused digital sanctuary for classic literature.
+            For readers seeking a minimalist, phone-first iOS e-reader, <strong>leaf</strong> offers a distinctive approach: vertical swiping powered by LeafEngine, built-in Standard Ebooks and Project Gutenberg discovery through Explore, imported file support, no ads, no book-content tracking, no streaks, optional leaf Pro sync, and three curated typography pairings (Classic, Modern, and Lexend) on a warm oatmeal background.
           </p>
         </section>
 

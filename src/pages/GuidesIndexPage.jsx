@@ -62,7 +62,7 @@ const topicSections = [
   },
   {
     title: 'Minimalist and Focused Reading',
-    description: 'Guides for quieter phone reading, fewer distractions, typography, privacy, and reading flow.',
+    description: 'Guides for vertical-swipe phone reading, fewer distractions, typography, privacy, and reading flow.',
     guideHrefs: ['/guides/best-minimalist-reading-apps-2026', '/guides/best-ebook-reader-apps-iphone'],
   },
 ]
@@ -144,10 +144,10 @@ export default function GuidesIndexPage() {
           Guides
         </p>
         <h1 style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(2.25rem, 5vw, 3.5rem)', lineHeight: 1.15, marginBottom: 'var(--space-6)' }}>
-          Reading guides for quieter iPhone reading.
+          Reading guides for vertical-swipe iPhone reading.
         </h1>
         <p style={{ fontFamily: 'var(--font-sans)', fontSize: '1.125rem', color: 'var(--color-ink-light)', lineHeight: 1.7 }}>
-          Practical comparisons and notes on free ebook apps, public-domain classics, minimalist e-readers, EPUB files, privacy, and focused reading on a phone.
+          Practical comparisons and notes on vertical-swipe reading, free ebook apps, public-domain classics, minimalist e-readers, EPUB files, privacy, and focused reading on a phone.
         </p>
       </header>
 

@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom'
 const appRows = [
   {
     name: 'leaf',
-    category: 'Best for free classics, calm reading, and imported files',
+    category: 'Best for free classics, vertical-swipe reading, and imported files',
     href: 'https://apps.apple.com/app/leaf-ebook-reader/id6758810936',
     freeAccess: 'Standard Ebooks, Project Gutenberg, imported EPUB/PDF/Markdown/.leaf files',
-    bestUse: 'Building a quiet free classics library on iPhone',
+    bestUse: 'Building a swipe-friendly free classics library on iPhone',
     tradeoff: 'Not a commercial bookstore for new releases',
   },
   {
@@ -64,19 +64,19 @@ const appRows = [
     href: 'https://apps.apple.com/us/app/google-play-books-audiobooks/id400989007?l=en',
     freeAccess: 'Uploaded EPUB/PDF files and free Google Play titles',
     bestUse: 'Keeping free files in a Google account across iPhone, Android, and web',
-    tradeoff: 'Less focused on a quiet iPhone-native reading experience',
+    tradeoff: 'Less focused on a vertical-swipe iPhone-native reading experience',
   },
 ]
 
 const appWriteups = [
   {
     name: 'leaf',
-    category: 'Best for free classics, calm reading, and imported files',
+    category: 'Best for free classics, vertical-swipe reading, and imported files',
     href: 'https://apps.apple.com/app/leaf-ebook-reader/id6758810936',
     body:
-      'leaf is the strongest fit if your idea of free ebooks is public-domain classics, imported EPUB files, and a quiet iPhone reading space. It is not trying to be a giant bookstore; it is built around reading books you already own or can legally download for free.',
+      'leaf is the strongest fit if your idea of free ebooks is public-domain classics, imported EPUB files, and a vertical-swipe iPhone reading space. It is not trying to be a giant bookstore; it is built around reading books you already own or can legally download for free.',
     details:
-      'Its Explore public archive brings Standard Ebooks and Project Gutenberg discovery into the app. leaf also supports EPUB, PDF, Markdown, and .leaf imports, plus reading journals, highlights, notes, share cards, themes, fonts, custom fonts with leaf Pro, optional Pro sync, and iCloud Book Vault.',
+      'Its curated Explore tab brings Standard Ebooks and Project Gutenberg discovery into the app. leaf also supports EPUB, PDF, Markdown, and .leaf imports, plus reading journals, highlights, notes, share cards, themes, fonts, custom fonts with leaf Pro, optional Pro sync, and iCloud Book Vault.',
     tradeoff:
       'The tradeoff is that leaf is best for free classics and personal libraries, not for browsing a large commercial catalogue of current paid books.',
   },
@@ -155,7 +155,7 @@ const appWriteups = [
     details:
       'It makes sense for readers who want cross-platform access more than a deeply customized iPhone reading interface.',
     tradeoff:
-      'The tradeoff is that the app is strongest as a Google account library, not as a quiet phone-first reading environment.',
+      'The tradeoff is that the app is strongest as a Google account library, not as a vertical-swipe iPhone reading environment.',
   },
 ]
 
@@ -183,7 +183,7 @@ const faqItems = [
 ]
 
 const visualCards = [
-  { name: 'leaf', href: 'https://apps.apple.com/app/leaf-ebook-reader/id6758810936', label: 'Reader', summary: 'Read free classics and imported files in a calm iPhone app.' },
+  { name: 'leaf', href: 'https://apps.apple.com/app/leaf-ebook-reader/id6758810936', label: 'Reader', summary: 'Read free classics and imported files in a vertical-swipe iPhone app.' },
   { name: 'Libby', href: 'https://apps.apple.com/us/app/libby-the-library-app/id1076402606', label: 'Library', summary: 'Borrow ebooks and audiobooks for free with a library card.' },
   { name: 'Project Gutenberg', href: 'https://www.gutenberg.org/', label: 'Archive', summary: 'Download from the largest free public-domain ebook library.' },
   { name: 'Standard Ebooks', href: 'https://standardebooks.org/', label: 'Editions', summary: 'Get polished free EPUB editions of public-domain classics.' },
