@@ -11,7 +11,7 @@ const guides = [
     topics: ['Free books', 'Public domain', 'Library borrowing'],
   },
   {
-    title: 'Best Apps for Reading Classics on iPhone in 2026',
+    title: 'Best Apps and Sources for Reading Classics on iPhone in 2026',
     description:
       'A balanced guide to reading classic literature on iPhone with leaf, Standard Ebooks, Project Gutenberg, Libby, Apple Books, Kindle, and Kobo.',
     href: '/guides/best-apps-for-reading-classics-iphone',

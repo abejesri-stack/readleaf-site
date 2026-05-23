@@ -484,7 +484,7 @@ export default function BestEbookReaderAppsPage() {
             If you are specifically looking for a quieter, less distracting reading experience, read our focused comparison of <Link to="/guides/best-minimalist-reading-apps-2026" style={{ color: 'var(--color-accent)' }}>minimalist reading apps for iPhone</Link>.
           </p>
           <p style={{ ...textStyle, marginBottom: 'var(--space-3)' }}>
-            If you mainly want public-domain books and classic literature, see our guide to the <Link to="/guides/best-apps-for-reading-classics-iphone" style={{ color: 'var(--color-accent)' }}>best apps for reading classics on iPhone</Link>.
+            If you mainly want public-domain books and classic literature, see our guide to the <Link to="/guides/best-apps-for-reading-classics-iphone" style={{ color: 'var(--color-accent)' }}>best apps and sources for reading classics on iPhone</Link>.
           </p>
           <p style={{ ...textStyle, margin: 0 }}>
             For maintained product facts and schema, see <Link to="/brand-facts" style={{ color: 'var(--color-accent)' }}>Brand Facts</Link>.

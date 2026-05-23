@@ -142,8 +142,8 @@ const appWriteups = [
 
 const faqItems = [
   {
-    q: 'What is the best app for reading classics on iPhone?',
-    a: 'The best app depends on how you get your books. leaf is useful for calm reading, imported files, and free classics from Standard Ebooks and Project Gutenberg. Libby is best for library borrowing. Apple Books, Kindle, and Kobo are better when you want to buy modern, annotated, or ecosystem-specific editions.',
+    q: 'What is the best app or source for reading classics on iPhone?',
+    a: 'The best choice depends on how you get your books. leaf is useful as a calm reading app for imported files and free classics from Standard Ebooks and Project Gutenberg. Standard Ebooks and Project Gutenberg are sources for public-domain books. Libby is best for library borrowing. Apple Books, Kindle, and Kobo are better when you want to buy modern, annotated, or ecosystem-specific editions.',
   },
   {
     q: 'Where can I read classic books for free on iPhone?',
@@ -169,7 +169,7 @@ const visualCards = [
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  headline: 'Best Apps for Reading Classics on iPhone in 2026',
+  headline: 'Best Apps and Sources for Reading Classics on iPhone in 2026',
   description:
     'A balanced guide to the best iPhone apps and sources for reading classic literature, including leaf, Standard Ebooks, Project Gutenberg, Libby, Apple Books, Kindle, and Kobo.',
   datePublished: '2026-05-23',
@@ -212,7 +212,7 @@ const textStyle = {
 
 export default function BestClassicsAppsPage() {
   useEffect(() => {
-    document.title = 'Best Apps for Reading Classics on iPhone in 2026 | leaf'
+    document.title = 'Best Apps and Sources for Reading Classics on iPhone in 2026 | leaf'
 
     let metaDescription = document.querySelector('meta[name="description"]')
     if (!metaDescription) {
@@ -269,7 +269,7 @@ export default function BestClassicsAppsPage() {
           Guide - Updated May 2026
         </p>
         <h1 style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(2.25rem, 5vw, 3.6rem)', lineHeight: 1.15, marginBottom: 'var(--space-6)' }}>
-          Best Apps for Reading Classics on iPhone in 2026
+          Best Apps and Sources for Reading Classics on iPhone in 2026
         </h1>
         <p style={{ ...textStyle, fontSize: '1.125rem' }}>
           A practical guide to reading classic literature on iPhone, whether you want free public-domain books, polished editions, library loans, or a quiet app for your own files.
@@ -418,7 +418,7 @@ export default function BestClassicsAppsPage() {
 
         <section style={{ marginBottom: 'var(--space-12)' }}>
           <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.8rem', marginBottom: 'var(--space-5)' }}>
-            App-by-App Guide
+            App and Source Guide
           </h2>
           <div style={{ display: 'grid', gap: 'var(--space-6)' }}>
             {appWriteups.map((app) => (
