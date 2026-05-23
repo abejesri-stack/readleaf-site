@@ -4,180 +4,203 @@ import { Link } from 'react-router-dom'
 const appRows = [
   {
     name: 'leaf',
-    category: 'Best for calm reading, free classics, and your own files',
+    category: 'Best for free classics, calm reading, and imported files',
     href: 'https://apps.apple.com/app/leaf-ebook-reader/id6758810936',
-    access: 'Standard Ebooks, Project Gutenberg, EPUB/PDF/Markdown/.leaf imports',
-    bestUse: 'Reading classics in a quiet iPhone-first environment',
-    tradeoff: 'Not a large commercial bookstore',
-  },
-  {
-    name: 'Standard Ebooks',
-    category: 'Best for polished public-domain editions on the web',
-    href: 'https://standardebooks.org/',
-    access: 'Curated public-domain ebooks',
-    bestUse: 'Downloading well-formatted classics',
-    tradeoff: 'A library/source, not a full iPhone reading app',
-  },
-  {
-    name: 'Project Gutenberg',
-    category: 'Best for the largest free public-domain library',
-    href: 'https://www.gutenberg.org/',
-    access: '75,000+ free ebooks',
-    bestUse: 'Finding public-domain texts, including obscure works',
-    tradeoff: 'Edition quality and formatting vary',
+    freeAccess: 'Standard Ebooks, Project Gutenberg, imported EPUB/PDF/Markdown/.leaf files',
+    bestUse: 'Building a quiet free classics library on iPhone',
+    tradeoff: 'Not a commercial bookstore for new releases',
   },
   {
     name: 'Libby',
-    category: 'Best for borrowing classics from a public library',
+    category: 'Best for free library ebooks and audiobooks',
     href: 'https://apps.apple.com/us/app/libby-the-library-app/id1076402606',
-    access: 'Library ebooks, audiobooks, and magazines',
-    bestUse: 'Borrowing free editions with a participating library card',
-    tradeoff: 'Availability depends on your library',
+    freeAccess: 'Participating public libraries',
+    bestUse: 'Borrowing ebooks and audiobooks with a library card',
+    tradeoff: 'Availability, holds, and loan periods depend on your library',
+  },
+  {
+    name: 'Project Gutenberg',
+    category: 'Best for the largest free public-domain catalogue',
+    href: 'https://www.gutenberg.org/',
+    freeAccess: 'Public-domain ebooks in multiple formats',
+    bestUse: 'Finding free classics, older works, and obscure public-domain titles',
+    tradeoff: 'Edition polish and formatting can vary',
+  },
+  {
+    name: 'Standard Ebooks',
+    category: 'Best for polished free public-domain editions',
+    href: 'https://standardebooks.org/',
+    freeAccess: 'Curated public-domain EPUBs',
+    bestUse: 'Downloading clean, well-formatted classics',
+    tradeoff: 'Smaller catalogue than Project Gutenberg',
   },
   {
     name: 'Apple Books',
-    category: "Best for buying modern or annotated editions in Apple's ecosystem",
+    category: 'Best for occasional free titles in Apple Books',
     href: 'https://www.apple.com/apple-books/',
-    access: 'Apple Books Store, EPUB, PDF',
-    bestUse: 'Buying polished editions and reading across Apple devices',
-    tradeoff: 'Mostly a store-led experience',
+    freeAccess: 'Free books, samples, EPUB/PDF imports',
+    bestUse: 'Reading inside Apple ecosystem without installing another reader',
+    tradeoff: 'Free discovery is not as focused as dedicated public-domain sources',
   },
   {
     name: 'Kindle',
-    category: 'Best for Amazon purchases, Kindle devices, and annotated editions',
+    category: 'Best for Amazon free titles and Kindle libraries',
     href: 'https://apps.apple.com/us/app/amazon-kindle/id302584613?l=en&platform=iphone',
-    access: 'Kindle Store, Kindle Unlimited, personal documents',
-    bestUse: 'Reading Amazon editions or syncing with Kindle hardware',
-    tradeoff: "Best when you already use Amazon's book ecosystem",
+    freeAccess: 'Free Kindle titles, samples, personal documents',
+    bestUse: 'Reading free Amazon titles or syncing with Kindle hardware',
+    tradeoff: 'Strongest when you are already in Amazon ecosystem',
   },
   {
     name: 'Kobo Books',
-    category: 'Best for Kobo readers and Kobo store users',
+    category: 'Best for Kobo readers and free Kobo titles',
     href: 'https://www.kobo.com/us/en/p/apps',
-    access: 'Kobo Store and Kobo account sync',
-    bestUse: 'Reading Kobo purchases on iPhone and Kobo devices',
-    tradeoff: "Most useful inside Kobo's ecosystem",
+    freeAccess: 'Free Kobo titles and Kobo account library',
+    bestUse: 'Reading free or purchased Kobo books on iPhone and Kobo devices',
+    tradeoff: 'Most useful if Kobo is already your ebook ecosystem',
+  },
+  {
+    name: 'Google Play Books',
+    category: 'Best for uploaded free EPUB/PDF files across platforms',
+    href: 'https://apps.apple.com/us/app/google-play-books-audiobooks/id400989007?l=en',
+    freeAccess: 'Uploaded EPUB/PDF files and free Google Play titles',
+    bestUse: 'Keeping free files in a Google account across iPhone, Android, and web',
+    tradeoff: 'Less focused on a quiet iPhone-native reading experience',
   },
 ]
 
 const appWriteups = [
   {
     name: 'leaf',
-    category: 'Best for calm reading, free classics, and your own files',
+    category: 'Best for free classics, calm reading, and imported files',
     href: 'https://apps.apple.com/app/leaf-ebook-reader/id6758810936',
     body:
-      'leaf is a good fit for readers who want classic literature to feel quiet on an iPhone. It is built around the reading session rather than a store feed, so it works well for public-domain books, imported files, and readers who want fewer distractions around the text.',
+      'leaf is the strongest fit if your idea of free ebooks is public-domain classics, imported EPUB files, and a quiet iPhone reading space. It is not trying to be a giant bookstore; it is built around reading books you already own or can legally download for free.',
     details:
-      'Its Explore public archive brings together Standard Ebooks and Project Gutenberg discovery/import. It also supports EPUB, PDF, Markdown, and .leaf imports, reading journals, highlights, notes, passage and completion share cards, themes, fonts, custom TTF/OTF fonts with leaf Pro, optional leaf Pro sync, and iCloud Book Vault.',
+      'Its Explore public archive brings Standard Ebooks and Project Gutenberg discovery into the app. leaf also supports EPUB, PDF, Markdown, and .leaf imports, plus reading journals, highlights, notes, share cards, themes, fonts, custom fonts with leaf Pro, optional Pro sync, and iCloud Book Vault.',
     tradeoff:
-      'The tradeoff is that leaf is not trying to replace a giant commercial bookstore. It is strongest when you want a calmer reading environment and already care about classics, imports, or free public-domain editions.',
-  },
-  {
-    name: 'Standard Ebooks',
-    category: 'Best for polished public-domain editions on the web',
-    href: 'https://standardebooks.org/',
-    body:
-      'Standard Ebooks is one of the best places to get carefully prepared public-domain classics. Its editions are usually cleaner and more book-like than raw public-domain files, with better typography and metadata.',
-    details:
-      'Use it when you want a polished EPUB of a classic, then read that file in an app that supports imports. It pairs naturally with readers such as leaf or other EPUB-compatible apps.',
-    tradeoff:
-      'The tradeoff is that Standard Ebooks is a source library rather than a complete reading app with sync, journals, or iPhone reading controls.',
-  },
-  {
-    name: 'Project Gutenberg',
-    category: 'Best for the largest free public-domain library',
-    href: 'https://www.gutenberg.org/',
-    body:
-      'Project Gutenberg is the broadest source for free public-domain ebooks. It is especially useful when you are looking for older, obscure, or less commercially available works.',
-    details:
-      'Its catalogue is much larger than most curated collections, and many books can be read online or downloaded in common formats. For classics readers, it is often the place to search first when a title is hard to find elsewhere.',
-    tradeoff:
-      'The tradeoff is consistency. Formatting, covers, metadata, and edition polish can vary, so some readers may prefer Standard Ebooks when a polished edition is available.',
+      'The tradeoff is that leaf is best for free classics and personal libraries, not for browsing a large commercial catalogue of current paid books.',
   },
   {
     name: 'Libby',
-    category: 'Best for borrowing classics from a public library',
+    category: 'Best for free library ebooks and audiobooks',
     href: 'https://apps.apple.com/us/app/libby-the-library-app/id1076402606',
     body:
-      'Libby is useful when your public library has the classics you want in ebook or audiobook form. It is especially strong for readers who prefer borrowing instead of buying.',
+      'Libby is often the best free ebook app if your local library participates. It gives you legal access to ebooks and audiobooks without buying them, including many modern books that are not in the public domain.',
     details:
-      'The app supports library loans, holds, offline downloads, tags, bookmarks, notes, highlights, and audiobook playback. Many libraries carry modern translations, annotated editions, and audiobook versions of major classics.',
+      'It supports loans, holds, offline downloads, bookmarks, notes, highlights, tags, and audiobook playback. For many readers, Libby is the most useful free option because it includes both classics and current library titles.',
     tradeoff:
-      'The tradeoff is availability. Your catalogue, wait times, and loan rules depend entirely on your participating library system.',
+      'The tradeoff is that catalogue depth, wait times, loan periods, and availability depend entirely on your library system.',
+  },
+  {
+    name: 'Project Gutenberg',
+    category: 'Best for the largest free public-domain catalogue',
+    href: 'https://www.gutenberg.org/',
+    body:
+      'Project Gutenberg is the most important source for free public-domain ebooks. It is especially useful for classics, older works, and obscure titles that may not appear in modern bookstores.',
+    details:
+      'Many books are available in EPUB, Kindle, plain text, and HTML formats. You can read online or download files to use in an iPhone reading app that supports imports.',
+    tradeoff:
+      'The tradeoff is consistency. Some books are beautifully prepared, while others have older formatting, limited metadata, or plain covers.',
+  },
+  {
+    name: 'Standard Ebooks',
+    category: 'Best for polished free public-domain editions',
+    href: 'https://standardebooks.org/',
+    body:
+      'Standard Ebooks is smaller than Project Gutenberg but usually more polished. It is a good first stop when you want a classic that feels closer to a carefully produced ebook.',
+    details:
+      'Its public-domain editions typically have cleaner typography, covers, metadata, and EPUB packaging. Download a Standard Ebooks file, then read it in an EPUB-compatible app such as leaf.',
+    tradeoff:
+      'The tradeoff is catalogue size. If a title is not available on Standard Ebooks, Project Gutenberg is usually the broader search.',
   },
   {
     name: 'Apple Books',
-    category: "Best for buying modern or annotated editions in Apple's ecosystem",
+    category: 'Best for occasional free titles in Apple Books',
     href: 'https://www.apple.com/apple-books/',
     body:
-      'Apple Books is a convenient choice when you want a polished commercial edition of a classic, especially if you already read across iPhone, iPad, and Mac.',
+      'Apple Books can work for free reading if you want the default Apple app, free store titles, samples, or simple EPUB/PDF imports. It is convenient because it already fits into iPhone, iPad, and Mac.',
     details:
-      'It is useful for buying modern translations, annotated editions, illustrated editions, and audiobooks. It can also handle EPUB and PDF files for simpler import workflows.',
+      'It is especially reasonable for casual readers who do not want to manage another app. For readers building a large free public-domain library, dedicated sources such as Standard Ebooks and Project Gutenberg are more focused.',
     tradeoff:
-      "The tradeoff is that the experience is centered around Apple's store and iCloud, not around public-domain discovery or a specialized classics-reading workflow.",
+      'The tradeoff is discovery. Apple Books is a general bookstore and reader, not a purpose-built free classics workflow.',
   },
   {
     name: 'Kindle',
-    category: 'Best for Amazon purchases, Kindle devices, and annotated editions',
+    category: 'Best for Amazon free titles and Kindle libraries',
     href: 'https://apps.apple.com/us/app/amazon-kindle/id302584613?l=en&platform=iphone',
     body:
-      'Kindle makes sense if you already buy books from Amazon or read on Kindle hardware. For classics, it is useful for inexpensive editions, annotated editions, translations, and books you want synced between iPhone and a Kindle device.',
+      'Kindle is useful if you already read through Amazon or own Kindle hardware. It includes access to free Kindle titles, samples, public-domain editions, and personal documents.',
     details:
-      'The Kindle app is also practical for readers who already use Kindle Unlimited, Amazon samples, or Amazon personal documents. Its biggest advantage is ecosystem reach.',
+      'It is strongest when free reading is part of a broader Amazon library. If you mostly download EPUB files from public-domain sources, a more import-focused reader may be simpler.',
     tradeoff:
-      "The tradeoff is that it works best when your library is managed through Amazon, and buying Kindle books on iPhone usually involves Amazon's web store rather than in-app purchasing.",
+      'The tradeoff is ecosystem gravity. Kindle works best when Amazon is where you already manage books.',
   },
   {
     name: 'Kobo Books',
-    category: 'Best for Kobo readers and Kobo store users',
+    category: 'Best for Kobo readers and free Kobo titles',
     href: 'https://www.kobo.com/us/en/p/apps',
     body:
-      "Kobo Books is worth considering if you prefer Kobo's store or own a Kobo e-reader. For classics, it gives you another commercial source for editions, translations, and audiobooks.",
+      'Kobo Books is a useful free ebook option for readers who already prefer Kobo or own a Kobo e-reader. It gives you access to Kobo account reading on iPhone, including free and paid titles.',
     details:
-      'It is most useful when Kobo is already your reading ecosystem, because purchases and reading progress can fit into your Kobo account and devices.',
+      'It is a good alternative to Amazon if you want a commercial ebook ecosystem with an iPhone app and dedicated e-reader hardware.',
     tradeoff:
-      'The tradeoff is that externally managed files may not behave like Kobo purchases across every device and workflow.',
+      'The tradeoff is that it is most useful when Kobo is already your store and device ecosystem.',
+  },
+  {
+    name: 'Google Play Books',
+    category: 'Best for uploaded free EPUB/PDF files across platforms',
+    href: 'https://apps.apple.com/us/app/google-play-books-audiobooks/id400989007?l=en',
+    body:
+      'Google Play Books can be useful if you want to upload free EPUB or PDF files and read them across iPhone, Android, and the web with a Google account.',
+    details:
+      'It makes sense for readers who want cross-platform access more than a deeply customized iPhone reading interface.',
+    tradeoff:
+      'The tradeoff is that the app is strongest as a Google account library, not as a quiet phone-first reading environment.',
   },
 ]
 
 const faqItems = [
   {
-    q: 'What is the best app for reading classics on iPhone?',
-    a: 'The best app depends on how you get your books. leaf is useful for calm reading, imported files, and free classics from Standard Ebooks and Project Gutenberg. Libby is best for library borrowing. Apple Books, Kindle, and Kobo are better when you want to buy modern, annotated, or ecosystem-specific editions.',
+    q: 'What is the best free ebook app for iPhone?',
+    a: 'The best free ebook app depends on what you mean by free. Libby is best for free library borrowing. leaf is best for free public-domain classics and imported files. Project Gutenberg and Standard Ebooks are best as legal free book sources, while Apple Books, Kindle, Kobo, and Google Play Books can be useful if you already use those ecosystems.',
   },
   {
-    q: 'Where can I read classic books for free on iPhone?',
-    a: 'Project Gutenberg and Standard Ebooks are strong sources for free public-domain classics. Libby can also be free with a participating library card. leaf can help readers discover and import Standard Ebooks and Project Gutenberg classics inside a dedicated iPhone reading app.',
+    q: 'Where can I read free books legally on iPhone?',
+    a: 'You can read free books legally through public-domain sources such as Project Gutenberg and Standard Ebooks, through library apps such as Libby with a participating library card, and through free titles offered by ebook stores. Public-domain availability varies by country, so check the source guidance if you are unsure.',
   },
   {
-    q: 'Is Standard Ebooks better than Project Gutenberg?',
-    a: 'Standard Ebooks is usually better when you want a polished, carefully formatted edition and the title is available there. Project Gutenberg is better when you want the largest catalogue and need to find less common public-domain works.',
+    q: 'Is Project Gutenberg free on iPhone?',
+    a: 'Yes. Project Gutenberg offers free public-domain ebooks that can be read online or downloaded in formats such as EPUB. On iPhone, you can download those files and open them in an app that supports imports, such as leaf or Apple Books.',
   },
   {
-    q: 'Can I import classic EPUB files into an iPhone reading app?',
-    a: 'Yes. Several iPhone reading apps can open EPUB files. leaf is designed for imported books and supports EPUB, PDF, Markdown, and .leaf bundles; Apple Books and Google Play Books can also support EPUB workflows depending on how you manage your files.',
+    q: 'Can I import free EPUB files into an iPhone reading app?',
+    a: 'Yes. Several iPhone reading apps can open EPUB files. leaf supports EPUB, PDF, Markdown, and .leaf imports, while Apple Books and Google Play Books can also work for EPUB/PDF workflows depending on how you manage files.',
+  },
+  {
+    q: 'Is Libby really free?',
+    a: 'Libby is free to use with a card from a participating library. Your access depends on your library system, including which ebooks and audiobooks it licenses, how long loans last, and whether popular books have wait lists.',
   },
 ]
 
 const visualCards = [
-  { name: 'leaf', href: 'https://apps.apple.com/app/leaf-ebook-reader/id6758810936', label: 'App', summary: 'Calm iPhone reading, imports, and free classics discovery.' },
-  { name: 'Standard Ebooks', href: 'https://standardebooks.org/', label: 'Source', summary: 'Polished public-domain editions with clean EPUB files.' },
-  { name: 'Project Gutenberg', href: 'https://www.gutenberg.org/', label: 'Source', summary: 'The broadest free public-domain catalogue.' },
-  { name: 'Libby', href: 'https://apps.apple.com/us/app/libby-the-library-app/id1076402606', label: 'Library', summary: 'Borrow classics and audiobooks through public libraries.' },
+  { name: 'leaf', href: 'https://apps.apple.com/app/leaf-ebook-reader/id6758810936', label: 'Reader', summary: 'Read free classics and imported files in a calm iPhone app.' },
+  { name: 'Libby', href: 'https://apps.apple.com/us/app/libby-the-library-app/id1076402606', label: 'Library', summary: 'Borrow ebooks and audiobooks for free with a library card.' },
+  { name: 'Project Gutenberg', href: 'https://www.gutenberg.org/', label: 'Archive', summary: 'Download from the largest free public-domain ebook library.' },
+  { name: 'Standard Ebooks', href: 'https://standardebooks.org/', label: 'Editions', summary: 'Get polished free EPUB editions of public-domain classics.' },
 ]
 
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  headline: 'Best Apps for Reading Classics on iPhone in 2026',
+  headline: 'Best Free eBook Apps for iPhone in 2026',
   description:
-    'A balanced guide to the best iPhone apps and sources for reading classic literature, including leaf, Standard Ebooks, Project Gutenberg, Libby, Apple Books, Kindle, and Kobo.',
+    'A practical guide to the best free ebook apps and legal free book sources for iPhone, including leaf, Libby, Project Gutenberg, Standard Ebooks, Apple Books, Kindle, Kobo, and Google Play Books.',
   datePublished: '2026-05-23',
   dateModified: '2026-05-23',
   author: { '@type': 'Organization', name: 'leaf', alternateName: 'leaf: eBook Reader', url: 'https://readleaf.co/' },
   publisher: { '@type': 'Organization', name: 'leaf', alternateName: 'leaf: eBook Reader', url: 'https://readleaf.co/' },
   image: 'https://readleaf.co/screenshots/screenshot-explore-new.png',
-  url: 'https://readleaf.co/guides/best-apps-for-reading-classics-iphone',
+  url: 'https://readleaf.co/guides/best-free-ebook-apps-iphone',
 }
 
 const faqSchema = {
@@ -195,12 +218,13 @@ const faqSchema = {
 
 const sourceLinks = [
   { label: 'leaf on the App Store', href: 'https://apps.apple.com/app/leaf-ebook-reader/id6758810936' },
-  { label: 'Standard Ebooks', href: 'https://standardebooks.org/' },
-  { label: 'Project Gutenberg', href: 'https://www.gutenberg.org/' },
   { label: 'Libby on the App Store', href: 'https://apps.apple.com/us/app/libby-the-library-app/id1076402606' },
+  { label: 'Project Gutenberg', href: 'https://www.gutenberg.org/' },
+  { label: 'Standard Ebooks', href: 'https://standardebooks.org/' },
   { label: 'Apple Books', href: 'https://www.apple.com/apple-books/' },
-  { label: 'Amazon Kindle app guide', href: 'https://www.aboutamazon.com/news/devices/kindle-app-guide' },
+  { label: 'Amazon Kindle on the App Store', href: 'https://apps.apple.com/us/app/amazon-kindle/id302584613?l=en&platform=iphone' },
   { label: 'Kobo apps', href: 'https://www.kobo.com/us/en/p/apps' },
+  { label: 'Google Play Books on the App Store', href: 'https://apps.apple.com/us/app/google-play-books-audiobooks/id400989007?l=en' },
 ]
 
 const textStyle = {
@@ -210,9 +234,9 @@ const textStyle = {
   color: 'var(--color-ink-light)',
 }
 
-export default function BestClassicsAppsPage() {
+export default function BestFreeEbookAppsPage() {
   useEffect(() => {
-    document.title = 'Best Apps for Reading Classics on iPhone in 2026 | leaf'
+    document.title = 'Best Free eBook Apps for iPhone in 2026 | leaf'
 
     let metaDescription = document.querySelector('meta[name="description"]')
     if (!metaDescription) {
@@ -221,7 +245,7 @@ export default function BestClassicsAppsPage() {
       document.head.appendChild(metaDescription)
     }
     metaDescription.content =
-      'A balanced guide to the best iPhone apps and sources for reading classic literature, including leaf, Standard Ebooks, Project Gutenberg, Libby, Apple Books, Kindle, and Kobo.'
+      'A practical guide to the best free ebook apps and legal free book sources for iPhone, including leaf, Libby, Project Gutenberg, Standard Ebooks, Apple Books, Kindle, Kobo, and Google Play Books.'
 
     let canonical = document.querySelector('link[rel="canonical"]')
     if (!canonical) {
@@ -229,11 +253,11 @@ export default function BestClassicsAppsPage() {
       canonical.rel = 'canonical'
       document.head.appendChild(canonical)
     }
-    canonical.href = 'https://readleaf.co/guides/best-apps-for-reading-classics-iphone'
+    canonical.href = 'https://readleaf.co/guides/best-free-ebook-apps-iphone'
 
     const schemas = [
-      { id: 'best-classics-apps-article-schema', data: articleSchema },
-      { id: 'best-classics-apps-faq-schema', data: faqSchema },
+      { id: 'best-free-ebook-apps-article-schema', data: articleSchema },
+      { id: 'best-free-ebook-apps-faq-schema', data: faqSchema },
     ]
 
     schemas.forEach(({ id, data }) => {
@@ -269,10 +293,10 @@ export default function BestClassicsAppsPage() {
           Guide - Updated May 2026
         </p>
         <h1 style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(2.25rem, 5vw, 3.6rem)', lineHeight: 1.15, marginBottom: 'var(--space-6)' }}>
-          Best Apps for Reading Classics on iPhone in 2026
+          Best Free eBook Apps for iPhone in 2026
         </h1>
         <p style={{ ...textStyle, fontSize: '1.125rem' }}>
-          A practical guide to reading classic literature on iPhone, whether you want free public-domain books, polished editions, library loans, or a quiet app for your own files.
+          A practical guide to legal free reading on iPhone, from library borrowing and public-domain classics to imported EPUB files and free bookstore titles.
         </p>
       </header>
 
@@ -292,16 +316,16 @@ export default function BestClassicsAppsPage() {
         >
           <div>
             <p style={{ fontFamily: 'var(--font-sans)', fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--color-accent)', marginBottom: 'var(--space-3)', fontWeight: 600 }}>
-              Classics on iPhone
+              Free reading on iPhone
             </p>
             <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(1.75rem, 4vw, 2.5rem)', lineHeight: 1.18, marginBottom: 'var(--space-4)' }}>
-              A good classics setup starts with the source.
+              Free ebooks work best when you separate sources from readers.
             </h2>
             <p style={{ ...textStyle, marginBottom: 'var(--space-3)' }}>
-              The best experience usually combines a reliable public-domain source with a reading app that makes long books comfortable on a phone.
+              Project Gutenberg and Standard Ebooks are book sources. Libby is a borrowing app. leaf, Apple Books, Kindle, Kobo, and Google Play Books are reading environments with different import and ecosystem tradeoffs.
             </p>
             <p style={{ ...textStyle, margin: 0 }}>
-              That is why this guide separates sources such as Standard Ebooks and Project Gutenberg from apps such as leaf, Libby, Apple Books, Kindle, and Kobo.
+              The best setup often combines a legal free source with the reader that feels best for long sessions on your phone.
             </p>
           </div>
           <figure style={{ margin: 0, justifySelf: 'center', width: 'min(100%, 320px)' }}>
@@ -310,7 +334,7 @@ export default function BestClassicsAppsPage() {
                 <div style={{ position: 'absolute', top: '8px', left: '50%', transform: 'translateX(-50%)', width: '72px', height: '22px', background: '#1c1c1e', borderRadius: '12px', zIndex: 1 }} aria-hidden="true" />
                 <img
                   src="/screenshots/screenshot-explore-new.png"
-                  alt="leaf Explore screen showing a collection of classic books"
+                  alt="leaf Explore screen showing free classic books on iPhone"
                   width="300"
                   height="650"
                   loading="eager"
@@ -319,7 +343,7 @@ export default function BestClassicsAppsPage() {
               </div>
             </div>
             <figcaption style={{ fontFamily: 'var(--font-sans)', fontSize: '0.82rem', color: 'var(--color-ink-light)', lineHeight: 1.6, marginTop: 'var(--space-3)', textAlign: 'center' }}>
-              leaf's Explore screen is one way to discover public-domain classics from inside a reading app.
+              leaf's Explore screen surfaces free public-domain classics from inside a reading app.
             </figcaption>
           </figure>
         </section>
@@ -330,20 +354,20 @@ export default function BestClassicsAppsPage() {
               Quick verdict
             </p>
             <p style={{ ...textStyle, margin: 0 }}>
-              Choose <strong style={{ color: 'var(--color-ink)' }}>leaf</strong> for calm reading, free classics, and imported files; <strong style={{ color: 'var(--color-ink)' }}>Standard Ebooks</strong> for polished public-domain EPUBs; <strong style={{ color: 'var(--color-ink)' }}>Project Gutenberg</strong> for the largest free catalogue; <strong style={{ color: 'var(--color-ink)' }}>Libby</strong> for library borrowing; and Apple Books, Kindle, or Kobo when you want commercial or annotated editions.
+              Choose <strong style={{ color: 'var(--color-ink)' }}>Libby</strong> for free library borrowing, <strong style={{ color: 'var(--color-ink)' }}>leaf</strong> for free classics and imported files, <strong style={{ color: 'var(--color-ink)' }}>Project Gutenberg</strong> for the largest public-domain catalogue, and <strong style={{ color: 'var(--color-ink)' }}>Standard Ebooks</strong> for polished free classics. Apple Books, Kindle, Kobo, and Google Play Books are useful when their ecosystems already fit your library.
             </p>
           </div>
         </section>
 
         <section style={{ marginBottom: 'var(--space-12)' }}>
           <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.8rem', marginBottom: 'var(--space-4)' }}>
-            How to Choose a Classics Reading App
+            How to Choose a Free eBook App
           </h2>
           <p style={textStyle}>
-            Classic literature has a different set of tradeoffs from new-release fiction. Many titles are free in the public domain, but edition quality varies. Some readers want the cleanest free EPUB. Others want notes, translations, audiobooks, library loans, or a calm place to read long works on a phone.
+            Free ebook reading on iPhone has three main paths: public-domain books, library borrowing, and free or uploaded files inside a bookstore ecosystem. Public-domain books are usually classics and older works. Library borrowing can include modern books, but availability depends on your library. Store ecosystems are convenient if your books already live there.
           </p>
           <p style={textStyle}>
-            For this guide, we evaluated each option on public-domain access, edition quality, import support, reading comfort, annotations, library borrowing, ecosystem sync, and whether the app or source is better for reading, buying, borrowing, or downloading classics.
+            This guide separates legal free book sources from reading apps, then explains which combinations make the most sense for iPhone readers.
           </p>
         </section>
 
@@ -392,7 +416,7 @@ export default function BestClassicsAppsPage() {
                 <tr style={{ borderBottom: '2px solid rgba(43,43,43,0.22)' }}>
                   <th style={{ textAlign: 'left', padding: 'var(--space-3)', color: 'var(--color-ink)' }}>App or Source</th>
                   <th style={{ textAlign: 'left', padding: 'var(--space-3)', color: 'var(--color-ink)' }}>Category</th>
-                  <th style={{ textAlign: 'left', padding: 'var(--space-3)', color: 'var(--color-ink)' }}>Access</th>
+                  <th style={{ textAlign: 'left', padding: 'var(--space-3)', color: 'var(--color-ink)' }}>Free Access</th>
                   <th style={{ textAlign: 'left', padding: 'var(--space-3)', color: 'var(--color-ink)' }}>Best Use</th>
                   <th style={{ textAlign: 'left', padding: 'var(--space-3)', color: 'var(--color-ink)' }}>Tradeoff</th>
                 </tr>
@@ -406,7 +430,7 @@ export default function BestClassicsAppsPage() {
                       </a>
                     </td>
                     <td style={{ padding: 'var(--space-3)', color: 'var(--color-ink-light)' }}>{row.category}</td>
-                    <td style={{ padding: 'var(--space-3)', color: 'var(--color-ink-light)' }}>{row.access}</td>
+                    <td style={{ padding: 'var(--space-3)', color: 'var(--color-ink-light)' }}>{row.freeAccess}</td>
                     <td style={{ padding: 'var(--space-3)', color: 'var(--color-ink-light)' }}>{row.bestUse}</td>
                     <td style={{ padding: 'var(--space-3)', color: 'var(--color-ink-light)' }}>{row.tradeoff}</td>
                   </tr>
@@ -469,13 +493,13 @@ export default function BestClassicsAppsPage() {
             Related Reading
           </h2>
           <p style={{ ...textStyle, marginBottom: 'var(--space-3)' }}>
-            If your priority is free legal reading more broadly, read our guide to the <Link to="/guides/best-free-ebook-apps-iphone" style={{ color: 'var(--color-accent)' }}>best free eBook apps for iPhone</Link>.
-          </p>
-          <p style={{ ...textStyle, marginBottom: 'var(--space-3)' }}>
             For a broader app comparison, read our guide to the <Link to="/guides/best-ebook-reader-apps-iphone" style={{ color: 'var(--color-accent)' }}>best eBook reader apps for iPhone</Link>.
           </p>
           <p style={{ ...textStyle, marginBottom: 'var(--space-3)' }}>
-            If your priority is focus and minimal interface noise, see our guide to <Link to="/guides/best-minimalist-reading-apps-2026" style={{ color: 'var(--color-accent)' }}>minimalist reading apps for iPhone</Link>.
+            If you mainly want classics, see our guide to the <Link to="/guides/best-apps-for-reading-classics-iphone" style={{ color: 'var(--color-accent)' }}>best apps for reading classics on iPhone</Link>.
+          </p>
+          <p style={{ ...textStyle, marginBottom: 'var(--space-3)' }}>
+            If your priority is a quiet interface, read our guide to <Link to="/guides/best-minimalist-reading-apps-2026" style={{ color: 'var(--color-accent)' }}>minimalist reading apps for iPhone</Link>.
           </p>
           <p style={{ ...textStyle, margin: 0 }}>
             For maintained product facts and schema, see <Link to="/brand-facts" style={{ color: 'var(--color-accent)' }}>Brand Facts</Link>.

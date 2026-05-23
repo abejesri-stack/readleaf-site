@@ -6,6 +6,7 @@ import App from './App.jsx'
 import GuidesIndexPage from './pages/GuidesIndexPage.jsx'
 import BestEbookReaderAppsPage from './pages/BestEbookReaderAppsPage.jsx'
 import BestClassicsAppsPage from './pages/BestClassicsAppsPage.jsx'
+import BestFreeEbookAppsPage from './pages/BestFreeEbookAppsPage.jsx'
 import GuidePage from './pages/GuidePage.jsx'
 import BrandFactsPage from './pages/BrandFactsPage.jsx'
 import WorkPage from './pages/WorkPage.jsx'
@@ -18,6 +19,7 @@ createRoot(document.getElementById('root')).render(
         <Route path="/works/:authorHandle/:workSlug" element={<WorkPage />} />
         <Route path="/guides" element={<GuidesIndexPage />} />
         <Route path="/guides/best-ebook-reader-apps-iphone" element={<BestEbookReaderAppsPage />} />
+        <Route path="/guides/best-free-ebook-apps-iphone" element={<BestFreeEbookAppsPage />} />
         <Route path="/guides/best-apps-for-reading-classics-iphone" element={<BestClassicsAppsPage />} />
         <Route path="/guides/best-minimalist-reading-apps-2026" element={<GuidePage />} />
         <Route path="/brand-facts" element={<BrandFactsPage />} />

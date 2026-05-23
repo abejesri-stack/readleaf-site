@@ -3,11 +3,20 @@ import { Link } from 'react-router-dom'
 
 const guides = [
   {
+    title: 'Best Free eBook Apps for iPhone in 2026',
+    description:
+      'A practical guide to legal free reading on iPhone, including leaf, Libby, Project Gutenberg, Standard Ebooks, Apple Books, Kindle, Kobo, and Google Play Books.',
+    href: '/guides/best-free-ebook-apps-iphone',
+    updated: 'May 2026',
+    topics: ['Free books', 'Public domain', 'Library borrowing'],
+  },
+  {
     title: 'Best Apps for Reading Classics on iPhone in 2026',
     description:
       'A balanced guide to reading classic literature on iPhone with leaf, Standard Ebooks, Project Gutenberg, Libby, Apple Books, Kindle, and Kobo.',
     href: '/guides/best-apps-for-reading-classics-iphone',
     updated: 'May 2026',
+    topics: ['Classics', 'Public domain', 'iPhone apps'],
   },
   {
     title: 'Best eBook Reader Apps for iPhone in 2026',
@@ -15,6 +24,7 @@ const guides = [
       'A practical comparison of leaf, Kindle, Apple Books, Kobo, Libby, and Google Play Books for different kinds of iPhone readers.',
     href: '/guides/best-ebook-reader-apps-iphone',
     updated: 'May 2026',
+    topics: ['App comparisons', 'EPUB readers', 'iPhone apps'],
   },
   {
     title: 'The Best Minimalist Reading Apps for iPhone in 2026',
@@ -22,10 +32,31 @@ const guides = [
       'A comparison of leaf, Kindle, and Apple Books for readers who care about focus, legibility, privacy, sync, and phone-first reading.',
     href: '/guides/best-minimalist-reading-apps-2026',
     updated: 'May 2026',
+    topics: ['Minimalist reading', 'Focus', 'Phone-first reading'],
+  },
+]
+
+const topicSections = [
+  {
+    title: 'Free Books and Public-Domain Reading',
+    description: 'Guides for finding legal free ebooks, public-domain classics, and library books on iPhone.',
+    guideHrefs: ['/guides/best-free-ebook-apps-iphone', '/guides/best-apps-for-reading-classics-iphone'],
+  },
+  {
+    title: 'iPhone Reading App Comparisons',
+    description: 'Balanced comparisons for choosing between leaf, Kindle, Apple Books, Kobo, Libby, and Google Play Books.',
+    guideHrefs: ['/guides/best-ebook-reader-apps-iphone', '/guides/best-free-ebook-apps-iphone'],
+  },
+  {
+    title: 'Minimalist and Focused Reading',
+    description: 'Guides for quieter phone reading, fewer distractions, typography, privacy, and reading flow.',
+    guideHrefs: ['/guides/best-minimalist-reading-apps-2026', '/guides/best-ebook-reader-apps-iphone'],
   },
 ]
 
 const upcomingGuides = [
+  'Best EPUB reader apps for iPhone',
+  'How to read Project Gutenberg books on iPhone',
   'How vertical scrolling changes phone reading',
   'Privacy-focused reading apps for iPhone',
 ]
@@ -41,7 +72,7 @@ export default function GuidesIndexPage() {
       document.head.appendChild(metaDescription)
     }
     metaDescription.content =
-      'Reading guides from leaf: eBook Reader about iPhone reading apps, minimalist e-readers, vertical scrolling, classic literature, privacy, and focused mobile reading.'
+      'Reading guides from leaf: eBook Reader about free ebook apps, public-domain classics, iPhone reading apps, minimalist e-readers, EPUB files, privacy, and focused mobile reading.'
 
     let canonical = document.querySelector('link[rel="canonical"]')
     if (!canonical) {
@@ -57,7 +88,7 @@ export default function GuidesIndexPage() {
       name: 'Reading Guides - leaf: eBook Reader',
       url: 'https://readleaf.co/guides/',
       description:
-        'Guides about iPhone reading apps, minimalist e-readers, vertical scrolling, privacy, and focused mobile reading.',
+        'Guides about free ebook apps, iPhone reading apps, public-domain classics, minimalist e-readers, vertical scrolling, privacy, and focused mobile reading.',
       mainEntity: {
         '@type': 'ItemList',
         itemListElement: guides.map((guide, index) => ({
@@ -104,12 +135,62 @@ export default function GuidesIndexPage() {
           Reading guides for quieter iPhone reading.
         </h1>
         <p style={{ fontFamily: 'var(--font-sans)', fontSize: '1.125rem', color: 'var(--color-ink-light)', lineHeight: 1.7 }}>
-          Practical comparisons and notes on minimalist e-readers, vertical scrolling, classic literature, privacy, and focused reading on a phone.
+          Practical comparisons and notes on free ebook apps, public-domain classics, minimalist e-readers, EPUB files, privacy, and focused reading on a phone.
         </p>
       </header>
 
       <main style={{ maxWidth: '820px', margin: '0 auto', padding: '0 var(--space-4) var(--space-16)' }}>
         <section style={{ marginBottom: 'var(--space-12)' }}>
+          <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.7rem', marginBottom: 'var(--space-5)' }}>
+            Start by Topic
+          </h2>
+          <div style={{ display: 'grid', gap: 'var(--space-4)' }}>
+            {topicSections.map((section) => (
+              <div
+                key={section.title}
+                style={{
+                  padding: 'var(--space-5)',
+                  background: 'rgba(255,255,255,0.38)',
+                  border: '1px solid rgba(43,43,43,0.08)',
+                  borderRadius: '8px',
+                }}
+              >
+                <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.25rem', marginBottom: 'var(--space-2)' }}>
+                  {section.title}
+                </h3>
+                <p style={{ fontFamily: 'var(--font-sans)', fontSize: '0.95rem', lineHeight: 1.7, color: 'var(--color-ink-light)', marginBottom: 'var(--space-4)' }}>
+                  {section.description}
+                </p>
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: 'var(--space-3)' }}>
+                  {section.guideHrefs.map((href) => {
+                    const guide = guides.find((item) => item.href === href)
+                    return (
+                      <Link
+                        key={href}
+                        to={href}
+                        style={{
+                          fontFamily: 'var(--font-sans)',
+                          fontSize: '0.86rem',
+                          color: 'var(--color-accent)',
+                          textDecoration: 'none',
+                          borderBottom: '1px solid currentColor',
+                          paddingBottom: '2px',
+                        }}
+                      >
+                        {guide.title}
+                      </Link>
+                    )
+                  })}
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section style={{ marginBottom: 'var(--space-12)' }}>
+          <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.7rem', marginBottom: 'var(--space-5)' }}>
+            Published Guides
+          </h2>
           {guides.map((guide) => (
             <Link
               key={guide.href}
@@ -131,6 +212,9 @@ export default function GuidesIndexPage() {
               </h2>
               <p style={{ fontFamily: 'var(--font-sans)', fontSize: '1rem', lineHeight: 1.7, color: 'var(--color-ink-light)', margin: 0 }}>
                 {guide.description}
+              </p>
+              <p style={{ fontFamily: 'var(--font-sans)', fontSize: '0.78rem', lineHeight: 1.7, color: 'var(--color-ink-light)', marginTop: 'var(--space-3)', marginBottom: 0 }}>
+                {guide.topics.join(' / ')}
               </p>
             </Link>
           ))}
