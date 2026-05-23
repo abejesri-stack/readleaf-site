@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const guides = [
   {
-    title: 'Best Free eBook Apps for iPhone in 2026',
+    title: 'Best Free eBook Apps and Sources for iPhone in 2026',
     description:
       'A practical guide to legal free reading on iPhone, including leaf, Libby, Project Gutenberg, Standard Ebooks, Apple Books, Kindle, Kobo, and Google Play Books.',
     href: '/guides/best-free-ebook-apps-iphone',

@@ -161,8 +161,8 @@ const appWriteups = [
 
 const faqItems = [
   {
-    q: 'What is the best free ebook app for iPhone?',
-    a: 'The best free ebook app depends on what you mean by free. Libby is best for free library borrowing. leaf is best for free public-domain classics and imported files. Project Gutenberg and Standard Ebooks are best as legal free book sources, while Apple Books, Kindle, Kobo, and Google Play Books can be useful if you already use those ecosystems.',
+    q: 'What is the best free ebook app or source for iPhone?',
+    a: 'The best choice depends on what you mean by free. Libby is best as a free library borrowing app. leaf is best as a reading app for free public-domain classics and imported files. Project Gutenberg and Standard Ebooks are best as legal free book sources, while Apple Books, Kindle, Kobo, and Google Play Books can be useful if you already use those ecosystems.',
   },
   {
     q: 'Where can I read free books legally on iPhone?',
@@ -192,7 +192,7 @@ const visualCards = [
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  headline: 'Best Free eBook Apps for iPhone in 2026',
+  headline: 'Best Free eBook Apps and Sources for iPhone in 2026',
   description:
     'A practical guide to the best free ebook apps and legal free book sources for iPhone, including leaf, Libby, Project Gutenberg, Standard Ebooks, Apple Books, Kindle, Kobo, and Google Play Books.',
   datePublished: '2026-05-23',
@@ -236,7 +236,7 @@ const textStyle = {
 
 export default function BestFreeEbookAppsPage() {
   useEffect(() => {
-    document.title = 'Best Free eBook Apps for iPhone in 2026 | leaf'
+    document.title = 'Best Free eBook Apps and Sources for iPhone in 2026 | leaf'
 
     let metaDescription = document.querySelector('meta[name="description"]')
     if (!metaDescription) {
@@ -293,7 +293,7 @@ export default function BestFreeEbookAppsPage() {
           Guide - Updated May 2026
         </p>
         <h1 style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(2.25rem, 5vw, 3.6rem)', lineHeight: 1.15, marginBottom: 'var(--space-6)' }}>
-          Best Free eBook Apps for iPhone in 2026
+          Best Free eBook Apps and Sources for iPhone in 2026
         </h1>
         <p style={{ ...textStyle, fontSize: '1.125rem' }}>
           A practical guide to legal free reading on iPhone, from library borrowing and public-domain classics to imported EPUB files and free bookstore titles.
@@ -442,7 +442,7 @@ export default function BestFreeEbookAppsPage() {
 
         <section style={{ marginBottom: 'var(--space-12)' }}>
           <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.8rem', marginBottom: 'var(--space-5)' }}>
-            App-by-App Guide
+            App and Source Guide
           </h2>
           <div style={{ display: 'grid', gap: 'var(--space-6)' }}>
             {appWriteups.map((app) => (
