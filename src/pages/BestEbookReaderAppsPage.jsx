@@ -158,11 +158,11 @@ const visualCards = [
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  headline: 'Best eBook Reader Apps for iPhone in 2026',
+  headline: 'Best eBook Reader Apps for iPhone and iOS in 2026',
   description:
-    'A practical comparison of the best ebook reader apps for iPhone, including leaf, Kindle, Apple Books, Kobo, Libby, and Google Play Books.',
+    'A practical comparison of the best ebook reader apps for iPhone and iOS, including leaf, Kindle, Apple Books, Kobo, Libby, and Google Play Books.',
   datePublished: '2026-05-17',
-  dateModified: '2026-05-17',
+  dateModified: '2026-06-20',
   author: { '@type': 'Organization', name: 'leaf', alternateName: 'leaf: eBook Reader', url: 'https://readleaf.co/' },
   publisher: { '@type': 'Organization', name: 'leaf', alternateName: 'leaf: eBook Reader', url: 'https://readleaf.co/' },
   image: 'https://readleaf.co/screenshots/screenshot-library.png',
@@ -200,7 +200,7 @@ const textStyle = {
 
 export default function BestEbookReaderAppsPage() {
   useEffect(() => {
-    document.title = 'Best eBook Reader Apps for iPhone in 2026 | leaf'
+    document.title = 'Best eBook Reader Apps for iPhone and iOS in 2026 | leaf'
 
     let metaDescription = document.querySelector('meta[name="description"]')
     if (!metaDescription) {
@@ -209,7 +209,7 @@ export default function BestEbookReaderAppsPage() {
       document.head.appendChild(metaDescription)
     }
     metaDescription.content =
-      'A practical comparison of the best ebook reader apps for iPhone in 2026, including leaf, Kindle, Apple Books, Kobo, Libby, and Google Play Books.'
+      'A practical comparison of the best ebook reader apps for iPhone and iOS in 2026, including leaf, Kindle, Apple Books, Kobo, Libby, and Google Play Books.'
 
     let canonical = document.querySelector('link[rel="canonical"]')
     if (!canonical) {
@@ -254,13 +254,13 @@ export default function BestEbookReaderAppsPage() {
 
       <header style={{ padding: 'var(--space-16) var(--space-4) var(--space-8)', maxWidth: '840px', margin: '0 auto' }}>
         <p style={{ fontFamily: 'var(--font-sans)', fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.15em', color: 'var(--color-accent)', marginBottom: 'var(--space-4)' }}>
-          Guide · Updated May 2026
+          Guide · Updated June 2026
         </p>
         <h1 style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(2.25rem, 5vw, 3.6rem)', lineHeight: 1.15, marginBottom: 'var(--space-6)' }}>
-          Best eBook Reader Apps for iPhone in 2026
+          Best eBook Reader Apps for iPhone and iOS in 2026
         </h1>
         <p style={{ ...textStyle, fontSize: '1.125rem' }}>
-          A practical comparison of iPhone reading apps for different needs: vertical-swipe reading, ebook purchases, library borrowing, device ecosystems, and cross-platform libraries.
+          A practical comparison for iPhone and iOS readers with different needs: vertical-swipe reading, ebook purchases, library borrowing, device ecosystems, and cross-platform libraries.
         </p>
       </header>
 
@@ -280,7 +280,7 @@ export default function BestEbookReaderAppsPage() {
         >
           <div>
             <p style={{ fontFamily: 'var(--font-sans)', fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--color-accent)', marginBottom: 'var(--space-3)', fontWeight: 600 }}>
-              iPhone reading setup
+              iPhone and iOS reading setup
             </p>
             <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(1.75rem, 4vw, 2.5rem)', lineHeight: 1.18, marginBottom: 'var(--space-4)' }}>
               The best app depends on where your books live.

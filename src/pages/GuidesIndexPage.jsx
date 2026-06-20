@@ -43,12 +43,12 @@ const guides = [
     topics: ['Classics', 'Public domain', 'iPhone apps'],
   },
   {
-    title: 'Best eBook Reader Apps for iPhone in 2026',
+    title: 'Best eBook Reader Apps for iPhone and iOS in 2026',
     description:
-      'A practical comparison of leaf, Kindle, Apple Books, Kobo, Libby, and Google Play Books for different kinds of iPhone readers.',
+      'A practical comparison of leaf, Kindle, Apple Books, Kobo, Libby, and Google Play Books for different kinds of iPhone and iOS readers.',
     href: '/guides/best-ebook-reader-apps-iphone',
-    updated: 'May 2026',
-    topics: ['App comparisons', 'EPUB readers', 'iPhone apps'],
+    updated: 'June 2026',
+    topics: ['App comparisons', 'EPUB readers', 'iPhone and iOS apps'],
   },
   {
     title: 'The Best Minimalist Reading Apps for iPhone in 2026',
