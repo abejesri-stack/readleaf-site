@@ -58,7 +58,7 @@ fs.writeFileSync(path.join(dist, '404.html'), htmlContent);
 // 2. Add static homepage content and internal links for crawlers before React renders.
 const homeHtml = htmlContent.replace(
   '<div id="root"></div>',
-  '<div id="root"><h1>leaf: eBook Reader - Vertical-Swipe Book Reader for iPhone</h1><p>leaf is a vertical-swipe iOS e-reader with built-in Standard Ebooks and Project Gutenberg discovery, imported EPUB/PDF/Markdown support, optional leaf Pro sync, and no ads.</p><nav><a href="/guides/">Reading Guides</a> <a href="/guides/how-to-read-project-gutenberg-books-on-iphone">How to Read Project Gutenberg Books on iPhone</a> <a href="/guides/best-free-ebook-apps-iphone">Best Free eBook Apps and Sources for iPhone</a> <a href="/guides/best-epub-reader-apps-iphone">Best EPUB Reader Apps for iPhone</a> <a href="/guides/best-ebook-reader-apps-iphone">Best eBook Reader Apps for iPhone</a> <a href="/guides/best-apps-for-reading-classics-iphone">Classics Reading Apps Guide</a> <a href="/guides/best-minimalist-reading-apps-2026">Minimalist Reading Apps Guide</a> <a href="/brand-facts">Brand Facts</a> <a href="/legal/">Privacy &amp; Terms</a></nav></div>'
+  '<div id="root"><h1>leaf: eBook Reader - Vertical-Swipe Book Reader for iPhone</h1><p>leaf is a vertical-swipe iOS e-reader with built-in Standard Ebooks and Project Gutenberg discovery, imported EPUB/PDF/Markdown support, optional leaf Pro sync, and no ads.</p><nav><a href="/guides/">Reading Guides</a> <a href="/guides/how-to-read-epub-files-on-iphone">How to Read EPUB Files on iPhone</a> <a href="/guides/how-to-read-project-gutenberg-books-on-iphone">How to Read Project Gutenberg Books on iPhone</a> <a href="/guides/best-free-ebook-apps-iphone">Best Free eBook Apps and Sources for iPhone</a> <a href="/guides/best-epub-reader-apps-iphone">Best EPUB Reader Apps for iPhone</a> <a href="/guides/best-ebook-reader-apps-iphone">Best eBook Reader Apps for iPhone</a> <a href="/guides/best-apps-for-reading-classics-iphone">Classics Reading Apps Guide</a> <a href="/guides/best-minimalist-reading-apps-2026">Minimalist Reading Apps Guide</a> <a href="/brand-facts">Brand Facts</a> <a href="/legal/">Privacy &amp; Terms</a></nav></div>'
 );
 fs.writeFileSync(index, homeHtml);
 
@@ -82,6 +82,7 @@ const guidesIndexStaticHtml = `<div id="root">
     <h2>EPUB and Imported Files</h2>
     <p>Guides for reading EPUB files, imported books, PDFs, and personally managed libraries on iPhone.</p>
     <ul>
+      <li><a href="/guides/how-to-read-epub-files-on-iphone">How to Read EPUB Files on iPhone in 2026</a></li>
       <li><a href="/guides/best-epub-reader-apps-iphone">Best EPUB Reader Apps for iPhone in 2026</a></li>
       <li><a href="/guides/best-ebook-reader-apps-iphone">Best eBook Reader Apps for iPhone in 2026</a></li>
     </ul>
@@ -92,6 +93,10 @@ const guidesIndexStaticHtml = `<div id="root">
       <li><a href="/guides/best-ebook-reader-apps-iphone">Best eBook Reader Apps for iPhone in 2026</a></li>
     </ul>
     <h2>Published Guides</h2>
+    <article>
+      <h2><a href="/guides/how-to-read-epub-files-on-iphone">How to Read EPUB Files on iPhone in 2026</a></h2>
+      <p>A practical guide to opening, importing, and reading EPUB files on iPhone with leaf, Apple Books, Kindle, Files, and other iPhone workflows.</p>
+    </article>
     <article>
       <h2><a href="/guides/best-epub-reader-apps-iphone">Best EPUB Reader Apps for iPhone in 2026</a></h2>
       <p>A practical guide to reading EPUB files and imported books on iPhone with leaf, Apple Books, Google Play Books, Documents by Readdle, Kindle, and Kobo.</p>
@@ -169,6 +174,102 @@ const guideStaticHtml = `<div id="root">
       <a href="/guides/best-free-ebook-apps-iphone">Best Free eBook Apps and Sources for iPhone</a>
       <a href="/brand-facts">Brand Facts</a>
       <a href="/legal/">Privacy and Terms</a>
+    </nav>
+  </article>
+</div>`;
+
+const howToReadEpubFilesIphoneStaticHtml = `<div id="root">
+  <article>
+    <h1>How to Read EPUB Files on iPhone in 2026</h1>
+    <p>A practical guide to opening, importing, and reading EPUB files on iPhone with leaf, Apple Books, Kindle, Files, and other iPhone workflows.</p>
+    <figure>
+      <img src="/screenshots/screenshot-library.png" alt="leaf library screen showing EPUB files and imported books on iPhone" width="300" height="650" loading="eager" />
+      <figcaption>leaf keeps imported EPUBs alongside the rest of your reading library.</figcaption>
+    </figure>
+    <h2>EPUB files on iPhone</h2>
+    <p>EPUB is a flexible ebook format, but the reading experience depends on where the file came from and which app owns the library after you open it. If you read a lot of downloaded books, public-domain classics, or personal files, choose a reader that treats imports as a real library rather than one-off attachments.</p>
+    <h2>Open an EPUB file on iPhone</h2>
+    <ol>
+      <li>Download the EPUB from a source such as Project Gutenberg, Standard Ebooks, an author site, or your cloud storage.</li>
+      <li>If the file opens in Safari, tap the share button. If it is in Files, long-press or open the file and use the share menu.</li>
+      <li>Choose the reading app you want to use. Common options include leaf, Apple Books, Kindle workflows, and other EPUB-compatible apps.</li>
+      <li>After the import, open the book from that app's library rather than hunting for the file again.</li>
+      <li>If iOS does not show the app you want, confirm the app is installed and supports the file type you are opening.</li>
+    </ol>
+    <h2>Best iPhone EPUB workflows</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Workflow</th>
+          <th>Best for</th>
+          <th>How it works</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Open in leaf</td>
+          <td>Vertical-swipe reading and imported EPUB libraries</td>
+          <td>Save or download the EPUB on iPhone, open the share sheet, choose leaf, then keep the book in your library.</td>
+        </tr>
+        <tr>
+          <td>Open in Apple Books</td>
+          <td>A built-in Apple reading path</td>
+          <td>Download or receive an EPUB, open the iOS share sheet, then choose Books when it appears as an option.</td>
+        </tr>
+        <tr>
+          <td>Use Send to Kindle</td>
+          <td>Amazon libraries and Kindle devices</td>
+          <td>Send the file to your Kindle library, then read it in the Kindle app or on Kindle hardware.</td>
+        </tr>
+        <tr>
+          <td>Use a file manager first</td>
+          <td>Downloads, folders, cloud storage, and mixed PDFs</td>
+          <td>Organize the file in Files, iCloud Drive, or a file manager, then open it in the reading app you prefer.</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2>Choose EPUB instead of PDF when the book is mostly text</h2>
+    <p>EPUB is usually the better format for novels, essays, nonfiction, poetry, and public-domain classics on iPhone because the text can adapt to your screen and settings. PDF is still useful when layout matters more than reflow, such as forms, scans, academic papers, and image-heavy documents.</p>
+    <ul>
+      <li>EPUB - best default for books on iPhone because it reflows text and adapts to reader settings.</li>
+      <li>PDF - best for fixed-layout documents, but often cramped for long prose books on a phone.</li>
+      <li>Markdown - useful for manuscripts, drafts, exports, and lightweight text files.</li>
+      <li>Kindle personal documents - useful when you want the book inside Amazon's ecosystem.</li>
+    </ul>
+    <h2>Where leaf fits</h2>
+    <p>leaf is a good fit if your goal is to read EPUB files in a dedicated iPhone reading app instead of a store-first app or a file manager. It supports EPUB, PDF, and Markdown imports, and its Explore tab can help readers find books from Standard Ebooks and Project Gutenberg before importing them into the library.</p>
+    <p>The main difference is the reading experience: leaf is built around vertical-swipe reading on iPhone. For longer books, it also includes reading journals, highlights, notes, passage and completion share cards, themes, fonts, custom fonts with leaf Pro, optional leaf Pro sync, and iCloud Book Vault.</p>
+    <p><a href="https://apps.apple.com/app/leaf-ebook-reader/id6758810936">Download leaf on the App Store</a> if you want a reader designed around imported books and vertical-swipe reading.</p>
+    <h2>FAQ</h2>
+    <h3>Can I read EPUB files on iPhone?</h3>
+    <p>Yes. iPhone can read EPUB files through apps such as leaf, Apple Books, Google Play Books, Kindle workflows, and other EPUB-compatible readers.</p>
+    <h3>What is the easiest way to open an EPUB on iPhone?</h3>
+    <p>The easiest workflow is usually to download or save the EPUB, tap the share button, then choose a compatible reading app such as leaf or Apple Books.</p>
+    <h3>Is EPUB better than PDF for reading books on iPhone?</h3>
+    <p>For most prose books, EPUB is better because the text can reflow for the screen, font size, and reader settings. PDF is better when the original page layout must stay fixed.</p>
+    <h3>Can Apple Books open EPUB files?</h3>
+    <p>Yes. Apple Books can be a simple built-in option for many EPUB and PDF files, especially if you prefer Apple-native library and iCloud workflows.</p>
+    <h3>What is the best EPUB reader for iPhone?</h3>
+    <p>It depends on your workflow. leaf is a good fit for vertical-swipe EPUB reading, imports, free classics discovery, journals, notes, highlights, themes, fonts, optional Pro sync, and iCloud Book Vault. Apple Books is a simple built-in option, and Kindle is best when you already use Amazon or Kindle devices.</p>
+    <h2>Sources</h2>
+    <ul>
+      <li><a href="https://apps.apple.com/app/leaf-ebook-reader/id6758810936">leaf on the App Store</a></li>
+      <li><a href="https://www.apple.com/apple-books/">Apple Books</a></li>
+      <li><a href="https://support.apple.com/en-us/104965">Apple Support: move ePub books and PDFs to iPhone</a></li>
+      <li><a href="https://support.apple.com/en-us/108362">Apple Support: EPUB in Books and third-party readers</a></li>
+      <li><a href="https://www.amazon.com/sendtokindle">Amazon Send to Kindle</a></li>
+      <li><a href="https://www.gutenberg.org/">Project Gutenberg</a></li>
+      <li><a href="https://standardebooks.org/">Standard Ebooks</a></li>
+    </ul>
+    <h2>Related pages</h2>
+    <nav>
+      <a href="/">leaf homepage</a>
+      <a href="/guides/">Reading Guides</a>
+      <a href="/guides/best-epub-reader-apps-iphone">Best EPUB Reader Apps for iPhone</a>
+      <a href="/guides/how-to-read-project-gutenberg-books-on-iphone">How to Read Project Gutenberg Books on iPhone</a>
+      <a href="/guides/best-ebook-reader-apps-iphone">Best eBook Reader Apps for iPhone</a>
+      <a href="/guides/best-free-ebook-apps-iphone">Best Free eBook Apps and Sources for iPhone</a>
+      <a href="/brand-facts">Brand Facts</a>
     </nav>
   </article>
 </div>`;
@@ -261,6 +362,7 @@ const projectGutenbergIphoneStaticHtml = `<div id="root">
       <a href="/guides/best-free-ebook-apps-iphone">Best Free eBook Apps and Sources for iPhone</a>
       <a href="/guides/best-apps-for-reading-classics-iphone">Best Apps and Sources for Reading Classics on iPhone</a>
       <a href="/guides/best-epub-reader-apps-iphone">Best EPUB Reader Apps for iPhone</a>
+      <a href="/guides/how-to-read-epub-files-on-iphone">How to Read EPUB Files on iPhone</a>
       <a href="/brand-facts">Brand Facts</a>
     </nav>
   </article>
@@ -408,6 +510,7 @@ const bestFreeEbookAppsStaticHtml = `<div id="root">
       <a href="/">leaf homepage</a>
       <a href="/guides/">Reading Guides</a>
       <a href="/guides/how-to-read-project-gutenberg-books-on-iphone">How to Read Project Gutenberg Books on iPhone</a>
+      <a href="/guides/how-to-read-epub-files-on-iphone">How to Read EPUB Files on iPhone</a>
       <a href="/guides/best-epub-reader-apps-iphone">Best EPUB Reader Apps for iPhone</a>
       <a href="/guides/best-ebook-reader-apps-iphone">Best eBook Reader Apps for iPhone</a>
       <a href="/guides/best-apps-for-reading-classics-iphone">Best Apps and Sources for Reading Classics on iPhone</a>
@@ -495,6 +598,7 @@ const bestEpubReaderAppsStaticHtml = `<div id="root">
       <a href="/guides/">Reading Guides</a>
       <a href="/guides/best-ebook-reader-apps-iphone">Best eBook Reader Apps for iPhone</a>
       <a href="/guides/best-free-ebook-apps-iphone">Best Free eBook Apps and Sources for iPhone</a>
+      <a href="/guides/how-to-read-epub-files-on-iphone">How to Read EPUB Files on iPhone</a>
       <a href="/guides/how-to-read-project-gutenberg-books-on-iphone">How to Read Project Gutenberg Books on iPhone</a>
       <a href="/guides/best-apps-for-reading-classics-iphone">Best Apps and Sources for Reading Classics on iPhone</a>
       <a href="/brand-facts">Brand Facts</a>
@@ -588,6 +692,7 @@ const bestClassicsAppsStaticHtml = `<div id="root">
       <a href="/guides/">Reading Guides</a>
       <a href="/guides/best-epub-reader-apps-iphone">Best EPUB Reader Apps for iPhone</a>
       <a href="/guides/best-free-ebook-apps-iphone">Best Free eBook Apps and Sources for iPhone</a>
+      <a href="/guides/how-to-read-epub-files-on-iphone">How to Read EPUB Files on iPhone</a>
       <a href="/guides/how-to-read-project-gutenberg-books-on-iphone">How to Read Project Gutenberg Books on iPhone</a>
       <a href="/guides/best-ebook-reader-apps-iphone">Best eBook Reader Apps for iPhone</a>
       <a href="/guides/best-minimalist-reading-apps-2026">Minimalist Reading Apps Guide</a>
@@ -623,6 +728,16 @@ const guidesIndexHtml = setSeo(homeHtml, {
   guidesIndexStaticHtml + '\n  </body>'
 );
 fs.writeFileSync(path.join(guidesDir, 'index.html'), guidesIndexHtml);
+
+const howToReadEpubFilesIphoneHtml = setSeo(homeHtml, {
+  title: 'How to Read EPUB Files on iPhone in 2026 | leaf',
+  description: 'A practical guide to opening, importing, and reading EPUB files on iPhone with leaf, Apple Books, Kindle, Files, and other iPhone workflows.',
+  canonical: 'https://readleaf.co/guides/how-to-read-epub-files-on-iphone',
+}).replace(
+  /<div id="root">[\s\S]*?<\/div>\s*<\/body>/,
+  howToReadEpubFilesIphoneStaticHtml + '\n  </body>'
+);
+fs.writeFileSync(path.join(guidesDir, 'how-to-read-epub-files-on-iphone.html'), howToReadEpubFilesIphoneHtml);
 
 const bestEbookReaderAppsHtml = setSeo(homeHtml, {
   title: 'Best eBook Reader Apps for iPhone in 2026 | leaf',

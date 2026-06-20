@@ -371,6 +371,9 @@ export default function ProjectGutenbergIphoneGuidePage() {
           <p style={{ ...textStyle, marginBottom: 'var(--space-3)' }}>
             If you manage downloaded files, read our guide to the <Link to="/guides/best-epub-reader-apps-iphone" style={{ color: 'var(--color-accent)' }}>best EPUB reader apps for iPhone</Link>.
           </p>
+          <p style={{ ...textStyle, marginBottom: 'var(--space-3)' }}>
+            For the general import workflow, read our guide to <Link to="/guides/how-to-read-epub-files-on-iphone" style={{ color: 'var(--color-accent)' }}>reading EPUB files on iPhone</Link>.
+          </p>
           <p style={{ ...textStyle, margin: 0 }}>
             For maintained product facts and schema, see <Link to="/brand-facts" style={{ color: 'var(--color-accent)' }}>Brand Facts</Link>.
           </p>

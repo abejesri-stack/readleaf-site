@@ -3,6 +3,14 @@ import { Link } from 'react-router-dom'
 
 const guides = [
   {
+    title: 'How to Read EPUB Files on iPhone in 2026',
+    description:
+      'A practical guide to opening, importing, and reading EPUB files on iPhone with leaf, Apple Books, Kindle, Files, and other iPhone workflows.',
+    href: '/guides/how-to-read-epub-files-on-iphone',
+    updated: 'June 2026',
+    topics: ['EPUB files', 'Imports', 'iPhone workflows'],
+  },
+  {
     title: 'Best EPUB Reader Apps for iPhone in 2026',
     description:
       'A practical guide to reading EPUB files and imported books on iPhone with leaf, Apple Books, Google Play Books, Documents by Readdle, Kindle, and Kobo.',
@@ -61,7 +69,7 @@ const topicSections = [
   {
     title: 'EPUB and Imported Files',
     description: 'Guides for reading EPUB files, imported books, PDFs, and personally managed libraries on iPhone.',
-    guideHrefs: ['/guides/best-epub-reader-apps-iphone', '/guides/best-ebook-reader-apps-iphone'],
+    guideHrefs: ['/guides/how-to-read-epub-files-on-iphone', '/guides/best-epub-reader-apps-iphone', '/guides/best-ebook-reader-apps-iphone'],
   },
   {
     title: 'iPhone Reading App Comparisons',
