@@ -11,6 +11,14 @@ const guides = [
     topics: ['EPUB files', 'Imports', 'iPhone workflows'],
   },
   {
+    title: 'How to Read Standard Ebooks on iPhone in 2026',
+    description:
+      'A practical guide to reading Standard Ebooks on iPhone with leaf Explore, Safari EPUB downloads, Apple Books imports, and Kindle workflows.',
+    href: '/guides/how-to-read-standard-ebooks-on-iphone',
+    updated: 'June 2026',
+    topics: ['Standard Ebooks', 'Free classics', 'EPUB files'],
+  },
+  {
     title: 'Best EPUB Reader Apps for iPhone in 2026',
     description:
       'A practical guide to reading EPUB files and imported books on iPhone with leaf, Apple Books, Google Play Books, Documents by Readdle, Kindle, and Kobo.',
@@ -64,7 +72,7 @@ const topicSections = [
   {
     title: 'Free Books and Public-Domain Reading',
     description: 'Guides for finding legal free ebooks, public-domain classics, and library books on iPhone.',
-    guideHrefs: ['/guides/best-free-ebook-apps-iphone', '/guides/how-to-read-project-gutenberg-books-on-iphone', '/guides/best-apps-for-reading-classics-iphone'],
+    guideHrefs: ['/guides/best-free-ebook-apps-iphone', '/guides/how-to-read-standard-ebooks-on-iphone', '/guides/how-to-read-project-gutenberg-books-on-iphone', '/guides/best-apps-for-reading-classics-iphone'],
   },
   {
     title: 'EPUB and Imported Files',

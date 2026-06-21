@@ -39,6 +39,24 @@ test('how to read EPUB files guide route renders and loads its screenshot', asyn
   await expect(image).toHaveJSProperty('complete', true)
 })
 
+test('how to read Standard Ebooks guide route renders and loads its screenshot', async ({ page }) => {
+  await page.goto('/guides/how-to-read-standard-ebooks-on-iphone', { waitUntil: 'domcontentloaded' })
+
+  await expect(page).toHaveTitle('How to Read Standard Ebooks on iPhone in 2026 | leaf')
+  await expect(page.getByRole('heading', { level: 1 })).toHaveText('How to Read Standard Ebooks on iPhone in 2026')
+  await expect(page.getByRole('heading', { name: 'Read Standard Ebooks on iPhone', exact: true })).toBeVisible()
+
+  const image = page.getByAltText('leaf Explore screen showing Standard Ebooks and classic books on iPhone')
+  await expect(image).toBeVisible()
+  await expect(image).toHaveJSProperty('complete', true)
+})
+
+test('guide hub links to Standard Ebooks how-to guide', async ({ page }) => {
+  await page.goto('/guides', { waitUntil: 'domcontentloaded' })
+
+  await expect(page.locator('a[href="/guides/how-to-read-standard-ebooks-on-iphone"]').first()).toBeVisible()
+})
+
 test('guide hub links to how to read EPUB files guide', async ({ page }) => {
   await page.goto('/guides', { waitUntil: 'domcontentloaded' })
 

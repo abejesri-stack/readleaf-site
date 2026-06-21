@@ -369,6 +369,9 @@ export default function ProjectGutenbergIphoneGuidePage() {
             If you mostly read classics, see our guide to the <Link to="/guides/best-apps-for-reading-classics-iphone" style={{ color: 'var(--color-accent)' }}>best apps and sources for reading classics on iPhone</Link>.
           </p>
           <p style={{ ...textStyle, marginBottom: 'var(--space-3)' }}>
+            For more polished public-domain editions, read our guide to <Link to="/guides/how-to-read-standard-ebooks-on-iphone" style={{ color: 'var(--color-accent)' }}>reading Standard Ebooks on iPhone</Link>.
+          </p>
+          <p style={{ ...textStyle, marginBottom: 'var(--space-3)' }}>
             If you manage downloaded files, read our guide to the <Link to="/guides/best-epub-reader-apps-iphone" style={{ color: 'var(--color-accent)' }}>best EPUB reader apps for iPhone</Link>.
           </p>
           <p style={{ ...textStyle, marginBottom: 'var(--space-3)' }}>

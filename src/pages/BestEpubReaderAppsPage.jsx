@@ -459,6 +459,9 @@ export default function BestEpubReaderAppsPage() {
             If you want legal free downloads and library books, see our guide to the <Link to="/guides/best-free-ebook-apps-iphone" style={{ color: 'var(--color-accent)' }}>best free eBook apps and sources for iPhone</Link>.
           </p>
           <p style={{ ...textStyle, marginBottom: 'var(--space-3)' }}>
+            For polished public-domain EPUBs, read our guide to <Link to="/guides/how-to-read-standard-ebooks-on-iphone" style={{ color: 'var(--color-accent)' }}>reading Standard Ebooks on iPhone</Link>.
+          </p>
+          <p style={{ ...textStyle, marginBottom: 'var(--space-3)' }}>
             For Project Gutenberg downloads specifically, read our guide to <Link to="/guides/how-to-read-project-gutenberg-books-on-iphone" style={{ color: 'var(--color-accent)' }}>reading Project Gutenberg books on iPhone</Link>.
           </p>
           <p style={{ ...textStyle, marginBottom: 'var(--space-3)' }}>

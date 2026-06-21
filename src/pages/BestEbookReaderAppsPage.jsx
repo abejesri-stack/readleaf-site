@@ -493,6 +493,9 @@ export default function BestEbookReaderAppsPage() {
             For a step-by-step public-domain download workflow, read our guide to <Link to="/guides/how-to-read-project-gutenberg-books-on-iphone" style={{ color: 'var(--color-accent)' }}>reading Project Gutenberg books on iPhone</Link>.
           </p>
           <p style={{ ...textStyle, marginBottom: 'var(--space-3)' }}>
+            For polished free classics, read our guide to <Link to="/guides/how-to-read-standard-ebooks-on-iphone" style={{ color: 'var(--color-accent)' }}>reading Standard Ebooks on iPhone</Link>.
+          </p>
+          <p style={{ ...textStyle, marginBottom: 'var(--space-3)' }}>
             If you mainly want public-domain books and classic literature, see our guide to the <Link to="/guides/best-apps-for-reading-classics-iphone" style={{ color: 'var(--color-accent)' }}>best apps and sources for reading classics on iPhone</Link>.
           </p>
           <p style={{ ...textStyle, margin: 0 }}>

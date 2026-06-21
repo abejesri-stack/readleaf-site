@@ -505,6 +505,9 @@ export default function BestFreeEbookAppsPage() {
             For step-by-step Gutenberg instructions, read our guide to <Link to="/guides/how-to-read-project-gutenberg-books-on-iphone" style={{ color: 'var(--color-accent)' }}>reading Project Gutenberg books on iPhone</Link>.
           </p>
           <p style={{ ...textStyle, marginBottom: 'var(--space-3)' }}>
+            For polished public-domain editions, read our guide to <Link to="/guides/how-to-read-standard-ebooks-on-iphone" style={{ color: 'var(--color-accent)' }}>reading Standard Ebooks on iPhone</Link>.
+          </p>
+          <p style={{ ...textStyle, marginBottom: 'var(--space-3)' }}>
             If you mainly want classics, see our guide to the <Link to="/guides/best-apps-for-reading-classics-iphone" style={{ color: 'var(--color-accent)' }}>best apps and sources for reading classics on iPhone</Link>.
           </p>
           <p style={{ ...textStyle, marginBottom: 'var(--space-3)' }}>
