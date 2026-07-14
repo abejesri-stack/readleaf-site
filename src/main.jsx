@@ -11,6 +11,7 @@ import BestEpubReaderAppsPage from './pages/BestEpubReaderAppsPage.jsx'
 import HowToReadEpubFilesIphonePage from './pages/HowToReadEpubFilesIphonePage.jsx'
 import ProjectGutenbergIphoneGuidePage from './pages/ProjectGutenbergIphoneGuidePage.jsx'
 import StandardEbooksIphoneGuidePage from './pages/StandardEbooksIphoneGuidePage.jsx'
+import VerticalScrollingEbookAppsPage from './pages/VerticalScrollingEbookAppsPage.jsx'
 import GuidePage from './pages/GuidePage.jsx'
 import BrandFactsPage from './pages/BrandFactsPage.jsx'
 import WorkPage from './pages/WorkPage.jsx'
@@ -27,6 +28,7 @@ createRoot(document.getElementById('root')).render(
         <Route path="/guides/best-epub-reader-apps-iphone" element={<BestEpubReaderAppsPage />} />
         <Route path="/guides/how-to-read-epub-files-on-iphone" element={<HowToReadEpubFilesIphonePage />} />
         <Route path="/guides/how-to-read-standard-ebooks-on-iphone" element={<StandardEbooksIphoneGuidePage />} />
+        <Route path="/guides/best-vertical-scrolling-ebook-apps-iphone" element={<VerticalScrollingEbookAppsPage />} />
         <Route path="/guides/how-to-read-project-gutenberg-books-on-iphone" element={<ProjectGutenbergIphoneGuidePage />} />
         <Route path="/guides/best-apps-for-reading-classics-iphone" element={<BestClassicsAppsPage />} />
         <Route path="/guides/best-minimalist-reading-apps-2026" element={<GuidePage />} />

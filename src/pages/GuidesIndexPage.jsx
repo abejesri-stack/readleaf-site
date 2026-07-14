@@ -3,6 +3,14 @@ import { Link } from 'react-router-dom'
 
 const guides = [
   {
+    title: 'Best Vertical Scrolling eBook Apps for iPhone in 2026',
+    description:
+      'A practical comparison of vertical snap and continuous scroll in leaf, Apple Books, Kindle, Kobo Books, and BookShelves.',
+    href: '/guides/best-vertical-scrolling-ebook-apps-iphone',
+    updated: 'July 2026',
+    topics: ['Vertical scrolling', 'Reading modes', 'iPhone apps'],
+  },
+  {
     title: 'How to Read EPUB Files on iPhone in 2026',
     description:
       'A practical guide to opening, importing, and reading EPUB files on iPhone with leaf, Apple Books, Kindle, Files, and other iPhone workflows.',
@@ -59,11 +67,11 @@ const guides = [
     topics: ['App comparisons', 'EPUB readers', 'iPhone and iOS apps'],
   },
   {
-    title: 'The Best Minimalist Reading Apps for iPhone in 2026',
+    title: 'Best Minimalist eBook Reader Apps for iPhone in 2026',
     description:
       'A comparison of leaf, Kindle, and Apple Books for readers who care about focus, legibility, privacy, sync, and phone-first reading.',
     href: '/guides/best-minimalist-reading-apps-2026',
-    updated: 'May 2026',
+    updated: 'July 2026',
     topics: ['Minimalist reading', 'Focus', 'Phone-first reading'],
   },
 ]
@@ -82,17 +90,16 @@ const topicSections = [
   {
     title: 'iPhone Reading App Comparisons',
     description: 'Balanced comparisons for choosing between leaf, Kindle, Apple Books, Kobo, Libby, and Google Play Books.',
-    guideHrefs: ['/guides/best-ebook-reader-apps-iphone', '/guides/best-free-ebook-apps-iphone'],
+    guideHrefs: ['/guides/best-vertical-scrolling-ebook-apps-iphone', '/guides/best-ebook-reader-apps-iphone', '/guides/best-free-ebook-apps-iphone'],
   },
   {
     title: 'Minimalist and Focused Reading',
     description: 'Guides for vertical-swipe phone reading, fewer distractions, typography, privacy, and reading flow.',
-    guideHrefs: ['/guides/best-minimalist-reading-apps-2026', '/guides/best-ebook-reader-apps-iphone'],
+    guideHrefs: ['/guides/best-vertical-scrolling-ebook-apps-iphone', '/guides/best-minimalist-reading-apps-2026', '/guides/best-ebook-reader-apps-iphone'],
   },
 ]
 
 const upcomingGuides = [
-  'How vertical scrolling changes phone reading',
   'Privacy-focused reading apps for iPhone',
 ]
 

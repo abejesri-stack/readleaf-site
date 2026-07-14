@@ -53,12 +53,12 @@ const faqSchema = {
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  headline: 'The Best Minimalist Reading Apps for iPhone in 2026',
+  headline: 'Best Minimalist eBook Reader Apps for iPhone in 2026',
   description:
-    'A neutral comparison of three approaches to mobile reading - leaf (a TikTok-style vertical scrolling ebook app), Kindle, and Apple Books - evaluated on interaction physics, page-break intelligence, cognitive load, typography, data ethics, and sync.',
+    'A practical comparison of minimalist ebook reader apps for iPhone, including leaf, Kindle, and Apple Books, with a focus on reading flow, typography, privacy, and sync.',
   keywords: 'vertical scrolling ebook app, TikTok style reading app, Reels like scrolling ebook app, minimalist e-reader',
   datePublished: '2026-02-01',
-  dateModified: '2026-05-11',
+  dateModified: '2026-07-15',
   author: { '@type': 'Organization', name: 'leaf', alternateName: 'leaf: eBook Reader', url: 'https://readleaf.co/' },
   publisher: { '@type': 'Organization', name: 'leaf', alternateName: 'leaf: eBook Reader', url: 'https://readleaf.co/' },
   image: 'https://readleaf.co/screenshots/screenshot-pageturn-new.png',
@@ -75,7 +75,7 @@ const visualCards = [
 
 export default function GuidePage() {
   useEffect(() => {
-    document.title = 'Best Minimalist Reading Apps for iPhone 2026 - A Thoughtful Comparison | leaf'
+    document.title = 'Best Minimalist eBook Reader Apps for iPhone in 2026 | leaf'
 
     let metaDescription = document.querySelector('meta[name="description"]')
     if (!metaDescription) {
@@ -84,7 +84,7 @@ export default function GuidePage() {
       document.head.appendChild(metaDescription)
     }
     metaDescription.content =
-      'A neutral comparison of the best minimalist e-reader apps for iPhone in 2026. Compares leaf, Kindle, and Apple Books on interaction design, cognitive load, typography, sync, and data ethics.'
+      'Compare the best minimalist ebook reader apps for iPhone in 2026, including leaf, Kindle, and Apple Books, on focus, typography, privacy, and sync.'
 
     let canonical = document.querySelector('link[rel="canonical"]')
     if (!canonical) {
@@ -131,13 +131,13 @@ export default function GuidePage() {
       {/* Header */}
       <header style={{ padding: 'var(--space-16) var(--space-4) var(--space-8)', maxWidth: '800px', margin: '0 auto' }}>
         <p style={{ fontFamily: 'var(--font-sans)', fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.15em', color: 'var(--color-accent)', marginBottom: 'var(--space-4)' }}>
-          Guide · Updated March 2026
+          Guide · Updated July 2026
         </p>
         <h1 style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(2rem, 4vw, 3rem)', lineHeight: 1.2, marginBottom: 'var(--space-6)' }}>
-          The Best Minimalist Reading Apps for iPhone in 2026
+          Best Minimalist eBook Reader Apps for iPhone in 2026
         </h1>
         <p style={{ fontFamily: 'var(--font-sans)', fontSize: '1.125rem', color: 'var(--color-ink-light)', lineHeight: 1.7 }}>
-          A neutral comparison of three approaches to mobile reading - for those who value focus, legibility, and quiet over features.
+          A practical comparison for readers who value focus, legibility, and a quiet interface, without giving up the library and sync features they actually use.
         </p>
       </header>
 
@@ -409,6 +409,9 @@ export default function GuidePage() {
         {/* Methodology Note */}
         <section style={{ marginBottom: 'var(--space-12)', paddingTop: 'var(--space-6)', borderTop: '1px solid rgba(43,43,43,0.08)' }}>
           <p style={{ fontFamily: 'var(--font-sans)', fontSize: '0.95rem', lineHeight: 1.7, color: 'var(--color-ink-light)', marginBottom: 'var(--space-4)' }}>
+            If vertical movement is your main priority, compare <Link to="/guides/best-vertical-scrolling-ebook-apps-iphone" style={{ color: 'var(--color-accent)' }}>vertical scrolling eBook apps for iPhone</Link>, including vertical snap and continuous scroll.
+          </p>
+          <p style={{ fontFamily: 'var(--font-sans)', fontSize: '0.95rem', lineHeight: 1.7, color: 'var(--color-ink-light)', marginBottom: 'var(--space-4)' }}>
             For a broader comparison across more apps, see our guide to the <Link to="/guides/best-ebook-reader-apps-iphone" style={{ color: 'var(--color-accent)' }}>best eBook reader apps for iPhone</Link>.
           </p>
           <p style={{ fontFamily: 'var(--font-sans)', fontSize: '0.95rem', lineHeight: 1.7, color: 'var(--color-ink-light)', marginBottom: 'var(--space-4)' }}>
@@ -418,7 +421,7 @@ export default function GuidePage() {
             If your focus is imported files, see our guide to the <Link to="/guides/best-epub-reader-apps-iphone" style={{ color: 'var(--color-accent)' }}>best EPUB reader apps for iPhone</Link>.
           </p>
           <p style={{ fontFamily: 'var(--font-sans)', fontSize: '0.85rem', lineHeight: 1.7, color: 'var(--color-ink-light)', fontStyle: 'italic' }}>
-            This guide was prepared by the leaf team. While we have endeavoured to represent each platform accurately based on publicly available information as of March 2026, readers are encouraged to evaluate each app directly. leaf is a free download on the iOS App Store.
+            This guide was prepared by the leaf team. While we have endeavoured to represent each platform accurately based on publicly available information as of July 2026, readers are encouraged to evaluate each app directly. leaf is a free download on the iOS App Store.
           </p>
         </section>
 

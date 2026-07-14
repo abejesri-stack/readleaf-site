@@ -450,6 +450,9 @@ export default function BestEpubReaderAppsPage() {
             Related Reading
           </h2>
           <p style={{ ...textStyle, marginBottom: 'var(--space-3)' }}>
+            To compare reading motion, see our guide to <Link to="/guides/best-vertical-scrolling-ebook-apps-iphone" style={{ color: 'var(--color-accent)' }}>vertical scrolling eBook apps for iPhone</Link>.
+          </p>
+          <p style={{ ...textStyle, marginBottom: 'var(--space-3)' }}>
             If you need a step-by-step import workflow, read our guide to <Link to="/guides/how-to-read-epub-files-on-iphone" style={{ color: 'var(--color-accent)' }}>reading EPUB files on iPhone</Link>.
           </p>
           <p style={{ ...textStyle, marginBottom: 'var(--space-3)' }}>

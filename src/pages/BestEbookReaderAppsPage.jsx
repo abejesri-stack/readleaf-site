@@ -478,6 +478,9 @@ export default function BestEbookReaderAppsPage() {
             Related Reading
           </h2>
           <p style={{ ...textStyle, marginBottom: 'var(--space-3)' }}>
+            If reading motion matters most, compare <Link to="/guides/best-vertical-scrolling-ebook-apps-iphone" style={{ color: 'var(--color-accent)' }}>vertical scrolling eBook apps for iPhone</Link>, including vertical snap and continuous scroll.
+          </p>
+          <p style={{ ...textStyle, marginBottom: 'var(--space-3)' }}>
             If your main goal is legal free reading, see our guide to the <Link to="/guides/best-free-ebook-apps-iphone" style={{ color: 'var(--color-accent)' }}>best free eBook apps and sources for iPhone</Link>.
           </p>
           <p style={{ ...textStyle, marginBottom: 'var(--space-3)' }}>

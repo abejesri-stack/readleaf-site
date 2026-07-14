@@ -58,7 +58,7 @@ fs.writeFileSync(path.join(dist, '404.html'), htmlContent);
 // 2. Add static homepage content and internal links for crawlers before React renders.
 const homeHtml = htmlContent.replace(
   '<div id="root"></div>',
-  '<div id="root"><h1>leaf: eBook Reader - Vertical-Swipe Book Reader for iPhone</h1><p>leaf is a vertical-swipe iOS e-reader with built-in Standard Ebooks and Project Gutenberg discovery, imported EPUB/PDF/Markdown support, optional leaf Pro sync, and no ads.</p><nav><a href="/guides/">Reading Guides</a> <a href="/guides/how-to-read-standard-ebooks-on-iphone">How to Read Standard Ebooks on iPhone</a> <a href="/guides/how-to-read-epub-files-on-iphone">How to Read EPUB Files on iPhone</a> <a href="/guides/how-to-read-project-gutenberg-books-on-iphone">How to Read Project Gutenberg Books on iPhone</a> <a href="/guides/best-free-ebook-apps-iphone">Best Free eBook Apps and Sources for iPhone</a> <a href="/guides/best-epub-reader-apps-iphone">Best EPUB Reader Apps for iPhone</a> <a href="/guides/best-ebook-reader-apps-iphone">Best eBook Reader Apps for iPhone and iOS</a> <a href="/guides/best-apps-for-reading-classics-iphone">Classics Reading Apps Guide</a> <a href="/guides/best-minimalist-reading-apps-2026">Minimalist Reading Apps Guide</a> <a href="/brand-facts">Brand Facts</a> <a href="/legal/">Privacy &amp; Terms</a></nav></div>'
+  '<div id="root"><h1>leaf: eBook Reader - Vertical-Swipe Book Reader for iPhone</h1><p>leaf is a vertical-swipe iOS e-reader with built-in Standard Ebooks and Project Gutenberg discovery, imported EPUB/PDF/Markdown support, optional leaf Pro sync, and no ads.</p><nav><a href="/guides/">Reading Guides</a> <a href="/guides/best-vertical-scrolling-ebook-apps-iphone">Best Vertical Scrolling eBook Apps for iPhone</a> <a href="/guides/how-to-read-standard-ebooks-on-iphone">How to Read Standard Ebooks on iPhone</a> <a href="/guides/how-to-read-epub-files-on-iphone">How to Read EPUB Files on iPhone</a> <a href="/guides/how-to-read-project-gutenberg-books-on-iphone">How to Read Project Gutenberg Books on iPhone</a> <a href="/guides/best-free-ebook-apps-iphone">Best Free eBook Apps and Sources for iPhone</a> <a href="/guides/best-epub-reader-apps-iphone">Best EPUB Reader Apps for iPhone</a> <a href="/guides/best-ebook-reader-apps-iphone">Best eBook Reader Apps for iPhone and iOS</a> <a href="/guides/best-apps-for-reading-classics-iphone">Classics Reading Apps Guide</a> <a href="/guides/best-minimalist-reading-apps-2026">Minimalist eBook Reader Apps Guide</a> <a href="/brand-facts">Brand Facts</a> <a href="/legal/">Privacy &amp; Terms</a></nav></div>'
 );
 fs.writeFileSync(index, homeHtml);
 
@@ -77,6 +77,7 @@ const guidesIndexStaticHtml = `<div id="root">
     <h2>iPhone Reading App Comparisons</h2>
     <p>Balanced comparisons for choosing between leaf, Kindle, Apple Books, Kobo, Libby, and Google Play Books.</p>
     <ul>
+      <li><a href="/guides/best-vertical-scrolling-ebook-apps-iphone">Best Vertical Scrolling eBook Apps for iPhone in 2026</a></li>
       <li><a href="/guides/best-ebook-reader-apps-iphone">Best eBook Reader Apps for iPhone and iOS in 2026</a></li>
       <li><a href="/guides/best-free-ebook-apps-iphone">Best Free eBook Apps and Sources for iPhone in 2026</a></li>
     </ul>
@@ -90,10 +91,15 @@ const guidesIndexStaticHtml = `<div id="root">
     <h2>Minimalist and Focused Reading</h2>
     <p>Guides for vertical-swipe phone reading, fewer distractions, typography, privacy, and reading flow.</p>
     <ul>
-      <li><a href="/guides/best-minimalist-reading-apps-2026">The Best Minimalist Reading Apps for iPhone in 2026</a></li>
+      <li><a href="/guides/best-vertical-scrolling-ebook-apps-iphone">Best Vertical Scrolling eBook Apps for iPhone in 2026</a></li>
+      <li><a href="/guides/best-minimalist-reading-apps-2026">Best Minimalist eBook Reader Apps for iPhone in 2026</a></li>
       <li><a href="/guides/best-ebook-reader-apps-iphone">Best eBook Reader Apps for iPhone and iOS in 2026</a></li>
     </ul>
     <h2>Published Guides</h2>
+    <article>
+      <h2><a href="/guides/best-vertical-scrolling-ebook-apps-iphone">Best Vertical Scrolling eBook Apps for iPhone in 2026</a></h2>
+      <p>A practical comparison of vertical snap and continuous scroll in leaf, Apple Books, Kindle, Kobo Books, and BookShelves.</p>
+    </article>
     <article>
       <h2><a href="/guides/how-to-read-epub-files-on-iphone">How to Read EPUB Files on iPhone in 2026</a></h2>
       <p>A practical guide to opening, importing, and reading EPUB files on iPhone with leaf, Apple Books, Kindle, Files, and other iPhone workflows.</p>
@@ -123,12 +129,11 @@ const guidesIndexStaticHtml = `<div id="root">
       <p>A practical comparison of leaf, Kindle, Apple Books, Kobo, Libby, and Google Play Books for different kinds of iPhone and iOS readers.</p>
     </article>
     <article>
-      <h2><a href="/guides/best-minimalist-reading-apps-2026">The Best Minimalist Reading Apps for iPhone in 2026</a></h2>
+      <h2><a href="/guides/best-minimalist-reading-apps-2026">Best Minimalist eBook Reader Apps for iPhone in 2026</a></h2>
       <p>A comparison of leaf, Kindle, and Apple Books for readers who care about focus, legibility, privacy, sync, and phone-first reading.</p>
     </article>
     <h2>Planned guide topics</h2>
     <ul>
-      <li>How vertical scrolling changes phone reading</li>
       <li>Privacy-focused reading apps for iPhone</li>
     </ul>
     <nav>
@@ -139,9 +144,69 @@ const guidesIndexStaticHtml = `<div id="root">
   </main>
 </div>`;
 
+const verticalScrollingAppsStaticHtml = `<div id="root">
+  <article>
+    <h1>Best Vertical Scrolling eBook Apps for iPhone in 2026</h1>
+    <p>A practical comparison of vertical snap and continuous scroll in leaf, Apple Books, Kindle, Kobo Books, and BookShelves.</p>
+    <figure>
+      <img src="/screenshots/leaf_slide.png" alt="leaf vertical scrolling ebook reader shown on an iPhone" width="1200" height="1501" loading="eager" />
+      <figcaption>leaf combines one-screen-at-a-time Glide mode with continuous Stream mode.</figcaption>
+    </figure>
+    <h2>Quick answer</h2>
+    <p>Choose leaf if you want vertical snap reading as the main interaction, continuous scroll as an option, and built-in free classics discovery. Choose Apple Books for the easiest built-in Scroll mode, Kindle or Kobo for books already purchased in those stores, and BookShelves for a personal EPUB library across Apple devices.</p>
+    <h2>Vertical snap and continuous scroll are different</h2>
+    <p>Continuous scroll moves through a book freely like a web page. Vertical snap also moves upward, but each gesture settles on a defined screen of text. Continuous scroll gives precise movement, while vertical snap provides stable stopping points that can be easier to resume.</p>
+    <h2>Vertical scrolling eBook apps compared</h2>
+    <table>
+      <thead>
+        <tr><th>App</th><th>Best for</th><th>Vertical reading</th><th>Library and files</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><a href="https://apps.apple.com/app/leaf-ebook-reader/id6758810936">leaf</a></td><td>Vertical snap reading and free classics</td><td>Glide vertical snap, Stream continuous scroll, or Leaf page turn</td><td>EPUB, PDF, and Markdown imports</td></tr>
+        <tr><td><a href="https://support.apple.com/guide/iphone/read-books-iphc1af7c57/ios">Apple Books</a></td><td>The simplest built-in iPhone option</td><td>Scroll, Curl, or Fast Fade for supported books</td><td>Apple purchases plus imported EPUB and PDF files</td></tr>
+        <tr><td><a href="https://apps.apple.com/us/app/amazon-kindle/id302584613?platform=iphone">Kindle</a></td><td>Amazon purchases and Kindle libraries</td><td>Continuous scrolling or paginated reading for supported books</td><td>Kindle purchases and personal documents</td></tr>
+        <tr><td><a href="https://apps.apple.com/us/app/kobo-books-audiobooks/id301259483?platform=iphone">Kobo Books</a></td><td>Kobo store customers and device owners</td><td>Vertical scrolling or page turns, depending on book and app version</td><td>Kobo purchases and ecosystem reading</td></tr>
+        <tr><td><a href="https://getbookshelves.app/">BookShelves</a></td><td>Personal EPUB libraries across Apple devices</td><td>Continuous scroll or paginated reading</td><td>EPUB, PDF, comics, and Calibre-connected libraries</td></tr>
+      </tbody>
+    </table>
+    <h2>App-by-app recommendations</h2>
+    <p>leaf treats vertical movement as the core reading model. Glide advances one composed screen at a time, Stream provides continuous scrolling, and Leaf retains a conventional page turn. It also includes Standard Ebooks and Project Gutenberg discovery, a curated Explore tab, EPUB/PDF/Markdown imports, highlights, notes, reading journals, share cards, themes, fonts, custom fonts with leaf Pro, optional Pro sync, and iCloud Book Vault.</p>
+    <p>Apple Books is the easiest built-in option and supports Scroll mode for compatible books. Kindle is strongest for Amazon libraries and Kindle devices. Kobo Books fits readers who buy from Kobo or use Kobo hardware. BookShelves is useful for readers who manage personal files and want continuous scroll across Apple devices.</p>
+    <h2>How to turn on vertical scrolling</h2>
+    <ol>
+      <li>In leaf, choose Glide for one-screen vertical swipes or Stream for continuous scrolling.</li>
+      <li>In Apple Books, open Themes and Settings, tap the page-turn control, and choose Scroll.</li>
+      <li>In Kindle, open Aa reading settings, choose Layout, and enable Continuous Scrolling when available.</li>
+      <li>In Kobo Books, select vertical scrolling in reading settings when it is available for the book and app version.</li>
+      <li>In BookShelves, switch from pagination to continuous scroll in the reader appearance controls.</li>
+    </ol>
+    <h2>FAQ</h2>
+    <h3>What is the best vertical scrolling eBook app for iPhone?</h3>
+    <p>leaf is the strongest fit for vertical snap plus optional continuous scroll. Apple Books is the easiest built-in option, Kindle and Kobo fit their store ecosystems, and BookShelves is useful for personal libraries.</p>
+    <h3>Does Apple Books have vertical scrolling?</h3>
+    <p>Yes. Supported books can use Scroll mode, and fixed-layout documents expose a separate Vertical Scrolling option.</p>
+    <h3>What is the difference between vertical snap and continuous scroll?</h3>
+    <p>Vertical snap advances one screen at a time and stops at a defined reading position. Continuous scroll moves freely through the text like a web page.</p>
+    <h3>Can the Kindle app scroll vertically on iPhone?</h3>
+    <p>Kindle offers continuous scrolling for supported reflowable books, although the option may not appear for every format.</p>
+    <h3>Which vertical scrolling app is best for EPUB files?</h3>
+    <p>leaf is a good fit for EPUB readers who want vertical snap or continuous scroll, while Apple Books is the simplest built-in choice and BookShelves is useful for larger personal libraries.</p>
+    <h2>Related pages</h2>
+    <nav>
+      <a href="/">leaf homepage</a>
+      <a href="/guides/">Reading Guides</a>
+      <a href="/guides/best-minimalist-reading-apps-2026">Best Minimalist eBook Reader Apps for iPhone</a>
+      <a href="/guides/best-ebook-reader-apps-iphone">Best eBook Reader Apps for iPhone and iOS</a>
+      <a href="/guides/best-epub-reader-apps-iphone">Best EPUB Reader Apps for iPhone</a>
+      <a href="/guides/how-to-read-epub-files-on-iphone">How to Read EPUB Files on iPhone</a>
+      <a href="/brand-facts">Brand Facts</a>
+    </nav>
+  </article>
+</div>`;
+
 const guideStaticHtml = `<div id="root">
   <article>
-    <h1>The Best Minimalist Reading Apps for iPhone in 2026</h1>
+    <h1>Best Minimalist eBook Reader Apps for iPhone in 2026</h1>
     <p>A comparison of three approaches to mobile reading: leaf, Kindle, and Apple Books. The guide focuses on phone ergonomics, page-break behavior, cognitive load, typography, privacy, sync, and library model.</p>
     <figure>
       <img src="/screenshots/screenshot-pageturn-new.png" alt="leaf reader screen showing a quiet page-turn reading mode" width="300" height="650" loading="eager" />
@@ -175,6 +240,7 @@ const guideStaticHtml = `<div id="root">
     <nav>
       <a href="/">leaf homepage</a>
       <a href="/guides/">Reading Guides</a>
+      <a href="/guides/best-vertical-scrolling-ebook-apps-iphone">Best Vertical Scrolling eBook Apps for iPhone</a>
       <a href="/guides/how-to-read-standard-ebooks-on-iphone">How to Read Standard Ebooks on iPhone</a>
       <a href="/guides/how-to-read-project-gutenberg-books-on-iphone">How to Read Project Gutenberg Books on iPhone</a>
       <a href="/guides/best-free-ebook-apps-iphone">Best Free eBook Apps and Sources for iPhone</a>
@@ -271,6 +337,7 @@ const howToReadEpubFilesIphoneStaticHtml = `<div id="root">
     <nav>
       <a href="/">leaf homepage</a>
       <a href="/guides/">Reading Guides</a>
+      <a href="/guides/best-vertical-scrolling-ebook-apps-iphone">Best Vertical Scrolling eBook Apps for iPhone</a>
       <a href="/guides/best-epub-reader-apps-iphone">Best EPUB Reader Apps for iPhone</a>
       <a href="/guides/how-to-read-standard-ebooks-on-iphone">How to Read Standard Ebooks on iPhone</a>
       <a href="/guides/how-to-read-project-gutenberg-books-on-iphone">How to Read Project Gutenberg Books on iPhone</a>
@@ -511,6 +578,7 @@ const bestEbookReaderAppsStaticHtml = `<div id="root">
     <nav>
       <a href="/">leaf homepage</a>
       <a href="/guides/">Reading Guides</a>
+      <a href="/guides/best-vertical-scrolling-ebook-apps-iphone">Best Vertical Scrolling eBook Apps for iPhone</a>
       <a href="/guides/best-epub-reader-apps-iphone">Best EPUB Reader Apps for iPhone</a>
       <a href="/guides/best-free-ebook-apps-iphone">Best Free eBook Apps and Sources for iPhone</a>
       <a href="/guides/how-to-read-project-gutenberg-books-on-iphone">How to Read Project Gutenberg Books on iPhone</a>
@@ -695,6 +763,7 @@ const bestEpubReaderAppsStaticHtml = `<div id="root">
     <nav>
       <a href="/">leaf homepage</a>
       <a href="/guides/">Reading Guides</a>
+      <a href="/guides/best-vertical-scrolling-ebook-apps-iphone">Best Vertical Scrolling eBook Apps for iPhone</a>
       <a href="/guides/best-ebook-reader-apps-iphone">Best eBook Reader Apps for iPhone</a>
       <a href="/guides/best-free-ebook-apps-iphone">Best Free eBook Apps and Sources for iPhone</a>
       <a href="/guides/how-to-read-standard-ebooks-on-iphone">How to Read Standard Ebooks on iPhone</a>
@@ -900,9 +969,19 @@ const bestClassicsAppsHtml = setSeo(homeHtml, {
 );
 fs.writeFileSync(path.join(guidesDir, 'best-apps-for-reading-classics-iphone.html'), bestClassicsAppsHtml);
 
+const verticalScrollingAppsHtml = setSeo(homeHtml, {
+  title: 'Best Vertical Scrolling eBook Apps for iPhone in 2026 | leaf',
+  description: 'Compare the best vertical scrolling ebook apps for iPhone in 2026, including vertical snap, continuous scroll, EPUB support, libraries, and sync.',
+  canonical: 'https://readleaf.co/guides/best-vertical-scrolling-ebook-apps-iphone',
+}).replace(
+  /<div id="root">[\s\S]*?<\/div>\s*<\/body>/,
+  verticalScrollingAppsStaticHtml + '\n  </body>'
+);
+fs.writeFileSync(path.join(guidesDir, 'best-vertical-scrolling-ebook-apps-iphone.html'), verticalScrollingAppsHtml);
+
 const guideHtml = setSeo(homeHtml, {
-  title: 'Best Minimalist Reading Apps for iPhone 2026 - A Thoughtful Comparison | leaf',
-  description: 'A neutral comparison of the best minimalist e-reader apps for iPhone in 2026. Compares leaf, Kindle, and Apple Books on interaction design, cognitive load, typography, sync, and data ethics.',
+  title: 'Best Minimalist eBook Reader Apps for iPhone in 2026 | leaf',
+  description: 'Compare the best minimalist ebook reader apps for iPhone in 2026, including leaf, Kindle, and Apple Books, on focus, typography, privacy, and sync.',
   canonical: 'https://readleaf.co/guides/best-minimalist-reading-apps-2026',
 }).replace(
   /<div id="root">[\s\S]*?<\/div>\s*<\/body>/,

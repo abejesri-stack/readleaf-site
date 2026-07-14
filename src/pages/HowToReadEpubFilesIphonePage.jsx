@@ -356,6 +356,9 @@ export default function HowToReadEpubFilesIphonePage() {
             Related Reading
           </h2>
           <p style={{ ...textStyle, marginBottom: 'var(--space-3)' }}>
+            If you prefer to move through EPUBs vertically, compare <Link to="/guides/best-vertical-scrolling-ebook-apps-iphone" style={{ color: 'var(--color-accent)' }}>vertical scrolling eBook apps for iPhone</Link>.
+          </p>
+          <p style={{ ...textStyle, marginBottom: 'var(--space-3)' }}>
             For a broader app comparison, see our guide to the <Link to="/guides/best-epub-reader-apps-iphone" style={{ color: 'var(--color-accent)' }}>best EPUB reader apps for iPhone</Link>.
           </p>
           <p style={{ ...textStyle, marginBottom: 'var(--space-3)' }}>

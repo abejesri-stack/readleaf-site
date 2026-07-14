@@ -731,6 +731,10 @@ function App() {
             style={{ fontFamily: 'var(--font-sans)', fontSize: '0.72rem', textTransform: 'uppercase', letterSpacing: '0.08em', color: 'rgba(43,43,43,0.4)' }}>
             Guides
           </Link>
+          <Link to="/guides/best-vertical-scrolling-ebook-apps-iphone"
+            style={{ fontFamily: 'var(--font-sans)', fontSize: '0.72rem', textTransform: 'uppercase', letterSpacing: '0.08em', color: 'rgba(43,43,43,0.4)' }}>
+            Vertical Reading
+          </Link>
           <Link to="/brand-facts"
             style={{ fontFamily: 'var(--font-sans)', fontSize: '0.72rem', textTransform: 'uppercase', letterSpacing: '0.08em', color: 'rgba(43,43,43,0.4)' }}>
             Brand Facts

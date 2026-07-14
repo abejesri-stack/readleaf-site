@@ -1,5 +1,31 @@
 import { test, expect } from '@playwright/test'
 
+test('vertical scrolling guide renders with its feature image', async ({ page }) => {
+  await page.goto('/guides/best-vertical-scrolling-ebook-apps-iphone', { waitUntil: 'domcontentloaded' })
+
+  await expect(page).toHaveTitle('Best Vertical Scrolling eBook Apps for iPhone in 2026 | leaf')
+  await expect(page.getByRole('heading', { level: 1 })).toHaveText('Best Vertical Scrolling eBook Apps for iPhone in 2026')
+  await expect(page.getByRole('heading', { name: 'Vertical snap and continuous scroll are not the same' })).toBeVisible()
+
+  const image = page.getByAltText('leaf vertical scrolling ebook reader shown on an iPhone')
+  await expect(image).toBeVisible()
+  await expect(image).toHaveJSProperty('complete', true)
+})
+
+test('guide hub links to vertical scrolling guide', async ({ page }) => {
+  await page.goto('/guides', { waitUntil: 'domcontentloaded' })
+
+  await expect(page.locator('a[href="/guides/best-vertical-scrolling-ebook-apps-iphone"]').first()).toBeVisible()
+})
+
+test('minimalist guide uses focused ebook reader targeting', async ({ page }) => {
+  await page.goto('/guides/best-minimalist-reading-apps-2026', { waitUntil: 'domcontentloaded' })
+
+  await expect(page).toHaveTitle('Best Minimalist eBook Reader Apps for iPhone in 2026 | leaf')
+  await expect(page.getByRole('heading', { level: 1 })).toHaveText('Best Minimalist eBook Reader Apps for iPhone in 2026')
+  await expect(page.locator('a[href="/guides/best-vertical-scrolling-ebook-apps-iphone"]')).toBeVisible()
+})
+
 test('broader ebook reader guide targets iPhone and iOS queries', async ({ page }) => {
   await page.goto('/guides/best-ebook-reader-apps-iphone', { waitUntil: 'domcontentloaded' })
 
