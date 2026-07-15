@@ -1,11 +1,18 @@
 import { test, expect } from '@playwright/test'
 
+const expectModifiedDate = async (page, schemaSelector) => {
+  const schemaText = await page.locator(schemaSelector).evaluate((element) => element.textContent)
+  expect(JSON.parse(schemaText).dateModified).toBe('2026-07-15')
+}
+
 test('vertical scrolling guide renders with its feature image', async ({ page }) => {
   await page.goto('/guides/best-vertical-scrolling-ebook-apps-iphone', { waitUntil: 'domcontentloaded' })
 
   await expect(page).toHaveTitle('Best Vertical Scrolling eBook Apps for iPhone in 2026 | leaf')
   await expect(page.getByRole('heading', { level: 1 })).toHaveText('Best Vertical Scrolling eBook Apps for iPhone in 2026')
+  await expect(page.getByText('Quick answer', { exact: true })).toBeVisible()
   await expect(page.getByRole('heading', { name: 'Vertical snap and continuous scroll are not the same' })).toBeVisible()
+  await expectModifiedDate(page, '#vertical-scroll-article-schema')
 
   const image = page.getByAltText('leaf vertical scrolling ebook reader shown on an iPhone')
   await expect(image).toBeVisible()
@@ -58,7 +65,9 @@ test('how to read EPUB files guide route renders and loads its screenshot', asyn
 
   await expect(page).toHaveTitle('How to Read EPUB Files on iPhone in 2026 | leaf')
   await expect(page.getByRole('heading', { level: 1 })).toHaveText('How to Read EPUB Files on iPhone in 2026')
+  await expect(page.getByText('Quick answer', { exact: true })).toBeVisible()
   await expect(page.getByRole('heading', { name: 'Open an EPUB file on iPhone' })).toBeVisible()
+  await expectModifiedDate(page, '#how-to-read-epub-files-iphone-article-schema')
 
   const image = page.getByAltText('leaf library screen showing EPUB files and imported books on iPhone')
   await expect(image).toBeVisible()
@@ -94,7 +103,9 @@ test('Project Gutenberg guide route renders and loads its Explore screenshot', a
 
   await expect(page).toHaveTitle('How to Read Project Gutenberg Books on iPhone in 2026 | leaf')
   await expect(page.getByRole('heading', { level: 1 })).toHaveText('How to Read Project Gutenberg Books on iPhone in 2026')
+  await expect(page.getByText('Quick answer', { exact: true })).toBeVisible()
   await expect(page.getByRole('heading', { name: 'Download a Project Gutenberg EPUB on iPhone' })).toBeVisible()
+  await expectModifiedDate(page, '#project-gutenberg-iphone-article-schema')
 
   const image = page.getByAltText('leaf Explore screen showing Project Gutenberg and free classic books on iPhone')
   await expect(image).toBeVisible()

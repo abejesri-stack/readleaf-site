@@ -91,11 +91,18 @@ const articleSchema = {
   description:
     'A practical guide to reading Project Gutenberg books on iPhone, including EPUB downloads, Safari, Apple Books, Kindle workflows, and leaf Explore.',
   datePublished: '2026-05-24',
-  dateModified: '2026-05-24',
+  dateModified: '2026-07-15',
   author: { '@type': 'Organization', name: 'leaf', alternateName: 'leaf: eBook Reader', url: 'https://readleaf.co/' },
   publisher: { '@type': 'Organization', name: 'leaf', alternateName: 'leaf: eBook Reader', url: 'https://readleaf.co/' },
   image: 'https://readleaf.co/screenshots/screenshot-explore-new.png',
   url: guideUrl,
+  mainEntityOfPage: guideUrl,
+  citation: [
+    'https://www.gutenberg.org/',
+    'https://www.gutenberg.org/help/mobile',
+    'https://gutenberg.org/help/reading_options.html',
+    'https://gutenberg.org/help/bibliographic_record.html',
+  ],
 }
 
 const faqSchema = {
@@ -186,7 +193,7 @@ export default function ProjectGutenbergIphoneGuidePage() {
 
       <header style={{ padding: 'var(--space-16) var(--space-4) var(--space-8)', maxWidth: '840px', margin: '0 auto' }}>
         <p style={{ fontFamily: 'var(--font-sans)', fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.15em', color: 'var(--color-accent)', marginBottom: 'var(--space-4)' }}>
-          Guide - Updated May 2026
+          Guide - Updated July 2026
         </p>
         <h1 style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(2.25rem, 5vw, 3.6rem)', lineHeight: 1.15, marginBottom: 'var(--space-6)' }}>
           How to Read Project Gutenberg Books on iPhone in 2026
@@ -194,9 +201,23 @@ export default function ProjectGutenbergIphoneGuidePage() {
         <p style={{ ...textStyle, fontSize: '1.125rem' }}>
           A practical guide to finding free public-domain books on Project Gutenberg, choosing the right format, and reading them comfortably on iPhone.
         </p>
+        <p style={{ ...textStyle, fontSize: '0.82rem', marginTop: 'var(--space-4)' }}>
+          Reviewed by the leaf team on July 15, 2026. Download and format guidance was checked against Project Gutenberg's official help pages.
+        </p>
       </header>
 
       <main style={{ maxWidth: '920px', margin: '0 auto', padding: '0 var(--space-4) var(--space-16)' }}>
+        <section style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 1fr)', gap: 'var(--space-4)', marginBottom: 'var(--space-12)' }}>
+          <div style={{ background: 'rgba(255,255,255,0.5)', border: '1px solid rgba(43,43,43,0.08)', borderRadius: '8px', padding: 'var(--space-5)' }}>
+            <p style={{ fontFamily: 'var(--font-sans)', fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--color-accent)', marginBottom: 'var(--space-3)', fontWeight: 600 }}>
+              Quick answer
+            </p>
+            <p style={{ ...textStyle, margin: 0 }}>
+              You can read Project Gutenberg books on iPhone in Safari or download an EPUB and open it in a compatible reader. EPUB is the best default for most books. Choose <strong style={{ color: 'var(--color-ink)' }}>leaf</strong> for built-in Gutenberg discovery and vertical-swipe reading, or <strong style={{ color: 'var(--color-ink)' }}>Apple Books</strong> for a simple built-in import path.
+            </p>
+          </div>
+        </section>
+
         <section
           style={{
             display: 'grid',
@@ -242,17 +263,6 @@ export default function ProjectGutenbergIphoneGuidePage() {
               leaf's Explore tab can surface public-domain classics from Project Gutenberg inside the reader.
             </figcaption>
           </figure>
-        </section>
-
-        <section style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 1fr)', gap: 'var(--space-4)', marginBottom: 'var(--space-12)' }}>
-          <div style={{ background: 'rgba(255,255,255,0.5)', border: '1px solid rgba(43,43,43,0.08)', borderRadius: '8px', padding: 'var(--space-5)' }}>
-            <p style={{ fontFamily: 'var(--font-sans)', fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--color-accent)', marginBottom: 'var(--space-3)', fontWeight: 600 }}>
-              Quick verdict
-            </p>
-            <p style={{ ...textStyle, margin: 0 }}>
-              Use <strong style={{ color: 'var(--color-ink)' }}>EPUB</strong> as the default download format for reading apps. Use <strong style={{ color: 'var(--color-ink)' }}>leaf</strong> if you want built-in Gutenberg discovery, vertical-swipe reading, notes, journals, highlights, share cards, themes, and optional Pro sync. Use <strong style={{ color: 'var(--color-ink)' }}>Apple Books</strong> for a simple built-in import path.
-            </p>
-          </div>
         </section>
 
         <section style={{ marginBottom: 'var(--space-12)' }}>

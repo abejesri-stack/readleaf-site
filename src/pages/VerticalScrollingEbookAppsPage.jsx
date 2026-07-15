@@ -75,6 +75,8 @@ const articleSchema = {
   publisher: { '@type': 'Organization', name: 'leaf', alternateName: 'leaf: eBook Reader', url: 'https://readleaf.co/' },
   image: 'https://readleaf.co/screenshots/leaf_slide.png',
   url: guideUrl,
+  mainEntityOfPage: guideUrl,
+  citation: apps.map(({ link }) => link),
 }
 
 const faqSchema = {
@@ -165,9 +167,21 @@ export default function VerticalScrollingEbookAppsPage() {
         <p style={{ ...bodyStyle, fontSize: '1.125rem', maxWidth: '720px' }}>
           Vertical reading can mean a free-moving continuous scroll or a controlled upward swipe that advances one screen at a time. This guide compares both approaches so you can choose an iPhone reader that matches how you actually hold and move through a book.
         </p>
+        <p style={{ ...bodyStyle, fontSize: '0.82rem', marginTop: 'var(--space-4)' }}>
+          Reviewed by the leaf team on July 15, 2026. Product details were checked against the official sources linked in this guide.
+        </p>
       </header>
 
       <main style={{ maxWidth: '860px', margin: '0 auto', padding: '0 var(--space-4) var(--space-16)' }}>
+        <section style={{ padding: 'var(--space-6)', marginBottom: 'var(--space-12)', background: 'rgba(255,255,255,0.5)', border: '1px solid rgba(43,43,43,0.08)', borderRadius: '8px' }}>
+          <p style={{ fontFamily: 'var(--font-sans)', fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--color-accent)', marginBottom: 'var(--space-3)', fontWeight: 600 }}>
+            Quick answer
+          </p>
+          <p style={{ ...bodyStyle, color: 'var(--color-ink)', margin: 0 }}>
+            Choose <strong>leaf</strong> if you want vertical snap reading as the main interaction, continuous scroll as an option, and direct discovery of free classics. Choose <strong>Apple Books</strong> for the easiest built-in Scroll mode, <strong>Kindle</strong> or <strong>Kobo</strong> for books already purchased in those stores, and <strong>BookShelves</strong> for a personal EPUB library across Apple devices.
+          </p>
+        </section>
+
         <figure style={{ margin: '0 0 var(--space-12)', maxWidth: '760px' }}>
           <img
             src="/screenshots/leaf_slide.png"
@@ -181,15 +195,6 @@ export default function VerticalScrollingEbookAppsPage() {
             leaf is designed around vertical phone reading, with both one-screen-at-a-time Glide mode and continuous Stream mode.
           </figcaption>
         </figure>
-
-        <section style={{ padding: 'var(--space-6)', marginBottom: 'var(--space-12)', background: 'rgba(255,255,255,0.5)', border: '1px solid rgba(43,43,43,0.08)', borderRadius: '8px' }}>
-          <p style={{ fontFamily: 'var(--font-sans)', fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--color-accent)', marginBottom: 'var(--space-3)', fontWeight: 600 }}>
-            Quick answer
-          </p>
-          <p style={{ ...bodyStyle, color: 'var(--color-ink)', margin: 0 }}>
-            Choose <strong>leaf</strong> if you want vertical snap reading as the main interaction, continuous scroll as an option, and direct discovery of free classics. Choose <strong>Apple Books</strong> for the easiest built-in Scroll mode, <strong>Kindle</strong> or <strong>Kobo</strong> for books already purchased in those stores, and <strong>BookShelves</strong> for a personal EPUB library across Apple devices.
-          </p>
-        </section>
 
         <section style={{ marginBottom: 'var(--space-12)' }}>
           <h2 style={headingStyle}>Vertical snap and continuous scroll are not the same</h2>
@@ -306,6 +311,19 @@ export default function VerticalScrollingEbookAppsPage() {
               <p style={{ ...bodyStyle, fontSize: '0.95rem', margin: 0 }}>{answer}</p>
             </div>
           ))}
+        </section>
+
+        <section style={{ marginBottom: 'var(--space-12)' }}>
+          <h2 style={headingStyle}>Official sources</h2>
+          <ul style={{ ...bodyStyle, paddingLeft: '1.2rem' }}>
+            {apps.map((app) => (
+              <li key={app.link}>
+                <a href={app.link} target="_blank" rel="noopener noreferrer" style={linkStyle}>
+                  {app.name} official product or support page
+                </a>
+              </li>
+            ))}
+          </ul>
         </section>
 
         <section style={{ paddingTop: 'var(--space-6)', borderTop: '1px solid rgba(43,43,43,0.08)' }}>

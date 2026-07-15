@@ -91,11 +91,19 @@ const articleSchema = {
   description:
     'A practical guide to opening, importing, and reading EPUB files on iPhone with leaf, Apple Books, Kindle, Files, and other iPhone workflows.',
   datePublished: '2026-06-20',
-  dateModified: '2026-06-20',
+  dateModified: '2026-07-15',
   author: { '@type': 'Organization', name: 'leaf', alternateName: 'leaf: eBook Reader', url: 'https://readleaf.co/' },
   publisher: { '@type': 'Organization', name: 'leaf', alternateName: 'leaf: eBook Reader', url: 'https://readleaf.co/' },
   image: 'https://readleaf.co/screenshots/screenshot-library.png',
   url: guideUrl,
+  mainEntityOfPage: guideUrl,
+  citation: [
+    'https://support.apple.com/en-us/104965',
+    'https://support.apple.com/en-us/108362',
+    'https://www.amazon.com/sendtokindle',
+    'https://www.gutenberg.org/',
+    'https://standardebooks.org/',
+  ],
 }
 
 const faqSchema = {
@@ -186,7 +194,7 @@ export default function HowToReadEpubFilesIphonePage() {
 
       <header style={{ padding: 'var(--space-16) var(--space-4) var(--space-8)', maxWidth: '840px', margin: '0 auto' }}>
         <p style={{ fontFamily: 'var(--font-sans)', fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.15em', color: 'var(--color-accent)', marginBottom: 'var(--space-4)' }}>
-          Guide - Updated June 2026
+          Guide - Updated July 2026
         </p>
         <h1 style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(2.25rem, 5vw, 3.6rem)', lineHeight: 1.15, marginBottom: 'var(--space-6)' }}>
           How to Read EPUB Files on iPhone in 2026
@@ -194,9 +202,21 @@ export default function HowToReadEpubFilesIphonePage() {
         <p style={{ ...textStyle, fontSize: '1.125rem' }}>
           A practical guide to opening EPUB files on iPhone, choosing the right app, and deciding when Apple Books, Kindle, Files, or a dedicated reader like leaf makes the most sense.
         </p>
+        <p style={{ ...textStyle, fontSize: '0.82rem', marginTop: 'var(--space-4)' }}>
+          Reviewed by the leaf team on July 15, 2026. File-handling steps were checked against the official sources linked below.
+        </p>
       </header>
 
       <main style={{ maxWidth: '920px', margin: '0 auto', padding: '0 var(--space-4) var(--space-16)' }}>
+        <section style={{ padding: 'var(--space-6)', marginBottom: 'var(--space-10)', background: 'rgba(255,255,255,0.5)', border: '1px solid rgba(43,43,43,0.08)', borderRadius: '8px' }}>
+          <p style={{ fontFamily: 'var(--font-sans)', fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--color-accent)', marginBottom: 'var(--space-3)', fontWeight: 600 }}>
+            Quick answer
+          </p>
+          <p style={{ ...textStyle, color: 'var(--color-ink)', margin: 0 }}>
+            To open an EPUB file on iPhone, download or save the file, tap Share, and choose an EPUB-compatible app such as leaf or Apple Books. EPUB is usually the best format for novels and other text-heavy books because it reflows to your screen, font size, and reading settings.
+          </p>
+        </section>
+
         <section
           style={{
             display: 'grid',

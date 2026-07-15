@@ -148,12 +148,13 @@ const verticalScrollingAppsStaticHtml = `<div id="root">
   <article>
     <h1>Best Vertical Scrolling eBook Apps for iPhone in 2026</h1>
     <p>A practical comparison of vertical snap and continuous scroll in leaf, Apple Books, Kindle, Kobo Books, and BookShelves.</p>
+    <p>Reviewed by the leaf team on July 15, 2026. Product details were checked against the official sources linked in this guide.</p>
+    <h2>Quick answer</h2>
+    <p>Choose leaf if you want vertical snap reading as the main interaction, continuous scroll as an option, and built-in free classics discovery. Choose Apple Books for the easiest built-in Scroll mode, Kindle or Kobo for books already purchased in those stores, and BookShelves for a personal EPUB library across Apple devices.</p>
     <figure>
       <img src="/screenshots/leaf_slide.png" alt="leaf vertical scrolling ebook reader shown on an iPhone" width="1200" height="1501" loading="eager" />
       <figcaption>leaf combines one-screen-at-a-time Glide mode with continuous Stream mode.</figcaption>
     </figure>
-    <h2>Quick answer</h2>
-    <p>Choose leaf if you want vertical snap reading as the main interaction, continuous scroll as an option, and built-in free classics discovery. Choose Apple Books for the easiest built-in Scroll mode, Kindle or Kobo for books already purchased in those stores, and BookShelves for a personal EPUB library across Apple devices.</p>
     <h2>Vertical snap and continuous scroll are different</h2>
     <p>Continuous scroll moves through a book freely like a web page. Vertical snap also moves upward, but each gesture settles on a defined screen of text. Continuous scroll gives precise movement, while vertical snap provides stable stopping points that can be easier to resume.</p>
     <h2>Vertical scrolling eBook apps compared</h2>
@@ -191,6 +192,14 @@ const verticalScrollingAppsStaticHtml = `<div id="root">
     <p>Kindle offers continuous scrolling for supported reflowable books, although the option may not appear for every format.</p>
     <h3>Which vertical scrolling app is best for EPUB files?</h3>
     <p>leaf is a good fit for EPUB readers who want vertical snap or continuous scroll, while Apple Books is the simplest built-in choice and BookShelves is useful for larger personal libraries.</p>
+    <h2>Official sources</h2>
+    <ul>
+      <li><a href="https://apps.apple.com/app/leaf-ebook-reader/id6758810936">leaf on the App Store</a></li>
+      <li><a href="https://support.apple.com/guide/iphone/read-books-iphc1af7c57/ios">Apple Books reading controls</a></li>
+      <li><a href="https://apps.apple.com/us/app/amazon-kindle/id302584613?platform=iphone">Kindle on the App Store</a></li>
+      <li><a href="https://apps.apple.com/us/app/kobo-books-audiobooks/id301259483?platform=iphone">Kobo Books on the App Store</a></li>
+      <li><a href="https://getbookshelves.app/">BookShelves official site</a></li>
+    </ul>
     <h2>Related pages</h2>
     <nav>
       <a href="/">leaf homepage</a>
@@ -254,6 +263,9 @@ const howToReadEpubFilesIphoneStaticHtml = `<div id="root">
   <article>
     <h1>How to Read EPUB Files on iPhone in 2026</h1>
     <p>A practical guide to opening, importing, and reading EPUB files on iPhone with leaf, Apple Books, Kindle, Files, and other iPhone workflows.</p>
+    <p>Reviewed by the leaf team on July 15, 2026. File-handling steps were checked against the official sources linked below.</p>
+    <h2>Quick answer</h2>
+    <p>To open an EPUB file on iPhone, download or save the file, tap Share, and choose an EPUB-compatible app such as leaf or Apple Books. EPUB is usually the best format for novels and other text-heavy books because it reflows to your screen, font size, and reading settings.</p>
     <figure>
       <img src="/screenshots/screenshot-library.png" alt="leaf library screen showing EPUB files and imported books on iPhone" width="300" height="650" loading="eager" />
       <figcaption>leaf keeps imported EPUBs alongside the rest of your reading library.</figcaption>
@@ -442,13 +454,15 @@ const projectGutenbergIphoneStaticHtml = `<div id="root">
   <article>
     <h1>How to Read Project Gutenberg Books on iPhone in 2026</h1>
     <p>A practical guide to finding free public-domain books on Project Gutenberg, choosing the right format, and reading them comfortably on iPhone.</p>
+    <p>Reviewed by the leaf team on July 15, 2026. Download and format guidance was checked against Project Gutenberg's official help pages.</p>
+    <h2>Quick answer</h2>
+    <p>You can read Project Gutenberg books on iPhone in Safari or download an EPUB and open it in a compatible reader. EPUB is the best default for most books. Choose leaf for built-in Gutenberg discovery and vertical-swipe reading, or Apple Books for a simple built-in import path.</p>
     <figure>
       <img src="/screenshots/screenshot-explore-new.png" alt="leaf Explore screen showing Project Gutenberg and free classic books on iPhone" width="300" height="650" loading="eager" />
       <figcaption>leaf's Explore tab can surface public-domain classics from Project Gutenberg inside the reader.</figcaption>
     </figure>
     <h2>Project Gutenberg on iPhone</h2>
     <p>Project Gutenberg is a free public-domain ebook library. On iPhone, you can read in the browser, download an EPUB, or use a reading app that supports imports.</p>
-    <p>Use EPUB as the default download format for reading apps. Use leaf if you want built-in Gutenberg discovery, vertical-swipe reading, notes, journals, highlights, share cards, themes, and optional Pro sync. Use Apple Books for a simple built-in import path.</p>
     <h2>What Project Gutenberg is good for</h2>
     <p>Project Gutenberg is best for free public-domain books: classics, older nonfiction, poetry, essays, and obscure works that may not be easy to find in modern ebook stores. Its official site offers books that can be read online or downloaded in formats such as EPUB, Kindle-compatible files, plain text, and HTML.</p>
     <p>Public-domain status depends on where you live. Project Gutenberg focuses on free ebooks, but readers outside the United States should check local copyright rules before downloading.</p>
