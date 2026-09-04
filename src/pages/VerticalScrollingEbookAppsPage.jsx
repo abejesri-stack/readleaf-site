@@ -7,7 +7,7 @@ const apps = [
   {
     name: 'leaf',
     bestFor: 'Vertical snap reading and free classics',
-    motion: 'Glide vertical snap, Stream continuous scroll, or Leaf page turn',
+    motion: 'Slide vertical snap, Continuous free scroll, or Page Curl page turn',
     files: 'EPUB, PDF, and Markdown imports',
     link: 'https://apps.apple.com/app/leaf-ebook-reader/id6758810936',
   },
@@ -44,7 +44,7 @@ const apps = [
 const faqItems = [
   {
     question: 'What is the best vertical scrolling eBook app for iPhone?',
-    answer: 'leaf is the strongest fit if you want a vertical swipe to advance one screen at a time, plus an optional continuous Stream mode. Apple Books is the easiest built-in option, Kindle and Kobo are best for their store ecosystems, and BookShelves is useful for personal libraries.',
+    answer: 'leaf is the strongest fit if you want a vertical swipe to advance one screen at a time, plus an optional free-scrolling Continuous mode. Apple Books is the easiest built-in option, Kindle and Kobo are best for their store ecosystems, and BookShelves is useful for personal libraries.',
   },
   {
     question: 'Does Apple Books have vertical scrolling?',
@@ -192,7 +192,7 @@ export default function VerticalScrollingEbookAppsPage() {
             style={{ display: 'block', width: '100%', height: 'auto', borderRadius: '8px', boxShadow: '0 24px 60px rgba(43,43,43,0.14)' }}
           />
           <figcaption style={{ ...bodyStyle, fontSize: '0.82rem', lineHeight: 1.6, marginTop: 'var(--space-3)' }}>
-            leaf is designed around vertical phone reading, with both one-screen-at-a-time Glide mode and continuous Stream mode.
+            leaf is designed around vertical phone reading, with both one-screen-at-a-time Slide mode and free-scrolling Continuous mode.
           </figcaption>
         </figure>
 
@@ -243,7 +243,7 @@ export default function VerticalScrollingEbookAppsPage() {
             <a href="https://apps.apple.com/app/leaf-ebook-reader/id6758810936" target="_blank" rel="noopener noreferrer" style={linkStyle}>leaf</a>: best for vertical snap reading and built-in classics
           </h3>
           <p style={{ ...bodyStyle, marginBottom: 'var(--space-3)' }}>
-            leaf treats vertical movement as the core reading model rather than a secondary setting. Glide moves upward one composed screen at a time, Stream provides continuous scrolling, and Leaf retains a conventional page-turn option. This makes it the clearest choice when the upward swipe itself is what you want to change about phone reading.
+            leaf treats vertical movement as the core reading model rather than a secondary setting. Slide moves upward one composed screen at a time, Continuous provides free scrolling, and Page Curl retains a conventional page-turn option. This makes it the clearest choice when the upward swipe itself is what you want to change about phone reading.
           </p>
           <p style={{ ...bodyStyle, marginBottom: 'var(--space-6)' }}>
             It also brings Standard Ebooks, Project Gutenberg, and a curated Explore tab into the app. You can import EPUB, PDF, and Markdown books; keep highlights, notes, reading journals, and share cards; change themes and fonts; add custom fonts with leaf Pro; and optionally sync reading data with leaf Pro while using iCloud Book Vault for original files.
@@ -281,7 +281,7 @@ export default function VerticalScrollingEbookAppsPage() {
         <section style={{ marginBottom: 'var(--space-12)' }}>
           <h2 style={headingStyle}>How to turn on vertical scrolling</h2>
           <ol style={{ ...bodyStyle, paddingLeft: '1.4rem' }}>
-            <li style={{ marginBottom: 'var(--space-3)' }}><strong>leaf:</strong> open a book and choose Glide for one-screen vertical swipes or Stream for continuous scrolling from the reading-mode controls.</li>
+            <li style={{ marginBottom: 'var(--space-3)' }}><strong>leaf:</strong> open a book and choose Slide for one-screen vertical swipes or Continuous for free scrolling from the reading-mode controls.</li>
             <li style={{ marginBottom: 'var(--space-3)' }}><strong>Apple Books:</strong> open a supported book, tap the reading menu, open Themes &amp; Settings, tap the page-turn control, and select Scroll.</li>
             <li style={{ marginBottom: 'var(--space-3)' }}><strong>Kindle:</strong> open a supported book, open the Aa reading settings, choose Layout, and enable Continuous Scrolling when the option is available.</li>
             <li style={{ marginBottom: 'var(--space-3)' }}><strong>Kobo Books:</strong> open the reading settings and select vertical scrolling when it is available for that book and app version.</li>

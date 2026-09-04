@@ -58,7 +58,7 @@ fs.writeFileSync(path.join(dist, '404.html'), htmlContent);
 // 2. Add static homepage content and internal links for crawlers before React renders.
 const homeHtml = htmlContent.replace(
   '<div id="root"></div>',
-  '<div id="root"><h1>leaf: eBook Reader - Vertical-Swipe Book Reader for iPhone</h1><p>leaf is a vertical-swipe iOS e-reader with built-in Standard Ebooks and Project Gutenberg discovery, imported EPUB/PDF/Markdown support, optional leaf Pro sync, and no ads.</p><nav><a href="/guides/">Reading Guides</a> <a href="/guides/best-vertical-scrolling-ebook-apps-iphone">Best Vertical Scrolling eBook Apps for iPhone</a> <a href="/guides/how-to-read-standard-ebooks-on-iphone">How to Read Standard Ebooks on iPhone</a> <a href="/guides/how-to-read-epub-files-on-iphone">How to Read EPUB Files on iPhone</a> <a href="/guides/how-to-read-project-gutenberg-books-on-iphone">How to Read Project Gutenberg Books on iPhone</a> <a href="/guides/best-free-ebook-apps-iphone">Best Free eBook Apps and Sources for iPhone</a> <a href="/guides/best-epub-reader-apps-iphone">Best EPUB Reader Apps for iPhone</a> <a href="/guides/best-ebook-reader-apps-iphone">Best eBook Reader Apps for iPhone and iOS</a> <a href="/guides/best-apps-for-reading-classics-iphone">Classics Reading Apps Guide</a> <a href="/guides/best-minimalist-reading-apps-2026">Minimalist eBook Reader Apps Guide</a> <a href="/brand-facts">Brand Facts</a> <a href="/legal/">Privacy &amp; Terms</a></nav></div>'
+  '<div id="root"><h1>leaf: eBook Reader - Vertical-Swipe Book Reader for iPhone</h1><p>leaf is a vertical-swipe iOS e-reader with built-in Standard Ebooks and Project Gutenberg discovery, imported EPUB/PDF/Markdown support, optional leaf Pro sync, and no ads.</p><nav><a href="/guides/">Reading Guides</a> <a href="/guides/best-vertical-scrolling-ebook-apps-iphone">Best Vertical Scrolling eBook Apps for iPhone</a> <a href="/guides/how-to-read-standard-ebooks-on-iphone">How to Read Standard Ebooks on iPhone</a> <a href="/guides/how-to-read-epub-files-on-iphone">How to Read EPUB Files on iPhone</a> <a href="/guides/how-to-read-pdfs-on-iphone">How to Read PDFs on iPhone</a> <a href="/guides/how-to-focus-while-reading-on-iphone">How to Focus While Reading on iPhone</a> <a href="/guides/how-to-read-project-gutenberg-books-on-iphone">How to Read Project Gutenberg Books on iPhone</a> <a href="/guides/best-free-ebook-apps-iphone">Best Free eBook Apps and Sources for iPhone</a> <a href="/guides/best-epub-reader-apps-iphone">Best EPUB Reader Apps for iPhone</a> <a href="/guides/best-ebook-reader-apps-iphone">Best eBook Reader Apps for iPhone and iOS</a> <a href="/guides/best-apps-for-reading-classics-iphone">Classics Reading Apps Guide</a> <a href="/guides/best-minimalist-reading-apps-2026">Minimalist eBook Reader Apps Guide</a> <a href="/brand-facts">Brand Facts</a> <a href="/legal/">Privacy &amp; Terms</a></nav></div>'
 );
 fs.writeFileSync(index, homeHtml);
 
@@ -85,6 +85,8 @@ const guidesIndexStaticHtml = `<div id="root">
     <p>Guides for reading EPUB files, imported books, PDFs, and personally managed libraries on iPhone.</p>
     <ul>
       <li><a href="/guides/how-to-read-epub-files-on-iphone">How to Read EPUB Files on iPhone in 2026</a></li>
+      <li><a href="/guides/how-to-read-pdfs-on-iphone">How to Read PDFs on iPhone in 2026</a></li>
+      <li><a href="/guides/how-to-focus-while-reading-on-iphone">How to Focus While Reading on iPhone in 2026</a></li>
       <li><a href="/guides/best-epub-reader-apps-iphone">Best EPUB Reader Apps for iPhone in 2026</a></li>
       <li><a href="/guides/best-ebook-reader-apps-iphone">Best eBook Reader Apps for iPhone and iOS in 2026</a></li>
     </ul>
@@ -355,6 +357,129 @@ const howToReadEpubFilesIphoneStaticHtml = `<div id="root">
       <a href="/guides/how-to-read-project-gutenberg-books-on-iphone">How to Read Project Gutenberg Books on iPhone</a>
       <a href="/guides/best-ebook-reader-apps-iphone">Best eBook Reader Apps for iPhone</a>
       <a href="/guides/best-free-ebook-apps-iphone">Best Free eBook Apps and Sources for iPhone</a>
+      <a href="/brand-facts">Brand Facts</a>
+    </nav>
+  </article>
+</div>`;
+
+const howToReadPdfsIphoneStaticHtml = `<div id="root">
+  <article>
+    <h1>How to Read PDFs on iPhone in 2026</h1>
+    <p>Opening a PDF on iPhone is easy. Reading a long one comfortably is not. This guide covers why fixed-layout pages fight a phone screen, what to do about two-column papers, and when converting to EPUB is worth it.</p>
+    <p>Reviewed by the leaf team on September 2, 2026. File-handling steps were checked against the official sources linked below.</p>
+    <h2>Quick answer</h2>
+    <p>To read a PDF on iPhone, save the file, tap Share, and open it in a reading app. For short documents Apple Books or the Files preview is fine. For a long PDF, and especially a two-column one, use a reader that crops to the text and follows the columns, so the type stays large and you never scroll sideways to finish a line.</p>
+    <figure>
+      <img src="/screenshots/screenshot-pdf-column.png" alt="A two-column academic paper open in leaf on iPhone, showing one column filling the screen with the figure kept whole above it" width="300" height="650" loading="eager" />
+      <figcaption>One column fills the screen, and the figure above it stays whole.</figcaption>
+    </figure>
+    <h2>Why PDFs are hard to read on a phone</h2>
+    <p>A PDF is a fixed layout. Every line break, column, and margin was decided when the document was made, usually for a sheet of A4 or US Letter paper. An EPUB reflows to whatever screen it lands on; a PDF cannot. So a phone has two options, and both are uncomfortable: show the whole page and make the type very small, or zoom until the type is readable, at which point each line is wider than the screen.</p>
+    <h2>Open a PDF on iPhone</h2>
+    <ol>
+      <li>Save or download the PDF from Safari, Mail, Messages, or your cloud storage.</li>
+      <li>Tap the share button. In the Files app, long-press the file and choose Share.</li>
+      <li>Pick the app you want to read it in. Apple Books, leaf, and other reading apps appear here.</li>
+      <li>Open the document from that app's library afterwards, so it keeps your position instead of starting over.</li>
+      <li>If the app you want is missing from the share sheet, confirm it is installed and that it accepts PDFs.</li>
+    </ol>
+    <h2>Two-column documents: one column at a time</h2>
+    <p>Academic papers are the worst case. Scroll straight down a two-column page and you alternate between two unrelated arguments. leaf reads the layout of the page, finds the columns, and shows them one at a time in reading order. Because a column is roughly a third the width of the page, the text can be much larger and a full line still fits the screen. In testing, a two-column paper went from around 10pt to an effective 17pt with no sideways scrolling.</p>
+    <h2>Ways to read a PDF on iPhone</h2>
+    <table>
+      <thead>
+        <tr><th>Workflow</th><th>Best for</th><th>Tradeoff</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Open in leaf</td><td>Long PDFs, papers, and multi-column documents</td><td>Built for reading a PDF end to end rather than annotating forms or signing documents.</td></tr>
+        <tr><td>Open in Apple Books</td><td>Occasional PDFs and a built-in Apple library</td><td>Shows the whole page scaled to the screen, so text on a dense page can end up small.</td></tr>
+        <tr><td>Preview in Files</td><td>A quick look without importing anything</td><td>Fine for a glance, but it keeps no reading position and no library.</td></tr>
+        <tr><td>Convert to EPUB first</td><td>Prose books that were only ever published as PDF</td><td>Text reflows properly afterwards, but conversion can scramble footnotes, tables, and figures.</td></tr>
+      </tbody>
+    </table>
+    <h2>Should you convert the PDF to EPUB?</h2>
+    <p>Sometimes. If the document is plain prose that only ever existed as a PDF, converting it to EPUB is the cleanest answer: the text reflows, you control the font size, and it behaves like any other book. If the layout carries meaning, keep the original. Papers with figures and tables, sheet music, comics, slides, forms, and scans all lose something in conversion, and footnotes in particular tend to scatter.</p>
+    <h2>Frequently asked questions</h2>
+    <h3>Can you read PDFs on iPhone?</h3>
+    <p>Yes. iPhone can open PDFs in Apple Books, the Files app preview, and third-party reading apps such as leaf. The harder question is not whether a PDF opens, but whether it is comfortable to read a long one on a phone screen.</p>
+    <h3>Why are PDFs so hard to read on a phone?</h3>
+    <p>A PDF is a fixed layout. Unlike an EPUB, the text does not reflow to fit a smaller screen, so a page designed for A4 or US Letter gets scaled down until the type is very small. Zooming in makes the type readable but pushes each line wider than the screen.</p>
+    <h3>How do you read a two-column PDF on iPhone?</h3>
+    <p>Use a reader that detects the columns and shows one at a time in reading order. leaf does this automatically, so the text is larger and you never scroll sideways to finish a line.</p>
+    <h3>Should you convert a PDF to EPUB to read it on iPhone?</h3>
+    <p>For a prose book that only exists as a PDF, converting gives you reflowing text and full control over font size. For anything where the layout carries meaning, conversion tends to scramble the page and reading the original is better.</p>
+    <h3>What is the best PDF reader app for iPhone?</h3>
+    <p>For reading a long PDF end to end, leaf treats a PDF like a book: it detects columns so text stays large, offers the same three reading modes as ebooks, follows your light or dark theme, and remembers your position per document. Apple Books is a reasonable built-in option for occasional PDFs, and dedicated annotation apps are better if your main task is marking up or signing documents.</p>
+    <h3>Does leaf remember where you stopped in a PDF?</h3>
+    <p>Yes. leaf keeps a reading position for each PDF, including which part of the page you were on.</p>
+    <h2>Sources</h2>
+    <ul>
+      <li><a href="https://apps.apple.com/app/leaf-ebook-reader/id6758810936">leaf on the App Store</a></li>
+      <li><a href="https://support.apple.com/en-us/104965">Apple Support: move ePub books and PDFs to iPhone</a></li>
+      <li><a href="https://www.apple.com/apple-books/">Apple Books</a></li>
+    </ul>
+    <nav>
+      <a href="/">leaf homepage</a>
+      <a href="/guides/">Reading Guides</a>
+      <a href="/guides/how-to-read-epub-files-on-iphone">How to Read EPUB Files on iPhone</a>
+      <a href="/guides/best-vertical-scrolling-ebook-apps-iphone">Best Vertical Scrolling eBook Apps for iPhone</a>
+      <a href="/guides/best-epub-reader-apps-iphone">Best EPUB Reader Apps for iPhone</a>
+      <a href="/guides/best-ebook-reader-apps-iphone">Best eBook Reader Apps for iPhone</a>
+      <a href="/brand-facts">Brand Facts</a>
+    </nav>
+  </article>
+</div>`;
+
+const howToFocusReadingIphoneStaticHtml = `<div id="root">
+  <article>
+    <h1>How to Focus While Reading on iPhone in 2026</h1>
+    <p>If you keep opening a book on your phone and closing it four paragraphs later, the problem probably is not willpower. This guide separates the two things that actually get in the way, and covers what helps with each.</p>
+    <h2>Quick answer</h2>
+    <p>Cut the interruptions, shrink the commitment, and give yourself momentum. Turn on a Focus mode, decide to read for ten minutes rather than a chapter, and use something that keeps the text moving instead of asking you to push it along yourself.</p>
+    <h2>Two different problems</h2>
+    <p>The first is interruption: a phone is a reading device that also delivers messages, and every other app is one swipe away. This one has obvious fixes and most advice stops here.</p>
+    <p>The second is momentum, and it is the one people rarely name. A page of text sits perfectly still. Every bit of forward motion has to come from you, and if your attention is already frayed there is nothing pulling you along. That is why you can turn off every notification, sit in a quiet room, and still read the same paragraph three times.</p>
+    <h2>What helps, and what each thing misses</h2>
+    <table>
+      <thead><tr><th>Approach</th><th>What it helps with</th><th>What it misses</th></tr></thead>
+      <tbody>
+        <tr><td>Silence the interruptions</td><td>Notifications and other apps a swipe away</td><td>Does nothing if your attention drifts on its own.</td></tr>
+        <tr><td>Read for a set time, not a set amount</td><td>The size of the commitment</td><td>Ten minutes is easy to agree to. A chapter is an unknown quantity.</td></tr>
+        <tr><td>Listen to an audiobook</td><td>Momentum, because a voice keeps moving whether you do or not</td><td>You are listening rather than reading.</td></tr>
+        <tr><td>Read along at a set pace</td><td>Momentum while still reading the text yourself</td><td>A pace set too fast feels rushed, so it needs adjusting.</td></tr>
+        <tr><td>Larger text, less on screen</td><td>Effort, if the type is genuinely too small</td><td>Cosmetic if the problem is attention rather than legibility.</td></tr>
+      </tbody>
+    </table>
+    <figure>
+      <img src="/screenshots/screenshot-readalong.png" alt="Read-along mode in leaf on iPhone, with the current line at full strength and the surrounding text softened but still readable" width="300" height="650" loading="eager" />
+      <figcaption>The line you are on is lit. Everything else stays readable.</figcaption>
+    </figure>
+    <h2>Read along: something to follow</h2>
+    <p>In leaf you tap play and the text starts moving at a pace you set, lighting each line as it goes. You are still reading the words yourself, but you are following something rather than pushing it. Nothing is hidden: the lines around the one you are on stay on screen and readable, so you can glance back whenever you lose the thread, pause with a tap, or step back a sentence. That is the difference between this and speed reading, and it is the whole reason it does not cost you comprehension.</p>
+    <h2>What none of this fixes</h2>
+    <p>If you are exhausted, no pacing will help; sleep will. If the book is genuinely not for you, finishing it is not a focus problem. And a reading app is not a treatment for anything: if difficulty concentrating is affecting your work or your life more broadly, that is worth raising with a professional rather than solving with software. What tools can do is make starting easier and make continuing require less of you.</p>
+    <h2>Frequently asked questions</h2>
+    <h3>Why is it so hard to focus when reading on a phone?</h3>
+    <p>Two different problems get blamed on the same thing: interruption, and momentum. Most advice addresses only the first, which is why turning off notifications often does not fix it.</p>
+    <h3>What is read-along reading?</h3>
+    <p>Read-along sets a steady pace through the text and highlights your position as it moves, so the page keeps going without you having to scroll. You are still reading the words yourself, unlike an audiobook.</p>
+    <h3>Is read-along the same as speed reading?</h3>
+    <p>No. Speed-reading apps usually flash one word at a time, replacing each word with the next, which removes your ability to glance back and tends to cost comprehension. Read-along in leaf never hides or replaces anything: the surrounding lines stay readable, and you can pause or step back a sentence.</p>
+    <h3>Does leaf read books out loud?</h3>
+    <p>Not yet. Read-along in leaf is silent: it sets the pace and highlights the line, but there is no narration.</p>
+    <h3>How long should a reading session be?</h3>
+    <p>Short enough that you will actually start. Ten or fifteen minutes is a more useful target than a chapter, because a chapter is an unknown quantity.</p>
+    <h2>Sources</h2>
+    <ul>
+      <li><a href="https://apps.apple.com/app/leaf-ebook-reader/id6758810936">leaf on the App Store</a></li>
+      <li><a href="https://support.apple.com/en-us/HT212608">Apple Support: use Focus on iPhone</a></li>
+    </ul>
+    <nav>
+      <a href="/">leaf homepage</a>
+      <a href="/guides/">Reading Guides</a>
+      <a href="/guides/how-to-read-pdfs-on-iphone">How to Read PDFs on iPhone</a>
+      <a href="/guides/best-minimalist-reading-apps-2026">Minimalist eBook Reader Apps Guide</a>
+      <a href="/guides/best-vertical-scrolling-ebook-apps-iphone">Best Vertical Scrolling eBook Apps for iPhone</a>
       <a href="/brand-facts">Brand Facts</a>
     </nav>
   </article>
@@ -922,6 +1047,26 @@ const howToReadEpubFilesIphoneHtml = setSeo(homeHtml, {
   howToReadEpubFilesIphoneStaticHtml + '\n  </body>'
 );
 fs.writeFileSync(path.join(guidesDir, 'how-to-read-epub-files-on-iphone.html'), howToReadEpubFilesIphoneHtml);
+
+const howToReadPdfsIphoneHtml = setSeo(homeHtml, {
+  title: 'How to Read PDFs on iPhone in 2026 | leaf',
+  description: 'A practical guide to reading PDFs on iPhone, including why fixed-layout pages are hard on a phone, how to handle two-column papers, and when to convert to EPUB.',
+  canonical: 'https://readleaf.co/guides/how-to-read-pdfs-on-iphone',
+}).replace(
+  /<div id="root">[\s\S]*?<\/div>\s*<\/body>/,
+  howToReadPdfsIphoneStaticHtml + '\n  </body>'
+);
+fs.writeFileSync(path.join(guidesDir, 'how-to-read-pdfs-on-iphone.html'), howToReadPdfsIphoneHtml);
+
+const howToFocusReadingIphoneHtml = setSeo(homeHtml, {
+  title: 'How to Focus While Reading on iPhone in 2026 | leaf',
+  description: 'Why reading on a phone is hard to sustain, what actually helps, and how read-along pacing differs from speed reading and audiobooks.',
+  canonical: 'https://readleaf.co/guides/how-to-focus-while-reading-on-iphone',
+}).replace(
+  /<div id="root">[\s\S]*?<\/div>\s*<\/body>/,
+  howToFocusReadingIphoneStaticHtml + '\n  </body>'
+);
+fs.writeFileSync(path.join(guidesDir, 'how-to-focus-while-reading-on-iphone.html'), howToFocusReadingIphoneHtml);
 
 const standardEbooksIphoneHtml = setSeo(homeHtml, {
   title: 'How to Read Standard Ebooks on iPhone in 2026 | leaf',

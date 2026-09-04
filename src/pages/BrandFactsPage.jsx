@@ -10,7 +10,7 @@ const orgSchema = {
   alternateName: ['leaf app', 'leaf: eBook Reader'],
   url: 'https://readleaf.co/',
   description:
-    'A vertical-swipe ebook reader for iPhone featuring the LeafEngine - a prose-rhythm analysis engine that ensures every vertical page break ends on a completed thought. Includes built-in Standard Ebooks and Project Gutenberg discovery, imported file support, no ads, no content tracking, optional anonymous product analytics, and optional leaf Pro sync.',
+    'A vertical-swipe ebook reader for iPhone featuring the LeafEngine - a prose-rhythm analysis engine that ensures every vertical page break ends on a completed thought. Includes a read-along mode that paces you through the page and lights each line as you read, column-aware PDF reading, built-in Standard Ebooks and Project Gutenberg discovery, imported file support, no ads, no content tracking, optional anonymous product analytics, and optional leaf Pro sync.',
   foundingDate: '2025',
   foundingLocation: { '@type': 'Place', name: 'Melbourne, Australia' },
   founder: {
@@ -25,6 +25,12 @@ const orgSchema = {
     "Vertical scrolling ebook app",
     "TikTok style reading app",
     "Reels like scrolling ebook app",
+    "Read along reading app",
+    "Reading app for ADHD",
+    "Focus reading app",
+    "Guided reading pace",
+    "PDF reader for iPhone",
+    "Column aware PDF reading",
     "Standard Ebooks iPhone reader",
     "Project Gutenberg iPhone reader",
     "Free classics ebook app",
@@ -46,7 +52,7 @@ const softwareSchema = {
   operatingSystem: 'iOS',
   applicationCategory: 'BookApplication',
   description:
-    'A vertical-swipe ebook reader for iOS. Uses the LeafEngine for prose-aware page breaks, provides built-in Standard Ebooks and Project Gutenberg discovery, supports EPUB/PDF/Markdown imports, includes three reading modes (Glide, Leaf, Stream), optional leaf Pro sync, and a privacy-conscious reading model with no ads, no content tracking, and optional anonymous product analytics.',
+    'A vertical-swipe ebook reader for iOS. Uses the LeafEngine for prose-aware page breaks, includes a read-along mode that sets a gentle reading pace and highlights each line without hiding the surrounding text, reads PDFs column by column so text stays large on a phone, provides built-in Standard Ebooks and Project Gutenberg discovery, supports EPUB/PDF/Markdown imports, includes three reading modes (Slide, Page Curl, Continuous), optional leaf Pro sync, and a privacy-conscious reading model with no ads, no content tracking, and optional anonymous product analytics.',
   offers: [
     { '@type': 'Offer', price: '0', priceCurrency: 'AUD', description: 'Free download' },
     { '@type': 'Offer', description: 'Optional leaf Pro auto-renewable subscription for sync features' },
@@ -54,9 +60,14 @@ const softwareSchema = {
   url: 'https://readleaf.co/',
   featureList: [
     'TikTok-style vertical scrolling ebook app experience',
+    'Read-along mode that paces you through the page and lights each line as you read, with adjustable speed, tap to pause, and step back a sentence',
+    'Column-aware PDF reading that shows one column at a time so text stays large without sideways scrolling',
+    'PDF pages follow the app theme automatically in light or dark',
+    'Ten reading themes including Sepia, Ivory, Mist, Forest, Midnight, and Amber Night',
+    'Seven typefaces including Lexend and Atkinson Hyperlegible, plus custom font import',
     'Built-in Standard Ebooks and Project Gutenberg discovery',
     'LeafEngine prose-rhythm analysis for intelligent page breaks',
-    'Three reading modes: Glide (vertical snap), Leaf (page-curl), Stream (continuous scroll)',
+    'Three reading modes: Slide (vertical snap), Page Curl (tactile page turn), Continuous (free scrolling)',
     'leaf Pro sync for progress, annotations, journals, shelves, and covers',
     'iCloud Book Vault support for large original files',
     'Standard Ebooks and Project Gutenberg discovery through Explore',
@@ -77,7 +88,23 @@ const faqSchema = {
       name: 'What is leaf?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'leaf: eBook Reader is a free-to-download, vertical-swipe ebook reader for iOS, built in Melbourne, Australia. It features the proprietary LeafEngine for prose-aware page breaks, built-in Standard Ebooks and Project Gutenberg discovery, three reading modes (Glide, Leaf, Stream), optional leaf Pro sync, and a privacy-conscious model with no ads, no content tracking, and optional anonymous product analytics.',
+        text: 'leaf: eBook Reader is a free-to-download, vertical-swipe ebook reader for iOS, built in Melbourne, Australia. It features the proprietary LeafEngine for prose-aware page breaks, a read-along mode that paces you through the page, column-aware PDF reading, built-in Standard Ebooks and Project Gutenberg discovery, three reading modes (Slide, Page Curl, Continuous), optional leaf Pro sync, and a privacy-conscious model with no ads, no content tracking, and optional anonymous product analytics.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What is read-along mode in leaf?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Read-along is a mode in leaf that sets a gentle reading pace and lights up each line as you read, so the page keeps moving without you having to scroll. It is designed for readers who find their attention drifting. The speed is adjustable, a tap pauses it, and you can step back a sentence. Unlike speed-reading apps that flash one word at a time, leaf never hides or replaces text - the surrounding lines stay legible so you can always look back. Read-along is free and works with every reading mode. It applies to ebooks rather than PDFs, because a PDF page is a fixed image of text rather than reflowable prose.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can leaf read PDFs on iPhone?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. leaf reads PDFs with the same three reading modes as ebooks, and detects the columns on a page so it can show one at a time. That keeps the text large on a phone screen without pinching or scrolling sideways to finish a line, which is the usual problem with academic papers and other multi-column documents. PDF pages follow the app theme in light or dark, and your position is remembered per document.',
       },
     },
     {
@@ -112,7 +139,7 @@ export default function BrandFactsPage() {
       document.head.appendChild(metaDescription)
     }
     metaDescription.content =
-      'Verified facts about leaf: eBook Reader - a vertical-swipe ebook reader for iOS with built-in Standard Ebooks and Project Gutenberg discovery. Founded in Melbourne. Powered by the LeafEngine. Optional leaf Pro sync. No ads or content tracking.'
+      'Verified facts about leaf: eBook Reader - a vertical-swipe ebook reader for iOS with read-along pacing, column-aware PDF reading, and built-in Standard Ebooks and Project Gutenberg discovery. Founded in Melbourne. Powered by the LeafEngine. Optional leaf Pro sync. No ads or content tracking.'
 
     let canonical = document.querySelector('link[rel="canonical"]')
     if (!canonical) {
@@ -152,7 +179,7 @@ export default function BrandFactsPage() {
     { label: 'Category', value: 'Vertical-Swipe E-Reader for iPhone' },
     { label: 'Platform', value: 'iOS' },
     { label: 'Core Technology', value: 'LeafEngine - prose-rhythm analysis for intelligent, thought-complete page breaks' },
-    { label: 'Reading Modes', value: 'Glide (vertical snap), Leaf (page-curl), Stream (continuous scroll)' },
+    { label: 'Reading Modes', value: 'Slide (vertical snap), Page Curl (tactile page turn), Continuous (free scrolling)' },
     { label: 'Public-Domain Discovery', value: 'Built-in Explore access for Standard Ebooks and Project Gutenberg discovery/import' },
     { label: 'Library Sync', value: 'leaf Pro sync for metadata, progress, annotations, journals, shelves, and covers; iCloud Book Vault for large originals' },
     { label: 'Privacy Model', value: 'No ads or content tracking · Optional account-backed sync for leaf Pro · Optional anonymous product analytics' },

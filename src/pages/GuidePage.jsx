@@ -266,7 +266,7 @@ export default function GuidePage() {
                 {[
                   {
                     dim: 'Interaction Physics',
-                    leaf: 'Vertical swiping with logical snap points (Glide, Leaf, Stream modes)',
+                    leaf: 'Vertical swiping with logical snap points (Slide, Page Curl, Continuous modes)',
                     kindle: 'Horizontal tap/swipe page turn',
                     apple: 'Horizontal tap/swipe or continuous scroll',
                   },
@@ -302,7 +302,7 @@ export default function GuidePage() {
                   },
                   {
                     dim: 'Reading Modes',
-                    leaf: '3 modes: Glide (snap), Leaf (page-curl), Stream (continuous)',
+                    leaf: '3 modes: Slide (snap), Page Curl (page turn), Continuous (free scroll)',
                     kindle: 'Single paging mode',
                     apple: 'Paging or continuous scroll',
                   },

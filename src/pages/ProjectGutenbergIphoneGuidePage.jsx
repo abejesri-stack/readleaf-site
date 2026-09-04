@@ -8,7 +8,7 @@ const workflows = [
     name: 'leaf Explore',
     bestFor: 'Built-in Gutenberg discovery and vertical-swipe reading',
     steps:
-      'Open Explore in leaf, find a public-domain classic, import it into your library, then read with Glide, Leaf, or Stream.',
+      'Open Explore in leaf, find a public-domain classic, import it into your library, then read with Slide, Page Curl, or Continuous.',
     tradeoff:
       'Best when you want a dedicated reader; not a general commercial bookstore.',
   },

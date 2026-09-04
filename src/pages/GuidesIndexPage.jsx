@@ -19,6 +19,22 @@ const guides = [
     topics: ['EPUB files', 'Imports', 'iPhone workflows'],
   },
   {
+    title: 'How to Read PDFs on iPhone in 2026',
+    description:
+      'Why fixed-layout PDF pages fight a phone screen, how to handle two-column papers, and when converting to EPUB is worth it.',
+    href: '/guides/how-to-read-pdfs-on-iphone',
+    updated: 'September 2026',
+    topics: ['PDF files', 'Two-column papers', 'iPhone workflows'],
+  },
+  {
+    title: 'How to Focus While Reading on iPhone in 2026',
+    description:
+      'Why reading on a phone is hard to sustain, what actually helps, and how read-along pacing differs from speed reading and audiobooks.',
+    href: '/guides/how-to-focus-while-reading-on-iphone',
+    updated: 'September 2026',
+    topics: ['Focus', 'Read along', 'Reading habits'],
+  },
+  {
     title: 'How to Read Standard Ebooks on iPhone in 2026',
     description:
       'A practical guide to reading Standard Ebooks on iPhone with leaf Explore, Safari EPUB downloads, Apple Books imports, and Kindle workflows.',
@@ -85,12 +101,12 @@ const topicSections = [
   {
     title: 'EPUB and Imported Files',
     description: 'Guides for reading EPUB files, imported books, PDFs, and personally managed libraries on iPhone.',
-    guideHrefs: ['/guides/how-to-read-epub-files-on-iphone', '/guides/best-epub-reader-apps-iphone', '/guides/best-ebook-reader-apps-iphone'],
+    guideHrefs: ['/guides/how-to-read-epub-files-on-iphone', '/guides/how-to-read-pdfs-on-iphone', '/guides/best-epub-reader-apps-iphone', '/guides/best-ebook-reader-apps-iphone'],
   },
   {
     title: 'iPhone Reading App Comparisons',
     description: 'Balanced comparisons for choosing between leaf, Kindle, Apple Books, Kobo, Libby, and Google Play Books.',
-    guideHrefs: ['/guides/best-vertical-scrolling-ebook-apps-iphone', '/guides/best-ebook-reader-apps-iphone', '/guides/best-free-ebook-apps-iphone'],
+    guideHrefs: ['/guides/best-vertical-scrolling-ebook-apps-iphone', '/guides/how-to-focus-while-reading-on-iphone', '/guides/best-ebook-reader-apps-iphone', '/guides/best-free-ebook-apps-iphone'],
   },
   {
     title: 'Minimalist and Focused Reading',

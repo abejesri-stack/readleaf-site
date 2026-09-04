@@ -182,7 +182,7 @@ function App() {
       operatingSystem: 'iOS',
       applicationCategory: 'BookApplication',
       description:
-        'A vertical-swipe ebook reader for iOS. Features the LeafEngine for prose-aware page breaks, built-in Standard Ebooks and Project Gutenberg discovery, EPUB/PDF/Markdown imports, three reading modes (Glide, Leaf, Stream), and optional leaf Pro sync for library metadata, progress, annotations, journals, shelves, and covers.',
+        'A vertical-swipe ebook reader for iOS. Features the LeafEngine for prose-aware page breaks, built-in Standard Ebooks and Project Gutenberg discovery, EPUB/PDF/Markdown imports, three reading modes (Slide, Page Curl, Continuous), and optional leaf Pro sync for library metadata, progress, annotations, journals, shelves, and covers.',
       offers: [
         { '@type': 'Offer', price: '0', priceCurrency: 'AUD', description: 'Free download' },
         { '@type': 'Offer', description: 'Optional leaf Pro auto-renewable subscription for sync features' },
@@ -191,7 +191,7 @@ function App() {
       featureList: [
         'LeafEngine prose-rhythm analysis for intelligent page breaks',
         'Built-in Standard Ebooks and Project Gutenberg discovery',
-        'Three reading modes: Glide, Leaf, Stream',
+        'Three reading modes: Slide, Page Curl, Continuous',
         'leaf Pro sync for library metadata, progress, annotations, journals, shelves, and covers',
         'iCloud Book Vault support for large original files',
         'Standard Ebooks and Project Gutenberg discovery through Explore',
@@ -360,7 +360,7 @@ function App() {
                 Most ebook apps still borrow the page from a physical book. On a phone you hold vertically, horizontal page turns can feel like a convention carried over from another device.
               </p>
               <p style={{ maxWidth: 'none' }}>
-                leaf was built around thumb-driven vertical swipes. Glide snaps each screen into place, Stream lets you scroll continuously, and Leaf keeps a familiar page-turn feel when you want it.
+                leaf was built around thumb-driven vertical swipes. Slide snaps each screen into place, Continuous lets you scroll freely, and Page Curl keeps a familiar page-turn feel when you want it.
               </p>
               <p style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontSize: '1.5rem', color: 'var(--color-ink)', textAlign: 'center', marginTop: 'var(--space-8)', maxWidth: 'none' }}>
                 The best reading experience is one you don't notice.
@@ -442,20 +442,20 @@ function App() {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 'var(--space-5)' }}>
             {[
               {
-                title: 'Glide',
+                title: 'Slide',
                 subtitle: 'Smooth vertical snap',
                 desc: 'Swipe up. Each page settles perfectly in place, landing exactly where the thought ends. Fast, fluid, and surprisingly satisfying.',
                 bg: 'rgba(255,255,255,0.55)',
               },
               {
-                title: 'Leaf',
-                subtitle: 'Tactile page-curl',
+                title: 'Page Curl',
+                subtitle: 'A real page, turned',
                 desc: 'The classic page-turn, reimagined for the phone. Marks your progress and brings the feel of a real book to your screen.',
                 bg: 'rgba(255,255,255,0.35)',
               },
               {
-                title: 'Stream',
-                subtitle: 'Continuous scroll',
+                title: 'Continuous',
+                subtitle: 'Scroll without breaks',
                 desc: 'Scroll freely through the text without boundaries or breaks. Great for when you just want to lose yourself in a book.',
                 bg: 'rgba(255,255,255,0.45)',
               },
@@ -496,6 +496,88 @@ function App() {
           </div>
         </div>
       </section>
+
+      <div className="spacer-md" />
+
+
+      {/* ═══════════════════════════════════════════════════════
+          READ ALONG
+          ═══════════════════════════════════════════════════════ */}
+      <section className="section">
+        <div className="container">
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 'var(--space-12)', alignItems: 'center' }}>
+
+            <Motion.div initial="hidden" whileInView="show" variants={fadeLeft()} viewport={{ once: true }}>
+              <h2 style={{ fontSize: 'clamp(2.2rem, 4vw, 3.5rem)' }}>
+                For the days<br />you can&rsquo;t settle.
+              </h2>
+              <p>Some days you want to read and your attention keeps sliding off the page. You read the same paragraph three times and give up.</p>
+              <p>Tap play. leaf sets a gentle pace and lights up each line as you go, so the book keeps moving and you do too. Change the speed whenever you like, pause with a tap, or step back a sentence.</p>
+              <p style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontSize: '1.35rem', color: 'var(--color-ink)', marginTop: 'var(--space-6)', maxWidth: 'none' }}>
+                Nothing disappears. You can always look back.
+              </p>
+            </Motion.div>
+
+            <Motion.div initial="hidden" whileInView="show" variants={fadeRight()} viewport={{ once: true }}
+              style={{ display: 'flex', justifyContent: 'center' }}>
+              <div style={{
+                background: '#1c1c1e',
+                borderRadius: '3rem',
+                padding: '10px',
+                maxWidth: '250px',
+                width: '100%',
+                filter: 'drop-shadow(0 32px 64px rgba(0,0,0,0.22))',
+              }}>
+                <div style={{ borderRadius: '2.5rem', overflow: 'hidden', background: '#1c1c1c' }}>
+                  <img
+                    src="/screenshots/screenshot-readalong.png"
+                    alt="leaf read along mode, with the current line lit and the rest of the page softened"
+                    style={{ width: '100%', display: 'block' }}
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+            </Motion.div>
+
+          </div>
+        </div>
+      </section>
+
+
+      <div className="spacer-md" />
+
+
+      {/* ═══════════════════════════════════════════════════════
+          PDFs
+          ═══════════════════════════════════════════════════════ */}
+      <section className="section" style={{ background: 'rgba(255,255,255,0.4)' }}>
+        <div className="container">
+          <Motion.div initial="hidden" whileInView="show" variants={fadeUp} viewport={{ once: true }}>
+            <h2 className="text-center" style={{ fontSize: 'clamp(2.2rem, 4vw, 3.5rem)', marginBottom: 'var(--space-3)' }}>
+              PDFs that fit<br />the phone.
+            </h2>
+            <p style={{ margin: '0 auto var(--space-8)', maxWidth: '52ch', textAlign: 'center' }}>
+              Most readers hand you a whole A4 page shrunk to fit a screen, and you pinch and drag your way through it. leaf finds the columns and shows you one at a time, so the text is bigger and you never scroll sideways to finish a line.
+            </p>
+          </Motion.div>
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 'var(--space-8)', maxWidth: '900px', margin: '0 auto' }}>
+            <FeatureBadge
+              label="The same three flows"
+              desc="Read PDFs with Slide, Page Curl, or Continuous, exactly like any other book."
+            />
+            <FeatureBadge
+              label="Follows your theme"
+              desc="Pages switch to light or dark with the rest of the app, automatically."
+            />
+            <FeatureBadge
+              label="Picks up where you left off"
+              desc="Your position is kept per document, including which part of the page you were on."
+            />
+          </div>
+        </div>
+      </section>
+
 
       <div className="spacer-md" />
 
@@ -578,8 +660,12 @@ function App() {
                   desc="Sync reading progress, annotations, journals, shelves, and covers; large originals can remain available through iCloud Book Vault."
                 />
                 <FeatureBadge
+                  label="Make it yours"
+                  desc="Six more themes, three more typefaces or import your own, and control over line, paragraph, and letter spacing."
+                />
+                <FeatureBadge
                   label="No ads or content tracking"
-                  desc="leaf Pro adds sync, not feeds, streaks, advertising, or book-content tracking."
+                  desc="leaf Pro adds sync and customisation, not feeds, streaks, advertising, or book-content tracking."
                 />
               </div>
             </Motion.div>

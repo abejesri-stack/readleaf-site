@@ -25,3 +25,6 @@ playwright-report/
 *.njsproj
 *.sln
 *.sw?
+
+# Full-resolution screenshot backups (local only)
+.screenshot-originals/
