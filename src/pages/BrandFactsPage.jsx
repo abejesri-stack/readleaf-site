@@ -17,6 +17,10 @@ const orgSchema = {
     '@type': 'Person',
     name: 'Abe',
     address: { '@type': 'PostalAddress', addressLocality: 'Melbourne', addressCountry: 'AU' },
+    sameAs: [
+      'https://x.com/spaceabe',
+      'https://www.reddit.com/user/citizenabe/',
+    ],
   },
     "knowsAbout": [
     "Minimalist e-reader",
@@ -41,6 +45,11 @@ const orgSchema = {
     "iCloud Book Vault",
     "Classic literature"
   ],
+  sameAs: [
+    'https://apps.apple.com/app/leaf-ebook-reader/id6758810936',
+    'https://www.instagram.com/leaf.reader/',
+    'https://www.tiktok.com/@leaf.reader',
+  ],
   slogan: 'Swipe through books',
 }
 
@@ -58,6 +67,12 @@ const softwareSchema = {
     { '@type': 'Offer', description: 'Optional leaf Pro auto-renewable subscription for sync features' },
   ],
   url: 'https://readleaf.co/',
+  downloadUrl: 'https://apps.apple.com/app/leaf-ebook-reader/id6758810936',
+  sameAs: [
+    'https://apps.apple.com/app/leaf-ebook-reader/id6758810936',
+    'https://www.instagram.com/leaf.reader/',
+    'https://www.tiktok.com/@leaf.reader',
+  ],
   featureList: [
     'TikTok-style vertical scrolling ebook app experience',
     'Read-along mode that paces you through the page and lights each line as you read, with adjustable speed, tap to pause, and step back a sentence',
