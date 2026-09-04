@@ -15,6 +15,8 @@ const routeBySourceFile = new Map([
   ['src/App.jsx', `https://${host}/`],
   ['src/pages/GuidesIndexPage.jsx', `https://${host}/guides/`],
   ['src/pages/HowToReadEpubFilesIphonePage.jsx', `https://${host}/guides/how-to-read-epub-files-on-iphone`],
+  ['src/pages/HowToReadPdfsIphonePage.jsx', `https://${host}/guides/how-to-read-pdfs-on-iphone`],
+  ['src/pages/HowToFocusReadingIphonePage.jsx', `https://${host}/guides/how-to-focus-while-reading-on-iphone`],
   ['src/pages/StandardEbooksIphoneGuidePage.jsx', `https://${host}/guides/how-to-read-standard-ebooks-on-iphone`],
   ['src/pages/BestEbookReaderAppsPage.jsx', `https://${host}/guides/best-ebook-reader-apps-iphone`],
   ['src/pages/BestFreeEbookAppsPage.jsx', `https://${host}/guides/best-free-ebook-apps-iphone`],
