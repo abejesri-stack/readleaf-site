@@ -11,6 +11,7 @@ import BestEpubReaderAppsPage from './pages/BestEpubReaderAppsPage.jsx'
 import HowToReadEpubFilesIphonePage from './pages/HowToReadEpubFilesIphonePage.jsx'
 import HowToReadPdfsIphonePage from './pages/HowToReadPdfsIphonePage.jsx'
 import HowToFocusReadingIphonePage from './pages/HowToFocusReadingIphonePage.jsx'
+import HowToHaveBooksReadAloudIphonePage from './pages/HowToHaveBooksReadAloudIphonePage.jsx'
 import ProjectGutenbergIphoneGuidePage from './pages/ProjectGutenbergIphoneGuidePage.jsx'
 import StandardEbooksIphoneGuidePage from './pages/StandardEbooksIphoneGuidePage.jsx'
 import VerticalScrollingEbookAppsPage from './pages/VerticalScrollingEbookAppsPage.jsx'
@@ -57,6 +58,7 @@ createRoot(document.getElementById('root')).render(
         <Route path="/guides/how-to-read-epub-files-on-iphone" element={<HowToReadEpubFilesIphonePage />} />
         <Route path="/guides/how-to-read-pdfs-on-iphone" element={<HowToReadPdfsIphonePage />} />
         <Route path="/guides/how-to-focus-while-reading-on-iphone" element={<HowToFocusReadingIphonePage />} />
+        <Route path="/guides/how-to-have-books-read-aloud-on-iphone" element={<HowToHaveBooksReadAloudIphonePage />} />
         <Route path="/guides/how-to-read-standard-ebooks-on-iphone" element={<StandardEbooksIphoneGuidePage />} />
         <Route path="/guides/best-vertical-scrolling-ebook-apps-iphone" element={<VerticalScrollingEbookAppsPage />} />
         <Route path="/guides/how-to-read-project-gutenberg-books-on-iphone" element={<ProjectGutenbergIphoneGuidePage />} />

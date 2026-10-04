@@ -18,6 +18,7 @@ export const routes = [
   guide('how-to-read-epub-files-on-iphone', 'HowToReadEpubFilesIphonePage.jsx'),
   guide('how-to-read-pdfs-on-iphone', 'HowToReadPdfsIphonePage.jsx'),
   guide('how-to-focus-while-reading-on-iphone', 'HowToFocusReadingIphonePage.jsx'),
+  guide('how-to-have-books-read-aloud-on-iphone', 'HowToHaveBooksReadAloudIphonePage.jsx'),
   guide('how-to-read-standard-ebooks-on-iphone', 'StandardEbooksIphoneGuidePage.jsx'),
   guide('best-ebook-reader-apps-iphone', 'BestEbookReaderAppsPage.jsx'),
   guide('best-free-ebook-apps-iphone', 'BestFreeEbookAppsPage.jsx'),

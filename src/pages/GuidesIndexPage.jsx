@@ -4,6 +4,14 @@ import { setPageMeta } from '../seo.js'
 
 const guides = [
   {
+    title: 'How to Have Books Read Aloud on iPhone in 2026',
+    description:
+      'Every way to have an ebook read aloud on iPhone, from the built-in Speak Screen to Kindle, ElevenReader, Speechify, Voice Dream, and leaf, with what each costs and where it falls short.',
+    href: '/guides/how-to-have-books-read-aloud-on-iphone',
+    updated: 'October 2026',
+    topics: ['Read aloud', 'Text to speech', 'Listening'],
+  },
+  {
     title: 'Best Vertical Scrolling eBook Apps for iPhone in 2026',
     description:
       'A practical comparison of vertical snap and continuous scroll in leaf, Apple Books, Kindle, Kobo Books, and BookShelves.',
@@ -94,6 +102,11 @@ const guides = [
 ]
 
 const topicSections = [
+  {
+    title: 'Listening and Read Aloud',
+    description: 'Guides for having books read aloud on iPhone, text-to-speech voices, and reading along at a steady pace.',
+    guideHrefs: ['/guides/how-to-have-books-read-aloud-on-iphone', '/guides/how-to-focus-while-reading-on-iphone'],
+  },
   {
     title: 'Free Books and Public-Domain Reading',
     description: 'Guides for finding legal free ebooks, public-domain classics, and library books on iPhone.',

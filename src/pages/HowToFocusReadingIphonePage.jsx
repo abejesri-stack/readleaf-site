@@ -240,8 +240,12 @@ export default function HowToFocusReadingIphonePage() {
             <p style={{ ...textStyle, marginBottom: 'var(--space-3)' }}>
               In leaf you tap play and the text starts moving at a pace you set, lighting each line as it goes. You are still reading the words yourself &mdash; but you are following something rather than pushing it.
             </p>
-            <p style={textStyle}>
+            <p style={{ ...textStyle, marginBottom: 'var(--space-3)' }}>
               Nothing is hidden. The lines around the one you are on stay on screen and readable, so you can glance back whenever you lose the thread, pause with a tap, or step back a sentence. That is the difference between this and speed reading, and it is the whole reason it does not cost you comprehension.
+            </p>
+            <p style={textStyle}>
+              Turn on the voice and leaf reads the page aloud as the line moves. For every way to listen to a book on iPhone, see{' '}
+              <Link to="/guides/how-to-have-books-read-aloud-on-iphone" style={{ color: 'var(--color-ink)' }}>how to have books read aloud on iPhone</Link>.
             </p>
           </div>
           <figure style={{ margin: 0, textAlign: 'center' }}>
