@@ -10,7 +10,7 @@ const orgSchema = {
   alternateName: ['leaf app', 'leaf: eBook Reader'],
   url: 'https://readleaf.co/',
   description:
-    'A vertical-swipe ebook reader for iPhone featuring the LeafEngine - a prose-rhythm analysis engine that ensures every vertical page break ends on a completed thought. Includes a read-along mode that paces you through the page and lights each line as you read, column-aware PDF reading, built-in Standard Ebooks and Project Gutenberg discovery, imported file support, no ads, no content tracking, optional anonymous product analytics, and optional leaf Pro sync.',
+    'A vertical-swipe ebook reader for iPhone featuring the LeafEngine - a prose-rhythm analysis engine that ensures every vertical page break ends on a completed thought. Includes a read-along mode that paces you through the page and lights each line as you read, free on-device narration that reads the page aloud, column-aware PDF reading, built-in Standard Ebooks and Project Gutenberg discovery, imported file support, no ads, no content tracking, optional anonymous product analytics, and optional leaf Pro sync.',
   foundingDate: '2025',
   foundingLocation: { '@type': 'Place', name: 'Melbourne, Australia' },
   founder: {
@@ -30,6 +30,9 @@ const orgSchema = {
     "TikTok style reading app",
     "Reels like scrolling ebook app",
     "Read along reading app",
+    "Read aloud ebook app",
+    "Text to speech ebook reader",
+    "Offline narration",
     "Reading app for ADHD",
     "Focus reading app",
     "Guided reading pace",
@@ -61,7 +64,7 @@ const softwareSchema = {
   operatingSystem: 'iOS',
   applicationCategory: 'BookApplication',
   description:
-    'A vertical-swipe ebook reader for iOS. Uses the LeafEngine for prose-aware page breaks, includes a read-along mode that sets a gentle reading pace and highlights each line without hiding the surrounding text, reads PDFs column by column so text stays large on a phone, provides built-in Standard Ebooks and Project Gutenberg discovery, supports EPUB/PDF/Markdown imports, includes three reading modes (Slide, Page Curl, Continuous), optional leaf Pro sync, and a privacy-conscious reading model with no ads, no content tracking, and optional anonymous product analytics.',
+    'A vertical-swipe ebook reader for iOS. Uses the LeafEngine for prose-aware page breaks, includes a read-along mode that sets a gentle reading pace and highlights each line without hiding the surrounding text, can read the page aloud with the voices built into iPhone (free, unlimited, offline), reads PDFs column by column so text stays large on a phone, provides built-in Standard Ebooks and Project Gutenberg discovery, supports EPUB/PDF/Markdown imports, includes three reading modes (Slide, Page Curl, Continuous), optional leaf Pro sync, and a privacy-conscious reading model with no ads, no content tracking, and optional anonymous product analytics.',
   offers: [
     { '@type': 'Offer', price: '0', priceCurrency: 'AUD', description: 'Free download' },
     { '@type': 'Offer', description: 'Optional leaf Pro auto-renewable subscription for sync features' },
@@ -77,8 +80,11 @@ const softwareSchema = {
     'TikTok-style vertical scrolling ebook app experience',
     'Read-along mode that paces you through the page and lights each line as you read, with adjustable speed, tap to pause, and step back a sentence',
     'Column-aware PDF reading that shows one column at a time so text stays large without sideways scrolling',
+    'Free read-aloud narration with the voices built into iPhone: unlimited, offline, and private, with lock-screen and headphone controls',
     'PDF pages follow the app theme automatically in light or dark',
     'Ten reading themes including Sepia, Ivory, Mist, Forest, Midnight, and Amber Night',
+    'Custom reading themes: design up to six of your own with leaf Pro',
+    'Library grouped by shelf, with collapsible sections',
     'Seven typefaces including Lexend and Atkinson Hyperlegible, plus custom font import',
     'Built-in Standard Ebooks and Project Gutenberg discovery',
     'LeafEngine prose-rhythm analysis for intelligent page breaks',
@@ -116,6 +122,14 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
+      name: 'Does leaf read books aloud?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: "Yes. Turn on the voice in read-along and leaf reads the page aloud while the current line stays highlighted. It uses the voices built into iPhone, so narration is free and unlimited, works offline, and never uploads your books. It keeps reading with the screen locked, and you can pause, play, or skip back 15 seconds from the lock screen or headphones. leaf picks a voice in the book's language; Apple's Enhanced and Premium voices, a free download in iPhone Settings, sound the most natural. Narration works with ebooks rather than PDFs.",
+      },
+    },
+    {
+      '@type': 'Question',
       name: 'Can leaf read PDFs on iPhone?',
       acceptedAnswer: {
         '@type': 'Answer',
@@ -135,7 +149,7 @@ const faqSchema = {
       name: 'Is leaf free?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'leaf is free to download on the iOS App Store. leaf Pro is an optional auto-renewable subscription for cross-device sync features. leaf has no advertisements.',
+        text: 'leaf is free to download on the iOS App Store, and read-along and read-aloud narration are free. leaf Pro is an optional auto-renewable subscription for cross-device sync, extra themes and typefaces, and custom themes. leaf has no advertisements.',
       },
     },
   ],
@@ -154,7 +168,7 @@ export default function BrandFactsPage() {
       document.head.appendChild(metaDescription)
     }
     metaDescription.content =
-      'Verified facts about leaf: eBook Reader - a vertical-swipe ebook reader for iOS with read-along pacing, column-aware PDF reading, and built-in Standard Ebooks and Project Gutenberg discovery. Founded in Melbourne. Powered by the LeafEngine. Optional leaf Pro sync. No ads or content tracking.'
+      'Verified facts about leaf: eBook Reader - a vertical-swipe ebook reader for iOS with read-along pacing, free read-aloud narration, column-aware PDF reading, and built-in Standard Ebooks and Project Gutenberg discovery. Founded in Melbourne. Powered by the LeafEngine. Optional leaf Pro sync. No ads or content tracking.'
 
     let canonical = document.querySelector('link[rel="canonical"]')
     if (!canonical) {
@@ -195,6 +209,7 @@ export default function BrandFactsPage() {
     { label: 'Platform', value: 'iOS' },
     { label: 'Core Technology', value: 'LeafEngine - prose-rhythm analysis for intelligent, thought-complete page breaks' },
     { label: 'Reading Modes', value: 'Slide (vertical snap), Page Curl (tactile page turn), Continuous (free scrolling)' },
+    { label: 'Read Aloud', value: 'Free, unlimited, offline narration with the voices built into iPhone; lock-screen and headphone controls' },
     { label: 'Public-Domain Discovery', value: 'Built-in Explore access for Standard Ebooks and Project Gutenberg discovery/import' },
     { label: 'Library Sync', value: 'leaf Pro sync for metadata, progress, annotations, journals, shelves, and covers; iCloud Book Vault for large originals' },
     { label: 'Privacy Model', value: 'No ads or content tracking · Optional account-backed sync for leaf Pro · Optional anonymous product analytics' },

@@ -145,12 +145,12 @@ function App() {
       document.head.appendChild(meta)
     }
     meta.content =
-      'leaf: eBook Reader is a vertical-swipe ebook reader for iPhone with built-in Standard Ebooks and Project Gutenberg discovery, imported EPUB/PDF/Markdown support, and optional leaf Pro sync.'
+      'A vertical-swipe ebook reader for iPhone that reads aloud for free, offline. Free classics from Standard Ebooks and Project Gutenberg, your own EPUB, PDF and Markdown files, and no ads.'
 
     // Open Graph
     const ogTags = [
       { property: 'og:title', content: 'leaf: eBook Reader - Vertical-Swipe Book Reader for iPhone' },
-      { property: 'og:description', content: 'Swipe through ebooks on iPhone. Discover free classics from Standard Ebooks and Project Gutenberg, import your own files, and optionally sync with leaf Pro.' },
+      { property: 'og:description', content: 'Swipe through ebooks on iPhone, or let leaf read them aloud for free, offline. Free classics, your own files, and optional leaf Pro sync.' },
       { property: 'og:image', content: 'https://readleaf.co/leaf-app-icon.png' },
       { property: 'og:url', content: 'https://readleaf.co/' },
       { property: 'og:type', content: 'website' },
@@ -182,7 +182,7 @@ function App() {
       operatingSystem: 'iOS',
       applicationCategory: 'BookApplication',
       description:
-        'A vertical-swipe ebook reader for iOS. Features the LeafEngine for prose-aware page breaks, built-in Standard Ebooks and Project Gutenberg discovery, EPUB/PDF/Markdown imports, three reading modes (Slide, Page Curl, Continuous), and optional leaf Pro sync for library metadata, progress, annotations, journals, shelves, and covers.',
+        'A vertical-swipe ebook reader for iOS. Features the LeafEngine for prose-aware page breaks, read-along with free on-device narration, built-in Standard Ebooks and Project Gutenberg discovery, EPUB/PDF/Markdown imports, three reading modes (Slide, Page Curl, Continuous), and optional leaf Pro sync for library metadata, progress, annotations, journals, shelves, and covers.',
       offers: [
         { '@type': 'Offer', price: '0', priceCurrency: 'AUD', description: 'Free download' },
         { '@type': 'Offer', description: 'Optional leaf Pro auto-renewable subscription for sync features' },
@@ -192,6 +192,9 @@ function App() {
         'LeafEngine prose-rhythm analysis for intelligent page breaks',
         'Built-in Standard Ebooks and Project Gutenberg discovery',
         'Three reading modes: Slide, Page Curl, Continuous',
+        'Read-along mode that lights each line as you read',
+        'Free read-aloud narration with the voices built into iPhone: unlimited, offline, and private, with lock-screen and headphone controls',
+        'Custom reading themes: design up to six of your own with leaf Pro',
         'leaf Pro sync for library metadata, progress, annotations, journals, shelves, and covers',
         'iCloud Book Vault support for large original files',
         'Standard Ebooks and Project Gutenberg discovery through Explore',
@@ -301,7 +304,7 @@ function App() {
               marginTop: 0,
             }}>
               Vertical-swipe reading. Built-in free classics.<br />
-              Standard Ebooks, Gutenberg, and your own files.
+              And a voice that reads along with you, free.
             </p>
 
             <AppStoreBadge />
@@ -548,6 +551,58 @@ function App() {
 
 
       {/* ═══════════════════════════════════════════════════════
+          READ ALOUD
+          ═══════════════════════════════════════════════════════ */}
+      <section className="section">
+        <div className="container">
+          <Motion.div initial="hidden" whileInView="show" variants={fadeUp} viewport={{ once: true }}>
+            <p style={{
+              fontFamily: 'var(--font-sans)',
+              fontSize: '0.68rem',
+              textTransform: 'uppercase',
+              letterSpacing: '0.15em',
+              color: 'var(--color-accent)',
+              marginBottom: 'var(--space-3)',
+              fontWeight: 600,
+              textAlign: 'center',
+              maxWidth: 'none',
+            }}>
+              New · Read aloud
+            </p>
+            <h2 className="text-center" style={{ fontSize: 'clamp(2.2rem, 4vw, 3.5rem)', marginBottom: 'var(--space-3)' }}>
+              The reader that<br />reads to you.
+            </h2>
+            <p style={{ margin: '0 auto var(--space-8)', maxWidth: '52ch', textAlign: 'center' }}>
+              Turn on the voice in read-along and leaf reads the page aloud while the line lights up beside it. Read with your eyes, your ears, or both, and switch whenever you like.
+            </p>
+          </Motion.div>
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(300px, 100%), 1fr))', gap: 'var(--space-8)', maxWidth: '760px', margin: '0 auto' }}>
+            <FeatureBadge
+              label="Free, with no meter"
+              desc="Listen to a chapter or a whole book. There are no hours to count and no account to make."
+            />
+            <FeatureBadge
+              label="Private and offline"
+              desc="The voice runs on your iPhone. Your books are never uploaded, and it works without a connection."
+            />
+            <FeatureBadge
+              label="Keeps going when you lock"
+              desc="Pause, play, or skip back 15 seconds from the lock screen or your headphones."
+            />
+            <FeatureBadge
+              label="Natural voices"
+              desc="leaf picks a voice in the book's language. Apple's Enhanced and Premium voices are a free download and sound the most natural."
+            />
+          </div>
+        </div>
+      </section>
+
+
+      <div className="spacer-md" />
+
+
+      {/* ═══════════════════════════════════════════════════════
           PDFs
           ═══════════════════════════════════════════════════════ */}
       <section className="section" style={{ background: 'rgba(255,255,255,0.4)' }}>
@@ -639,7 +694,7 @@ function App() {
                 fontWeight: 600,
                 maxWidth: 'none',
               }}>
-                New · leaf Pro Sync
+                leaf Pro
               </p>
               <h2 style={{ fontSize: 'clamp(2rem, 4vw, 3.2rem)', marginBottom: 'var(--space-5)' }}>
                 Pick up where<br />you left off.
@@ -661,7 +716,7 @@ function App() {
                 />
                 <FeatureBadge
                   label="Make it yours"
-                  desc="Six more themes, three more typefaces or import your own, and control over line, paragraph, and letter spacing."
+                  desc="Six more themes or design up to six of your own, three more typefaces or import your own, and control over line, paragraph, and letter spacing."
                 />
                 <FeatureBadge
                   label="No ads or content tracking"
@@ -795,7 +850,7 @@ function App() {
               Start reading more,<br />starting today.
             </h2>
             <p style={{ margin: 'var(--space-5) auto var(--space-8)', maxWidth: '40ch', textAlign: 'center' }}>
-              Free on the App Store. leaf Pro is optional for cross-device sync. No ads.
+              Free on the App Store, read-aloud included. leaf Pro is optional for sync and customisation. No ads.
             </p>
             <AppStoreBadge />
           </Motion.div>

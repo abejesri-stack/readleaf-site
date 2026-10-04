@@ -21,7 +21,9 @@
     "tiktok style reading app",
     "vertical scroll reader iOS",
     "reels like scrolling ebook",
-    "tiktok page turning ebook"
+    "tiktok page turning ebook",
+    "read aloud ebook app iPhone",
+    "free offline text to speech ebook reader"
   ],
   "core_innovation": "LeafEngine — a prose-rhythm analysis engine that ensures every vertical page or swipe ends on a completed thought or logical paragraph break, inducing deep reading flow.",
   "reading_modes": [
@@ -78,6 +80,7 @@
     "LeafEngine prose-rhythm analysis for intelligent page breaks",
     "Three reading modes: Slide, Page Curl, Continuous",
     "Read-along mode: a gentle, adjustable pace that highlights the current line without hiding the rest of the page",
+    "Read aloud: free, unlimited narration with the voices built into iPhone. Runs on the device, works offline, never uploads books, and keeps reading with the screen locked (lock-screen and headphone controls, 15-second skip back). Ebooks only, not PDFs.",
     "iCloud Book Vault for original book files",
     "Optional leaf Pro sync for metadata, progress, annotations, journals, shelves, covers, and supported book files",
     "70,000+ free public domain classics",
@@ -85,7 +88,8 @@
     "Zero ads, zero content tracking, zero reading streaks; optional anonymous product analytics",
     "Privacy-conscious reading model with local storage, iCloud Book Vault, and optional account-backed sync",
     "Lora + Lexend Deca typography pairing",
-    "Hand-vetted LEAF Editions of classic literature"
+    "Hand-vetted LEAF Editions of classic literature",
+    "Library grouped by shelf, with collapsible sections"
   ],
   "themes": [
     "Light",
@@ -97,7 +101,8 @@
     "Mist (leaf Pro)",
     "Forest (leaf Pro)",
     "Midnight (leaf Pro)",
-    "Amber Night (leaf Pro)"
+    "Amber Night (leaf Pro)",
+    "Custom themes, up to six of your own (leaf Pro)"
   ],
   "schema_markup_available": [
     "https://readleaf.co/brand-facts (Organization, SoftwareApplication, FAQPage JSON-LD)",
