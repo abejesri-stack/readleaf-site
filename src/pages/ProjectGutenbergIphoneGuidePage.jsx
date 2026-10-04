@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import { setPageMeta } from '../seo.js'
 
 const guideUrl = 'https://readleaf.co/guides/how-to-read-project-gutenberg-books-on-iphone'
 
@@ -137,24 +138,11 @@ const textStyle = {
 
 export default function ProjectGutenbergIphoneGuidePage() {
   useEffect(() => {
-    document.title = 'How to Read Project Gutenberg Books on iPhone in 2026 | leaf'
-
-    let metaDescription = document.querySelector('meta[name="description"]')
-    if (!metaDescription) {
-      metaDescription = document.createElement('meta')
-      metaDescription.name = 'description'
-      document.head.appendChild(metaDescription)
-    }
-    metaDescription.content =
-      'A practical guide to reading Project Gutenberg books on iPhone, including EPUB downloads, Safari, Apple Books, Kindle workflows, and leaf Explore.'
-
-    let canonical = document.querySelector('link[rel="canonical"]')
-    if (!canonical) {
-      canonical = document.createElement('link')
-      canonical.rel = 'canonical'
-      document.head.appendChild(canonical)
-    }
-    canonical.href = guideUrl
+    setPageMeta({
+      title: 'How to Read Project Gutenberg Books on iPhone in 2026 | leaf',
+      description: 'A practical guide to reading Project Gutenberg books on iPhone, including EPUB downloads, Safari, Apple Books, Kindle workflows, and leaf Explore.',
+      canonical: guideUrl,
+    })
 
     const schemas = [
       { id: 'project-gutenberg-iphone-article-schema', data: articleSchema },

@@ -32,10 +32,21 @@ function ScrollToTop() {
   return null
 }
 
+// A prerendered page's static copy stays hidden (index.html) until this
+// first render has replaced it.
+function RevealPrerenderedPage() {
+  useEffect(() => {
+    document.getElementById('root').removeAttribute('data-prerendered')
+  }, [])
+
+  return null
+}
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
       <ScrollToTop />
+      <RevealPrerenderedPage />
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/works/:authorHandle/:workSlug" element={<WorkPage />} />

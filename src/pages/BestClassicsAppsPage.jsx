@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import { setPageMeta } from '../seo.js'
 
 const appRows = [
   {
@@ -212,24 +213,11 @@ const textStyle = {
 
 export default function BestClassicsAppsPage() {
   useEffect(() => {
-    document.title = 'Best Apps and Sources for Reading Classics on iPhone in 2026 | leaf'
-
-    let metaDescription = document.querySelector('meta[name="description"]')
-    if (!metaDescription) {
-      metaDescription = document.createElement('meta')
-      metaDescription.name = 'description'
-      document.head.appendChild(metaDescription)
-    }
-    metaDescription.content =
-      'A balanced guide to the best iPhone apps and sources for reading classic literature, including leaf, Standard Ebooks, Project Gutenberg, Libby, Apple Books, Kindle, and Kobo.'
-
-    let canonical = document.querySelector('link[rel="canonical"]')
-    if (!canonical) {
-      canonical = document.createElement('link')
-      canonical.rel = 'canonical'
-      document.head.appendChild(canonical)
-    }
-    canonical.href = 'https://readleaf.co/guides/best-apps-for-reading-classics-iphone'
+    setPageMeta({
+      title: 'Best Apps and Sources for Reading Classics on iPhone in 2026 | leaf',
+      description: 'A balanced guide to the best iPhone apps and sources for reading classic literature, including leaf, Standard Ebooks, Project Gutenberg, Libby, Apple Books, Kindle, and Kobo.',
+      canonical: 'https://readleaf.co/guides/best-apps-for-reading-classics-iphone',
+    })
 
     const schemas = [
       { id: 'best-classics-apps-article-schema', data: articleSchema },

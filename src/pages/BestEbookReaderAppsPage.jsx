@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import { setPageMeta } from '../seo.js'
 
 const appRows = [
   {
@@ -200,24 +201,11 @@ const textStyle = {
 
 export default function BestEbookReaderAppsPage() {
   useEffect(() => {
-    document.title = 'Best eBook Reader Apps for iPhone and iOS in 2026 | leaf'
-
-    let metaDescription = document.querySelector('meta[name="description"]')
-    if (!metaDescription) {
-      metaDescription = document.createElement('meta')
-      metaDescription.name = 'description'
-      document.head.appendChild(metaDescription)
-    }
-    metaDescription.content =
-      'A practical comparison of the best ebook reader apps for iPhone and iOS in 2026, including leaf, Kindle, Apple Books, Kobo, Libby, and Google Play Books.'
-
-    let canonical = document.querySelector('link[rel="canonical"]')
-    if (!canonical) {
-      canonical = document.createElement('link')
-      canonical.rel = 'canonical'
-      document.head.appendChild(canonical)
-    }
-    canonical.href = 'https://readleaf.co/guides/best-ebook-reader-apps-iphone'
+    setPageMeta({
+      title: 'Best eBook Reader Apps for iPhone and iOS in 2026 | leaf',
+      description: 'A practical comparison of the best ebook reader apps for iPhone and iOS in 2026, including leaf, Kindle, Apple Books, Kobo, Libby, and Google Play Books.',
+      canonical: 'https://readleaf.co/guides/best-ebook-reader-apps-iphone',
+    })
 
     const schemas = [
       { id: 'best-ebook-reader-article-schema', data: articleSchema },
