@@ -46,7 +46,7 @@ const faqItems = [
   },
   {
     q: 'Does leaf read books out loud?',
-    a: 'Not yet. Read-along in leaf is silent: it sets the pace and highlights the line, but there is no narration. If you want a voice reading to you, an audiobook app or a text-to-speech reader is the right tool today.',
+    a: "Yes. Turn on the speaker in read-along and leaf reads the page aloud in a natural voice while the highlight follows along. It keeps reading with your screen locked, and you can pause or skip back from the lock screen or headphones. It uses the voices built into your iPhone, so it's free and works offline; Apple's Enhanced and Premium voices, a free download in Settings, sound the most natural.",
   },
   {
     q: 'How long should a reading session be?',

@@ -466,7 +466,7 @@ const howToFocusReadingIphoneStaticHtml = `<div id="root">
     <h3>Is read-along the same as speed reading?</h3>
     <p>No. Speed-reading apps usually flash one word at a time, replacing each word with the next, which removes your ability to glance back and tends to cost comprehension. Read-along in leaf never hides or replaces anything: the surrounding lines stay readable, and you can pause or step back a sentence.</p>
     <h3>Does leaf read books out loud?</h3>
-    <p>Not yet. Read-along in leaf is silent: it sets the pace and highlights the line, but there is no narration.</p>
+    <p>Yes. Turn on the speaker in read-along and leaf reads the page aloud in a natural voice while the highlight follows along. It keeps reading with your screen locked, and you can pause or skip back from the lock screen or headphones. It uses the voices built into your iPhone, so it&#39;s free and works offline; Apple&#39;s Enhanced and Premium voices, a free download in Settings, sound the most natural.</p>
     <h3>How long should a reading session be?</h3>
     <p>Short enough that you will actually start. Ten or fifteen minutes is a more useful target than a chapter, because a chapter is an unknown quantity.</p>
     <h2>Sources</h2>
