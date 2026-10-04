@@ -13,78 +13,14 @@ const AppStoreBadge = () => (
     onMouseEnter={e => e.currentTarget.style.opacity = '0.8'}
     onMouseLeave={e => e.currentTarget.style.opacity = '1'}
   >
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="160"
+    {/* Apple's official badge artwork: Apple's guidelines don't allow redrawing it */}
+    <img
+      src="/app-store-badge.svg"
+      alt="Download on the App Store"
+      width="162"
       height="54"
-      viewBox="0 0 160 54"
-      role="img"
-      aria-label="Download on the App Store"
-    >
-      {/* Badge background */}
-      <rect width="160" height="54" rx="9" fill="#000" />
-      <rect x="0.75" y="0.75" width="158.5" height="52.5" rx="8.25" stroke="rgba(255,255,255,0.2)" strokeWidth="0.75" fill="none" />
-
-      {/* Apple logo - canonical path, positioned left-center */}
-      {/*
-        Standard Apple logo path in a ~170×205 unit space.
-        Scaled to ~22px tall, centered vertically in the 54px badge.
-        translate(16, 16) scale(0.107) puts it at roughly 18×22px.
-      */}
-      <g transform="translate(16, 15.5) scale(0.108)">
-        {/* Leaf */}
-        <path
-          d="M 113.0,0.0
-             C 104.8,0.5 95.1,6.2 89.4,13.5
-               83.9,20.6 79.2,32.1 81.1,43.2
-               92.3,43.6 103.9,37.5 109.4,30.1
-               114.8,22.9 118.9,11.3 113.0,0.0 Z"
-          fill="white"
-        />
-        {/* Body */}
-        <path
-          d="M 111.0,44.4
-             C 95.7,44.4 88.4,54.0 76.8,54.0
-               65.5,54.0 55.7,44.7 42.1,44.7
-               19.8,44.7 0.0,63.4 0.0,97.8
-               0.0,119.8 8.3,142.9 18.6,158.7
-               27.4,172.2 35.1,183.0 46.4,183.0
-               57.5,183.0 62.2,175.8 75.6,175.8
-               89.1,175.8 93.6,183.0 104.9,183.0
-               116.3,183.0 124.0,172.0 132.6,159.7
-               138.5,151.2 140.8,145.7 143.7,137.8
-               118.9,127.4 114.8,91.7 140.0,79.6
-               132.4,64.5 121.2,44.4 111.0,44.4 Z"
-          fill="white"
-        />
-      </g>
-
-      {/* "Download on the" */}
-      <text
-        x="45"
-        y="22"
-        fontFamily="-apple-system, 'Helvetica Neue', Arial, sans-serif"
-        fontSize="10.5"
-        fontWeight="400"
-        letterSpacing="0.15"
-        fill="white"
-      >
-        Download on the
-      </text>
-
-      {/* "App Store" */}
-      <text
-        x="44"
-        y="39"
-        fontFamily="-apple-system, 'Helvetica Neue', Arial, sans-serif"
-        fontSize="21"
-        fontWeight="600"
-        letterSpacing="-0.4"
-        fill="white"
-      >
-        App Store
-      </text>
-    </svg>
+      style={{ display: 'block' }}
+    />
   </a>
 )
 
