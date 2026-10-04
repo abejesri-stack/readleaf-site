@@ -155,7 +155,7 @@ const verticalScrollingAppsStaticHtml = `<div id="root">
     <p>Choose leaf if you want vertical snap reading as the main interaction, continuous scroll as an option, and built-in free classics discovery. Choose Apple Books for the easiest built-in Scroll mode, Kindle or Kobo for books already purchased in those stores, and BookShelves for a personal EPUB library across Apple devices.</p>
     <figure>
       <img src="/screenshots/leaf_slide.png" alt="leaf vertical scrolling ebook reader shown on an iPhone" width="1200" height="1501" loading="eager" />
-      <figcaption>leaf combines one-screen-at-a-time Glide mode with continuous Stream mode.</figcaption>
+      <figcaption>leaf combines one-screen-at-a-time Slide mode with continuous scrolling in Continuous mode.</figcaption>
     </figure>
     <h2>Vertical snap and continuous scroll are different</h2>
     <p>Continuous scroll moves through a book freely like a web page. Vertical snap also moves upward, but each gesture settles on a defined screen of text. Continuous scroll gives precise movement, while vertical snap provides stable stopping points that can be easier to resume.</p>
@@ -165,7 +165,7 @@ const verticalScrollingAppsStaticHtml = `<div id="root">
         <tr><th>App</th><th>Best for</th><th>Vertical reading</th><th>Library and files</th></tr>
       </thead>
       <tbody>
-        <tr><td><a href="https://apps.apple.com/app/leaf-ebook-reader/id6758810936">leaf</a></td><td>Vertical snap reading and free classics</td><td>Glide vertical snap, Stream continuous scroll, or Leaf page turn</td><td>EPUB, PDF, and Markdown imports</td></tr>
+        <tr><td><a href="https://apps.apple.com/app/leaf-ebook-reader/id6758810936">leaf</a></td><td>Vertical snap reading and free classics</td><td>Slide vertical snap, Continuous scroll, or Page Curl page turn</td><td>EPUB, PDF, and Markdown imports</td></tr>
         <tr><td><a href="https://support.apple.com/guide/iphone/read-books-iphc1af7c57/ios">Apple Books</a></td><td>The simplest built-in iPhone option</td><td>Scroll, Curl, or Fast Fade for supported books</td><td>Apple purchases plus imported EPUB and PDF files</td></tr>
         <tr><td><a href="https://apps.apple.com/us/app/amazon-kindle/id302584613?platform=iphone">Kindle</a></td><td>Amazon purchases and Kindle libraries</td><td>Continuous scrolling or paginated reading for supported books</td><td>Kindle purchases and personal documents</td></tr>
         <tr><td><a href="https://apps.apple.com/us/app/kobo-books-audiobooks/id301259483?platform=iphone">Kobo Books</a></td><td>Kobo store customers and device owners</td><td>Vertical scrolling or page turns, depending on book and app version</td><td>Kobo purchases and ecosystem reading</td></tr>
@@ -173,11 +173,11 @@ const verticalScrollingAppsStaticHtml = `<div id="root">
       </tbody>
     </table>
     <h2>App-by-app recommendations</h2>
-    <p>leaf treats vertical movement as the core reading model. Glide advances one composed screen at a time, Stream provides continuous scrolling, and Leaf retains a conventional page turn. It also includes Standard Ebooks and Project Gutenberg discovery, a curated Explore tab, EPUB/PDF/Markdown imports, highlights, notes, reading journals, share cards, themes, fonts, custom fonts with leaf Pro, optional Pro sync, and iCloud Book Vault.</p>
+    <p>leaf treats vertical movement as the core reading model. Slide advances one composed screen at a time, Continuous provides free scrolling, and Page Curl retains a conventional page turn. It also includes Standard Ebooks and Project Gutenberg discovery, a curated Explore tab, EPUB/PDF/Markdown imports, highlights, notes, reading journals, share cards, themes, fonts, custom fonts with leaf Pro, optional Pro sync, and iCloud Book Vault.</p>
     <p>Apple Books is the easiest built-in option and supports Scroll mode for compatible books. Kindle is strongest for Amazon libraries and Kindle devices. Kobo Books fits readers who buy from Kobo or use Kobo hardware. BookShelves is useful for readers who manage personal files and want continuous scroll across Apple devices.</p>
     <h2>How to turn on vertical scrolling</h2>
     <ol>
-      <li>In leaf, choose Glide for one-screen vertical swipes or Stream for continuous scrolling.</li>
+      <li>In leaf, choose Slide for one-screen vertical swipes or Continuous for free scrolling.</li>
       <li>In Apple Books, open Themes and Settings, tap the page-turn control, and choose Scroll.</li>
       <li>In Kindle, open Aa reading settings, choose Layout, and enable Continuous Scrolling when available.</li>
       <li>In Kobo Books, select vertical scrolling in reading settings when it is available for the book and app version.</li>
@@ -604,7 +604,7 @@ const projectGutenbergIphoneStaticHtml = `<div id="root">
         <tr>
           <td>leaf Explore</td>
           <td>Built-in Gutenberg discovery and vertical-swipe reading</td>
-          <td>Open Explore in leaf, find a public-domain classic, import it into your library, then read with Glide, Leaf, or Stream.</td>
+          <td>Open Explore in leaf, find a public-domain classic, import it into your library, then read with Slide, Page Curl, or Continuous.</td>
         </tr>
         <tr>
           <td>Safari download</td>
@@ -1019,7 +1019,7 @@ const brandFactsHtml = setSeo(homeHtml, {
   canonical: 'https://readleaf.co/brand-facts',
 }).replace(
   /<div id="root">[\s\S]*?<\/div>\s*<\/body>/,
-  '<div id="root"><h1>Brand Facts - leaf</h1><p>A vertical-swipe e-reader for iOS with built-in Standard Ebooks and Project Gutenberg discovery through Explore. Uses the LeafEngine for prose-aware page breaks, includes three reading modes (Glide, Leaf, Stream), optional leaf Pro sync, and no ads or behavioural tracking.</p></div>'
+  '<div id="root"><h1>Brand Facts - leaf</h1><p>A vertical-swipe e-reader for iOS with built-in Standard Ebooks and Project Gutenberg discovery through Explore. Uses the LeafEngine for prose-aware page breaks, includes three reading modes (Slide, Page Curl, Continuous), optional leaf Pro sync, and no ads or behavioural tracking.</p></div>'
     + '\n  </body>'
 );
 fs.writeFileSync(path.join(dist, 'brand-facts.html'), brandFactsHtml);
