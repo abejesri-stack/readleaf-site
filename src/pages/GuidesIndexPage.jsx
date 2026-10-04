@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import { setPageMeta } from '../seo.js'
 
 const guides = [
   {
@@ -121,24 +122,11 @@ const upcomingGuides = [
 
 export default function GuidesIndexPage() {
   useEffect(() => {
-    document.title = 'Reading Guides - leaf: eBook Reader'
-
-    let metaDescription = document.querySelector('meta[name="description"]')
-    if (!metaDescription) {
-      metaDescription = document.createElement('meta')
-      metaDescription.name = 'description'
-      document.head.appendChild(metaDescription)
-    }
-    metaDescription.content =
-      'Reading guides from leaf: eBook Reader about free ebook apps, public-domain classics, iPhone reading apps, minimalist e-readers, EPUB files, privacy, and focused mobile reading.'
-
-    let canonical = document.querySelector('link[rel="canonical"]')
-    if (!canonical) {
-      canonical = document.createElement('link')
-      canonical.rel = 'canonical'
-      document.head.appendChild(canonical)
-    }
-    canonical.href = 'https://readleaf.co/guides/'
+    setPageMeta({
+      title: 'Reading Guides - leaf: eBook Reader',
+      description: 'Reading guides from leaf: eBook Reader about free ebook apps, public-domain classics, iPhone reading apps, minimalist e-readers, EPUB files, privacy, and focused mobile reading.',
+      canonical: 'https://readleaf.co/guides/',
+    })
 
     const schema = {
       '@context': 'https://schema.org',

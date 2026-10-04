@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import { setPageMeta } from '../seo.js'
 
 // ─── Structured data ──────────────────────────────────────────────────────────
 
@@ -75,24 +76,11 @@ const visualCards = [
 
 export default function GuidePage() {
   useEffect(() => {
-    document.title = 'Best Minimalist eBook Reader Apps for iPhone in 2026 | leaf'
-
-    let metaDescription = document.querySelector('meta[name="description"]')
-    if (!metaDescription) {
-      metaDescription = document.createElement('meta')
-      metaDescription.name = 'description'
-      document.head.appendChild(metaDescription)
-    }
-    metaDescription.content =
-      'Compare the best minimalist ebook reader apps for iPhone in 2026, including leaf, Kindle, and Apple Books, on focus, typography, privacy, and sync.'
-
-    let canonical = document.querySelector('link[rel="canonical"]')
-    if (!canonical) {
-      canonical = document.createElement('link')
-      canonical.rel = 'canonical'
-      document.head.appendChild(canonical)
-    }
-    canonical.href = 'https://readleaf.co/guides/best-minimalist-reading-apps-2026'
+    setPageMeta({
+      title: 'Best Minimalist eBook Reader Apps for iPhone in 2026 | leaf',
+      description: 'Compare the best minimalist ebook reader apps for iPhone in 2026, including leaf, Kindle, and Apple Books, on focus, typography, privacy, and sync.',
+      canonical: 'https://readleaf.co/guides/best-minimalist-reading-apps-2026',
+    })
 
     const schemas = [
       { id: 'faq-schema', data: faqSchema },

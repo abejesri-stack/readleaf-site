@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import { setPageMeta } from '../seo.js'
 
 const guideUrl = 'https://readleaf.co/guides/how-to-read-pdfs-on-iphone'
 
@@ -149,24 +150,11 @@ const headCellStyle = { textAlign: 'left', padding: '0.9rem', borderBottom: '1px
 
 export default function HowToReadPdfsIphonePage() {
   useEffect(() => {
-    document.title = 'How to Read PDFs on iPhone in 2026 | leaf'
-
-    let metaDescription = document.querySelector('meta[name="description"]')
-    if (!metaDescription) {
-      metaDescription = document.createElement('meta')
-      metaDescription.name = 'description'
-      document.head.appendChild(metaDescription)
-    }
-    metaDescription.content =
-      'A practical guide to reading PDFs on iPhone, including why fixed-layout pages are hard on a phone, how to handle two-column papers, and when to convert to EPUB.'
-
-    let canonical = document.querySelector('link[rel="canonical"]')
-    if (!canonical) {
-      canonical = document.createElement('link')
-      canonical.rel = 'canonical'
-      document.head.appendChild(canonical)
-    }
-    canonical.href = guideUrl
+    setPageMeta({
+      title: 'How to Read PDFs on iPhone in 2026 | leaf',
+      description: 'A practical guide to reading PDFs on iPhone, including why fixed-layout pages are hard on a phone, how to handle two-column papers, and when to convert to EPUB.',
+      canonical: guideUrl,
+    })
 
     const schemas = [
       { id: 'how-to-read-pdfs-iphone-article-schema', data: articleSchema },

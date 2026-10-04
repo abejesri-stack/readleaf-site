@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import { motion as Motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
+import { setPageMeta } from './seo.js'
 
 // ─── App Store Badge ─────────────────────────────────────────────────────────
 const AppStoreBadge = () => (
@@ -71,43 +72,13 @@ const FeatureBadge = ({ label, desc }) => (
 // ─── App ─────────────────────────────────────────────────────────────────────
 function App() {
   useEffect(() => {
-    document.title = 'leaf: eBook Reader - Vertical-Swipe Book Reader for iPhone'
-
-    // Meta description
-    let meta = document.querySelector('meta[name="description"]')
-    if (!meta) {
-      meta = document.createElement('meta')
-      meta.name = 'description'
-      document.head.appendChild(meta)
-    }
-    meta.content =
-      'leaf: eBook Reader is a vertical-swipe ebook reader for iPhone with built-in Standard Ebooks and Project Gutenberg discovery, imported EPUB/PDF/Markdown support, and optional leaf Pro sync.'
-
-    // Open Graph
-    const ogTags = [
-      { property: 'og:title', content: 'leaf: eBook Reader - Vertical-Swipe Book Reader for iPhone' },
-      { property: 'og:description', content: 'Swipe through ebooks on iPhone. Discover free classics from Standard Ebooks and Project Gutenberg, import your own files, and optionally sync with leaf Pro.' },
-      { property: 'og:image', content: 'https://readleaf.co/leaf-app-icon.png' },
-      { property: 'og:url', content: 'https://readleaf.co/' },
-      { property: 'og:type', content: 'website' },
-    ]
-    ogTags.forEach(({ property, content }) => {
-      let el = document.querySelector(`meta[property="${property}"]`)
-      if (!el) {
-        el = document.createElement('meta')
-        el.setAttribute('property', property)
-        document.head.appendChild(el)
-      }
-      el.setAttribute('content', content)
+    // The OG card image and og:type come from index.html.
+    setPageMeta({
+      title: 'leaf: eBook Reader - Vertical-Swipe Book Reader for iPhone',
+      description: 'leaf: eBook Reader is a vertical-swipe ebook reader for iPhone with built-in Standard Ebooks and Project Gutenberg discovery, imported EPUB/PDF/Markdown support, and optional leaf Pro sync.',
+      ogDescription: 'Swipe through ebooks on iPhone. Discover free classics from Standard Ebooks and Project Gutenberg, import your own files, and optionally sync with leaf Pro.',
+      canonical: 'https://readleaf.co/',
     })
-
-    let canonical = document.querySelector('link[rel="canonical"]')
-    if (!canonical) {
-      canonical = document.createElement('link')
-      canonical.rel = 'canonical'
-      document.head.appendChild(canonical)
-    }
-    canonical.href = 'https://readleaf.co/'
 
     // SoftwareApplication JSON-LD for AEO
     const schema = {

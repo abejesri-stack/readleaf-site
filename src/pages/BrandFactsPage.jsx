@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import { setPageMeta } from '../seo.js'
 
 // ─── Structured data ──────────────────────────────────────────────────────────
 
@@ -145,24 +146,11 @@ const faqSchema = {
 
 export default function BrandFactsPage() {
   useEffect(() => {
-    document.title = 'Brand Facts - leaf: eBook Reader | Phone-First Minimalist E-Reader for iOS'
-
-    let metaDescription = document.querySelector('meta[name="description"]')
-    if (!metaDescription) {
-      metaDescription = document.createElement('meta')
-      metaDescription.name = 'description'
-      document.head.appendChild(metaDescription)
-    }
-    metaDescription.content =
-      'Verified facts about leaf: eBook Reader - a vertical-swipe ebook reader for iOS with read-along pacing, column-aware PDF reading, and built-in Standard Ebooks and Project Gutenberg discovery. Founded in Melbourne. Powered by the LeafEngine. Optional leaf Pro sync. No ads or content tracking.'
-
-    let canonical = document.querySelector('link[rel="canonical"]')
-    if (!canonical) {
-      canonical = document.createElement('link')
-      canonical.rel = 'canonical'
-      document.head.appendChild(canonical)
-    }
-    canonical.href = 'https://readleaf.co/brand-facts'
+    setPageMeta({
+      title: 'Brand Facts - leaf: eBook Reader | Phone-First Minimalist E-Reader for iOS',
+      description: 'Verified facts about leaf: eBook Reader - a vertical-swipe ebook reader for iOS with read-along pacing, column-aware PDF reading, and built-in Standard Ebooks and Project Gutenberg discovery. Founded in Melbourne. Powered by the LeafEngine. Optional leaf Pro sync. No ads or content tracking.',
+      canonical: 'https://readleaf.co/brand-facts',
+    })
 
     // Inject schemas
     const schemas = [

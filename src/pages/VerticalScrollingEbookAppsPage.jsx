@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import { setPageMeta } from '../seo.js'
 
 const guideUrl = 'https://readleaf.co/guides/best-vertical-scrolling-ebook-apps-iphone'
 
@@ -107,24 +108,11 @@ const linkStyle = { color: 'var(--color-accent)' }
 
 export default function VerticalScrollingEbookAppsPage() {
   useEffect(() => {
-    document.title = 'Best Vertical Scrolling eBook Apps for iPhone in 2026 | leaf'
-
-    let metaDescription = document.querySelector('meta[name="description"]')
-    if (!metaDescription) {
-      metaDescription = document.createElement('meta')
-      metaDescription.name = 'description'
-      document.head.appendChild(metaDescription)
-    }
-    metaDescription.content =
-      'Compare the best vertical scrolling ebook apps for iPhone in 2026, including vertical snap, continuous scroll, EPUB support, libraries, and sync.'
-
-    let canonical = document.querySelector('link[rel="canonical"]')
-    if (!canonical) {
-      canonical = document.createElement('link')
-      canonical.rel = 'canonical'
-      document.head.appendChild(canonical)
-    }
-    canonical.href = guideUrl
+    setPageMeta({
+      title: 'Best Vertical Scrolling eBook Apps for iPhone in 2026 | leaf',
+      description: 'Compare the best vertical scrolling ebook apps for iPhone in 2026, including vertical snap, continuous scroll, EPUB support, libraries, and sync.',
+      canonical: guideUrl,
+    })
 
     const schemas = [
       { id: 'vertical-scroll-article-schema', data: articleSchema },

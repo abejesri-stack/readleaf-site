@@ -40,6 +40,11 @@
     <link rel="icon" type="image/png" href="/leaf-app-icon.png" />
     <link rel="apple-touch-icon" href="/leaf-app-icon.png" />
 
+    <!-- Routes are prerendered (scripts/prerender.js). Keep that static copy
+         hidden until the app replaces it, so entrance animations don't flash;
+         show it anyway if the app hasn't started after 4 s. -->
+    <script>document.documentElement.classList.add('js');setTimeout(function(){document.documentElement.classList.remove('js')},4000)</script>
+    <style>.js #root[data-prerendered]{visibility:hidden}</style>
     <!-- Preconnect for Google Fonts (performance) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
