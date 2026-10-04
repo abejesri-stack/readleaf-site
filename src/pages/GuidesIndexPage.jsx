@@ -56,7 +56,7 @@ const guides = [
     description:
       'A practical guide to reading EPUB files and imported books on iPhone with leaf, Apple Books, Google Play Books, Documents by Readdle, Kindle, and Kobo.',
     href: '/guides/best-epub-reader-apps-iphone',
-    updated: 'May 2026',
+    updated: 'October 2026',
     topics: ['EPUB files', 'Imported books', 'File management'],
   },
   {
@@ -64,7 +64,7 @@ const guides = [
     description:
       'A practical guide to legal free reading on iPhone, including leaf, Libby, Project Gutenberg, Standard Ebooks, Apple Books, Kindle, Kobo, and Google Play Books.',
     href: '/guides/best-free-ebook-apps-iphone',
-    updated: 'May 2026',
+    updated: 'October 2026',
     topics: ['Free books', 'Public domain', 'Library borrowing'],
   },
   {
@@ -88,7 +88,7 @@ const guides = [
     description:
       'A practical comparison of leaf, Kindle, Apple Books, Kobo, Libby, and Google Play Books for different kinds of iPhone and iOS readers.',
     href: '/guides/best-ebook-reader-apps-iphone',
-    updated: 'June 2026',
+    updated: 'October 2026',
     topics: ['App comparisons', 'EPUB readers', 'iPhone and iOS apps'],
   },
   {

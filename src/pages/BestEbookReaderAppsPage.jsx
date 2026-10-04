@@ -10,7 +10,7 @@ const appRows = [
     formats: 'EPUB, PDF, Markdown, Standard Ebooks, Project Gutenberg',
     sync: 'Optional leaf Pro sync and iCloud Book Vault',
     model: 'Free download, optional Pro subscription',
-    verdict: 'A good fit if you want a vertical-swipe iPhone reader for imported books, public-domain classics, journals, share cards, themes, and typography controls.',
+    verdict: 'A good fit if you want a vertical-swipe iPhone reader for imported books and public-domain classics, with free read-aloud narration, journals, share cards, themes, and typography controls.',
   },
   {
     name: 'Kindle',
@@ -67,7 +67,7 @@ const appWriteups = [
     body:
       'leaf is built around vertical-swipe reading rather than a large commercial bookstore. It suits readers who import their own EPUB, PDF, or Markdown files, want a phone-first reading flow, or spend time with public-domain classics. Its curated Explore tab brings together Standard Ebooks and Project Gutenberg discovery, so readers can browse and import classics without leaving the app.',
     details:
-      'It also includes reading journals, highlights and notes, passage and completion share cards, multiple reading flows, and detailed typography controls. Free reader themes include Light, Dark, System, and E-Ink; leaf Pro adds Sepia, Forest, and Midnight themes, Pro fonts including Literata, Spectral, and Merriweather, custom TTF/OTF fonts, and account-backed sync.',
+      'It can also read books aloud: turn on the voice in read-along and leaf narrates the page while the current line lights up, free and offline, using the voices built into iPhone, and it keeps going with the screen locked. It also includes reading journals, highlights and notes, passage and completion share cards, multiple reading flows, and detailed typography controls. Free reader themes include Light, Dark, System, and E-Ink; leaf Pro adds six more themes and up to six custom themes, Pro fonts including Literata, Spectral, and Merriweather, custom TTF/OTF fonts, and account-backed sync.',
     tradeoff:
       'The tradeoff is that leaf is iOS-first and built around vertical reading and discovery rather than a giant paid storefront.',
   },
@@ -78,7 +78,7 @@ const appWriteups = [
     body:
       'Kindle is the practical choice for readers whose books already live with Amazon. It is especially useful if you switch between an iPhone, a Kindle device, and other Kindle apps, because your library and reading position follow your Amazon account.',
     details:
-      'The app works well for purchased Kindle books, Kindle Unlimited reading, samples, and personal documents. It is less about building a quiet independent library and more about staying inside Amazon’s mature reading ecosystem.',
+      'The app works well for purchased Kindle books, Kindle Unlimited reading, samples, and personal documents, and its Assistive Reader can read supported Kindle books aloud with your iPhone’s voices. It is less about building a quiet independent library and more about staying inside Amazon’s mature reading ecosystem.',
     tradeoff:
       'The tradeoff is ecosystem dependence: Kindle is strongest when you already buy, borrow, or manage books through Amazon.',
   },
@@ -142,13 +142,17 @@ const faqItems = [
     a: 'Libby is the most obvious choice if you have access to a participating library. leaf is useful for public-domain classics because it integrates Standard Ebooks and Project Gutenberg discovery alongside focused reading. Kindle, Apple Books, Kobo, and Google Play Books all include free titles, but their main strength is paid catalogue access.',
   },
   {
+    q: 'Which ebook reader apps can read books aloud on iPhone?',
+    a: 'leaf reads EPUB books and free classics aloud for free, offline, with the current line highlighted, and keeps going with the screen locked. The Kindle app’s Assistive Reader reads supported Kindle books aloud. Apple Books has no read-aloud mode of its own, but the iPhone’s built-in Speak Screen works in it and turns the pages. All three use the voices built into iPhone; apps such as ElevenReader use cloud AI voices instead, with metered or paid listening.',
+  },
+  {
     q: 'Should I use Kindle or Apple Books on iPhone?',
     a: 'Use Kindle if your books are mostly from Amazon or you also read on Kindle hardware. Use Apple Books if you prefer Apple’s built-in app, iCloud sync, and Apple’s store experience.',
   },
 ]
 
 const visualCards = [
-  { name: 'leaf', href: 'https://apps.apple.com/app/leaf-ebook-reader/id6758810936', label: 'Vertical swipe', summary: 'An iPhone reader for vertical swiping, imports, classics, journals, and typography.' },
+  { name: 'leaf', href: 'https://apps.apple.com/app/leaf-ebook-reader/id6758810936', label: 'Vertical swipe', summary: 'An iPhone reader for vertical swiping, imports, classics, read-aloud, journals, and typography.' },
   { name: 'Kindle', href: 'https://apps.apple.com/us/app/amazon-kindle/id302584613?l=en&platform=iphone', label: 'Amazon', summary: 'Best when your purchases and devices already live with Amazon.' },
   { name: 'Apple Books', href: 'https://www.apple.com/apple-books/', label: 'Apple', summary: 'A polished built-in path for Apple-native ebook purchases.' },
   { name: 'Libby', href: 'https://apps.apple.com/us/app/libby-the-library-app/id1076402606', label: 'Library', summary: 'Borrow ebooks and audiobooks through participating libraries.' },
@@ -163,7 +167,7 @@ const articleSchema = {
   description:
     'A practical comparison of the best ebook reader apps for iPhone and iOS, including leaf, Kindle, Apple Books, Kobo, Libby, and Google Play Books.',
   datePublished: '2026-05-17',
-  dateModified: '2026-06-20',
+  dateModified: '2026-10-04',
   author: { '@type': 'Organization', name: 'leaf', alternateName: 'leaf: eBook Reader', url: 'https://readleaf.co/' },
   publisher: { '@type': 'Organization', name: 'leaf', alternateName: 'leaf: eBook Reader', url: 'https://readleaf.co/' },
   image: 'https://readleaf.co/screenshots/screenshot-library.png',
@@ -242,7 +246,7 @@ export default function BestEbookReaderAppsPage() {
 
       <header style={{ padding: 'var(--space-16) var(--space-4) var(--space-8)', maxWidth: '840px', margin: '0 auto' }}>
         <p style={{ fontFamily: 'var(--font-sans)', fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.15em', color: 'var(--color-accent)', marginBottom: 'var(--space-4)' }}>
-          Guide · Updated June 2026
+          Guide · Updated October 2026
         </p>
         <h1 style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(2.25rem, 5vw, 3.6rem)', lineHeight: 1.15, marginBottom: 'var(--space-6)' }}>
           Best eBook Reader Apps for iPhone and iOS in 2026
@@ -434,6 +438,7 @@ export default function BestEbookReaderAppsPage() {
             {[
               ['You import your own books', 'Start with leaf if you want a vertical-swipe iPhone reading environment, especially for EPUBs, PDFs, Markdown, and classics.'],
               ['You read public-domain classics', 'Use leaf if you want Standard Ebooks and Project Gutenberg discovery integrated into the same app you read in.'],
+              ['You want books read aloud', 'Use leaf for free, offline narration of EPUBs and classics with the line highlighted as it reads. For Kindle books, use the Kindle app’s Assistive Reader.'],
               ['You keep notes while reading', 'Use leaf if reading journals, highlights, notes, Markdown export, and share cards matter more than bookstore recommendations.'],
               ['You buy from Amazon', 'Use Kindle. It is the obvious choice when your library, recommendations, and devices already live in Amazon’s ecosystem.'],
               ['You borrow from the library', 'Use Libby. It solves a different problem from store apps: free library access with a card from a participating library.'],
@@ -465,6 +470,9 @@ export default function BestEbookReaderAppsPage() {
           <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.4rem', marginBottom: 'var(--space-4)' }}>
             Related Reading
           </h2>
+          <p style={{ ...textStyle, marginBottom: 'var(--space-3)' }}>
+            If you want books read to you, see every way to <Link to="/guides/how-to-have-books-read-aloud-on-iphone" style={{ color: 'var(--color-accent)' }}>have books read aloud on iPhone</Link>, from Speak Screen to Kindle and leaf.
+          </p>
           <p style={{ ...textStyle, marginBottom: 'var(--space-3)' }}>
             If reading motion matters most, compare <Link to="/guides/best-vertical-scrolling-ebook-apps-iphone" style={{ color: 'var(--color-accent)' }}>vertical scrolling eBook apps for iPhone</Link>, including vertical snap and continuous scroll.
           </p>

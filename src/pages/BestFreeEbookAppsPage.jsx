@@ -77,7 +77,7 @@ const appWriteups = [
     body:
       'leaf is the strongest fit if your idea of free ebooks is public-domain classics, imported EPUB files, and a vertical-swipe iPhone reading space. It is not trying to be a giant bookstore; it is built around reading books you already own or can legally download for free.',
     details:
-      'Its curated Explore tab brings Standard Ebooks and Project Gutenberg discovery into the app. leaf also supports EPUB, PDF, and Markdown imports, plus reading journals, highlights, notes, share cards, themes, fonts, custom fonts with leaf Pro, optional Pro sync, and iCloud Book Vault.',
+      'Its curated Explore tab brings Standard Ebooks and Project Gutenberg discovery into the app, and it can read those books aloud for free, offline, with the voices built into iPhone, so free classics double as free listening. leaf also supports EPUB, PDF, and Markdown imports, plus reading journals, highlights, notes, share cards, themes, fonts, custom fonts with leaf Pro, optional Pro sync, and iCloud Book Vault.',
     tradeoff:
       'The tradeoff is that leaf is best for free classics and personal libraries, not for browsing a large commercial catalogue of current paid books.',
   },
@@ -178,13 +178,17 @@ const faqItems = [
     a: 'Yes. Several iPhone reading apps can open EPUB files. leaf supports EPUB, PDF, and Markdown imports, while Apple Books and Google Play Books can also work for EPUB/PDF workflows depending on how you manage files.',
   },
   {
+    q: 'Can I listen to free books on iPhone?',
+    a: 'Yes, in a few ways. Libby lends audiobooks for free with a participating library card. LibriVox offers free public-domain audiobooks read by volunteers. And leaf reads public-domain classics and your own EPUB files aloud for free, offline, using the voices built into iPhone, with the current line highlighted so you can read along.',
+  },
+  {
     q: 'Is Libby really free?',
     a: 'Libby is free to use with a card from a participating library. Your access depends on your library system, including which ebooks and audiobooks it licenses, how long loans last, and whether popular books have wait lists.',
   },
 ]
 
 const visualCards = [
-  { name: 'leaf', href: 'https://apps.apple.com/app/leaf-ebook-reader/id6758810936', label: 'Reader', summary: 'Read free classics and imported files in a vertical-swipe iPhone app.' },
+  { name: 'leaf', href: 'https://apps.apple.com/app/leaf-ebook-reader/id6758810936', label: 'Reader', summary: 'Read, or listen to, free classics and imported files in a vertical-swipe iPhone app.' },
   { name: 'Libby', href: 'https://apps.apple.com/us/app/libby-the-library-app/id1076402606', label: 'Library', summary: 'Borrow ebooks and audiobooks for free with a library card.' },
   { name: 'Project Gutenberg', href: 'https://www.gutenberg.org/', label: 'Archive', summary: 'Download from the largest free public-domain ebook library.' },
   { name: 'Standard Ebooks', href: 'https://standardebooks.org/', label: 'Editions', summary: 'Get polished free EPUB editions of public-domain classics.' },
@@ -197,7 +201,7 @@ const articleSchema = {
   description:
     'A practical guide to the best free ebook apps and legal free book sources for iPhone, including leaf, Libby, Project Gutenberg, Standard Ebooks, Apple Books, Kindle, Kobo, and Google Play Books.',
   datePublished: '2026-05-23',
-  dateModified: '2026-05-23',
+  dateModified: '2026-10-04',
   author: { '@type': 'Organization', name: 'leaf', alternateName: 'leaf: eBook Reader', url: 'https://readleaf.co/' },
   publisher: { '@type': 'Organization', name: 'leaf', alternateName: 'leaf: eBook Reader', url: 'https://readleaf.co/' },
   image: 'https://readleaf.co/screenshots/screenshot-explore-new.png',
@@ -278,7 +282,7 @@ export default function BestFreeEbookAppsPage() {
 
       <header style={{ padding: 'var(--space-16) var(--space-4) var(--space-8)', maxWidth: '840px', margin: '0 auto' }}>
         <p style={{ fontFamily: 'var(--font-sans)', fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.15em', color: 'var(--color-accent)', marginBottom: 'var(--space-4)' }}>
-          Guide - Updated May 2026
+          Guide - Updated October 2026
         </p>
         <h1 style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(2.25rem, 5vw, 3.6rem)', lineHeight: 1.15, marginBottom: 'var(--space-6)' }}>
           Best Free eBook Apps and Sources for iPhone in 2026
@@ -480,6 +484,9 @@ export default function BestFreeEbookAppsPage() {
           <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.4rem', marginBottom: 'var(--space-4)' }}>
             Related Reading
           </h2>
+          <p style={{ ...textStyle, marginBottom: 'var(--space-3)' }}>
+            If you would rather listen, see how to <Link to="/guides/how-to-have-books-read-aloud-on-iphone" style={{ color: 'var(--color-accent)' }}>have books read aloud on iPhone</Link>, including free and offline options.
+          </p>
           <p style={{ ...textStyle, marginBottom: 'var(--space-3)' }}>
             If you are organizing downloaded EPUB files, read our guide to the <Link to="/guides/best-epub-reader-apps-iphone" style={{ color: 'var(--color-accent)' }}>best EPUB reader apps for iPhone</Link>.
           </p>

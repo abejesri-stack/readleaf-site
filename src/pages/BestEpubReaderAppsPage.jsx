@@ -61,7 +61,7 @@ const appWriteups = [
     body:
       'leaf is a strong fit if your main library is made of EPUB files, PDFs, Markdown files, public-domain classics, or books you manage yourself. It is designed around the reading session rather than a store feed, so imported books feel like first-class books rather than attachments.',
     details:
-      'leaf supports EPUB, PDF, and Markdown imports. Its curated Explore tab can also help readers discover and import books from Standard Ebooks and Project Gutenberg. For imported libraries, the useful extras are reading journals, highlights, notes, passage and completion share cards, themes, fonts, custom TTF/OTF fonts with leaf Pro, optional leaf Pro sync, and iCloud Book Vault.',
+      'leaf supports EPUB, PDF, and Markdown imports, and can read EPUB books aloud for free, offline, with the current line highlighted. Its curated Explore tab can also help readers discover and import books from Standard Ebooks and Project Gutenberg. For imported libraries, the useful extras are reading journals, highlights, notes, passage and completion share cards, themes, fonts, custom TTF/OTF fonts with leaf Pro, optional leaf Pro sync, and iCloud Book Vault.',
     tradeoff:
       'The tradeoff is that leaf is not trying to replace a giant bookstore. It is best when you care about reading your own files in a vertical-swipe iPhone-native environment.',
   },
@@ -132,6 +132,10 @@ const faqItems = [
     a: 'Yes. iPhone can read EPUB files through apps such as leaf, Apple Books, Google Play Books, and other EPUB-compatible readers. The best app depends on whether you want a dedicated reading environment, Apple-native convenience, or cross-platform upload sync.',
   },
   {
+    q: 'Can iPhone read EPUB files aloud?',
+    a: 'Yes. leaf reads EPUB books aloud for free and offline with the voices built into iPhone, highlighting the current line and continuing with the screen locked. In Apple Books, the built-in Speak Screen feature can read an EPUB aloud and turn the pages. Cloud apps such as ElevenReader import EPUB files too and use AI voices, with metered or paid listening.',
+  },
+  {
     q: 'Is Apple Books good for EPUB files?',
     a: 'Apple Books is good for occasional EPUB files because it is built into Apple workflows and supports simple EPUB/PDF reading. Readers with larger imported libraries may prefer an app focused more directly on imported books, typography, notes, and file organization.',
   },
@@ -142,7 +146,7 @@ const faqItems = [
 ]
 
 const visualCards = [
-  { name: 'leaf', href: 'https://apps.apple.com/app/leaf-ebook-reader/id6758810936', label: 'Imported reading', summary: 'Vertical-swipe EPUB, PDF, and Markdown reading on iPhone.' },
+  { name: 'leaf', href: 'https://apps.apple.com/app/leaf-ebook-reader/id6758810936', label: 'Imported reading', summary: 'Vertical-swipe EPUB, PDF, and Markdown reading on iPhone, with free read-aloud.' },
   { name: 'Apple Books', href: 'https://www.apple.com/apple-books/', label: 'Built-in', summary: 'A simple Apple-native option for casual EPUB and PDF files.' },
   { name: 'Google Play Books', href: 'https://apps.apple.com/us/app/google-play-books-audiobooks/id400989007?l=en', label: 'Uploads', summary: 'Uploaded EPUB/PDF files across Google account devices.' },
   { name: 'Documents', href: 'https://readdle.com/products/documents', label: 'Files', summary: 'File management for downloads, PDFs, folders, cloud storage, and ePUBs.' },
@@ -155,7 +159,7 @@ const articleSchema = {
   description:
     'A practical guide to the best iPhone apps for reading EPUB files and imported books, including leaf, Apple Books, Google Play Books, Documents by Readdle, Kindle, and Kobo.',
   datePublished: '2026-05-23',
-  dateModified: '2026-05-23',
+  dateModified: '2026-10-04',
   author: { '@type': 'Organization', name: 'leaf', alternateName: 'leaf: eBook Reader', url: 'https://readleaf.co/' },
   publisher: { '@type': 'Organization', name: 'leaf', alternateName: 'leaf: eBook Reader', url: 'https://readleaf.co/' },
   image: 'https://readleaf.co/screenshots/screenshot-library.png',
@@ -235,7 +239,7 @@ export default function BestEpubReaderAppsPage() {
 
       <header style={{ padding: 'var(--space-16) var(--space-4) var(--space-8)', maxWidth: '840px', margin: '0 auto' }}>
         <p style={{ fontFamily: 'var(--font-sans)', fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.15em', color: 'var(--color-accent)', marginBottom: 'var(--space-4)' }}>
-          Guide - Updated May 2026
+          Guide - Updated October 2026
         </p>
         <h1 style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(2.25rem, 5vw, 3.6rem)', lineHeight: 1.15, marginBottom: 'var(--space-6)' }}>
           Best EPUB Reader Apps for iPhone in 2026
@@ -437,6 +441,9 @@ export default function BestEpubReaderAppsPage() {
           <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.4rem', marginBottom: 'var(--space-4)' }}>
             Related Reading
           </h2>
+          <p style={{ ...textStyle, marginBottom: 'var(--space-3)' }}>
+            To listen to your EPUB files, see how to <Link to="/guides/how-to-have-books-read-aloud-on-iphone" style={{ color: 'var(--color-accent)' }}>have books read aloud on iPhone</Link>.
+          </p>
           <p style={{ ...textStyle, marginBottom: 'var(--space-3)' }}>
             To compare reading motion, see our guide to <Link to="/guides/best-vertical-scrolling-ebook-apps-iphone" style={{ color: 'var(--color-accent)' }}>vertical scrolling eBook apps for iPhone</Link>.
           </p>
