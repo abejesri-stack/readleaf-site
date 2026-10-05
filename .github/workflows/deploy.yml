@@ -49,4 +49,5 @@ jobs:
         uses: actions/deploy-pages@v4
       - name: Notify IndexNow about changed URLs
         continue-on-error: true
-        run: npm run indexnow -- --changed
+        # github.event.before is the commit main pointed at before this push.
+        run: npm run indexnow -- --changed --since "${{ github.event.before }}"

@@ -17,22 +17,25 @@ const { values } = parseArgs({
   options: {
     all: { type: 'boolean', default: false },
     changed: { type: 'boolean', default: false },
+    // The commit the site was last deployed from; defaults to the previous commit.
+    since: { type: 'string', default: 'HEAD^' },
     'dry-run': { type: 'boolean', default: false },
     url: { type: 'string', multiple: true },
   },
 })
 
-// Pages whose source file changed in the last commit (see scripts/routes.js).
+// Pages whose source file changed since --since (see scripts/routes.js). A
+// push can carry several commits, so CI passes the commit it last deployed.
 const getChangedUrls = () => {
   try {
     const changedFiles = new Set(execFileSync(
       'git',
-      ['diff', '--name-only', 'HEAD^', '--'],
+      ['diff', '--name-only', values.since, 'HEAD', '--'],
       { cwd: root, encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'] },
     ).trim().split('\n').filter(Boolean))
     return routes.filter(({ source }) => changedFiles.has(source)).map(({ route }) => site + route)
   } catch {
-    console.warn('IndexNow: previous commit unavailable; submitting every page.')
+    console.warn(`IndexNow: ${values.since} unavailable; submitting every page.`)
     return allUrls
   }
 }
